@@ -1,1 +1,17 @@
-﻿ErrorGeneratingOutput
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<TemplateID>{1c8f4931-84da-4193-9ea4-bcc6e33bf135}</TemplateID>
+		<Name Package="{67c649b8-57b5-4de9-81bd-8d7f08b3aa12}" ID="103"/>
+		<Description Package="{67c649b8-57b5-4de9-81bd-8d7f08b3aa12}" ID="102"/>
+		<Icon Package="{67c649b8-57b5-4de9-81bd-8d7f08b3aa12}" ID="201" />
+		<ProjectType>CSharp</ProjectType>
+		<SortOrder>360</SortOrder>
+		<DefaultName>JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPS</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.JRPPCLMCFProyectoIPS">JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPS</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.JRPPCLMCFProyectoIPS.diagram">JRPPCLMCFProyectoIPS.diagram</ProjectItem>
+	</TemplateContent>
+</VSTemplate>
+
