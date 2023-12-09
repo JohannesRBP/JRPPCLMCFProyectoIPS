@@ -393,6 +393,7 @@
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="parametroDec" DisplayName="Parametro Dec" DefaultText="parametroDec" />
       </ShapeHasDecorators>
+      <Compartment Name="Atributo" />
     </CompartmentShape>
   </Shapes>
   <XmlSerializationBehavior Name="JRPPCLMCFProyectoIPSSerializationBehavior" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
