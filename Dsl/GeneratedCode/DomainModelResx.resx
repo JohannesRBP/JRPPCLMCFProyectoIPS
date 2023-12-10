@@ -645,6 +645,222 @@
     <value>Clase Enriquecida</value>
     <comment>PropertyDisplayName for DomainRole &apos;EstiloAtributo&apos; on DomainRelationship &apos;ClaseEnriquecidaHasEstiloAtributo&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase</value>
+    <comment>Description for DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.DisplayName" xml:space="preserve">
+    <value>Clase References Clase</value>
+    <comment>DisplayName for DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidad0.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad0</value>
+    <comment>Description for DomainProperty &apos;cardinalidad0&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidad0.DisplayName" xml:space="preserve">
+    <value>Cardinalidad0</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidad0&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidad1.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad1</value>
+    <comment>Description for DomainProperty &apos;cardinalidad1&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidad1.DisplayName" xml:space="preserve">
+    <value>Cardinalidad1</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidad1&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/SourceClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.SourceClase</value>
+    <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/SourceClase.DisplayName" xml:space="preserve">
+    <value>Source Clase</value>
+    <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/SourceClase.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Referenciada</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/TargetClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.TargetClase</value>
+    <comment>Description for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/TargetClase.DisplayName" xml:space="preserve">
+    <value>Target Clase</value>
+    <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/TargetClase.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Referenciadora</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija</value>
+    <comment>Description for DomainClass &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.DisplayName" xml:space="preserve">
+    <value>Clase Has Clase Hija</value>
+    <comment>DisplayName for DomainClass &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/tipoHerencia.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Tipo Herencia</value>
+    <comment>Description for DomainProperty &apos;tipoHerencia&apos; on DomainClass &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/tipoHerencia.DisplayName" xml:space="preserve">
+    <value>Tipo Herencia</value>
+    <comment>DisplayName for DomainProperty &apos;tipoHerencia&apos; on DomainClass &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/SourceClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClase</value>
+    <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/SourceClase.DisplayName" xml:space="preserve">
+    <value>Source Clase</value>
+    <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/SourceClase.PropertyDisplayName" xml:space="preserve">
+    <value>Sub Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/TargetClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClase</value>
+    <comment>Description for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/TargetClase.DisplayName" xml:space="preserve">
+    <value>Target Clase</value>
+    <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/TargetClase.PropertyDisplayName" xml:space="preserve">
+    <value>Super Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases</value>
+    <comment>Description for DomainClass &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.DisplayName" xml:space="preserve">
+    <value>Clase Compone Clases</value>
+    <comment>DisplayName for DomainClass &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/cardinalidadO.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.Cardinalidad O</value>
+    <comment>Description for DomainProperty &apos;cardinalidadO&apos; on DomainClass &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/cardinalidadO.DisplayName" xml:space="preserve">
+    <value>Cardinalidad O</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadO&apos; on DomainClass &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/cardinalidadD.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.Cardinalidad D</value>
+    <comment>Description for DomainProperty &apos;cardinalidadD&apos; on DomainClass &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/cardinalidadD.DisplayName" xml:space="preserve">
+    <value>Cardinalidad D</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadD&apos; on DomainClass &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/SourceClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.SourceClase</value>
+    <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/SourceClase.DisplayName" xml:space="preserve">
+    <value>Source Clase</value>
+    <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/SourceClase.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Contenida</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/TargetClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.TargetClase</value>
+    <comment>Description for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/TargetClase.DisplayName" xml:space="preserve">
+    <value>Target Clase</value>
+    <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases/TargetClase.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Contiene</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseComponeClases&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase</value>
+    <comment>Description for DomainClass &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.DisplayName" xml:space="preserve">
+    <value>Clase Referencia Clase</value>
+    <comment>DisplayName for DomainClass &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/cardinalidadO.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.Cardinalidad O</value>
+    <comment>Description for DomainProperty &apos;cardinalidadO&apos; on DomainClass &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/cardinalidadO.DisplayName" xml:space="preserve">
+    <value>Cardinalidad O</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadO&apos; on DomainClass &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/cardinalidadD.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.Cardinalidad D</value>
+    <comment>Description for DomainProperty &apos;cardinalidadD&apos; on DomainClass &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/cardinalidadD.DisplayName" xml:space="preserve">
+    <value>Cardinalidad D</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadD&apos; on DomainClass &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/SourceClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.SourceClase</value>
+    <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/SourceClase.DisplayName" xml:space="preserve">
+    <value>Source Clase</value>
+    <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/SourceClase.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Referenciada2</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/TargetClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.TargetClase</value>
+    <comment>Description for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/TargetClase.DisplayName" xml:space="preserve">
+    <value>Target Clase</value>
+    <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/TargetClase.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Refe</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato/Boolean.DisplayName" xml:space="preserve">
     <value>Boolean</value>
     <comment>Display name for EnumerationLiteral &apos;Boolean&apos; on DomainEnumeration &apos;TipoDato&apos;</comment>
@@ -713,6 +929,82 @@
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase</value>
+    <comment>Description for DomainClass &apos;MetaforaClase_Clase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.DisplayName" xml:space="preserve">
+    <value>Metafora Clase_ Clase</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaClase_Clase&apos;</comment>
+  </data>
+  <data name="MetaforaClase_Clasecardinalidad0DecDefaultText" xml:space="preserve">
+    <value>cardinalidad0Dec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaClase_Clasecardinalidad1DecDefaultText" xml:space="preserve">
+    <value>cardinalidad1Dec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaClase_ClasenombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia</value>
+    <comment>Description for DomainClass &apos;MetaforaHerencia&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia.DisplayName" xml:space="preserve">
+    <value>Metafora Herencia</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaHerencia&apos;</comment>
+  </data>
+  <data name="MetaforaHerencianombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaHerenciatipoHerenciaDecDefaultText" xml:space="preserve">
+    <value>tipoHerenciaDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaRComposicion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaRComposicion</value>
+    <comment>Description for DomainClass &apos;MetaforaRComposicion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaRComposicion.DisplayName" xml:space="preserve">
+    <value>Metafora RComposicion</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaRComposicion&apos;</comment>
+  </data>
+  <data name="MetaforaRComposicionnombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaRComposicioncardinalidadODecDefaultText" xml:space="preserve">
+    <value>cardinalidadODec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaRComposicioncardinalidadDDecDefaultText" xml:space="preserve">
+    <value>cardinalidadDDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaReferenciada.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaReferenciada</value>
+    <comment>Description for DomainClass &apos;MetaforaReferenciada&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaReferenciada.DisplayName" xml:space="preserve">
+    <value>Metafora Referenciada</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaReferenciada&apos;</comment>
+  </data>
+  <data name="MetaforaReferenciadanombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaReferenciadacardinalidadODecDefaultText" xml:space="preserve">
+    <value>cardinalidadODec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaReferenciadacardinalidadDDecDefaultText" xml:space="preserve">
+    <value>cardinalidadDDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="FormatList" xml:space="preserve">
     <value>JRPPCLMCFProyectoIPS (*.JRPPCLMCFProyectoIPS)|*.JRPPCLMCFProyectoIPS</value>
     <comment>A list of file format specifiers for the Save dialog box</comment>
@@ -763,6 +1055,42 @@
   </data>
   <data name="ParametroToolboxTooltip" xml:space="preserve">
     <value>Parametro</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EnlacesToolboxTab" xml:space="preserve">
+    <value>Enlaces</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="AsociacionClaseClaseToolboxItem" xml:space="preserve">
+    <value>Asociacion Clase-Clase</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AsociacionClaseClaseToolboxTooltip" xml:space="preserve">
+    <value>Crear una Asociacion Clase Clase</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="HerenciaPadreHijoToolboxItem" xml:space="preserve">
+    <value>HerenciaPadreHijo</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="HerenciaPadreHijoToolboxTooltip" xml:space="preserve">
+    <value>Herencia Padre Hijo</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ComposicionToolboxItem" xml:space="preserve">
+    <value>Composicion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ComposicionToolboxTooltip" xml:space="preserve">
+    <value>Composicion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ReferencialToolboxItem" xml:space="preserve">
+    <value>Referencial</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ReferencialToolboxTooltip" xml:space="preserve">
+    <value>Referencial</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -895,19 +1223,35 @@ A DomainClass can be serialized as a moniker only if
     <comment>Icon decorator default image</comment>
   </data>
   <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\A.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\A.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ClaseToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\C.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\C.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="OperacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\O.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\O.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ParametroToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\P.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\P.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AsociacionClaseClaseToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\Aso.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="HerenciaPadreHijoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\H.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ComposicionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\CO.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ReferencialToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\RE.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

@@ -12,5 +12,1162 @@ using DslDiagrams = global::Microsoft.VisualStudio.Modeling.Diagrams;
 
 namespace UPM_IPS.JRPPCLMCFProyectoIPS
 {
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class ClaseReferencesClaseBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+				{
+					if (candidateTarget is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+					{
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateSource;
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateTarget;
+						if(targetClase == null || sourceClase == null || global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.GetLinks(sourceClase, targetClase).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+				{
+					if (target is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+					{
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceAccepted = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)source;
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetAccepted = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class ClaseHasClaseHijaBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+				{
+					if (candidateTarget is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+					{
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateSource;
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateTarget;
+						if(targetClase == null || global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.GetLinkTosuperClase(targetClase) != null) return false;
+						if(targetClase == null || sourceClase == null || global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.GetLinks(sourceClase, targetClase).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+				{
+					if (target is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+					{
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceAccepted = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)source;
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetAccepted = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class ClaseComponeClasesBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+				{
+					if (candidateTarget is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+					{
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateSource;
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateTarget;
+						if(targetClase == null || sourceClase == null || global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.GetLinks(sourceClase, targetClase).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+				{
+					if (target is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+					{
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceAccepted = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)source;
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetAccepted = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+	/// <summary>
+	/// ConnectionBuilder class to provide logic for constructing connections between elements.
+	/// </summary>
+	public static partial class ClaseReferenciaClaseBuilder
+	{
+		#region Accept Connection Methods
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the source of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the source of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptSource(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+
+		/// <summary>
+		/// Test whether a given model element is acceptable to this ConnectionBuilder as the target of a connection.
+		/// </summary>
+		/// <param name="candidate">The model element to test.</param>
+		/// <returns>Whether the element can be used as the target of a connection.</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		public static bool CanAcceptTarget(DslModeling::ModelElement candidate)
+		{
+			if (candidate == null) return false;
+			else if (candidate is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+			{ 
+				return true;
+			}
+			else
+				return false;
+		}
+		
+		/// <summary>
+		/// Test whether a given pair of model elements are acceptable to this ConnectionBuilder as the source and target of a connection
+		/// </summary>
+		/// <param name="candidateSource">The model element to test as a source</param>
+		/// <param name="candidateTarget">The model element to test as a target</param>
+		/// <returns>Whether the elements can be used as the source and target of a connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static bool CanAcceptSourceAndTarget(DslModeling::ModelElement candidateSource, DslModeling::ModelElement candidateTarget)
+		{
+			// Accepts null, null; source, null; source, target but NOT null, target
+			if (candidateSource == null)
+			{
+				if (candidateTarget != null)
+				{
+					throw new global::System.ArgumentNullException("candidateSource");
+				}
+				else // Both null
+				{
+					return false;
+				}
+			}
+			bool acceptSource = CanAcceptSource(candidateSource);
+			// If the source wasn't accepted then there's no point checking targets.
+			// If there is no target then the source controls the accept.
+			if (!acceptSource || candidateTarget == null)
+			{
+				return acceptSource;
+			}
+			else // Check combinations
+			{
+				if (candidateSource is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+				{
+					if (candidateTarget is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+					{
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateSource;
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateTarget;
+						if(targetClase == null || sourceClase == null || global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.GetLinks(sourceClase, targetClase).Count > 0) return false;
+						return true;
+					}
+				}
+				
+			}
+			return false;
+		}
+		#endregion
+
+		#region Connection Methods
+		/// <summary>
+		/// Make a connection between the given pair of source and target elements
+		/// </summary>
+		/// <param name="source">The model element to use as the source of the connection</param>
+		/// <param name="target">The model element to use as the target of the connection</param>
+		/// <returns>A link representing the created connection</returns>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
+		public static DslModeling::ElementLink Connect(DslModeling::ModelElement source, DslModeling::ModelElement target)
+		{
+			if (source == null)
+			{
+				throw new global::System.ArgumentNullException("source");
+			}
+			if (target == null)
+			{
+				throw new global::System.ArgumentNullException("target");
+			}
+			
+			if (CanAcceptSourceAndTarget(source, target))
+			{
+				if (source is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+				{
+					if (target is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
+					{
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceAccepted = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)source;
+						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetAccepted = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)target;
+						DslModeling::ElementLink result = new global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase(sourceAccepted, targetAccepted);
+						if (DslModeling::DomainClassInfo.HasNameProperty(result))
+						{
+							DslModeling::DomainClassInfo.SetUniqueName(result);
+						}
+						return result;
+					}
+				}
+				
+			}
+			global::System.Diagnostics.Debug.Fail("Having agreed that the connection can be accepted we should never fail to make one.");
+			throw new global::System.InvalidOperationException();
+		}
+		#endregion
+ 	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class AsociacionClaseClaseConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		
+		/// <summary>
+		/// Constructs a new AsociacionClaseClaseConnectAction for the given Diagram.
+		/// </summary>
+		public AsociacionClaseClaseConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		
+		/// <summary>
+		/// Returns the AsociacionClaseClaseConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AsociacionClaseClaseConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class AsociacionClaseClaseConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the AsociacionClaseClaseConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected AsociacionClaseClaseConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder ClaseReferencesClaseBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return ClaseReferencesClaseBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return ClaseReferencesClaseBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder ClaseReferencesClaseBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				ClaseReferencesClaseBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class AsociacionClaseClaseConnectionType : AsociacionClaseClaseConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the AsociacionClaseClaseConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public AsociacionClaseClaseConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class HerenciaPadreHijoConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		
+		/// <summary>
+		/// Constructs a new HerenciaPadreHijoConnectAction for the given Diagram.
+		/// </summary>
+		public HerenciaPadreHijoConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		
+		/// <summary>
+		/// Returns the HerenciaPadreHijoConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new HerenciaPadreHijoConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class HerenciaPadreHijoConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the HerenciaPadreHijoConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected HerenciaPadreHijoConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder ClaseHasClaseHijaBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return ClaseHasClaseHijaBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return ClaseHasClaseHijaBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder ClaseHasClaseHijaBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				ClaseHasClaseHijaBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class HerenciaPadreHijoConnectionType : HerenciaPadreHijoConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the HerenciaPadreHijoConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public HerenciaPadreHijoConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class ComposicionConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		
+		/// <summary>
+		/// Constructs a new ComposicionConnectAction for the given Diagram.
+		/// </summary>
+		public ComposicionConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		
+		/// <summary>
+		/// Returns the ComposicionConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new ComposicionConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class ComposicionConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the ComposicionConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected ComposicionConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder ClaseComponeClasesBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return ClaseComponeClasesBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return ClaseComponeClasesBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder ClaseComponeClasesBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				ClaseComponeClasesBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class ComposicionConnectionType : ComposicionConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the ComposicionConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public ComposicionConnectionType() : base() {}
+		}
+	}
+ 	
+ 	/// <summary>
+	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
+	/// </summary>
+	internal partial class ReferencialConnectAction : DslDiagrams::ConnectAction
+	{
+		private DslDiagrams::ConnectionType[] connectionTypes;
+		
+		/// <summary>
+		/// Constructs a new ReferencialConnectAction for the given Diagram.
+		/// </summary>
+		public ReferencialConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		{
+		}
+		
+		/// <summary>
+		/// Gets the cursor corresponding to the given mouse position.
+		/// </summary>
+		/// <remarks>
+		/// Changes the cursor to Cursors.No before the first mouse click if the source shape is not valid.
+		/// </remarks>
+		public override global::System.Windows.Forms.Cursor GetCursor(global::System.Windows.Forms.Cursor currentCursor, DslDiagrams::DiagramClientView diagramClientView, DslDiagrams::PointD mousePosition)
+		{
+			if (this.MouseDownHitShape == null && currentCursor != global::System.Windows.Forms.Cursors.No)
+			{
+				DslDiagrams::DiagramHitTestInfo hitTestInfo = new DslDiagrams::DiagramHitTestInfo(diagramClientView);
+				this.Diagram.DoHitTest(mousePosition, hitTestInfo);
+				DslDiagrams::ShapeElement shape = hitTestInfo.HitDiagramItem.Shape;
+
+				DslDiagrams::ConnectionType connectionType = GetConnectionTypes(shape, null)[0];
+				string warningString = string.Empty;
+				if (!connectionType.CanCreateConnection(shape, null, ref warningString))
+				{
+					return global::System.Windows.Forms.Cursors.No;
+				}
+			}
+			return base.GetCursor(currentCursor, diagramClientView, mousePosition);
+		}
+		
+		
+		/// <summary>
+		/// Returns the ReferencialConnectionType associated with this action.
+		/// </summary>
+		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+		{
+			if(this.connectionTypes == null)
+			{
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new ReferencialConnectionType() };
+			}
+			
+			return this.connectionTypes;
+		}
+		
+		private partial class ReferencialConnectionTypeBase : DslDiagrams::ConnectionType
+		{
+			/// <summary>
+			/// Constructs a new the ReferencialConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			protected ReferencialConnectionTypeBase() : base() {}
+			
+			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
+			{
+				if (shape is DslDiagrams::Compartment)
+				{
+					return shape.ParentShape;
+				}
+				DslDiagrams::SwimlaneShape swimlane = shape as DslDiagrams::SwimlaneShape;
+				if (swimlane != null && swimlane.ForwardDragDropToParent)
+				{
+					return shape.ParentShape;
+				}
+				return shape;
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to determine if the given shapes can be connected.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder ClaseReferenciaClaseBuilder.
+			/// </remarks>
+			public override bool CanCreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, ref string connectionWarning)
+			{
+				bool canConnect = true;
+				
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				
+				DslModeling::ModelElement targetElement = null;
+				if (targetShapeElement != null)
+				{
+					targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+					targetElement = targetShapeElement.ModelElement;
+					if(targetElement == null) targetElement = targetShapeElement;
+			
+				}
+
+				// base.CanCreateConnection must be called to check whether existing Locks prevent this link from getting created.	
+				canConnect = base.CanCreateConnection(sourceShapeElement, targetShapeElement, ref connectionWarning);
+				if (canConnect)
+				{				
+					if(targetShapeElement == null)
+					{
+						return ClaseReferenciaClaseBuilder.CanAcceptSource(sourceElement);
+					}
+					else
+					{				
+						return ClaseReferenciaClaseBuilder.CanAcceptSourceAndTarget(sourceElement, targetElement);
+					}
+				}
+				else
+				{
+					//return false
+					return canConnect;
+				}
+			}
+						
+			/// <summary>
+			/// Called by the base ConnectAction class to ask whether the given source and target are valid.
+			/// </summary>
+			/// <remarks>
+			/// Always return true here, to give CanCreateConnection a chance to decide.
+			/// </remarks>
+			public override bool IsValidSourceAndTarget(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
+			{
+				return true;
+			}
+			
+			/// <summary>
+			/// Called by the base ConnectAction class to create the underlying relationship.
+			/// </summary>
+			/// <remarks>
+			/// This implementation delegates calls to the ConnectionBuilder ClaseReferenciaClaseBuilder.
+			/// </remarks>
+			public override void CreateConnection(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement, DslDiagrams::PaintFeedbackArgs paintFeedbackArgs)
+			{
+				if(sourceShapeElement == null) throw new global::System.ArgumentNullException("sourceShapeElement");
+				if(targetShapeElement == null) throw new global::System.ArgumentNullException("targetShapeElement");
+				
+				sourceShapeElement = RemovePassThroughShapes(sourceShapeElement);
+				targetShapeElement = RemovePassThroughShapes(targetShapeElement);
+				
+				DslModeling::ModelElement sourceElement = sourceShapeElement.ModelElement;
+				if(sourceElement == null) sourceElement = sourceShapeElement;
+				DslModeling::ModelElement targetElement = targetShapeElement.ModelElement;
+				if(targetElement == null) targetElement = targetShapeElement;
+				ClaseReferenciaClaseBuilder.Connect(sourceElement, targetElement);
+			}
+		}
+		
+		private partial class ReferencialConnectionType : ReferencialConnectionTypeBase
+		{
+			/// <summary>
+			/// Constructs a new the ReferencialConnectionType with the given ConnectionBuilder.
+			/// </summary>
+			public ReferencialConnectionType() : base() {}
+		}
+	}
 }
 

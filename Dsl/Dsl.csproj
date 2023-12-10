@@ -161,6 +161,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\CO.bmp" />
+    <Content Include="Resources\H.bmp" />
+    <Content Include="Resources\O.bmp" />
+    <Content Include="Resources\P.bmp" />
+    <Content Include="Resources\RE.bmp" />
     <None Include="DslDefinition.dsl.diagram">
       <DependentUpon>DslDefinition.dsl</DependentUpon>
     </None>
@@ -251,6 +256,8 @@
     <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml">
       <Link>CodeAnalysisDictionary.xml</Link>
     </CodeAnalysisDictionary>
+    <Content Include="Resources\A.bmp" />
+    <Content Include="Resources\Aso.bmp" />
     <Content Include="Resources\C.bmp" />
     <Content Include="Resources\ExampleConnectorToolBitmap.bmp" />
     <Content Include="Resources\ExampleShapeToolBitmap.bmp" />

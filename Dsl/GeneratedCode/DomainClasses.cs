@@ -352,6 +352,130 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			}
 		}
 		#endregion
+		#region ClaseReferenciada opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseReferenciada.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.SourceClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseReferenciada
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.SourceClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region claseReferenciadora opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of claseReferenciadora.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.TargetClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> claseReferenciadora
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.TargetClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region subClase opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of subClase.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> subClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region superClase opposite domain role accessor
+		/// <summary>
+		/// Gets or sets superClase.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClase
+		/// </summary>
+		public virtual Clase superClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClaseDomainRoleId) as Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClaseDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region ClaseContenida opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseContenida.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.SourceClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseContenida
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.SourceClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region ClaseContiene opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseContiene.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.TargetClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseContiene
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.TargetClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region ClaseReferenciada2 opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseReferenciada2.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.SourceClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseReferenciada2
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.SourceClaseDomainRoleId);
+			}
+		}
+		#endregion
+		#region ClaseRefe opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseRefe.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.TargetClase
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Clase> ClaseRefe
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.TargetClaseDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -383,6 +507,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase.DomainClassId)) 
 				{
 					return true;
 				}
@@ -434,6 +563,15 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			{
 				// Create link for path ClaseHasAtributoIdentificador.AtributoIdentificador
 				this.AtributoIdentificador.Add(sourceAtributoIdentificador3);
+
+				return;
+			}
+				
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClase4 = sourceElement as global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase;
+			if (sourceClase4 != null)
+			{
+				// Create link for path ClaseHasClaseHija.subClase
+				this.subClase.Add(sourceClase4);
 
 				return;
 			}
@@ -497,6 +635,20 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.ClaseDomainRoleId, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.AtributoIdentificadorDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClase4 = sourceElement as global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase;
+			if (sourceClase4 != null)
+			{
+				// Delete link for path ClaseHasClaseHija.subClase
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.GetLinks((global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)this, sourceClase4))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClaseDomainRoleId, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClaseDomainRoleId);
 				}
 
 				return;
