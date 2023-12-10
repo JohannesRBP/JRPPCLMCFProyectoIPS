@@ -189,6 +189,14 @@
     <value>Tipo Dato Calculado</value>
     <comment>DisplayName for DomainProperty &apos;tipoDatoCalculado&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Atributo/modAcceso.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Atributo.Mod Acceso</value>
+    <comment>Description for DomainProperty &apos;modAcceso&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Atributo/modAcceso.DisplayName" xml:space="preserve">
+    <value>Mod Acceso</value>
+    <comment>DisplayName for DomainProperty &apos;modAcceso&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Operacion.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Operacion</value>
     <comment>Description for DomainClass &apos;Operacion&apos;</comment>
@@ -204,6 +212,22 @@
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Operacion/nombre.DisplayName" xml:space="preserve">
     <value>Nombre</value>
     <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Operacion/parametrosCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Operacion.Parametros Calculado</value>
+    <comment>Description for DomainProperty &apos;parametrosCalculado&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Operacion/parametrosCalculado.DisplayName" xml:space="preserve">
+    <value>Parametros Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;parametrosCalculado&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Operacion/modAcceso.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Operacion.Mod Acceso</value>
+    <comment>Description for DomainProperty &apos;modAcceso&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Operacion/modAcceso.DisplayName" xml:space="preserve">
+    <value>Mod Acceso</value>
+    <comment>DisplayName for DomainProperty &apos;modAcceso&apos; on DomainClass &apos;Operacion&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador</value>
@@ -356,14 +380,6 @@
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/tipoDato.DisplayName" xml:space="preserve">
     <value>Tipo Dato</value>
     <comment>DisplayName for DomainProperty &apos;tipoDato&apos; on DomainClass &apos;Parametro&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/tipoParametro.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Tipo Parametro</value>
-    <comment>Description for DomainProperty &apos;tipoParametro&apos; on DomainClass &apos;Parametro&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/tipoParametro.DisplayName" xml:space="preserve">
-    <value>Tipo Parametro</value>
-    <comment>DisplayName for DomainProperty &apos;tipoParametro&apos; on DomainClass &apos;Parametro&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/nombre.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Nombre</value>
@@ -677,22 +693,6 @@
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato.Double</value>
     <comment>Description for EnumerationLiteral &apos;Double&apos; on DomainEnumeration &apos;TipoDato&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.AtributoMetafora.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.AtributoMetafora</value>
-    <comment>Description for DomainClass &apos;AtributoMetafora&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.AtributoMetafora.DisplayName" xml:space="preserve">
-    <value>Atributo Metafora</value>
-    <comment>DisplayName for DomainClass &apos;AtributoMetafora&apos;</comment>
-  </data>
-  <data name="AtributoMetaforanombreDecDefaultText" xml:space="preserve">
-    <value>nombreDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="AtributoMetaforatipoDatoDecDefaultText" xml:space="preserve">
-    <value>tipoDatoDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseMetafora</value>
     <comment>Description for DomainClass &apos;ClaseMetafora&apos;</comment>
@@ -705,7 +705,7 @@
     <value></value>
     <comment>Compartment title</comment>
   </data>
-  <data name="ClaseMetaforaOperacionTitle" xml:space="preserve">
+  <data name="ClaseMetaforaOpereacionTitle" xml:space="preserve">
     <value></value>
     <comment>Compartment title</comment>
   </data>
@@ -747,6 +747,22 @@
   </data>
   <data name="ClaseToolboxTooltip" xml:space="preserve">
     <value>Clase</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="OperacionToolboxItem" xml:space="preserve">
+    <value>Operacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="OperacionToolboxTooltip" xml:space="preserve">
+    <value>Operacion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ParametroToolboxItem" xml:space="preserve">
+    <value>Parametro</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ParametroToolboxTooltip" xml:space="preserve">
+    <value>Parametro</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -874,12 +890,24 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ClaseMetaforaIconCDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\C.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
   <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\A.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="ClaseToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\ExampleShapeToolBitmap.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\C.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="OperacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\O.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ParametroToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\P.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

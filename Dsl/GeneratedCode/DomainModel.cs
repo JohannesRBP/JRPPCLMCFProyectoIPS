@@ -86,7 +86,6 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				typeof(ClaseEnriquecidaHasEstiloOperacion),
 				typeof(ClaseEnriquecidaHasEstiloAtributo),
 				typeof(JRPPCLMCFProyectoIPSDiagram),
-				typeof(AtributoMetafora),
 				typeof(ClaseMetafora),
 				typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.FixUpDiagram),
 				typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.CompartmentItemAddRule),
@@ -109,7 +108,10 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				new DomainMemberInfo(typeof(Atributo), "nombre", Atributo.nombreDomainPropertyId, typeof(Atributo.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "tipoDato", Atributo.tipoDatoDomainPropertyId, typeof(Atributo.tipoDatoPropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "tipoDatoCalculado", Atributo.tipoDatoCalculadoDomainPropertyId, typeof(Atributo.tipoDatoCalculadoPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "modAcceso", Atributo.modAccesoDomainPropertyId, typeof(Atributo.modAccesoPropertyHandler)),
 				new DomainMemberInfo(typeof(Operacion), "nombre", Operacion.nombreDomainPropertyId, typeof(Operacion.nombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Operacion), "parametrosCalculado", Operacion.parametrosCalculadoDomainPropertyId, typeof(Operacion.parametrosCalculadoPropertyHandler)),
+				new DomainMemberInfo(typeof(Operacion), "modAcceso", Operacion.modAccesoDomainPropertyId, typeof(Operacion.modAccesoPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoIdentificador), "nombre", AtributoIdentificador.nombreDomainPropertyId, typeof(AtributoIdentificador.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoIdentificador), "tipoDato", AtributoIdentificador.tipoDatoDomainPropertyId, typeof(AtributoIdentificador.tipoDatoPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloClase), "colorFondo", EstiloClase.colorFondoDomainPropertyId, typeof(EstiloClase.colorFondoPropertyHandler)),
@@ -124,7 +126,6 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				new DomainMemberInfo(typeof(EstiloOperacion), "tipoLetra", EstiloOperacion.tipoLetraDomainPropertyId, typeof(EstiloOperacion.tipoLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloOperacion), "colorLetra", EstiloOperacion.colorLetraDomainPropertyId, typeof(EstiloOperacion.colorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(Parametro), "tipoDato", Parametro.tipoDatoDomainPropertyId, typeof(Parametro.tipoDatoPropertyHandler)),
-				new DomainMemberInfo(typeof(Parametro), "tipoParametro", Parametro.tipoParametroDomainPropertyId, typeof(Parametro.tipoParametroPropertyHandler)),
 				new DomainMemberInfo(typeof(Parametro), "nombre", Parametro.nombreDomainPropertyId, typeof(Parametro.nombrePropertyHandler)),
 			};
 		}
@@ -173,7 +174,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(13);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(12);
 				createElementMap.Add(typeof(TapizClassWeb), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(ClaseEnriquecida), 2);
@@ -185,8 +186,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				createElementMap.Add(typeof(EstiloOperacion), 8);
 				createElementMap.Add(typeof(Parametro), 9);
 				createElementMap.Add(typeof(JRPPCLMCFProyectoIPSDiagram), 10);
-				createElementMap.Add(typeof(AtributoMetafora), 11);
-				createElementMap.Add(typeof(ClaseMetafora), 12);
+				createElementMap.Add(typeof(ClaseMetafora), 11);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -211,8 +211,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				case 8: return new EstiloOperacion(partition, propertyAssignments);
 				case 9: return new Parametro(partition, propertyAssignments);
 				case 10: return new JRPPCLMCFProyectoIPSDiagram(partition, propertyAssignments);
-				case 11: return new AtributoMetafora(partition, propertyAssignments);
-				case 12: return new ClaseMetafora(partition, propertyAssignments);
+				case 11: return new ClaseMetafora(partition, propertyAssignments);
 				default: return null;
 			}
 		}

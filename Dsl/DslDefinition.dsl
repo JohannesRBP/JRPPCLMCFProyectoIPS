@@ -96,6 +96,11 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="979fdb55-9380-4055-a6ed-eb81fd58ae54" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Atributo.Mod Acceso" Name="modAcceso" DisplayName="Mod Acceso">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="5506969c-a465-41b1-808f-d124a632a5b1" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Operacion" Name="Operacion" DisplayName="Operacion" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
@@ -105,12 +110,12 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="4780fb8f-ee89-4cee-af14-99db7188a3a6" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Operacion.Parametros" Name="parametros" DisplayName="Parametros">
+        <DomainProperty Id="12ac8132-9423-4a1a-bc3a-031db6a994fe" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Operacion.Parametros Calculado" Name="parametrosCalculado" DisplayName="Parametros Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="12ac8132-9423-4a1a-bc3a-031db6a994fe" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Operacion.Parametros Calculado" Name="parametrosCalculado" DisplayName="Parametros Calculado">
+        <DomainProperty Id="43d0bbd0-bbd0-4c82-bcf4-3d797b5bb1e6" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Operacion.Mod Acceso" Name="modAcceso" DisplayName="Mod Acceso">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -213,11 +218,6 @@
         <DomainProperty Id="3dee28e9-44eb-45aa-befd-cd31e7b3bc74" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Tipo Dato" Name="tipoDato" DisplayName="Tipo Dato">
           <Type>
             <DomainEnumerationMoniker Name="TipoDato" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="74746f14-3079-408e-970c-35902e1b7a14" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Tipo Parametro" Name="tipoParametro" DisplayName="Tipo Parametro">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="3d3ebe9b-db95-487f-a87d-c9c8dd0074b0" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Nombre" Name="nombre" DisplayName="Nombre">
@@ -386,14 +386,15 @@
     </DomainEnumeration>
   </Types>
   <Shapes>
-    <CompartmentShape Id="fa56f67d-987a-4f21-b72e-0cf9d5b1ad2b" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseMetafora" Name="ClaseMetafora" DisplayName="Clase Metafora" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Clase Metafora" InitialHeight="1" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+    <CompartmentShape Id="fa56f67d-987a-4f21-b72e-0cf9d5b1ad2b" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseMetafora" Name="ClaseMetafora" DisplayName="Clase Metafora" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Clase Metafora" FillColor="LightSeaGreen" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="parametroDec" DisplayName="Parametro Dec" DefaultText="parametroDec" />
+        <IconDecorator Name="IconC" DisplayName="Icon C" DefaultIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\C.bmp" />
       </ShapeHasDecorators>
       <Compartment Name="Atributo" />
+      <Compartment Name="Opereacion" />
     </CompartmentShape>
   </Shapes>
   <XmlSerializationBehavior Name="JRPPCLMCFProyectoIPSSerializationBehavior" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
@@ -452,6 +453,9 @@
           <XmlPropertyData XmlName="tipoDatoCalculado" Representation="Ignore">
             <DomainPropertyMoniker Name="Atributo/tipoDatoCalculado" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="modAcceso">
+            <DomainPropertyMoniker Name="Atributo/modAcceso" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="Operacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="operacionMoniker" ElementName="operacion" MonikerTypeName="OperacionMoniker">
@@ -463,11 +467,11 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="parametro">
             <DomainRelationshipMoniker Name="OperacionHasParametro" />
           </XmlRelationshipData>
-          <XmlPropertyData XmlName="parametros">
-            <DomainPropertyMoniker Name="Operacion/parametros" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="parametrosCalculado">
+          <XmlPropertyData XmlName="parametrosCalculado" Representation="Ignore">
             <DomainPropertyMoniker Name="Operacion/parametrosCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="modAcceso">
+            <DomainPropertyMoniker Name="Operacion/modAcceso" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -536,9 +540,6 @@
           <XmlPropertyData XmlName="tipoDato">
             <DomainPropertyMoniker Name="Parametro/tipoDato" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="tipoParametro">
-            <DomainPropertyMoniker Name="Parametro/tipoParametro" />
-          </XmlPropertyData>
           <XmlPropertyData XmlName="nombre">
             <DomainPropertyMoniker Name="Parametro/nombre" />
           </XmlPropertyData>
@@ -593,6 +594,28 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <CompartmentShapeMoniker Name="ClaseMetafora" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="ClaseMetafora/Atributo" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseHasAtributo.Atributo/!Atributo</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/tipoDatoCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="ClaseMetafora/Opereacion" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseHasOperacion.Operacion/!Operacion</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Operacion/parametrosCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
       </CompartmentShapeMap>
     </ShapeMaps>
   </Diagram>
@@ -604,11 +627,17 @@
       <XmlSerializationBehaviorMoniker Name="JRPPCLMCFProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
     <ToolboxTab TabText="JRPPCLMCFProyectoIPS">
-      <ElementTool Name="Atributo" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Atributo" Tooltip="Atributo" HelpKeyword="Atributo">
+      <ElementTool Name="Atributo" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\A.bmp" Caption="Atributo" Tooltip="Atributo" HelpKeyword="Atributo">
         <DomainClassMoniker Name="Atributo" />
       </ElementTool>
-      <ElementTool Name="Clase" ToolboxIcon="Resources\ExampleShapeToolBitmap.bmp" Caption="Clase" Tooltip="Clase" HelpKeyword="Clase">
+      <ElementTool Name="Clase" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\C.bmp" Caption="Clase" Tooltip="Clase" HelpKeyword="Clase">
         <DomainClassMoniker Name="Clase" />
+      </ElementTool>
+      <ElementTool Name="Operacion" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\O.bmp" Caption="Operacion" Tooltip="Operacion" HelpKeyword="Operacion">
+        <DomainClassMoniker Name="Operacion" />
+      </ElementTool>
+      <ElementTool Name="Parametro" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\P.bmp" Caption="Parametro" Tooltip="Parametro" HelpKeyword="Parametro">
+        <DomainClassMoniker Name="Parametro" />
       </ElementTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

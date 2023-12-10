@@ -45,6 +45,22 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"@ClaseToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 1)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSToolboxTab",
+					"@OperacionToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JRPPCLMCFProyectoIPS.OperacionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Operacion", 
+					"@OperacionToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 2)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSToolboxTab",
+					"@ParametroToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JRPPCLMCFProyectoIPS.ParametroToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"Parametro", 
+					"@ParametroToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 3)]
 	[VSShell::ProvideEditorFactory(typeof(JRPPCLMCFProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JRPPCLMCFProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JRPPCLMCFProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

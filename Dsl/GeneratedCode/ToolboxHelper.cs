@@ -94,7 +94,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		{
 			get
 			{
-				return 2;
+				return 4;
 			}
 		}
 		
@@ -171,6 +171,38 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						"Clase", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ClaseToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "UPM_IPS.JRPPCLMCFProyectoIPS.OperacionToolboxItem":
+					// Add Operacion shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JRPPCLMCFProyectoIPS.OperacionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						3, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("OperacionToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("OperacionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("JRPPCLMCFProyectoIPSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Operacion", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("OperacionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JRPPCLMCFProyectoIPS.Operacion.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "UPM_IPS.JRPPCLMCFProyectoIPS.ParametroToolboxItem":
+					// Add Parametro shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JRPPCLMCFProyectoIPS.ParametroToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						4, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ParametroToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ParametroToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("JRPPCLMCFProyectoIPSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Parametro", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ParametroToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});

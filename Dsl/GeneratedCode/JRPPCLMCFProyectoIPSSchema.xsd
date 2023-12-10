@@ -229,6 +229,8 @@
         <xsd:attribute name="nombre" type="xsd:string" />
         <!-- Property: tipoDato -->
         <xsd:attribute name="tipoDato" type="TipoDato" />
+        <!-- Property: modAcceso -->
+        <xsd:attribute name="modAcceso" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -280,6 +282,8 @@
         </xsd:attribute>
         <!-- Property: nombre -->
         <xsd:attribute name="nombre" type="xsd:string" />
+        <!-- Property: modAcceso -->
+        <xsd:attribute name="modAcceso" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -468,8 +472,6 @@
         </xsd:attribute>
         <!-- Property: tipoDato -->
         <xsd:attribute name="tipoDato" type="TipoDato" />
-        <!-- Property: tipoParametro -->
-        <xsd:attribute name="tipoParametro" type="xsd:string" />
         <!-- Property: nombre -->
         <xsd:attribute name="nombre" type="xsd:string" />
       </xsd:extension>
