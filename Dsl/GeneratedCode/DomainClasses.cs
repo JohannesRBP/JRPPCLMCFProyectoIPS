@@ -63,6 +63,22 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			}
 		}
 		#endregion
+		#region ClaseEnumeradors opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of ClaseEnumeradors.
+		/// Description for
+		/// UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.TapizClassWeb
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ClaseEnumerador> ClaseEnumeradors
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ClaseEnumerador>, ClaseEnumerador>(global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.TapizClassWebDomainRoleId);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the
@@ -84,6 +100,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase.DomainClassId)) 
+				{
+					return true;
+				}
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.DomainClassId)) 
 				{
 					return true;
 				}
@@ -120,6 +141,15 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 
 				return;
 			}
+				
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador sourceClaseEnumerador2 = sourceElement as global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador;
+			if (sourceClaseEnumerador2 != null)
+			{
+				// Create link for path TapizClassWebHasClaseEnumeradors.ClaseEnumeradors
+				this.ClaseEnumeradors.Add(sourceClaseEnumerador2);
+
+				return;
+			}
 		
 			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
 			// during a "Paste".
@@ -152,6 +182,20 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
 					link.Delete(global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClase.TapizClassWebDomainRoleId, global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClase.ClaseDomainRoleId);
+				}
+
+				return;
+			}
+				
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador sourceClaseEnumerador2 = sourceElement as global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador;
+			if (sourceClaseEnumerador2 != null)
+			{
+				// Delete link for path TapizClassWebHasClaseEnumeradors.ClaseEnumeradors
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.GetLinks((global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb)this, sourceClaseEnumerador2))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.TapizClassWebDomainRoleId, global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.ClaseEnumeradorDomainRoleId);
 				}
 
 				return;
@@ -4217,6 +4261,415 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			set
 			{
 				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.OperacionHasParametro.ParametroDomainRoleId, value);
+			}
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.JRPPCLMCFProyectoIPS
+{
+	/// <summary>
+	/// DomainClass ClaseEnumerador
+	/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("f96ef5a4-919b-4a0f-b2c3-719e32ae3eba")]
+	public partial class ClaseEnumerador : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// ClaseEnumerador domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xf96ef5a4, 0x919b, 0x4a0f, 0xb2, 0xc3, 0x71, 0x9e, 0x32, 0xae, 0x3e, 0xba);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ClaseEnumerador(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public ClaseEnumerador(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region nombre domain property code
+		
+		/// <summary>
+		/// nombre domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x1988b470, 0x18d1, 0x46fb, 0xb8, 0x58, 0x81, 0x75, 0x86, 0x4c, 0x11, 0xab);
+		
+		/// <summary>
+		/// Storage for nombre
+		/// </summary>
+		private global::System.String nombrePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombre domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.Nombre
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador/nombre.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador/nombre.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("1988b470-18d1-46fb-b858-8175864c11ab")]
+		public global::System.String nombre
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombrePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombrePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseEnumerador.nombre domain property.
+		/// </summary>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseEnumerador, global::System.String>
+		{
+			private nombrePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseEnumerador.nombre domain property value handler.
+			/// </summary>
+			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseEnumerador.nombre domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ClaseEnumerador element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombrePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseEnumerador element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombrePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region TapizClassWeb opposite domain role accessor
+		/// <summary>
+		/// Gets or sets TapizClassWeb.
+		/// Description for
+		/// UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.ClaseEnumerador
+		/// </summary>
+		public virtual TapizClassWeb TapizClassWeb
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.ClaseEnumeradorDomainRoleId) as TapizClassWeb;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.ClaseEnumeradorDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Enumeradors opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Enumeradors.
+		/// Description for
+		/// UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.ClaseEnumerador
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Enumerador> Enumeradors
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Enumerador>, Enumerador>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.ClaseEnumeradorDomainRoleId);
+			}
+		}
+		#endregion
+		#region ElementGroupPrototype Merge methods
+		/// <summary>
+		/// Returns a value indicating whether the source element represented by the
+		/// specified root ProtoElement can be added to this element.
+		/// </summary>
+		/// <param name="rootElement">
+		/// The root ProtoElement representing a source element.  This can be null, 
+		/// in which case the ElementGroupPrototype does not contain an ProtoElements
+		/// and the code should inspect the ElementGroupPrototype context information.
+		/// </param>
+		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
+		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
+		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
+		{
+			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
+			
+			if (rootElement != null)
+			{
+				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador.DomainClassId)) 
+				{
+					return true;
+				}
+			}
+			return base.CanMerge(rootElement, elementGroupPrototype);
+		}
+		
+		/// <summary>
+		/// Called by the Merge process to create a relationship between 
+		/// this target element and the specified source element. 
+		/// Typically, a parent-child relationship is established
+		/// between the target element (the parent) and the source element 
+		/// (the child), but any relationship can be established.
+		/// </summary>
+		/// <param name="sourceElement">The element that is to be related to this model element.</param>
+		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
+		/// <remarks>
+		/// This method is overriden to create the relationship between the target element and the specified source element.
+		/// The base method does nothing.
+		/// </remarks>
+		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
+		{
+			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
+			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
+			// need to support this case.
+			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
+		
+				
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador sourceEnumerador1 = sourceElement as global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador;
+			if (sourceEnumerador1 != null)
+			{
+				// Create link for path ClaseEnumeradorHasEnumeradors.Enumeradors
+				this.Enumeradors.Add(sourceEnumerador1);
+
+				return;
+			}
+		
+			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
+			// during a "Paste".
+			if (sourceElement is DslModeling::ExtensionElement
+				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
+			{
+				return;
+			}
+		
+			// Fall through to base class if this class hasn't handled the merge.
+			base.MergeRelate(sourceElement, elementGroup);
+		}
+		
+		/// <summary>
+		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
+		/// element from the current one (removes links created by MergeRelate).
+		/// </summary>
+		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
+		{
+			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
+				
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador sourceEnumerador1 = sourceElement as global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador;
+			if (sourceEnumerador1 != null)
+			{
+				// Delete link for path ClaseEnumeradorHasEnumeradors.Enumeradors
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.GetLinks((global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador)this, sourceEnumerador1))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.ClaseEnumeradorDomainRoleId, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.EnumeradorDomainRoleId);
+				}
+
+				return;
+			}
+			// Fall through to base class if this class hasn't handled the unmerge.
+			base.MergeDisconnect(sourceElement);
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.JRPPCLMCFProyectoIPS
+{
+	/// <summary>
+	/// DomainClass Enumerador
+	/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("9a38d11e-0f6d-46de-aecd-d1b2042fb7c2")]
+	public partial class Enumerador : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Enumerador domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x9a38d11e, 0x0f6d, 0x46de, 0xae, 0xcd, 0xd1, 0xb2, 0x04, 0x2f, 0xb7, 0xc2);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Enumerador(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Enumerador(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region nombre domain property code
+		
+		/// <summary>
+		/// nombre domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x03175537, 0x6c68, 0x4067, 0xb9, 0x1d, 0x3d, 0x4d, 0xc9, 0xdb, 0x22, 0x42);
+		
+		/// <summary>
+		/// Storage for nombre
+		/// </summary>
+		private global::System.String nombrePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombre domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador.Nombre
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador/nombre.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador/nombre.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("03175537-6c68-4067-b91d-3d4dc9db2242")]
+		public global::System.String nombre
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombrePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombrePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Enumerador.nombre domain property.
+		/// </summary>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<Enumerador, global::System.String>
+		{
+			private nombrePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Enumerador.nombre domain property value handler.
+			/// </summary>
+			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Enumerador.nombre domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Enumerador element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombrePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Enumerador element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombrePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region ClaseEnumerador opposite domain role accessor
+		/// <summary>
+		/// Gets or sets ClaseEnumerador.
+		/// Description for
+		/// UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.Enumerador
+		/// </summary>
+		public virtual ClaseEnumerador ClaseEnumerador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.EnumeradorDomainRoleId) as ClaseEnumerador;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.EnumeradorDomainRoleId, value);
 			}
 		}
 		#endregion

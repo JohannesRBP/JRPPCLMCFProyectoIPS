@@ -493,6 +493,38 @@
     <value>Tipo Parametro Calculado</value>
     <comment>DisplayName for DomainProperty &apos;tipoParametroCalculado&apos; on DomainClass &apos;Parametro&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador</value>
+    <comment>Description for DomainClass &apos;ClaseEnumerador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.DisplayName" xml:space="preserve">
+    <value>Clase Enumerador</value>
+    <comment>DisplayName for DomainClass &apos;ClaseEnumerador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseEnumerador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador/nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseEnumerador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador</value>
+    <comment>Description for DomainClass &apos;Enumerador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador.DisplayName" xml:space="preserve">
+    <value>Enumerador</value>
+    <comment>DisplayName for DomainClass &apos;Enumerador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador/nombre.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador.Nombre</value>
+    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;Enumerador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador/nombre.DisplayName" xml:space="preserve">
+    <value>Nombre</value>
+    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;Enumerador&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClase</value>
     <comment>Description for DomainClass &apos;TapizClassWebHasClase&apos;</comment>
@@ -957,6 +989,70 @@
     <value>Super Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors</value>
+    <comment>Description for DomainClass &apos;TapizClassWebHasClaseEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.DisplayName" xml:space="preserve">
+    <value>Tapiz Class Web Has Clase Enumeradors</value>
+    <comment>DisplayName for DomainClass &apos;TapizClassWebHasClaseEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/TapizClassWeb.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.TapizClassWeb</value>
+    <comment>Description for DomainRole &apos;TapizClassWeb&apos; on DomainRelationship &apos;TapizClassWebHasClaseEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/TapizClassWeb.DisplayName" xml:space="preserve">
+    <value>Tapiz Class Web</value>
+    <comment>DisplayName for DomainRole &apos;TapizClassWeb&apos; on DomainRelationship &apos;TapizClassWebHasClaseEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/TapizClassWeb.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Enumeradors</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TapizClassWeb&apos; on DomainRelationship &apos;TapizClassWebHasClaseEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/ClaseEnumerador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.ClaseEnumerador</value>
+    <comment>Description for DomainRole &apos;ClaseEnumerador&apos; on DomainRelationship &apos;TapizClassWebHasClaseEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/ClaseEnumerador.DisplayName" xml:space="preserve">
+    <value>Clase Enumerador</value>
+    <comment>DisplayName for DomainRole &apos;ClaseEnumerador&apos; on DomainRelationship &apos;TapizClassWebHasClaseEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/ClaseEnumerador.PropertyDisplayName" xml:space="preserve">
+    <value>Tapiz Class Web</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClaseEnumerador&apos; on DomainRelationship &apos;TapizClassWebHasClaseEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors</value>
+    <comment>Description for DomainClass &apos;ClaseEnumeradorHasEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.DisplayName" xml:space="preserve">
+    <value>Clase Enumerador Has Enumeradors</value>
+    <comment>DisplayName for DomainClass &apos;ClaseEnumeradorHasEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/ClaseEnumerador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.ClaseEnumerador</value>
+    <comment>Description for DomainRole &apos;ClaseEnumerador&apos; on DomainRelationship &apos;ClaseEnumeradorHasEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/ClaseEnumerador.DisplayName" xml:space="preserve">
+    <value>Clase Enumerador</value>
+    <comment>DisplayName for DomainRole &apos;ClaseEnumerador&apos; on DomainRelationship &apos;ClaseEnumeradorHasEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/ClaseEnumerador.PropertyDisplayName" xml:space="preserve">
+    <value>Enumeradors</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClaseEnumerador&apos; on DomainRelationship &apos;ClaseEnumeradorHasEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/Enumerador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.Enumerador</value>
+    <comment>Description for DomainRole &apos;Enumerador&apos; on DomainRelationship &apos;ClaseEnumeradorHasEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/Enumerador.DisplayName" xml:space="preserve">
+    <value>Enumerador</value>
+    <comment>DisplayName for DomainRole &apos;Enumerador&apos; on DomainRelationship &apos;ClaseEnumeradorHasEnumeradors&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/Enumerador.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Enumerador</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Enumerador&apos; on DomainRelationship &apos;ClaseEnumeradorHasEnumeradors&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato/Boolean.DisplayName" xml:space="preserve">
     <value>Boolean</value>
     <comment>Display name for EnumerationLiteral &apos;Boolean&apos; on DomainEnumeration &apos;TipoDato&apos;</comment>
@@ -1004,6 +1100,14 @@
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato/Double.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato.Double</value>
     <comment>Description for EnumerationLiteral &apos;Double&apos; on DomainEnumeration &apos;TipoDato&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato/tipoHabitacion.DisplayName" xml:space="preserve">
+    <value>tipoHabitacion</value>
+    <comment>Display name for EnumerationLiteral &apos;tipoHabitacion&apos; on DomainEnumeration &apos;TipoDato&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato/tipoHabitacion.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato.tipoHabitacion</value>
+    <comment>Description for EnumerationLiteral &apos;tipoHabitacion&apos; on DomainEnumeration &apos;TipoDato&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Verde.DisplayName" xml:space="preserve">
     <value>Verde</value>
@@ -1233,6 +1337,26 @@
     <value>tipoParametroDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador</value>
+    <comment>Description for DomainClass &apos;MetaforaEnumerador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador.DisplayName" xml:space="preserve">
+    <value>Metafora Enumerador</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaEnumerador&apos;</comment>
+  </data>
+  <data name="MetaforaEnumeradorenumeradorDecTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="MetaforaEnumeradornombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaEnumerador&lt;&lt;Enumerator&gt;&gt;DefaultText" xml:space="preserve">
+    <value>&lt;&lt;Enumerator&gt;&gt;</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase</value>
     <comment>Description for DomainClass &apos;MetaforaClase_Clase&apos;</comment>
@@ -1355,6 +1479,14 @@
   </data>
   <data name="ParametroToolboxTooltip" xml:space="preserve">
     <value>Parametro</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ClaseEnumeradorToolboxItem" xml:space="preserve">
+    <value>ClaseEnumerador</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ClaseEnumeradorToolboxTooltip" xml:space="preserve">
+    <value>Clase Enumerador</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UML_CONECTORSToolboxTab" xml:space="preserve">
@@ -1592,6 +1724,10 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="ParametroToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\P.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ClaseEnumeradorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\enumerado.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="AsociacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">

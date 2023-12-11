@@ -11,6 +11,14 @@
             <DomainPath>TapizClassWebHasClase.Clase</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="ClaseEnumerador" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>TapizClassWebHasClaseEnumeradors.ClaseEnumeradors</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="bceb35b6-ba73-428e-b05a-d30989aae4a5" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Clase" Name="Clase" DisplayName="Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
@@ -292,6 +300,34 @@
         </DomainProperty>
       </Properties>
     </DomainClass>
+    <DomainClass Id="f96ef5a4-919b-4a0f-b2c3-719e32ae3eba" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador" Name="ClaseEnumerador" DisplayName="Clase Enumerador" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
+      <Properties>
+        <DomainProperty Id="1988b470-18d1-46fb-b858-8175864c11ab" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.Nombre" Name="nombre" DisplayName="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Enumerador" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ClaseEnumeradorHasEnumeradors.Enumeradors</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="9a38d11e-0f6d-46de-aecd-d1b2042fb7c2" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador" Name="Enumerador" DisplayName="Enumerador" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
+      <Properties>
+        <DomainProperty Id="03175537-6c68-4067-b91d-3d4dc9db2242" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador.Nombre" Name="nombre" DisplayName="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
   </Classes>
   <Relationships>
     <DomainRelationship Id="7420f56a-d1d9-4569-ac79-41a7f8eecec3" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClase" Name="TapizClassWebHasClase" DisplayName="Tapiz Class Web Has Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" IsEmbedding="true">
@@ -544,6 +580,38 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="7e6c3bf4-6655-4779-a0fc-0c19fd00afa7" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors" Name="TapizClassWebHasClaseEnumeradors" DisplayName="Tapiz Class Web Has Clase Enumeradors" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="10850e2f-63b2-4bac-b07a-b82bff51f0eb" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.TapizClassWeb" Name="TapizClassWeb" DisplayName="Tapiz Class Web" PropertyName="ClaseEnumeradors" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Clase Enumeradors">
+          <RolePlayer>
+            <DomainClassMoniker Name="TapizClassWeb" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="d2e1aad7-fc17-4173-8baa-5344af5d739a" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.ClaseEnumerador" Name="ClaseEnumerador" DisplayName="Clase Enumerador" PropertyName="TapizClassWeb" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Tapiz Class Web">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClaseEnumerador" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="b89bcc27-fe34-4ee4-b16b-5a6b2cdd960e" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors" Name="ClaseEnumeradorHasEnumeradors" DisplayName="Clase Enumerador Has Enumeradors" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="9bdcca01-6e06-41e0-9b69-4ad191e73d52" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.ClaseEnumerador" Name="ClaseEnumerador" DisplayName="Clase Enumerador" PropertyName="Enumeradors" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Enumeradors">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClaseEnumerador" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="f445630f-aa7b-4cc7-8fe2-2525f90722c9" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.Enumerador" Name="Enumerador" DisplayName="Enumerador" PropertyName="ClaseEnumerador" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Clase Enumerador">
+          <RolePlayer>
+            <DomainClassMoniker Name="Enumerador" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -569,6 +637,7 @@
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato.String" Name="String" Value="5" />
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato.Float" Name="Float" Value="3" />
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato.Double" Name="Double" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato.tipoHabitacion" Name="tipoHabitacion" Value="6" />
       </Literals>
     </DomainEnumeration>
     <DomainEnumeration Name="TipoColor" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor">
@@ -681,6 +750,15 @@
         <TextDecorator Name="tipoParametroDec" DisplayName="Tipo Parametro Dec" DefaultText="tipoParametroDec" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <CompartmentShape Id="2ae12404-188b-40f4-b27d-88a17c3bb943" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador" Name="MetaforaEnumerador" DisplayName="Metafora Enumerador" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Enumerador" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="OuterTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="&lt;&lt;Enumerator&gt;&gt;" DisplayName="&lt;&lt; Enumerator&gt;&gt;" DefaultText="&lt;&lt;Enumerator&gt;&gt;" />
+      </ShapeHasDecorators>
+      <Compartment Name="enumeradorDec" />
+    </CompartmentShape>
   </Shapes>
   <Connectors>
     <Connector Id="25c6962a-8dc5-43c1-bda8-80c6252e0847" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase" Name="MetaforaClase_Clase" DisplayName="Metafora Clase_ Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Clase_ Clase">
@@ -729,6 +807,9 @@
         <ElementData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="clase">
             <DomainRelationshipMoniker Name="TapizClassWebHasClase" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="claseEnumeradors">
+            <DomainRelationshipMoniker Name="TapizClassWebHasClaseEnumeradors" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -1025,6 +1106,34 @@
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
+      <XmlClassData TypeName="ClaseEnumerador" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnumeradorMoniker" ElementName="claseEnumerador" MonikerTypeName="ClaseEnumeradorMoniker">
+        <DomainClassMoniker Name="ClaseEnumerador" />
+        <ElementData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="ClaseEnumerador/nombre" />
+          </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="enumeradors">
+            <DomainRelationshipMoniker Name="ClaseEnumeradorHasEnumeradors" />
+          </XmlRelationshipData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="TapizClassWebHasClaseEnumeradors" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizClassWebHasClaseEnumeradorsMoniker" ElementName="tapizClassWebHasClaseEnumeradors" MonikerTypeName="TapizClassWebHasClaseEnumeradorsMoniker">
+        <DomainRelationshipMoniker Name="TapizClassWebHasClaseEnumeradors" />
+      </XmlClassData>
+      <XmlClassData TypeName="Enumerador" MonikerAttributeName="" SerializeId="true" MonikerElementName="enumeradorMoniker" ElementName="enumerador" MonikerTypeName="EnumeradorMoniker">
+        <DomainClassMoniker Name="Enumerador" />
+        <ElementData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="Enumerador/nombre" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseEnumeradorHasEnumeradors" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnumeradorHasEnumeradorsMoniker" ElementName="claseEnumeradorHasEnumeradors" MonikerTypeName="ClaseEnumeradorHasEnumeradorsMoniker">
+        <DomainRelationshipMoniker Name="ClaseEnumeradorHasEnumeradors" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaEnumerador" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaEnumeradorMoniker" ElementName="metaforaEnumerador" MonikerTypeName="MetaforaEnumeradorMoniker">
+        <CompartmentShapeMoniker Name="MetaforaEnumerador" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="JRPPCLMCFProyectoIPSExplorer" />
@@ -1308,6 +1417,33 @@
         </DecoratorMap>
         <GeometryShapeMoniker Name="MetaforaParametro" />
       </ShapeMap>
+      <CompartmentShapeMap>
+        <DomainClassMoniker Name="ClaseEnumerador" />
+        <ParentElementPath>
+          <DomainPath>TapizClassWebHasClaseEnumeradors.TapizClassWeb/!TapizClassWeb</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaEnumerador/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseEnumerador/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <CompartmentShapeMoniker Name="MetaforaEnumerador" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="MetaforaEnumerador/enumeradorDec" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseEnumeradorHasEnumeradors.Enumeradors/!Enumerador</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Enumerador/nombre" />
+              <DomainPath />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+      </CompartmentShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -1427,6 +1563,9 @@
       </ElementTool>
       <ElementTool Name="Parametro" ToolboxIcon="Resources\P.bmp" Caption="Parametro" Tooltip="Parametro" HelpKeyword="Parametro">
         <DomainClassMoniker Name="Parametro" />
+      </ElementTool>
+      <ElementTool Name="ClaseEnumerador" ToolboxIcon="Resources\enumerado.bmp" Caption="ClaseEnumerador" Tooltip="Clase Enumerador" HelpKeyword="ClaseEnumerador">
+        <DomainClassMoniker Name="ClaseEnumerador" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="UML_CONECTORS">

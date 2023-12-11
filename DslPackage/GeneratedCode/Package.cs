@@ -61,6 +61,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"@ParametroToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
 					Index = 3)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_TOOLSToolboxTab",
+					"@ClaseEnumeradorToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ClaseEnumerador", 
+					"@ClaseEnumeradorToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 4)]
 	[VSShell::ProvideStaticToolboxGroup("@UML_CONECTORSToolboxTab;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", "UPM_IPS.JRPPCLMCFProyectoIPS.UML_CONECTORSToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_CONECTORSToolboxTab",
 					"@AsociacionToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
@@ -69,7 +77,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"Asociacion", 
 					"@AsociacionToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 4)]
+					Index = 5)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_CONECTORSToolboxTab",
 					"@HerenciaToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					"UPM_IPS.JRPPCLMCFProyectoIPS.HerenciaToolboxItem", 
@@ -77,7 +85,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"Herencia", 
 					"@HerenciaToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 5)]
+					Index = 6)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_CONECTORSToolboxTab",
 					"@ComposicionToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					"UPM_IPS.JRPPCLMCFProyectoIPS.ComposicionToolboxItem", 
@@ -85,7 +93,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"Composicion", 
 					"@ComposicionToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 6)]
+					Index = 7)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_CONECTORSToolboxTab",
 					"@ReferencialToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					"UPM_IPS.JRPPCLMCFProyectoIPS.ReferencialToolboxItem", 
@@ -93,7 +101,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"Referencial", 
 					"@ReferencialToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 7)]
+					Index = 8)]
 	[VSShell::ProvideStaticToolboxGroup("@UML_WebToolsToolboxTab;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", "UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab",
 					"@ClaseEnriquecidaToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
@@ -102,7 +110,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"ClaseEnriquecida", 
 					"@ClaseEnriquecidaToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 8)]
+					Index = 9)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab",
 					"@EstiloClaseToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					"UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseToolboxItem", 
@@ -110,7 +118,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"EstiloClase", 
 					"@EstiloClaseToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 9)]
+					Index = 10)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab",
 					"@EstiloOperacionToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					"UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionToolboxItem", 
@@ -118,7 +126,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"EstiloOperacion", 
 					"@EstiloOperacionToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 10)]
+					Index = 11)]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab",
 					"@EstiloAtributoToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					"UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoToolboxItem", 
@@ -126,7 +134,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					"EstiloAtributo", 
 					"@EstiloAtributoToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
 					0xff00ff,
-					Index = 11)]
+					Index = 12)]
 	[VSShell::ProvideEditorFactory(typeof(JRPPCLMCFProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JRPPCLMCFProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JRPPCLMCFProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

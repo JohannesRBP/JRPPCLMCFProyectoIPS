@@ -3679,3 +3679,485 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		#endregion
 	}
 }
+namespace UPM_IPS.JRPPCLMCFProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship TapizClassWebHasClaseEnumeradors
+	/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("7e6c3bf4-6655-4779-a0fc-0c19fd00afa7")]
+	public partial class TapizClassWebHasClaseEnumeradors : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// TapizClassWebHasClaseEnumeradors domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x7e6c3bf4, 0x6655, 0x4779, 0xa0, 0xfc, 0x0c, 0x19, 0xfd, 0x00, 0xaf, 0xa7);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a TapizClassWebHasClaseEnumeradors link in the same Partition as the given TapizClassWeb
+		/// </summary>
+		/// <param name="source">TapizClassWeb to use as the source of the relationship.</param>
+		/// <param name="target">ClaseEnumerador to use as the target of the relationship.</param>
+		public TapizClassWebHasClaseEnumeradors(TapizClassWeb source, ClaseEnumerador target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(TapizClassWebHasClaseEnumeradors.TapizClassWebDomainRoleId, source), new DslModeling::RoleAssignment(TapizClassWebHasClaseEnumeradors.ClaseEnumeradorDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizClassWebHasClaseEnumeradors(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizClassWebHasClaseEnumeradors(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public TapizClassWebHasClaseEnumeradors(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public TapizClassWebHasClaseEnumeradors(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region TapizClassWeb domain role code
+		
+		/// <summary>
+		/// TapizClassWeb domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TapizClassWebDomainRoleId = new global::System.Guid(0x10850e2f, 0x63b2, 0x4bac, 0xb0, 0x7a, 0xb8, 0x2b, 0xff, 0x51, 0xf0, 0xeb);
+		
+		/// <summary>
+		/// DomainRole TapizClassWeb
+		/// Description for
+		/// UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.TapizClassWeb
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/TapizClassWeb.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/TapizClassWeb.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "ClaseEnumeradors", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/TapizClassWeb.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("10850e2f-63b2-4bac-b07a-b82bff51f0eb")]
+		public virtual TapizClassWeb TapizClassWeb
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (TapizClassWeb)DslModeling::DomainRoleInfo.GetRolePlayer(this, TapizClassWebDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TapizClassWebDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access TapizClassWeb of a ClaseEnumerador
+		/// <summary>
+		/// Gets TapizClassWeb.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static TapizClassWeb GetTapizClassWeb(ClaseEnumerador element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseEnumeradorDomainRoleId) as TapizClassWeb;
+		}
+		
+		/// <summary>
+		/// Sets TapizClassWeb.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetTapizClassWeb(ClaseEnumerador element, TapizClassWeb newTapizClassWeb)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseEnumeradorDomainRoleId, newTapizClassWeb);
+		}
+		#endregion
+		#region ClaseEnumerador domain role code
+		
+		/// <summary>
+		/// ClaseEnumerador domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseEnumeradorDomainRoleId = new global::System.Guid(0xd2e1aad7, 0xfc17, 0x4173, 0x8b, 0xaa, 0x53, 0x44, 0xaf, 0x5d, 0x73, 0x9a);
+		
+		/// <summary>
+		/// DomainRole ClaseEnumerador
+		/// Description for
+		/// UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.ClaseEnumerador
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/ClaseEnumerador.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/ClaseEnumerador.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "TapizClassWeb", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors/ClaseEnumerador.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("d2e1aad7-fc17-4173-8baa-5344af5d739a")]
+		public virtual ClaseEnumerador ClaseEnumerador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClaseEnumerador)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseEnumeradorDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseEnumeradorDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseEnumeradors of a TapizClassWeb
+		/// <summary>
+		/// Gets a list of ClaseEnumeradors.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ClaseEnumerador> GetClaseEnumeradors(TapizClassWeb element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ClaseEnumerador>, ClaseEnumerador>(element, TapizClassWebDomainRoleId);
+		}
+		#endregion
+		#region TapizClassWeb link accessor
+		/// <summary>
+		/// Get the list of TapizClassWebHasClaseEnumeradors links to a TapizClassWeb.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors> GetLinksToClaseEnumeradors ( global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb tapizClassWebInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors>(tapizClassWebInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.TapizClassWebDomainRoleId);
+		}
+		#endregion
+		#region ClaseEnumerador link accessor
+		/// <summary>
+		/// Get the TapizClassWebHasClaseEnumeradors link to a ClaseEnumerador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors GetLinkToTapizClassWeb (global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador claseEnumeradorInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors>(claseEnumeradorInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.ClaseEnumeradorDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ClaseEnumerador not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region TapizClassWebHasClaseEnumeradors instance accessors
+		
+		/// <summary>
+		/// Get any TapizClassWebHasClaseEnumeradors links between a given TapizClassWeb and a ClaseEnumerador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors> GetLinks( global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb source, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors>(source, global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.TapizClassWebDomainRoleId);
+			foreach ( global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors link in links )
+			{
+				if ( target.Equals(link.ClaseEnumerador) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one TapizClassWebHasClaseEnumeradors link between a given TapizClassWeband a ClaseEnumerador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors GetLink( global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb source, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors>(source, global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.TapizClassWebDomainRoleId);
+			foreach ( global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors link in links )
+			{
+				if ( target.Equals(link.ClaseEnumerador) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.JRPPCLMCFProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship ClaseEnumeradorHasEnumeradors
+	/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("b89bcc27-fe34-4ee4-b16b-5a6b2cdd960e")]
+	public partial class ClaseEnumeradorHasEnumeradors : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClaseEnumeradorHasEnumeradors domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb89bcc27, 0xfe34, 0x4ee4, 0xb1, 0x6b, 0x5a, 0x6b, 0x2c, 0xdd, 0x96, 0x0e);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClaseEnumeradorHasEnumeradors link in the same Partition as the given ClaseEnumerador
+		/// </summary>
+		/// <param name="source">ClaseEnumerador to use as the source of the relationship.</param>
+		/// <param name="target">Enumerador to use as the target of the relationship.</param>
+		public ClaseEnumeradorHasEnumeradors(ClaseEnumerador source, Enumerador target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseEnumeradorHasEnumeradors.ClaseEnumeradorDomainRoleId, source), new DslModeling::RoleAssignment(ClaseEnumeradorHasEnumeradors.EnumeradorDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnumeradorHasEnumeradors(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnumeradorHasEnumeradors(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClaseEnumeradorHasEnumeradors(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClaseEnumeradorHasEnumeradors(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ClaseEnumerador domain role code
+		
+		/// <summary>
+		/// ClaseEnumerador domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClaseEnumeradorDomainRoleId = new global::System.Guid(0x9bdcca01, 0x6e06, 0x41e0, 0x9b, 0x69, 0x4a, 0xd1, 0x91, 0xe7, 0x3d, 0x52);
+		
+		/// <summary>
+		/// DomainRole ClaseEnumerador
+		/// Description for
+		/// UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.ClaseEnumerador
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/ClaseEnumerador.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/ClaseEnumerador.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Enumeradors", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/ClaseEnumerador.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("9bdcca01-6e06-41e0-9b69-4ad191e73d52")]
+		public virtual ClaseEnumerador ClaseEnumerador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClaseEnumerador)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClaseEnumeradorDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClaseEnumeradorDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClaseEnumerador of a Enumerador
+		/// <summary>
+		/// Gets ClaseEnumerador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClaseEnumerador GetClaseEnumerador(Enumerador element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, EnumeradorDomainRoleId) as ClaseEnumerador;
+		}
+		
+		/// <summary>
+		/// Sets ClaseEnumerador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClaseEnumerador(Enumerador element, ClaseEnumerador newClaseEnumerador)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, EnumeradorDomainRoleId, newClaseEnumerador);
+		}
+		#endregion
+		#region Enumerador domain role code
+		
+		/// <summary>
+		/// Enumerador domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid EnumeradorDomainRoleId = new global::System.Guid(0xf445630f, 0xaa7b, 0x4cc7, 0x8f, 0xe2, 0x25, 0x25, 0xf9, 0x07, 0x22, 0xc9);
+		
+		/// <summary>
+		/// DomainRole Enumerador
+		/// Description for
+		/// UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.Enumerador
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/Enumerador.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/Enumerador.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClaseEnumerador", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors/Enumerador.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("f445630f-aa7b-4cc7-8fe2-2525f90722c9")]
+		public virtual Enumerador Enumerador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Enumerador)DslModeling::DomainRoleInfo.GetRolePlayer(this, EnumeradorDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, EnumeradorDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Enumeradors of a ClaseEnumerador
+		/// <summary>
+		/// Gets a list of Enumeradors.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Enumerador> GetEnumeradors(ClaseEnumerador element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Enumerador>, Enumerador>(element, ClaseEnumeradorDomainRoleId);
+		}
+		#endregion
+		#region ClaseEnumerador link accessor
+		/// <summary>
+		/// Get the list of ClaseEnumeradorHasEnumeradors links to a ClaseEnumerador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors> GetLinksToEnumeradors ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador claseEnumeradorInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors>(claseEnumeradorInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.ClaseEnumeradorDomainRoleId);
+		}
+		#endregion
+		#region Enumerador link accessor
+		/// <summary>
+		/// Get the ClaseEnumeradorHasEnumeradors link to a Enumerador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors GetLinkToClaseEnumerador (global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador enumeradorInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors>(enumeradorInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.EnumeradorDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Enumerador not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClaseEnumeradorHasEnumeradors instance accessors
+		
+		/// <summary>
+		/// Get any ClaseEnumeradorHasEnumeradors links between a given ClaseEnumerador and a Enumerador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors> GetLinks( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador source, global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors>(source, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.ClaseEnumeradorDomainRoleId);
+			foreach ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors link in links )
+			{
+				if ( target.Equals(link.Enumerador) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClaseEnumeradorHasEnumeradors link between a given ClaseEnumeradorand a Enumerador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors GetLink( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador source, global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors>(source, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors.ClaseEnumeradorDomainRoleId);
+			foreach ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors link in links )
+			{
+				if ( target.Equals(link.Enumerador) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}

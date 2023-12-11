@@ -23,16 +23,16 @@
             <atributo Id="b0dc618b-10e4-4fed-b1fa-c050740ddd25" nombre="id_empleado" tipoDato="Int" modAcceso="private" />
           </claseHasAtributo>
           <claseHasAtributo Id="0a9b1ced-5520-461a-9745-251254d8bf91">
-            <atributo Id="df757602-4fbc-4dde-a06b-5ab712834f8f" nombre="sueldo" tipoDato="Float" modAcceso="private" />
+            <atributo Id="df757602-4fbc-4dde-a06b-5ab712834f8f" nombre="sueldo" tipoDato="Int" modAcceso="private" />
           </claseHasAtributo>
         </atributo>
-        <claseContenida>
-          <claseComponeClases Id="963d8a20-4da8-46b0-926f-3a777e047283" nombre="gestiona" cardinalidadO="1" cardinalidadD="0..*">
+        <claseReferenciada1>
+          <claseReferenciaClase Id="9c3c99f8-6165-4298-bc7c-afd356e4d077" nombre="gestiona" cardinalidadO="1..*" cardinalidadD="0..*">
             <claseMoniker Id="fbb2b04b-95a4-4cd6-ae59-1435c6c2b30d" />
-          </claseComponeClases>
-        </claseContenida>
+          </claseReferenciaClase>
+        </claseReferenciada1>
         <subClase>
-          <clasePadreHasClaseHija Id="4cd4122f-9198-4eb1-a9ba-019e6a453203">
+          <clasePadreHasClaseHija Id="4cd4122f-9198-4eb1-a9ba-019e6a453203" tipoHerencia="{Total, Solapada}">
             <claseMoniker Id="b234be4b-af2f-4df0-9e02-c7d3704b5cbb" />
           </clasePadreHasClaseHija>
         </subClase>
@@ -63,7 +63,7 @@
             <atributo Id="6d7757bb-afa2-4cc3-a6e7-db6ab15aa79c" nombre="numHabitacion" tipoDato="Int" modAcceso="private" />
           </claseHasAtributo>
           <claseHasAtributo Id="05441058-172b-4dfc-98ee-3b5ae1fae1b1">
-            <atributo Id="1865272b-3351-4027-a481-3fc3aa31a48e" nombre="precio" tipoDato="Float" modAcceso="private" />
+            <atributo Id="1865272b-3351-4027-a481-3fc3aa31a48e" nombre="precio" tipoDato="Int" modAcceso="private" />
           </claseHasAtributo>
           <claseHasAtributo Id="473b8d37-3a44-4611-a93e-2d5c2dca280f">
             <atributo Id="1d13ba5f-666f-477b-bfbe-a2a351613235" nombre="tipoHabitacion" tipoDato="String" modAcceso="public" />
@@ -77,10 +77,10 @@
             <operacion Id="8c8569a7-7f70-4310-bf4a-b92868ea2238" nombre="reservarHabitacion">
               <parametro>
                 <operacionHasParametro Id="0f8af375-297f-4c82-934f-80f40b870dae">
-                  <parametro Id="7e9a528f-7bc5-4d31-8102-4449080e2ebe" tipoDato="Float" nombre="precio" tipoParametro="Entrada" />
+                  <parametro Id="7e9a528f-7bc5-4d31-8102-4449080e2ebe" tipoDato="Int" nombre="precio" tipoParametro="Entrada" />
                 </operacionHasParametro>
                 <operacionHasParametro Id="4bb40a7e-2683-4e8a-b6a0-803c857b4047">
-                  <parametro Id="0e8f81ca-1b63-4ac4-8373-be40d297a8f3" tipoDato="Float" nombre="precioTotal" tipoParametro="Salida" />
+                  <parametro Id="0e8f81ca-1b63-4ac4-8373-be40d297a8f3" tipoDato="Int" nombre="precioTotal" tipoParametro="Salida" />
                 </operacionHasParametro>
                 <operacionHasParametro Id="b0c97190-9c10-4339-aa41-ab6f085471ab">
                   <parametro Id="c09ade05-1d5a-44d1-9591-e3de39ca02af" tipoDato="Int" nombre="numNoches" tipoParametro="Entrada" />
@@ -122,16 +122,36 @@
           </claseHasAtributo>
         </atributo>
         <claseReferenciada>
-          <claseReferencesClase Id="10158e13-1de7-44e9-9694-0bc2072971a1">
+          <claseReferencesClase Id="10158e13-1de7-44e9-9694-0bc2072971a1" cardinalidad0="1..1" cardinalidad1="0..*" nombre="reserva">
             <claseEnriquecidaMoniker Id="21d1efb4-7100-46ff-86bc-8b91e878aab3" />
           </claseReferencesClase>
         </claseReferenciada>
         <subClase>
-          <clasePadreHasClaseHija Id="f807a22f-c450-49fe-a9b5-d9ffbcbc1475">
+          <clasePadreHasClaseHija Id="f807a22f-c450-49fe-a9b5-d9ffbcbc1475" tipoHerencia="{Total, Solapada}">
             <claseMoniker Id="b234be4b-af2f-4df0-9e02-c7d3704b5cbb" />
           </clasePadreHasClaseHija>
         </subClase>
       </clase>
     </tapizClassWebHasClase>
   </clase>
+  <claseEnumeradors>
+    <tapizClassWebHasClaseEnumeradors Id="aed61b51-c4bc-41cb-af5a-0fed6edf0518">
+      <claseEnumerador Id="88f9b786-21aa-48b5-8cab-293102f4c772" nombre="TipoHabitacion">
+        <enumeradors>
+          <claseEnumeradorHasEnumeradors Id="b61cb9ae-ddf7-47bb-acb2-f6437a5aeb3d">
+            <enumerador Id="1974d696-9ae5-4eb4-87fe-c751f95ded09" nombre="Normal" />
+          </claseEnumeradorHasEnumeradors>
+          <claseEnumeradorHasEnumeradors Id="a64c67fb-e18b-4ddd-98c6-e253c7aa07e6">
+            <enumerador Id="2d1f572b-4cf9-473a-884e-7dc32a7a6cae" nombre="Doble" />
+          </claseEnumeradorHasEnumeradors>
+          <claseEnumeradorHasEnumeradors Id="37640a1b-1f9d-4c3d-81d6-6988469c5570">
+            <enumerador Id="af634666-0007-4655-adc4-e12dfdfceaf3" nombre="Suite" />
+          </claseEnumeradorHasEnumeradors>
+          <claseEnumeradorHasEnumeradors Id="c9e46e4b-b3b4-4e6a-ae73-7a98efb85546">
+            <enumerador Id="4ecfb04a-dfa6-47f8-bd11-40eb5b61ca66" nombre="Tematica" />
+          </claseEnumeradorHasEnumeradors>
+        </enumeradors>
+      </claseEnumerador>
+    </tapizClassWebHasClaseEnumeradors>
+  </claseEnumeradors>
 </tapizClassWeb>

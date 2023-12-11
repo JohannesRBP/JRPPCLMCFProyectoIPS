@@ -110,7 +110,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		{
 			get
 			{
-				return 4;
+				return 5;
 			}
 		}
 		
@@ -219,6 +219,22 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						"Parametro", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ParametroToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorToolboxItem":
+					// Add ClaseEnumerador shape tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						5, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("ClaseEnumeradorToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ClaseEnumeradorToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.UML_TOOLSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UML_TOOLSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"ClaseEnumerador", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("ClaseEnumeradorToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						CreateElementToolPrototype(store, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});

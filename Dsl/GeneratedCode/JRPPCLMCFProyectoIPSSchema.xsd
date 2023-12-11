@@ -25,6 +25,21 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: TapizClassWebHasClaseEnumeradors -->
+          <xsd:element name="claseEnumeradors" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of TapizClassWebHasClaseEnumeradors</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="tapizClassWebHasClaseEnumeradors" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of TapizClassWebHasClaseEnumeradors needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -563,6 +578,91 @@
     </xsd:complexContent>
   </xsd:complexType>
   
+  <!-- ClaseEnumerador -->
+  <xsd:element name="claseEnumerador" type="ClaseEnumerador" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseEnumerador">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ClaseEnumeradorHasEnumeradors -->
+          <xsd:element name="enumeradors" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of ClaseEnumeradorHasEnumeradors</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="claseEnumeradorHasEnumeradors" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of ClaseEnumeradorHasEnumeradors needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: nombre -->
+        <xsd:attribute name="nombre" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnumerador Moniker -->
+  <xsd:element name="claseEnumeradorMoniker" type="ClaseEnumeradorMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseEnumeradorMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClaseEnumerador instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Enumerador -->
+  <xsd:element name="enumerador" type="Enumerador" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Enumerador">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: nombre -->
+        <xsd:attribute name="nombre" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Enumerador Moniker -->
+  <xsd:element name="enumeradorMoniker" type="EnumeradorMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="EnumeradorMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Enumerador instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
   <!-- TapizClassWebHasClase -->
   <xsd:element name="tapizClassWebHasClase" type="TapizClassWebHasClase" substitutionGroup="core:modelElement" />
   <xsd:complexType name="TapizClassWebHasClase">
@@ -1063,6 +1163,86 @@
     </xsd:complexContent>
   </xsd:complexType>
   
+  <!-- TapizClassWebHasClaseEnumeradors -->
+  <xsd:element name="tapizClassWebHasClaseEnumeradors" type="TapizClassWebHasClaseEnumeradors" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="TapizClassWebHasClaseEnumeradors">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ClaseEnumerador -->
+          <xsd:element ref="claseEnumerador" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- TapizClassWebHasClaseEnumeradors Moniker -->
+  <xsd:element name="tapizClassWebHasClaseEnumeradorsMoniker" type="TapizClassWebHasClaseEnumeradorsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="TapizClassWebHasClaseEnumeradorsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for TapizClassWebHasClaseEnumeradors instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnumeradorHasEnumeradors -->
+  <xsd:element name="claseEnumeradorHasEnumeradors" type="ClaseEnumeradorHasEnumeradors" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClaseEnumeradorHasEnumeradors">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Enumerador -->
+          <xsd:element ref="enumerador" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- ClaseEnumeradorHasEnumeradors Moniker -->
+  <xsd:element name="claseEnumeradorHasEnumeradorsMoniker" type="ClaseEnumeradorHasEnumeradorsMoniker" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="ClaseEnumeradorHasEnumeradorsMoniker">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for ClaseEnumeradorHasEnumeradors instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
   <!-- Enum TipoDato -->
   <xsd:simpleType name="TipoDato">
     <xsd:restriction base="xsd:string">
@@ -1072,6 +1252,7 @@
       <xsd:enumeration value="String"/>
       <xsd:enumeration value="Float"/>
       <xsd:enumeration value="Double"/>
+      <xsd:enumeration value="tipoHabitacion"/>
     </xsd:restriction>
   </xsd:simpleType>
   

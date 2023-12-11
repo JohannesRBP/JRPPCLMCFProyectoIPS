@@ -309,6 +309,12 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador)
+			{
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador newShape = new global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase)
 			{
 				global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase newShape = new global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase(this.Partition);
@@ -346,6 +352,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape.DecoratorsInitialized += EstiloAtributoShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape.DecoratorsInitialized += EstiloOperacionShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaParametro.DecoratorsInitialized += MetaforaParametroDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador.DecoratorsInitialized += MetaforaEnumeradorDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.DecoratorsInitialized += MetaforaClase_ClaseDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaRComposicion.DecoratorsInitialized += MetaforaRComposicionDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaReferenciada.DecoratorsInitialized += MetaforaReferenciadaDecoratorMap.OnDecoratorsInitialized;
@@ -484,6 +491,24 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.tipoParametroCalculadoDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tipoParametroDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaEnumerador.
+		/// </summary>
+		internal static partial class MetaforaEnumeradorDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaEnumerador.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -780,6 +805,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.Parametro), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
@@ -851,6 +877,10 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					// of the shape created for this child.  If no shape should be created, the method should return null.
 					parentElement = GetParentForParametro((global::UPM_IPS.JRPPCLMCFProyectoIPS.Parametro)childElement);
 				} else
+				if(childElement is global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador)
+				{
+					parentElement = GetParentForClaseEnumerador((global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador)childElement);
+				} else
 				{
 					parentElement = null;
 				}
@@ -868,6 +898,13 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				return result;
 			}
 			public static global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb GetParentForClaseEnriquecida( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb result = root.TapizClassWeb;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb GetParentForClaseEnumerador( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador root )
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb result = root.TapizClassWeb;
@@ -964,6 +1001,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasOperacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
 		{
 			/// <summary>
@@ -999,6 +1037,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				{
 					global::System.Collections.IEnumerable elements = GetClaseEnriquecidaForClaseEnriquecidaShapeoperacionDecFromLastLink((global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasOperacion)e.ModelElement);
 					UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape), "operacionDec", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors)
+				{
+					global::System.Collections.IEnumerable elements = GetClaseEnumeradorForMetaforaEnumeradorenumeradorDecFromLastLink((global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador), "enumeradorDec", repaintOnly);
 				}
 			}
 			
@@ -1059,6 +1102,20 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
+			internal static global::System.Collections.ICollection GetClaseEnumeradorForMetaforaEnumeradorenumeradorDecFromLastLink(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors root)
+			{
+				// Segment 0
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador result = root.ClaseEnumerador;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetClaseEnumeradorForMetaforaEnumeradorenumeradorDec(global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador root)
+			{
+				// Segments 1 and 0
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador result = root.ClaseEnumerador;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
 			#endregion
 	
 			#region helper method to update compartments 
@@ -1106,6 +1163,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasOperacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
 		{
 			/// <summary>
@@ -1140,6 +1198,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnriquecidaForClaseEnriquecidaShapeoperacionDecFromLastLink((global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasOperacion)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape), "operacionDec", repaintOnly);
 				}
+				if(e.ModelElement is global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClaseEnumeradorForMetaforaEnumeradorenumeradorDecFromLastLink((global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador), "enumeradorDec", repaintOnly);
+				}
 			}
 		}
 		
@@ -1148,6 +1211,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.Atributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.Operacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
 		{
 			/// <summary>
@@ -1182,6 +1246,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForClaseEnriquecidaShapeoperacionDec((global::UPM_IPS.JRPPCLMCFProyectoIPS.Operacion)e.ModelElement);
 					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape), "operacionDec", repaintOnly);
 				}
+				if(e.ModelElement is global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador && e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador.nombreDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnumeradorForMetaforaEnumeradorenumeradorDec((global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador), "enumeradorDec", repaintOnly);
+				}
 			}
 		}
 		
@@ -1190,6 +1259,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasOperacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
 		{
 			/// <summary>
@@ -1312,6 +1382,33 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape), "operacionDec", repaintOnly);
 					}
 				}
+				if(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClaseEnumeradorForMetaforaEnumeradorenumeradorDecFromLastLink((global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador compartmentShape = pel as global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnumeradorForMetaforaEnumeradorenumeradorDecFromLastLink((global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador), "enumeradorDec", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnumeradorForMetaforaEnumeradorenumeradorDec((global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador), "enumeradorDec", repaintOnly);
+					}
+				}
 			}
 		}
 	
@@ -1320,6 +1417,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasOperacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
 		{
 			/// <summary>
@@ -1364,6 +1462,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					{
 						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnriquecidaForClaseEnriquecidaShapeoperacionDec((global::UPM_IPS.JRPPCLMCFProyectoIPS.Operacion)e.CounterpartRolePlayer);
 						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape), "operacionDec", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumeradorHasEnumeradors).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClaseEnumeradorForMetaforaEnumeradorenumeradorDec((global::UPM_IPS.JRPPCLMCFProyectoIPS.Enumerador)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador), "enumeradorDec", repaintOnly);
 					}
 				}
 			}
