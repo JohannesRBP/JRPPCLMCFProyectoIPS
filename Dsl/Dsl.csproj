@@ -87,6 +87,7 @@
     <Compile Include="DesignerCustomization\EstiloOperacion.cs" />
     <Compile Include="DesignerCustomization\FixUpDiagram.cs" />
     <Compile Include="DesignerCustomization\Operacion.cs" />
+    <Compile Include="DesignerCustomization\Parametro.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

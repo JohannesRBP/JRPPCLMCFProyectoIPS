@@ -19,6 +19,12 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
         {
             return elem.Clase;
         }
-       
+
+        private ModelElement GetParentForParametro(Parametro elem)
+        {
+            return elem.Operacion;
+        }
+
+
     }
 }

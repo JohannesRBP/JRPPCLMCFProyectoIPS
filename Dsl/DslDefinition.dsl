@@ -293,6 +293,11 @@
             <DomainEnumerationMoniker Name="TipoParametro" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="f2828cda-df22-4f62-8be4-b395e1535b0c" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Tipo Parametro Calculado" Name="tipoParametroCalculado" DisplayName="Tipo Parametro Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
   </Classes>
@@ -678,6 +683,17 @@
         <TextDecorator Name="tipoLetraCalculadoDec" DisplayName="Tipo Letra Calculado Dec" DefaultText="tipoLetraCalculadoDec" />
       </ShapeHasDecorators>
     </GeometryShape>
+    <GeometryShape Id="e52a2308-8490-4c69-9c8a-6c2d2f614ffb" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaParametro" Name="MetaforaParametro" DisplayName="Metafora Parametro" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Parametro" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="iconParametro" DisplayName="Icon Parametro" DefaultIcon="Resources\P.bmp" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="tipoParametroDec" DisplayName="Tipo Parametro Dec" DefaultText="tipoParametroDec" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="25c6962a-8dc5-43c1-bda8-80c6252e0847" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase" Name="MetaforaClase_Clase" DisplayName="Metafora Clase_ Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Clase_ Clase">
@@ -916,6 +932,9 @@
           <XmlPropertyData XmlName="tipoParametro">
             <DomainPropertyMoniker Name="Parametro/tipoParametro" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoParametroCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="Parametro/tipoParametroCalculado" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="TapizClassWebHasClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="tapizClassWebHasClaseMoniker" ElementName="tapizClassWebHasClase" MonikerTypeName="TapizClassWebHasClaseMoniker">
@@ -1021,6 +1040,9 @@
       </XmlClassData>
       <XmlClassData TypeName="EstiloAtributoShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloAtributoShapeMoniker" ElementName="estiloAtributoShape" MonikerTypeName="EstiloAtributoShapeMoniker">
         <GeometryShapeMoniker Name="EstiloAtributoShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaParametro" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaParametroMoniker" ElementName="metaforaParametro" MonikerTypeName="MetaforaParametroMoniker">
+        <GeometryShapeMoniker Name="MetaforaParametro" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -1281,6 +1303,29 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="EstiloOperacionShape" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="Parametro" />
+        <ParentElementPath>
+          <DomainPath>OperacionHasParametro.Operacion/!Operacion</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaParametro/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Parametro/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaParametro/tipoParametroDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Parametro/tipoParametroCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaParametro" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>

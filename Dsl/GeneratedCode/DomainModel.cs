@@ -97,6 +97,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				typeof(EstiloClaseShape),
 				typeof(EstiloOperacionShape),
 				typeof(EstiloAtributoShape),
+				typeof(MetaforaParametro),
 				typeof(ClaseMetafora),
 				typeof(ClaseEnriquecidaShape),
 				typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.FixUpDiagram),
@@ -153,6 +154,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				new DomainMemberInfo(typeof(Parametro), "tipoDato", Parametro.tipoDatoDomainPropertyId, typeof(Parametro.tipoDatoPropertyHandler)),
 				new DomainMemberInfo(typeof(Parametro), "nombre", Parametro.nombreDomainPropertyId, typeof(Parametro.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Parametro), "tipoParametro", Parametro.tipoParametroDomainPropertyId, typeof(Parametro.tipoParametroPropertyHandler)),
+				new DomainMemberInfo(typeof(Parametro), "tipoParametroCalculado", Parametro.tipoParametroCalculadoDomainPropertyId, typeof(Parametro.tipoParametroCalculadoPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidad0", ClaseReferencesClase.cardinalidad0DomainPropertyId, typeof(ClaseReferencesClase.cardinalidad0PropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidad1", ClaseReferencesClase.cardinalidad1DomainPropertyId, typeof(ClaseReferencesClase.cardinalidad1PropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "nombre", ClaseReferencesClase.nombreDomainPropertyId, typeof(ClaseReferencesClase.nombrePropertyHandler)),
@@ -219,7 +221,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(20);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(21);
 				createElementMap.Add(typeof(TapizClassWeb), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(ClaseEnriquecida), 2);
@@ -238,8 +240,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				createElementMap.Add(typeof(EstiloClaseShape), 15);
 				createElementMap.Add(typeof(EstiloOperacionShape), 16);
 				createElementMap.Add(typeof(EstiloAtributoShape), 17);
-				createElementMap.Add(typeof(ClaseMetafora), 18);
-				createElementMap.Add(typeof(ClaseEnriquecidaShape), 19);
+				createElementMap.Add(typeof(MetaforaParametro), 18);
+				createElementMap.Add(typeof(ClaseMetafora), 19);
+				createElementMap.Add(typeof(ClaseEnriquecidaShape), 20);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -271,8 +274,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				case 15: return new EstiloClaseShape(partition, propertyAssignments);
 				case 16: return new EstiloOperacionShape(partition, propertyAssignments);
 				case 17: return new EstiloAtributoShape(partition, propertyAssignments);
-				case 18: return new ClaseMetafora(partition, propertyAssignments);
-				case 19: return new ClaseEnriquecidaShape(partition, propertyAssignments);
+				case 18: return new MetaforaParametro(partition, propertyAssignments);
+				case 19: return new ClaseMetafora(partition, propertyAssignments);
+				case 20: return new ClaseEnriquecidaShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}

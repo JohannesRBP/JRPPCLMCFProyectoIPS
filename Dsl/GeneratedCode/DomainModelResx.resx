@@ -485,6 +485,14 @@
     <value>Tipo Parametro</value>
     <comment>DisplayName for DomainProperty &apos;tipoParametro&apos; on DomainClass &apos;Parametro&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/tipoParametroCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Tipo Parametro Calculado</value>
+    <comment>Description for DomainProperty &apos;tipoParametroCalculado&apos; on DomainClass &apos;Parametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/tipoParametroCalculado.DisplayName" xml:space="preserve">
+    <value>Tipo Parametro Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;tipoParametroCalculado&apos; on DomainClass &apos;Parametro&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClase</value>
     <comment>Description for DomainClass &apos;TapizClassWebHasClase&apos;</comment>
@@ -1217,6 +1225,22 @@
     <value>tipoLetraCalculadoDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaParametro.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaParametro</value>
+    <comment>Description for DomainClass &apos;MetaforaParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaParametro.DisplayName" xml:space="preserve">
+    <value>Metafora Parametro</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaParametro&apos;</comment>
+  </data>
+  <data name="MetaforaParametronombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaParametrotipoParametroDecDefaultText" xml:space="preserve">
+    <value>tipoParametroDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase</value>
     <comment>Description for DomainClass &apos;MetaforaClase_Clase&apos;</comment>
@@ -1560,6 +1584,10 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="EstiloAtributoShapeIconEADefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\EA.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="MetaforaParametroiconParametroDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\P.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
   <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">

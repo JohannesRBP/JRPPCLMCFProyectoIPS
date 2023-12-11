@@ -4167,6 +4167,72 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		
 		#endregion
+		#region tipoParametroCalculado domain property code
+		
+		/// <summary>
+		/// tipoParametroCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tipoParametroCalculadoDomainPropertyId = new global::System.Guid(0xf2828cda, 0xdf22, 0x4f62, 0x8b, 0xe4, 0xb3, 0x95, 0xe1, 0x53, 0x5b, 0x0c);
+		
+		/// <summary>
+		/// Gets or sets the value of tipoParametroCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Tipo Parametro Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/tipoParametroCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/tipoParametroCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("f2828cda-df22-4f62-8be4-b395e1535b0c")]
+		public global::System.String tipoParametroCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoParametroCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Parametro.tipoParametroCalculado domain property.
+		/// </summary>
+		internal sealed partial class tipoParametroCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<Parametro, global::System.String>
+		{
+			private tipoParametroCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Parametro.tipoParametroCalculado domain property value handler.
+			/// </summary>
+			public static readonly tipoParametroCalculadoPropertyHandler Instance = new tipoParametroCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Parametro.tipoParametroCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tipoParametroCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Parametro element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for tipoParametroCalculado because its Kind is
+				// set to Calculated. Please provide the GettipoParametroCalculadoValue()
+				// method on the domain class.
+				return element.GettipoParametroCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
 		#region Operacion opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Operacion.
