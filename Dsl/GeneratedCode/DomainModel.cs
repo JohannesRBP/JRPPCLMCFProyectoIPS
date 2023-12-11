@@ -86,9 +86,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				typeof(ClaseEnriquecidaHasEstiloOperacion),
 				typeof(ClaseEnriquecidaHasEstiloAtributo),
 				typeof(ClaseReferencesClase),
-				typeof(ClaseHasClaseHija),
 				typeof(ClaseComponeClases),
 				typeof(ClaseReferenciaClase),
+				typeof(ClasePadreHasClaseHija),
 				typeof(JRPPCLMCFProyectoIPSDiagram),
 				typeof(MetaforaClase_Clase),
 				typeof(MetaforaHerencia),
@@ -158,14 +158,13 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidad0", ClaseReferencesClase.cardinalidad0DomainPropertyId, typeof(ClaseReferencesClase.cardinalidad0PropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidad1", ClaseReferencesClase.cardinalidad1DomainPropertyId, typeof(ClaseReferencesClase.cardinalidad1PropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "nombre", ClaseReferencesClase.nombreDomainPropertyId, typeof(ClaseReferencesClase.nombrePropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseHasClaseHija), "tipoHerencia", ClaseHasClaseHija.tipoHerenciaDomainPropertyId, typeof(ClaseHasClaseHija.tipoHerenciaPropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseHasClaseHija), "nombre", ClaseHasClaseHija.nombreDomainPropertyId, typeof(ClaseHasClaseHija.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseComponeClases), "nombre", ClaseComponeClases.nombreDomainPropertyId, typeof(ClaseComponeClases.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseComponeClases), "cardinalidadO", ClaseComponeClases.cardinalidadODomainPropertyId, typeof(ClaseComponeClases.cardinalidadOPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseComponeClases), "cardinalidadD", ClaseComponeClases.cardinalidadDDomainPropertyId, typeof(ClaseComponeClases.cardinalidadDPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferenciaClase), "nombre", ClaseReferenciaClase.nombreDomainPropertyId, typeof(ClaseReferenciaClase.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferenciaClase), "cardinalidadO", ClaseReferenciaClase.cardinalidadODomainPropertyId, typeof(ClaseReferenciaClase.cardinalidadOPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferenciaClase), "cardinalidadD", ClaseReferenciaClase.cardinalidadDDomainPropertyId, typeof(ClaseReferenciaClase.cardinalidadDPropertyHandler)),
+				new DomainMemberInfo(typeof(ClasePadreHasClaseHija), "tipoHerencia", ClasePadreHasClaseHija.tipoHerenciaDomainPropertyId, typeof(ClasePadreHasClaseHija.tipoHerenciaPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -194,12 +193,12 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				new DomainRolePlayerInfo(typeof(ClaseEnriquecidaHasEstiloAtributo), "EstiloAtributo", ClaseEnriquecidaHasEstiloAtributo.EstiloAtributoDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseReferencesClase), "SourceClase", ClaseReferencesClase.SourceClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseReferencesClase), "TargetClase", ClaseReferencesClase.TargetClaseDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseHasClaseHija), "SourceClase", ClaseHasClaseHija.SourceClaseDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClaseHasClaseHija), "TargetClase", ClaseHasClaseHija.TargetClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseComponeClases), "SourceClase", ClaseComponeClases.SourceClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseComponeClases), "TargetClase", ClaseComponeClases.TargetClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseReferenciaClase), "SourceClase", ClaseReferenciaClase.SourceClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClaseReferenciaClase), "TargetClase", ClaseReferenciaClase.TargetClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePadreHasClaseHija), "SourceClase", ClasePadreHasClaseHija.SourceClaseDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePadreHasClaseHija), "TargetClase", ClasePadreHasClaseHija.TargetClaseDomainRoleId),
 			};
 		}
 		#endregion
@@ -309,9 +308,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasEstiloOperacion), 6);
 				createElementLinkMap.Add(typeof(ClaseEnriquecidaHasEstiloAtributo), 7);
 				createElementLinkMap.Add(typeof(ClaseReferencesClase), 8);
-				createElementLinkMap.Add(typeof(ClaseHasClaseHija), 9);
-				createElementLinkMap.Add(typeof(ClaseComponeClases), 10);
-				createElementLinkMap.Add(typeof(ClaseReferenciaClase), 11);
+				createElementLinkMap.Add(typeof(ClaseComponeClases), 9);
+				createElementLinkMap.Add(typeof(ClaseReferenciaClase), 10);
+				createElementLinkMap.Add(typeof(ClasePadreHasClaseHija), 11);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -335,9 +334,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				case 6: return new ClaseEnriquecidaHasEstiloOperacion(partition, roleAssignments, propertyAssignments);
 				case 7: return new ClaseEnriquecidaHasEstiloAtributo(partition, roleAssignments, propertyAssignments);
 				case 8: return new ClaseReferencesClase(partition, roleAssignments, propertyAssignments);
-				case 9: return new ClaseHasClaseHija(partition, roleAssignments, propertyAssignments);
-				case 10: return new ClaseComponeClases(partition, roleAssignments, propertyAssignments);
-				case 11: return new ClaseReferenciaClase(partition, roleAssignments, propertyAssignments);
+				case 9: return new ClaseComponeClases(partition, roleAssignments, propertyAssignments);
+				case 10: return new ClaseReferenciaClase(partition, roleAssignments, propertyAssignments);
+				case 11: return new ClasePadreHasClaseHija(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -526,7 +525,6 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			DomainRoles.Add(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase.EstiloClaseDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.EstiloOperacionDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.EstiloAtributoDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClaseDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

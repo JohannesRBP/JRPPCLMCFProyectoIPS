@@ -805,54 +805,6 @@
     <value>Clase Referenciadora</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferencesClase&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija</value>
-    <comment>Description for DomainClass &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.DisplayName" xml:space="preserve">
-    <value>Clase Has Clase Hija</value>
-    <comment>DisplayName for DomainClass &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/tipoHerencia.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Tipo Herencia</value>
-    <comment>Description for DomainProperty &apos;tipoHerencia&apos; on DomainClass &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/tipoHerencia.DisplayName" xml:space="preserve">
-    <value>Tipo Herencia</value>
-    <comment>DisplayName for DomainProperty &apos;tipoHerencia&apos; on DomainClass &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Nombre</value>
-    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/SourceClase.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClase</value>
-    <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/SourceClase.DisplayName" xml:space="preserve">
-    <value>Source Clase</value>
-    <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/SourceClase.PropertyDisplayName" xml:space="preserve">
-    <value>Sub Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/TargetClase.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClase</value>
-    <comment>Description for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/TargetClase.DisplayName" xml:space="preserve">
-    <value>Target Clase</value>
-    <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/TargetClase.PropertyDisplayName" xml:space="preserve">
-    <value>Super Clase</value>
-    <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseHasClaseHija&apos;</comment>
-  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases</value>
     <comment>Description for DomainClass &apos;ClaseComponeClases&apos;</comment>
@@ -964,6 +916,46 @@
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase/TargetClase.PropertyDisplayName" xml:space="preserve">
     <value>Clase Refe</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClaseReferenciaClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija</value>
+    <comment>Description for DomainClass &apos;ClasePadreHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.DisplayName" xml:space="preserve">
+    <value>Clase Padre Has Clase Hija</value>
+    <comment>DisplayName for DomainClass &apos;ClasePadreHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/tipoHerencia.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.Tipo Herencia</value>
+    <comment>Description for DomainProperty &apos;tipoHerencia&apos; on DomainClass &apos;ClasePadreHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/tipoHerencia.DisplayName" xml:space="preserve">
+    <value>Tipo Herencia</value>
+    <comment>DisplayName for DomainProperty &apos;tipoHerencia&apos; on DomainClass &apos;ClasePadreHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClase</value>
+    <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.DisplayName" xml:space="preserve">
+    <value>Source Clase</value>
+    <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.PropertyDisplayName" xml:space="preserve">
+    <value>Sub Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.TargetClase</value>
+    <comment>Description for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.DisplayName" xml:space="preserve">
+    <value>Target Clase</value>
+    <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.PropertyDisplayName" xml:space="preserve">
+    <value>Super Clase</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato/Boolean.DisplayName" xml:space="preserve">
     <value>Boolean</value>
@@ -1268,10 +1260,6 @@
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia.DisplayName" xml:space="preserve">
     <value>Metafora Herencia</value>
     <comment>DisplayName for DomainClass &apos;MetaforaHerencia&apos;</comment>
-  </data>
-  <data name="MetaforaHerencianombreDecDefaultText" xml:space="preserve">
-    <value>nombreDec</value>
-    <comment>Text decorator default text</comment>
   </data>
   <data name="MetaforaHerenciatipoHerenciaDecDefaultText" xml:space="preserve">
     <value>tipoHerenciaDec</value>

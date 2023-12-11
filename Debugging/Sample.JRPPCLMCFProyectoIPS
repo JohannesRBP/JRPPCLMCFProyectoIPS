@@ -1,11 +1,137 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<exampleModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="fd9d18be-8a3d-4ce8-9a50-1ea1e8093375" xmlns="http://schemas.microsoft.com/dsltools/JRPPCLMCFProyectoIPS">
-  <elements>
-    <exampleElement Id="dd6266a9-e5a4-49b8-9663-289ac5ed5447" name="ExampleElement1">
-      <targets>
-        <exampleElementMoniker name="/fd9d18be-8a3d-4ce8-9a50-1ea1e8093375/ExampleElement2" />
-      </targets>
-    </exampleElement>
-    <exampleElement Id="87d3fe2b-c1da-4b40-9a08-c0f0ef157598" name="ExampleElement2" />
-  </elements>
-</exampleModel>
+<tapizClassWeb xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="af0601d1-7f86-4cd3-b2e3-5b365136a4c5" xmlns="http://schemas.microsoft.com/dsltools/JRPPCLMCFProyectoIPS">
+  <clase>
+    <tapizClassWebHasClase Id="00c34af2-1571-40f6-94be-89982d3c132c">
+      <clase Id="fbb2b04b-95a4-4cd6-ae59-1435c6c2b30d" nombre="Hotel">
+        <atributo>
+          <claseHasAtributo Id="61f1acbd-2987-456b-8358-cf7d164ff2c0">
+            <atributo Id="631eced3-cdde-46b1-9353-f6aaad4d7322" nombre="id_hotel" tipoDato="String" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="86227a05-8bd4-47b2-bb90-8ee31c9130ba">
+            <atributo Id="5e501c35-908e-4006-b334-cf826cc4d1f7" nombre="nombre" tipoDato="String" modAcceso="public" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="5a99045f-eaae-428c-bb13-e18e87ab2ba5">
+            <atributo Id="1551d655-36bc-464d-843b-ce2bae57d170" nombre="direccion" tipoDato="String" modAcceso="public" />
+          </claseHasAtributo>
+        </atributo>
+      </clase>
+    </tapizClassWebHasClase>
+    <tapizClassWebHasClase Id="eab265d3-3134-4179-82c4-b8c55d60f898">
+      <clase Id="e78f2f33-2116-47f6-9acc-bf6e618f5fa5" nombre="Director">
+        <atributo>
+          <claseHasAtributo Id="409e2230-6341-4f94-bbe4-53d047fdda74">
+            <atributo Id="b0dc618b-10e4-4fed-b1fa-c050740ddd25" nombre="id_empleado" tipoDato="Int" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="0a9b1ced-5520-461a-9745-251254d8bf91">
+            <atributo Id="df757602-4fbc-4dde-a06b-5ab712834f8f" nombre="sueldo" tipoDato="Float" modAcceso="private" />
+          </claseHasAtributo>
+        </atributo>
+        <claseContenida>
+          <claseComponeClases Id="963d8a20-4da8-46b0-926f-3a777e047283" nombre="gestiona" cardinalidadO="1" cardinalidadD="0..*">
+            <claseMoniker Id="fbb2b04b-95a4-4cd6-ae59-1435c6c2b30d" />
+          </claseComponeClases>
+        </claseContenida>
+        <subClase>
+          <clasePadreHasClaseHija Id="4cd4122f-9198-4eb1-a9ba-019e6a453203">
+            <claseMoniker Id="b234be4b-af2f-4df0-9e02-c7d3704b5cbb" />
+          </clasePadreHasClaseHija>
+        </subClase>
+      </clase>
+    </tapizClassWebHasClase>
+    <tapizClassWebHasClase Id="18ca460c-26fe-4415-b689-8eebd44d9720">
+      <clase Id="b234be4b-af2f-4df0-9e02-c7d3704b5cbb" nombre="Persona">
+        <atributo>
+          <claseHasAtributo Id="6472f431-3377-42b8-9b24-dc5a6399c305">
+            <atributo Id="b9efffc6-7cb8-48e1-80ac-46c1eca4d6ba" nombre="dni" tipoDato="String" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="d71515c3-e53d-47ca-b64b-fdb80a4eeebc">
+            <atributo Id="f5350154-f8e9-45cb-becb-fae8c5c4c60d" nombre="nombre" tipoDato="String" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="783f8564-290c-4d2a-aed8-8cd3142c754d">
+            <atributo Id="af0e62cf-4870-4e8e-aaa7-3ff34a2ad8c0" nombre="apellidos" tipoDato="String" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="f161630c-deaf-4eed-8bf0-5b035d77a8c7">
+            <atributo Id="9afbc4bf-cfb3-4067-93f9-aa3399987aae" nombre="telefono" tipoDato="Int" modAcceso="private" />
+          </claseHasAtributo>
+        </atributo>
+      </clase>
+    </tapizClassWebHasClase>
+    <tapizClassWebHasClase Id="ce2d57c0-661a-4712-beb9-70d64211ccea">
+      <claseEnriquecida Id="21d1efb4-7100-46ff-86bc-8b91e878aab3" nombre="Habitacion">
+        <atributo>
+          <claseHasAtributo Id="7f35f442-98ab-40ac-a783-b00cf1d5c0cc">
+            <atributo Id="6d7757bb-afa2-4cc3-a6e7-db6ab15aa79c" nombre="numHabitacion" tipoDato="Int" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="05441058-172b-4dfc-98ee-3b5ae1fae1b1">
+            <atributo Id="1865272b-3351-4027-a481-3fc3aa31a48e" nombre="precio" tipoDato="Float" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="473b8d37-3a44-4611-a93e-2d5c2dca280f">
+            <atributo Id="1d13ba5f-666f-477b-bfbe-a2a351613235" nombre="tipoHabitacion" tipoDato="String" modAcceso="public" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="75713a88-4236-4ab9-88af-26764085f89f">
+            <atributo Id="0fc5e41d-dd68-4812-9ba6-2fd82b452ad1" nombre="estado" tipoDato="Boolean" modAcceso="private" />
+          </claseHasAtributo>
+        </atributo>
+        <operacion>
+          <claseHasOperacion Id="eff6a413-6ece-46e1-a8c5-f723b8af8e55">
+            <operacion Id="8c8569a7-7f70-4310-bf4a-b92868ea2238" nombre="reservarHabitacion">
+              <parametro>
+                <operacionHasParametro Id="0f8af375-297f-4c82-934f-80f40b870dae">
+                  <parametro Id="7e9a528f-7bc5-4d31-8102-4449080e2ebe" tipoDato="Float" nombre="precio" tipoParametro="Entrada" />
+                </operacionHasParametro>
+                <operacionHasParametro Id="4bb40a7e-2683-4e8a-b6a0-803c857b4047">
+                  <parametro Id="0e8f81ca-1b63-4ac4-8373-be40d297a8f3" tipoDato="Float" nombre="precioTotal" tipoParametro="Salida" />
+                </operacionHasParametro>
+                <operacionHasParametro Id="b0c97190-9c10-4339-aa41-ab6f085471ab">
+                  <parametro Id="c09ade05-1d5a-44d1-9591-e3de39ca02af" tipoDato="Int" nombre="numNoches" tipoParametro="Entrada" />
+                </operacionHasParametro>
+              </parametro>
+            </operacion>
+          </claseHasOperacion>
+        </operacion>
+        <claseContenida>
+          <claseComponeClases Id="e19b603d-eb06-4d02-bcaa-ed8d35274fa8" nombre="tiene" cardinalidadO="1..*" cardinalidadD="1">
+            <claseMoniker Id="fbb2b04b-95a4-4cd6-ae59-1435c6c2b30d" />
+          </claseComponeClases>
+        </claseContenida>
+        <estiloClase>
+          <claseEnriquecidaHasEstiloClase Id="14832cfb-67c0-40c6-be0a-5532d1977aa1">
+            <estiloClase Id="761e6299-8c65-47ac-9fd8-e2da86b3d573" colorFondo="Verde" colorLetra="Verde" tipoLetra="TimesNewRoman" alineacion="Derecha" textoNormal="false" checkBox="false" radioButton="false" />
+          </claseEnriquecidaHasEstiloClase>
+        </estiloClase>
+        <estiloOperacion>
+          <claseEnriquecidaHasEstiloOperacion Id="2b6a3e52-00ba-42d6-819d-451a3b8805be">
+            <estiloOperacion Id="fa8f3a3a-abf8-4b9c-9ada-a8cc225fee9b" tipoLetra="TimesNewRoman" colorLetra="Verde" />
+          </claseEnriquecidaHasEstiloOperacion>
+        </estiloOperacion>
+        <estiloAtributo>
+          <claseEnriquecidaHasEstiloAtributo Id="a78a37c6-401b-4342-9821-5d677c062340">
+            <estiloAtributo Id="83c73ad6-f727-47b5-b315-b710099b9e2b" tipoLetra="TimesNewRoman" colorLetra="Verde" />
+          </claseEnriquecidaHasEstiloAtributo>
+        </estiloAtributo>
+      </claseEnriquecida>
+    </tapizClassWebHasClase>
+    <tapizClassWebHasClase Id="7970f17d-f554-4937-b008-b52d9c7ea8c4">
+      <clase Id="4cdf318e-c845-46d7-a56f-61fee57e9dfb" nombre="Cliente">
+        <atributo>
+          <claseHasAtributo Id="9a79ec39-e773-4015-a029-c671080d175a">
+            <atributo Id="1090ab65-9314-4602-9e00-d3938336e3bf" nombre="idCliente" tipoDato="Int" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="4c1cdfc4-6787-4562-983b-332280d20533">
+            <atributo Id="217f4f04-107b-4303-8dbd-e1f0241b0d2a" nombre="puntos" tipoDato="Double" modAcceso="private" />
+          </claseHasAtributo>
+        </atributo>
+        <claseReferenciada>
+          <claseReferencesClase Id="10158e13-1de7-44e9-9694-0bc2072971a1">
+            <claseEnriquecidaMoniker Id="21d1efb4-7100-46ff-86bc-8b91e878aab3" />
+          </claseReferencesClase>
+        </claseReferenciada>
+        <subClase>
+          <clasePadreHasClaseHija Id="f807a22f-c450-49fe-a9b5-d9ffbcbc1475">
+            <claseMoniker Id="b234be4b-af2f-4df0-9e02-c7d3704b5cbb" />
+          </clasePadreHasClaseHija>
+        </subClase>
+      </clase>
+    </tapizClassWebHasClase>
+  </clase>
+</tapizClassWeb>

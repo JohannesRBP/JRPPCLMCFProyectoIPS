@@ -332,25 +332,15 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		{
 			base.InitializeDecorators(shapeFields, decorators);
 			
-			DslDiagrams::TextField field1 = new DslDiagrams::TextField("nombreDec");
-			field1.DefaultText = global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaHerencianombreDecDefaultText");
+			DslDiagrams::TextField field1 = new DslDiagrams::TextField("tipoHerenciaDec");
+			field1.DefaultText = global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaHerenciatipoHerenciaDecDefaultText");
 			field1.DefaultFocusable = true;
 			field1.DefaultAutoSize = true;
 			field1.AnchoringBehavior.MinimumHeightInLines = 1;
 			field1.AnchoringBehavior.MinimumWidthInCharacters = 1;
 			field1.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty, true);
+			DslDiagrams::Decorator decorator1 = new DslDiagrams::ConnectorDecorator(field1, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator1);
-				
-			DslDiagrams::TextField field2 = new DslDiagrams::TextField("tipoHerenciaDec");
-			field2.DefaultText = global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaHerenciatipoHerenciaDecDefaultText");
-			field2.DefaultFocusable = true;
-			field2.DefaultAutoSize = true;
-			field2.AnchoringBehavior.MinimumHeightInLines = 1;
-			field2.AnchoringBehavior.MinimumWidthInCharacters = 1;
-			field2.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
-			DslDiagrams::Decorator decorator2 = new DslDiagrams::ConnectorDecorator(field2, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty);
-			decorators.Add(decorator2);
 				
 		}
 		

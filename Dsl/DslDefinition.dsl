@@ -46,14 +46,6 @@
             <DomainPath>ClaseHasAtributoIdentificador.AtributoIdentificador</DomainPath>
           </LinkCreationPaths>
         </ElementMergeDirective>
-        <ElementMergeDirective>
-          <Index>
-            <DomainClassMoniker Name="Clase" />
-          </Index>
-          <LinkCreationPaths>
-            <DomainPath>ClaseHasClaseHija.subClase</DomainPath>
-          </LinkCreationPaths>
-        </ElementMergeDirective>
       </ElementMergeDirectives>
     </DomainClass>
     <DomainClass Id="94994d28-8060-4921-877f-ed30607a62ba" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
@@ -463,34 +455,6 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
-    <DomainRelationship Id="2e7db51e-b3a0-4f88-a38a-3877f08c1199" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija" Name="ClaseHasClaseHija" DisplayName="Clase Has Clase Hija" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" IsEmbedding="true">
-      <Properties>
-        <DomainProperty Id="8c4e2f25-43c1-4587-95ea-17f4bdf4f4c1" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Tipo Herencia" Name="tipoHerencia" DisplayName="Tipo Herencia">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="9483dc30-3d55-4c07-bf92-46124080ab09" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Nombre" Name="nombre" DisplayName="Nombre">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-      </Properties>
-      <Source>
-        <DomainRole Id="f7880ac6-1602-4d86-b02d-8bc4373243f9" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="subClase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Sub Clase">
-          <RolePlayer>
-            <DomainClassMoniker Name="Clase" />
-          </RolePlayer>
-        </DomainRole>
-      </Source>
-      <Target>
-        <DomainRole Id="483254be-e777-4662-9dd7-641778464fb9" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="superClase" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Super Clase">
-          <RolePlayer>
-            <DomainClassMoniker Name="Clase" />
-          </RolePlayer>
-        </DomainRole>
-      </Target>
-    </DomainRelationship>
     <DomainRelationship Id="209da2bd-fa6e-4a67-a4a6-b7a9d7b74150" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases" Name="ClaseComponeClases" DisplayName="Clase Compone Clases" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
       <Properties>
         <DomainProperty Id="60f8e4ad-d33d-4f06-ab4b-71bdb48b81a4" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases.Nombre" Name="nombre" DisplayName="Nombre">
@@ -551,6 +515,29 @@
       </Source>
       <Target>
         <DomainRole Id="a5b310f7-4e00-4a9e-a0d5-0708616730fb" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="ClaseRefe" PropertyDisplayName="Clase Refe">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="c4597867-f5e8-40db-a9af-d7082fe4f543" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija" Name="ClasePadreHasClaseHija" DisplayName="Clase Padre Has Clase Hija" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
+      <Properties>
+        <DomainProperty Id="fc8449e7-44ae-4039-90b2-c49ad54748e2" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.Tipo Herencia" Name="tipoHerencia" DisplayName="Tipo Herencia">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <Source>
+        <DomainRole Id="984b087f-fbca-4076-bbc7-69e2f50b09f8" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="subClase" PropertyDisplayName="Sub Clase">
+          <RolePlayer>
+            <DomainClassMoniker Name="Clase" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="d775ff49-499a-4d09-890f-fbb86ee8aa76" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="superClase" PropertyDisplayName="Super Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -708,9 +695,6 @@
       </ConnectorHasDecorators>
     </Connector>
     <Connector Id="93b9ea3a-a94f-4d92-821c-cdf2a5db6258" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia" Name="MetaforaHerencia" DisplayName="Metafora Herencia" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Herencia" TargetEndStyle="HollowArrow">
-      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
-      </ConnectorHasDecorators>
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="tipoHerenciaDec" DisplayName="Tipo Herencia Dec" DefaultText="tipoHerenciaDec" />
       </ConnectorHasDecorators>
@@ -769,14 +753,14 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="claseReferenciada">
             <DomainRelationshipMoniker Name="ClaseReferencesClase" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="subClase">
-            <DomainRelationshipMoniker Name="ClaseHasClaseHija" />
-          </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="claseContenida">
             <DomainRelationshipMoniker Name="ClaseComponeClases" />
           </XmlRelationshipData>
           <XmlRelationshipData UseFullForm="true" RoleElementName="claseReferenciada1">
             <DomainRelationshipMoniker Name="ClaseReferenciaClase" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="subClase">
+            <DomainRelationshipMoniker Name="ClasePadreHasClaseHija" />
           </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
@@ -981,17 +965,6 @@
       <XmlClassData TypeName="MetaforaClase_Clase" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaClase_ClaseMoniker" ElementName="metaforaClase_Clase" MonikerTypeName="MetaforaClase_ClaseMoniker">
         <ConnectorMoniker Name="MetaforaClase_Clase" />
       </XmlClassData>
-      <XmlClassData TypeName="ClaseHasClaseHija" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseHasClaseHijaMoniker" ElementName="claseHasClaseHija" MonikerTypeName="ClaseHasClaseHijaMoniker">
-        <DomainRelationshipMoniker Name="ClaseHasClaseHija" />
-        <ElementData>
-          <XmlPropertyData XmlName="tipoHerencia">
-            <DomainPropertyMoniker Name="ClaseHasClaseHija/tipoHerencia" />
-          </XmlPropertyData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="ClaseHasClaseHija/nombre" />
-          </XmlPropertyData>
-        </ElementData>
-      </XmlClassData>
       <XmlClassData TypeName="MetaforaHerencia" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaHerenciaMoniker" ElementName="metaforaHerencia" MonikerTypeName="MetaforaHerenciaMoniker">
         <ConnectorMoniker Name="MetaforaHerencia" />
       </XmlClassData>
@@ -1044,6 +1017,14 @@
       <XmlClassData TypeName="MetaforaParametro" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaParametroMoniker" ElementName="metaforaParametro" MonikerTypeName="MetaforaParametroMoniker">
         <GeometryShapeMoniker Name="MetaforaParametro" />
       </XmlClassData>
+      <XmlClassData TypeName="ClasePadreHasClaseHija" MonikerAttributeName="" SerializeId="true" MonikerElementName="clasePadreHasClaseHijaMoniker" ElementName="clasePadreHasClaseHija" MonikerTypeName="ClasePadreHasClaseHijaMoniker">
+        <DomainRelationshipMoniker Name="ClasePadreHasClaseHija" />
+        <ElementData>
+          <XmlPropertyData XmlName="tipoHerencia">
+            <DomainPropertyMoniker Name="ClasePadreHasClaseHija/tipoHerencia" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="JRPPCLMCFProyectoIPSExplorer" />
@@ -1051,25 +1032,6 @@
     <ConnectionBuilder Name="ClaseReferencesClaseBuilder">
       <LinkConnectDirective>
         <DomainRelationshipMoniker Name="ClaseReferencesClase" />
-        <SourceDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Clase" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </SourceDirectives>
-        <TargetDirectives>
-          <RolePlayerConnectDirective>
-            <AcceptingClass>
-              <DomainClassMoniker Name="Clase" />
-            </AcceptingClass>
-          </RolePlayerConnectDirective>
-        </TargetDirectives>
-      </LinkConnectDirective>
-    </ConnectionBuilder>
-    <ConnectionBuilder Name="ClaseHasClaseHijaBuilder">
-      <LinkConnectDirective>
-        <DomainRelationshipMoniker Name="ClaseHasClaseHija" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
@@ -1108,6 +1070,25 @@
     <ConnectionBuilder Name="ClaseReferenciaClaseBuilder">
       <LinkConnectDirective>
         <DomainRelationshipMoniker Name="ClaseReferenciaClase" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="Clase" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="ClasePadreHasClaseHijaBuilder">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="ClasePadreHasClaseHija" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
@@ -1358,26 +1339,6 @@
         </DecoratorMap>
       </ConnectorMap>
       <ConnectorMap>
-        <ConnectorMoniker Name="MetaforaHerencia" />
-        <DomainRelationshipMoniker Name="ClaseHasClaseHija" />
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaHerencia/nombreDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseHasClaseHija/nombre" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-        <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaHerencia/tipoHerenciaDec" />
-          <PropertyDisplayed>
-            <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseHasClaseHija/tipoHerencia" />
-            </PropertyPath>
-          </PropertyDisplayed>
-        </DecoratorMap>
-      </ConnectorMap>
-      <ConnectorMap>
         <ConnectorMoniker Name="MetaforaRComposicion" />
         <DomainRelationshipMoniker Name="ClaseComponeClases" />
         <DecoratorMap>
@@ -1433,6 +1394,18 @@
           </PropertyDisplayed>
         </DecoratorMap>
       </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="MetaforaHerencia" />
+        <DomainRelationshipMoniker Name="ClasePadreHasClaseHija" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaHerencia/tipoHerenciaDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClasePadreHasClaseHija/tipoHerencia" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+      </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="JRPPCLMCFProyectoIPS" EditorGuid="cb8ae405-df97-4a87-aa43-feea91a8e8fc">
@@ -1461,7 +1434,7 @@
         <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClaseReferencesClaseBuilder" />
       </ConnectionTool>
       <ConnectionTool Name="Herencia" ToolboxIcon="Resources\H.bmp" Caption="Herencia" Tooltip="Herencia" HelpKeyword="Herencia">
-        <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClaseHasClaseHijaBuilder" />
+        <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClasePadreHasClaseHijaBuilder" />
       </ConnectionTool>
       <ConnectionTool Name="Composicion" ToolboxIcon="Resources\CO.bmp" Caption="Composicion" Tooltip="Composicion" HelpKeyword="Composicion">
         <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClaseComponeClasesBuilder" />

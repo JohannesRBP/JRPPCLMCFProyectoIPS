@@ -2412,419 +2412,6 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 namespace UPM_IPS.JRPPCLMCFProyectoIPS
 {
 	/// <summary>
-	/// DomainRelationship ClaseHasClaseHija
-	/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija
-	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel))]
-	[global::System.CLSCompliant(true)]
-	[DslModeling::DomainRelationship(IsEmbedding=true)]
-	[DslModeling::DomainObjectId("2e7db51e-b3a0-4f88-a38a-3877f08c1199")]
-	public partial class ClaseHasClaseHija : DslModeling::ElementLink
-	{
-		#region Constructors, domain class Id
-		
-		/// <summary>
-		/// ClaseHasClaseHija domain class Id.
-		/// </summary>
-		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x2e7db51e, 0xb3a0, 0x4f88, 0xa3, 0x8a, 0x38, 0x77, 0xf0, 0x8c, 0x11, 0x99);
-	
-				
-		/// <summary>
-		/// Constructor
-		/// Creates a ClaseHasClaseHija link in the same Partition as the given Clase
-		/// </summary>
-		/// <param name="source">Clase to use as the source of the relationship.</param>
-		/// <param name="target">Clase to use as the target of the relationship.</param>
-		public ClaseHasClaseHija(Clase source, Clase target)
-			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClaseHasClaseHija.SourceClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClaseHasClaseHija.TargetClaseDomainRoleId, target)}, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseHasClaseHija(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="store">Store where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseHasClaseHija(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		public ClaseHasClaseHija(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
-			: base(partition, roleAssignments, null)
-		{
-		}
-		
-		/// <summary>
-		/// Constructor
-		/// </summary>
-		/// <param name="partition">Partition where new link is to be created.</param>
-		/// <param name="roleAssignments">List of relationship role assignments.</param>
-		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
-		public ClaseHasClaseHija(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
-			: base(partition, roleAssignments, propertyAssignments)
-		{
-		}
-		#endregion
-		#region SourceClase domain role code
-		
-		/// <summary>
-		/// SourceClase domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid SourceClaseDomainRoleId = new global::System.Guid(0xf7880ac6, 0x1602, 0x4d86, 0xb0, 0x2d, 0x8b, 0xc4, 0x37, 0x32, 0x43, 0xf9);
-		
-		/// <summary>
-		/// DomainRole SourceClase
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClase
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/SourceClase.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/SourceClase.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "subClase", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
-		[DslModeling::DomainObjectId("f7880ac6-1602-4d86-b02d-8bc4373243f9")]
-		public virtual Clase SourceClase
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceClaseDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceClaseDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access superClase of a Clase
-		/// <summary>
-		/// Gets superClase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static Clase GetsuperClase(Clase element)
-		{
-			return DslModeling::DomainRoleInfo.GetLinkedElement(element, TargetClaseDomainRoleId) as Clase;
-		}
-		
-		/// <summary>
-		/// Sets superClase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static void SetsuperClase(Clase element, Clase newSourceClase)
-		{
-			DslModeling::DomainRoleInfo.SetLinkedElement(element, TargetClaseDomainRoleId, newSourceClase);
-		}
-		#endregion
-		#region TargetClase domain role code
-		
-		/// <summary>
-		/// TargetClase domain role Id.
-		/// </summary>
-		public static readonly global::System.Guid TargetClaseDomainRoleId = new global::System.Guid(0x483254be, 0xe777, 0x4662, 0x9d, 0xd7, 0x64, 0x17, 0x78, 0x46, 0x4f, 0xb9);
-		
-		/// <summary>
-		/// DomainRole TargetClase
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClase
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/TargetClase.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/TargetClase.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "superClase", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/TargetClase.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
-		[DslModeling::DomainObjectId("483254be-e777-4662-9dd7-641778464fb9")]
-		public virtual Clase TargetClase
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetClaseDomainRoleId);
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetClaseDomainRoleId, value);
-			}
-		}
-				
-		#endregion
-		#region Static methods to access subClase of a Clase
-		/// <summary>
-		/// Gets a list of subClase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetsubClase(Clase element)
-		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
-		}
-		#endregion
-		#region tipoHerencia domain property code
-		
-		/// <summary>
-		/// tipoHerencia domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid tipoHerenciaDomainPropertyId = new global::System.Guid(0x8c4e2f25, 0x43c1, 0x4587, 0x95, 0xea, 0x17, 0xf4, 0xbd, 0xf4, 0xf4, 0xc1);
-		
-		/// <summary>
-		/// Storage for tipoHerencia
-		/// </summary>
-		private global::System.String tipoHerenciaPropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of tipoHerencia domain property.
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Tipo Herencia
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/tipoHerencia.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/tipoHerencia.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("8c4e2f25-43c1-4587-95ea-17f4bdf4f4c1")]
-		public global::System.String tipoHerencia
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return tipoHerenciaPropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				tipoHerenciaPropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the ClaseHasClaseHija.tipoHerencia domain property.
-		/// </summary>
-		internal sealed partial class tipoHerenciaPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseHasClaseHija, global::System.String>
-		{
-			private tipoHerenciaPropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the ClaseHasClaseHija.tipoHerencia domain property value handler.
-			/// </summary>
-			public static readonly tipoHerenciaPropertyHandler Instance = new tipoHerenciaPropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the ClaseHasClaseHija.tipoHerencia domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return tipoHerenciaDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ClaseHasClaseHija element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.tipoHerenciaPropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClaseHasClaseHija element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.tipoHerenciaPropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region nombre domain property code
-		
-		/// <summary>
-		/// nombre domain property Id.
-		/// </summary>
-		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x9483dc30, 0x3d55, 0x4c07, 0xbf, 0x92, 0x46, 0x12, 0x40, 0x80, 0xab, 0x09);
-		
-		/// <summary>
-		/// Storage for nombre
-		/// </summary>
-		private global::System.String nombrePropertyStorage = string.Empty;
-		
-		/// <summary>
-		/// Gets or sets the value of nombre domain property.
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.Nombre
-		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/nombre.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija/nombre.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainObjectId("9483dc30-3d55-4c07-bf92-46124080ab09")]
-		public global::System.String nombre
-		{
-			[global::System.Diagnostics.DebuggerStepThrough]
-			get
-			{
-				return nombrePropertyStorage;
-			}
-			[global::System.Diagnostics.DebuggerStepThrough]
-			set
-			{
-				nombrePropertyHandler.Instance.SetValue(this, value);
-			}
-		}
-		/// <summary>
-		/// Value handler for the ClaseHasClaseHija.nombre domain property.
-		/// </summary>
-		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseHasClaseHija, global::System.String>
-		{
-			private nombrePropertyHandler() { }
-		
-			/// <summary>
-			/// Gets the singleton instance of the ClaseHasClaseHija.nombre domain property value handler.
-			/// </summary>
-			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
-		
-			/// <summary>
-			/// Gets the Id of the ClaseHasClaseHija.nombre domain property.
-			/// </summary>
-			public sealed override global::System.Guid DomainPropertyId
-			{
-				[global::System.Diagnostics.DebuggerStepThrough]
-				get
-				{
-					return nombreDomainPropertyId;
-				}
-			}
-			
-			/// <summary>
-			/// Gets a strongly-typed value of the property on specified element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(ClaseHasClaseHija element)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.nombrePropertyStorage;
-			}
-		
-			/// <summary>
-			/// Sets property value on an element.
-			/// </summary>
-			/// <param name="element">Element which owns the property.</param>
-			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(ClaseHasClaseHija element, global::System.String newValue)
-			{
-				if (element == null) throw new global::System.ArgumentNullException("element");
-		
-				global::System.String oldValue = GetValue(element);
-				if (newValue != oldValue)
-				{
-					ValueChanging(element, oldValue, newValue);
-					element.nombrePropertyStorage = newValue;
-					ValueChanged(element, oldValue, newValue);
-				}
-			}
-		}
-		
-		#endregion
-		#region SourceClase link accessor
-		/// <summary>
-		/// Get the list of ClaseHasClaseHija links to a Clase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija> GetLinksTosubClase ( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClaseInstance )
-		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija>(sourceClaseInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClaseDomainRoleId);
-		}
-		#endregion
-		#region TargetClase link accessor
-		/// <summary>
-		/// Get the ClaseHasClaseHija link to a Clase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija GetLinkTosuperClase (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetClaseInstance)
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija>(targetClaseInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.TargetClaseDomainRoleId);
-			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of TargetClase not obeyed.");
-			if ( links.Count == 0 )
-			{
-				return null;
-			}
-			else
-			{
-				return links[0];
-			}
-		}
-		#endregion
-		#region ClaseHasClaseHija instance accessors
-		
-		/// <summary>
-		/// Get any ClaseHasClaseHija links between a given Clase and a Clase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija> GetLinks( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase source, global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase target )
-		{
-			global::System.Collections.Generic.List<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija>();
-			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija>(source, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClaseDomainRoleId);
-			foreach ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija link in links )
-			{
-				if ( target.Equals(link.TargetClase) )
-				{
-					outLinks.Add(link);
-				}
-			}
-			return outLinks.AsReadOnly();
-		}
-		/// <summary>
-		/// Get the one ClaseHasClaseHija link between a given Claseand a Clase.
-		/// </summary>
-		[global::System.Diagnostics.DebuggerStepThrough]
-		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija GetLink( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase source, global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase target )
-		{
-			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija>(source, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija.SourceClaseDomainRoleId);
-			foreach ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija link in links )
-			{
-				if ( target.Equals(link.TargetClase) )
-				{
-					return link;
-				}
-			}
-			return null;
-		}
-		
-		#endregion
-	}
-}
-namespace UPM_IPS.JRPPCLMCFProyectoIPS
-{
-	/// <summary>
 	/// DomainRelationship ClaseComponeClases
 	/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases
 	/// </summary>
@@ -3772,6 +3359,314 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		{
 			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase>(source, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase.SourceClaseDomainRoleId);
 			foreach ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase link in links )
+			{
+				if ( target.Equals(link.TargetClase) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.JRPPCLMCFProyectoIPS
+{
+	/// <summary>
+	/// DomainRelationship ClasePadreHasClaseHija
+	/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("c4597867-f5e8-40db-a9af-d7082fe4f543")]
+	public partial class ClasePadreHasClaseHija : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClasePadreHasClaseHija domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xc4597867, 0xf5e8, 0x40db, 0xa9, 0xaf, 0xd7, 0x08, 0x2f, 0xe4, 0xf5, 0x43);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClasePadreHasClaseHija link in the same Partition as the given Clase
+		/// </summary>
+		/// <param name="source">Clase to use as the source of the relationship.</param>
+		/// <param name="target">Clase to use as the target of the relationship.</param>
+		public ClasePadreHasClaseHija(Clase source, Clase target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClasePadreHasClaseHija.SourceClaseDomainRoleId, source), new DslModeling::RoleAssignment(ClasePadreHasClaseHija.TargetClaseDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClasePadreHasClaseHija(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClasePadreHasClaseHija(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClasePadreHasClaseHija(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClasePadreHasClaseHija(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region SourceClase domain role code
+		
+		/// <summary>
+		/// SourceClase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid SourceClaseDomainRoleId = new global::System.Guid(0x984b087f, 0xfbca, 0x4076, 0xbb, 0xc7, 0x69, 0xe2, 0xf5, 0x0b, 0x09, 0xf8);
+		
+		/// <summary>
+		/// DomainRole SourceClase
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClase
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "subClase", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("984b087f-fbca-4076-bbc7-69e2f50b09f8")]
+		public virtual Clase SourceClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, SourceClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, SourceClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access superClase of a Clase
+		/// <summary>
+		/// Gets a list of superClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Clase> GetsuperClase(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, TargetClaseDomainRoleId);
+		}
+		#endregion
+		#region TargetClase domain role code
+		
+		/// <summary>
+		/// TargetClase domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid TargetClaseDomainRoleId = new global::System.Guid(0xd775ff49, 0x499a, 0x4d09, 0x89, 0x0f, 0xfb, 0xb8, 0x6e, 0xe8, 0xaa, 0x76);
+		
+		/// <summary>
+		/// DomainRole TargetClase
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.TargetClase
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "superClase", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("d775ff49-499a-4d09-890f-fbb86ee8aa76")]
+		public virtual Clase TargetClase
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Clase)DslModeling::DomainRoleInfo.GetRolePlayer(this, TargetClaseDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, TargetClaseDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access subClase of a Clase
+		/// <summary>
+		/// Gets a list of subClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Clase> GetsubClase(Clase element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
+		}
+		#endregion
+		#region tipoHerencia domain property code
+		
+		/// <summary>
+		/// tipoHerencia domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tipoHerenciaDomainPropertyId = new global::System.Guid(0xfc8449e7, 0x44ae, 0x4039, 0x90, 0xb2, 0xc4, 0x9a, 0xd5, 0x47, 0x48, 0xe2);
+		
+		/// <summary>
+		/// Storage for tipoHerencia
+		/// </summary>
+		private global::System.String tipoHerenciaPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of tipoHerencia domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.Tipo
+		/// Herencia
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/tipoHerencia.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/tipoHerencia.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("fc8449e7-44ae-4039-90b2-c49ad54748e2")]
+		public global::System.String tipoHerencia
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoHerenciaPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				tipoHerenciaPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClasePadreHasClaseHija.tipoHerencia domain property.
+		/// </summary>
+		internal sealed partial class tipoHerenciaPropertyHandler : DslModeling::DomainPropertyValueHandler<ClasePadreHasClaseHija, global::System.String>
+		{
+			private tipoHerenciaPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClasePadreHasClaseHija.tipoHerencia domain property value handler.
+			/// </summary>
+			public static readonly tipoHerenciaPropertyHandler Instance = new tipoHerenciaPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClasePadreHasClaseHija.tipoHerencia domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tipoHerenciaDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ClasePadreHasClaseHija element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoHerenciaPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClasePadreHasClaseHija element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoHerenciaPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region SourceClase link accessor
+		/// <summary>
+		/// Get the list of ClasePadreHasClaseHija links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> GetLinksTosubClase ( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClaseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija>(sourceClaseInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClaseDomainRoleId);
+		}
+		#endregion
+		#region TargetClase link accessor
+		/// <summary>
+		/// Get the list of ClasePadreHasClaseHija links to a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> GetLinksTosuperClase ( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetClaseInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija>(targetClaseInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.TargetClaseDomainRoleId);
+		}
+		#endregion
+		#region ClasePadreHasClaseHija instance accessors
+		
+		/// <summary>
+		/// Get any ClasePadreHasClaseHija links between a given Clase and a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> GetLinks( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase source, global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija>(source, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClaseDomainRoleId);
+			foreach ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija link in links )
+			{
+				if ( target.Equals(link.TargetClase) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClasePadreHasClaseHija link between a given Claseand a Clase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija GetLink( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase source, global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija>(source, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClaseDomainRoleId);
+			foreach ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija link in links )
 			{
 				if ( target.Equals(link.TargetClase) )
 				{
