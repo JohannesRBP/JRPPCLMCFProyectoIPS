@@ -937,20 +937,8 @@
     <value>Estilo Clase Shape</value>
     <comment>DisplayName for DomainClass &apos;EstiloClaseShape&apos;</comment>
   </data>
-  <data name="EstiloClaseShapecolorFondoDecDefaultText" xml:space="preserve">
-    <value>colorFondoDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="EstiloClaseShapecolorLetraDecDefaultText" xml:space="preserve">
-    <value>colorLetraDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="EstiloClaseShapetipoLetraDecDefaultText" xml:space="preserve">
-    <value>tipoLetraDec</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="EstiloClaseShapealineacionDecDefaultText" xml:space="preserve">
-    <value>alineacionDec</value>
+  <data name="EstiloClaseShapecalculadaDefaultText" xml:space="preserve">
+    <value>calculada</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape.Description" xml:space="preserve">
@@ -972,6 +960,22 @@
   <data name="ClaseEnriquecidaShapenombreDecDefaultText" xml:space="preserve">
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape</value>
+    <comment>Description for DomainClass &apos;EstiloOperacionShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape.DisplayName" xml:space="preserve">
+    <value>Estilo Operacion Shape</value>
+    <comment>DisplayName for DomainClass &apos;EstiloOperacionShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape</value>
+    <comment>Description for DomainClass &apos;EstiloAtributoShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape.DisplayName" xml:space="preserve">
+    <value>Estilo Atributo Shape</value>
+    <comment>DisplayName for DomainClass &apos;EstiloAtributoShape&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase</value>
@@ -1141,6 +1145,38 @@
     <value>UML_WebTools</value>
     <comment>Toolbox item tab name</comment>
   </data>
+  <data name="ClaseEnriquecidaToolboxItem" xml:space="preserve">
+    <value>ClaseEnriquecida</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ClaseEnriquecidaToolboxTooltip" xml:space="preserve">
+    <value>Clase Enriquecida</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EstiloClaseToolboxItem" xml:space="preserve">
+    <value>EstiloClase</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EstiloClaseToolboxTooltip" xml:space="preserve">
+    <value>Estilo Clase</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EstiloOperacionToolboxItem" xml:space="preserve">
+    <value>EstiloOperacion</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EstiloOperacionToolboxTooltip" xml:space="preserve">
+    <value>Estilo Operacion</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="EstiloAtributoToolboxItem" xml:space="preserve">
+    <value>EstiloAtributo</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="EstiloAtributoToolboxTooltip" xml:space="preserve">
+    <value>Estilo Atributo</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
     <value>ToolboxItem {0} was not found</value>
     <comment>Invalid toolId</comment>
@@ -1270,8 +1306,20 @@ A DomainClass can be serialized as a moniker only if
     <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\C.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
+  <data name="EstiloClaseShapeIconECDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\EC.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
   <data name="ClaseEnriquecidaShapeIconEnDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\EN.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="EstiloOperacionShapeIconEODefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EO.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="EstiloAtributoShapeIconEADefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EA.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
   <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
@@ -1304,6 +1352,22 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="ReferencialToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\RE.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ClaseEnriquecidaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EN.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EstiloClaseToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EC.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EstiloOperacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EO.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EstiloAtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EA.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

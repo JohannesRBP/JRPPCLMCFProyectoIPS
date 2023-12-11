@@ -95,6 +95,38 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					0xff00ff,
 					Index = 7)]
 	[VSShell::ProvideStaticToolboxGroup("@UML_WebToolsToolboxTab;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", "UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab")]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab",
+					"@ClaseEnriquecidaToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"ClaseEnriquecida", 
+					"@ClaseEnriquecidaToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 8)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab",
+					"@EstiloClaseToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EstiloClase", 
+					"@EstiloClaseToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 9)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab",
+					"@EstiloOperacionToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EstiloOperacion", 
+					"@EstiloOperacionToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 10)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.JRPPCLMCFProyectoIPS.UML_WebToolsToolboxTab",
+					"@EstiloAtributoToolboxItem;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					"UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"EstiloAtributo", 
+					"@EstiloAtributoToolboxBitmap;UPM_IPS.JRPPCLMCFProyectoIPS.Dsl.dll", 
+					0xff00ff,
+					Index = 11)]
 	[VSShell::ProvideEditorFactory(typeof(JRPPCLMCFProyectoIPSEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(JRPPCLMCFProyectoIPSEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(JRPPCLMCFProyectoIPSEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer

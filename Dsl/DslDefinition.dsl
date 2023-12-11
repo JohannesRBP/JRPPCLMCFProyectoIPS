@@ -533,19 +533,13 @@
     </CompartmentShape>
     <GeometryShape Id="d38d0576-299a-4100-8120-f3ab7ce692fd" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape" Name="EstiloClaseShape" DisplayName="Estilo Clase Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Clase Shape" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="colorFondoDec" DisplayName="Color Fondo Dec" DefaultText="colorFondoDec" />
+        <IconDecorator Name="IconEC" DisplayName="Icon EC" DefaultIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\EC.bmp" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="colorLetraDec" DisplayName="Color Letra Dec" DefaultText="colorLetraDec" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="tipoLetraDec" DisplayName="Tipo Letra Dec" DefaultText="tipoLetraDec" />
-      </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="alineacionDec" DisplayName="Alineacion Dec" DefaultText="alineacionDec" />
+        <TextDecorator Name="calculada" DisplayName="Calculada" DefaultText="calculada" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <CompartmentShape Id="03a15473-6c93-4e44-b77e-076cde6514b0" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape" Name="ClaseEnriquecidaShape" DisplayName="Clase Enriquecida Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Clase Enriquecida Shape" InitialHeight="1" Geometry="Rectangle">
+    <CompartmentShape Id="03a15473-6c93-4e44-b77e-076cde6514b0" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape" Name="ClaseEnriquecidaShape" DisplayName="Clase Enriquecida Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Clase Enriquecida Shape" FillColor="SteelBlue" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
@@ -555,6 +549,16 @@
       <Compartment Name="atributoDec" />
       <Compartment Name="operacionDec" />
     </CompartmentShape>
+    <GeometryShape Id="b2d34def-5bc5-4e39-8691-8438f9356ea0" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape" Name="EstiloOperacionShape" DisplayName="Estilo Operacion Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Operacion Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="IconEO" DisplayName="Icon EO" DefaultIcon="Resources\EO.bmp" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <GeometryShape Id="e42f110e-650e-4fbb-8e7b-2c2670d7906f" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape" Name="EstiloAtributoShape" DisplayName="Estilo Atributo Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Atributo Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="IconEA" DisplayName="Icon EA" DefaultIcon="Resources\EA.bmp" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="25c6962a-8dc5-43c1-bda8-80c6252e0847" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase" Name="MetaforaClase_Clase" DisplayName="Metafora Clase_ Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Clase_ Clase">
@@ -856,6 +860,12 @@
       </XmlClassData>
       <XmlClassData TypeName="ClaseEnriquecidaShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaShapeMoniker" ElementName="claseEnriquecidaShape" MonikerTypeName="ClaseEnriquecidaShapeMoniker">
         <CompartmentShapeMoniker Name="ClaseEnriquecidaShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="EstiloOperacionShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloOperacionShapeMoniker" ElementName="estiloOperacionShape" MonikerTypeName="EstiloOperacionShapeMoniker">
+        <GeometryShapeMoniker Name="EstiloOperacionShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="EstiloAtributoShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloAtributoShapeMoniker" ElementName="estiloAtributoShape" MonikerTypeName="EstiloAtributoShapeMoniker">
+        <GeometryShapeMoniker Name="EstiloAtributoShape" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -1160,7 +1170,20 @@
         <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClaseReferenciaClaseBuilder" />
       </ConnectionTool>
     </ToolboxTab>
-    <ToolboxTab TabText="UML_WebTools" />
+    <ToolboxTab TabText="UML_WebTools">
+      <ElementTool Name="ClaseEnriquecida" ToolboxIcon="Resources\EN.bmp" Caption="ClaseEnriquecida" Tooltip="Clase Enriquecida" HelpKeyword="ClaseEnriquecida">
+        <DomainClassMoniker Name="ClaseEnriquecida" />
+      </ElementTool>
+      <ElementTool Name="EstiloClase" ToolboxIcon="Resources\EC.bmp" Caption="EstiloClase" Tooltip="Estilo Clase" HelpKeyword="EstiloClase">
+        <DomainClassMoniker Name="EstiloClase" />
+      </ElementTool>
+      <ElementTool Name="EstiloOperacion" ToolboxIcon="Resources\EO.bmp" Caption="EstiloOperacion" Tooltip="Estilo Operacion" HelpKeyword="EstiloOperacion">
+        <DomainClassMoniker Name="EstiloOperacion" />
+      </ElementTool>
+      <ElementTool Name="EstiloAtributo" ToolboxIcon="Resources\EA.bmp" Caption="EstiloAtributo" Tooltip="Estilo Atributo" HelpKeyword="EstiloAtributo">
+        <DomainClassMoniker Name="EstiloAtributo" />
+      </ElementTool>
+    </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="JRPPCLMCFProyectoIPSDiagram" />
   </Designer>

@@ -163,7 +163,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\CO.bmp" />
+    <Content Include="Resources\EA.bmp" />
+    <Content Include="Resources\EC.bmp" />
     <Content Include="Resources\EN.bmp" />
+    <Content Include="Resources\EO.bmp" />
     <Content Include="Resources\H.bmp" />
     <Content Include="Resources\O.bmp" />
     <Content Include="Resources\P.bmp" />
