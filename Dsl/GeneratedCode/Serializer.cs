@@ -7585,6 +7585,23 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					}
 				}
 			}
+			// tipoParametro
+			if (!serializationContext.Result.Failed)
+			{
+				string attribtipoParametro = JRPPCLMCFProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoParametro");
+				if (attribtipoParametro != null)
+				{
+					TipoParametro valueOftipoParametro;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoParametro>(serializationContext, attribtipoParametro, out valueOftipoParametro))
+					{
+						instanceOfParametro.tipoParametro = valueOftipoParametro;
+					}
+					else
+					{	// Invalid property value, ignored.
+						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoParametro", typeof(TipoParametro), attribtipoParametro);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -8029,6 +8046,16 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					if (!string.IsNullOrEmpty(propValue))
 						JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombre", propValue);
 	
+				}
+			}
+			// tipoParametro
+			if (!serializationContext.Result.Failed)
+			{
+				TipoParametro propValue = instanceOfParametro.tipoParametro;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoParametro>(serializationContext, propValue);
+				if (!serializationContext.Result.Failed)
+				{
+					JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoParametro", serializedPropValue);
 				}
 			}
 		}

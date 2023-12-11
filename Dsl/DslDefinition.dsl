@@ -288,6 +288,11 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="6e44c33e-64f2-4eca-9141-1fff455b687e" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Tipo Parametro" Name="tipoParametro" DisplayName="Tipo Parametro">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoParametro" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
   </Classes>
@@ -596,6 +601,13 @@
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Izquierda" Name="Izquierda" Value="2" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="TipoParametro" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Entrada" Name="Entrada" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Salida" Name="Salida" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Entrada_Salida" Name="Entrada_Salida" Value="1" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <CompartmentShape Id="fa56f67d-987a-4f21-b72e-0cf9d5b1ad2b" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseMetafora" Name="ClaseMetafora" DisplayName="Clase Metafora" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Clase Metafora" FillColor="LightSeaGreen" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
@@ -608,23 +620,23 @@
       <Compartment Name="Atributo" />
       <Compartment Name="Opereacion" />
     </CompartmentShape>
-    <GeometryShape Id="d38d0576-299a-4100-8120-f3ab7ce692fd" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape" Name="EstiloClaseShape" DisplayName="Estilo Clase Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Clase Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="d38d0576-299a-4100-8120-f3ab7ce692fd" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape" Name="EstiloClaseShape" DisplayName="Estilo Clase Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Clase Shape" FillColor="LightSkyBlue" InitialHeight="1" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="IconEC" DisplayName="Icon EC" DefaultIcon="Resources\EC.bmp" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerMiddleRight" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="colorLetraCalculadoDec" DisplayName="Color Letra Calculado Dec" DefaultText="colorLetraCalculadoDec" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerMiddleLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="tipoLetraCalculadoDec" DisplayName="Tipo Letra Calculado Dec" DefaultText="tipoLetraCalculadoDec" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerBottomLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="colorFondoCalculadoDec" DisplayName="Color Fondo Calculado Dec" DefaultText="colorFondoCalculadoDec" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerBottomRight" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="alineacionCalculadaDec" DisplayName="Alineacion Calculada Dec" DefaultText="alineacionCalculadaDec" />
       </ShapeHasDecorators>
     </GeometryShape>
@@ -638,31 +650,31 @@
       <Compartment Name="atributoDec" />
       <Compartment Name="operacionDec" />
     </CompartmentShape>
-    <GeometryShape Id="b2d34def-5bc5-4e39-8691-8438f9356ea0" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape" Name="EstiloOperacionShape" DisplayName="Estilo Operacion Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Operacion Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="b2d34def-5bc5-4e39-8691-8438f9356ea0" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape" Name="EstiloOperacionShape" DisplayName="Estilo Operacion Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Operacion Shape" FillColor="MediumTurquoise" InitialHeight="1" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="IconEO" DisplayName="Icon EO" DefaultIcon="Resources\EO.bmp" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerBottomLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="colorLetraCalculadoDec" DisplayName="Color Letra Calculado Dec" DefaultText="colorLetraCalculadoDec" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="tipoLetraCalculadoDec" DisplayName="Tipo Letra Calculado Dec" DefaultText="tipoLetraCalculadoDec" />
       </ShapeHasDecorators>
     </GeometryShape>
-    <GeometryShape Id="e42f110e-650e-4fbb-8e7b-2c2670d7906f" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape" Name="EstiloAtributoShape" DisplayName="Estilo Atributo Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Atributo Shape" InitialHeight="1" Geometry="Rectangle">
+    <GeometryShape Id="e42f110e-650e-4fbb-8e7b-2c2670d7906f" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape" Name="EstiloAtributoShape" DisplayName="Estilo Atributo Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Atributo Shape" FillColor="PaleGreen" InitialHeight="1" Geometry="RoundedRectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="IconEA" DisplayName="Icon EA" DefaultIcon="Resources\EA.bmp" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerBottomLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="colorDeLetraCalculadoDec" DisplayName="Color De Letra Calculado Dec" DefaultText="colorDeLetraCalculadoDec" />
       </ShapeHasDecorators>
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="Center" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="tipoLetraCalculadoDec" DisplayName="Tipo Letra Calculado Dec" DefaultText="tipoLetraCalculadoDec" />
       </ShapeHasDecorators>
     </GeometryShape>
@@ -900,6 +912,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="nombre">
             <DomainPropertyMoniker Name="Parametro/nombre" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoParametro">
+            <DomainPropertyMoniker Name="Parametro/tipoParametro" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>

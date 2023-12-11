@@ -540,6 +540,8 @@
         <xsd:attribute name="tipoDato" type="TipoDato" />
         <!-- Property: nombre -->
         <xsd:attribute name="nombre" type="xsd:string" />
+        <!-- Property: tipoParametro -->
+        <xsd:attribute name="tipoParametro" type="TipoParametro" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1100,6 +1102,15 @@
       <xsd:enumeration value="Derecha"/>
       <xsd:enumeration value="Centro"/>
       <xsd:enumeration value="Izquierda"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum TipoParametro -->
+  <xsd:simpleType name="TipoParametro">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Entrada"/>
+      <xsd:enumeration value="Salida"/>
+      <xsd:enumeration value="Entrada_Salida"/>
     </xsd:restriction>
   </xsd:simpleType>
   

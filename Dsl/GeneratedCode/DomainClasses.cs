@@ -4080,6 +4080,93 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		
 		#endregion
+		#region tipoParametro domain property code
+		
+		/// <summary>
+		/// tipoParametro domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tipoParametroDomainPropertyId = new global::System.Guid(0x6e44c33e, 0x64f2, 0x4eca, 0x91, 0x41, 0x1f, 0xff, 0x45, 0x5b, 0x68, 0x7e);
+		
+		/// <summary>
+		/// Storage for tipoParametro
+		/// </summary>
+		private TipoParametro tipoParametroPropertyStorage;
+		
+		/// <summary>
+		/// Gets or sets the value of tipoParametro domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Tipo Parametro
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/tipoParametro.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Parametro/tipoParametro.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("6e44c33e-64f2-4eca-9141-1fff455b687e")]
+		public TipoParametro tipoParametro
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoParametroPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				tipoParametroPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Parametro.tipoParametro domain property.
+		/// </summary>
+		internal sealed partial class tipoParametroPropertyHandler : DslModeling::DomainPropertyValueHandler<Parametro, TipoParametro>
+		{
+			private tipoParametroPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Parametro.tipoParametro domain property value handler.
+			/// </summary>
+			public static readonly tipoParametroPropertyHandler Instance = new tipoParametroPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Parametro.tipoParametro domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tipoParametroDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed TipoParametro GetValue(Parametro element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoParametroPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Parametro element, TipoParametro newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				TipoParametro oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoParametroPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region Operacion opposite domain role accessor
 		/// <summary>
 		/// Gets or sets Operacion.

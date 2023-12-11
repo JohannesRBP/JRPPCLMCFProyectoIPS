@@ -152,6 +152,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				new DomainMemberInfo(typeof(EstiloOperacion), "colorLetraCalculado", EstiloOperacion.colorLetraCalculadoDomainPropertyId, typeof(EstiloOperacion.colorLetraCalculadoPropertyHandler)),
 				new DomainMemberInfo(typeof(Parametro), "tipoDato", Parametro.tipoDatoDomainPropertyId, typeof(Parametro.tipoDatoPropertyHandler)),
 				new DomainMemberInfo(typeof(Parametro), "nombre", Parametro.nombreDomainPropertyId, typeof(Parametro.nombrePropertyHandler)),
+				new DomainMemberInfo(typeof(Parametro), "tipoParametro", Parametro.tipoParametroDomainPropertyId, typeof(Parametro.tipoParametroPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidad0", ClaseReferencesClase.cardinalidad0DomainPropertyId, typeof(ClaseReferencesClase.cardinalidad0PropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidad1", ClaseReferencesClase.cardinalidad1DomainPropertyId, typeof(ClaseReferencesClase.cardinalidad1PropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "nombre", ClaseReferencesClase.nombreDomainPropertyId, typeof(ClaseReferencesClase.nombrePropertyHandler)),
@@ -734,6 +735,35 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Izquierda.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		Izquierda = 2,
+	}
+}
+namespace UPM_IPS.JRPPCLMCFProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: TipoParametro
+	/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum TipoParametro
+	{
+		/// <summary>
+		/// Entrada
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Entrada
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro/Entrada.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		Entrada = 0,
+		/// <summary>
+		/// Salida
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Salida
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro/Salida.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		Salida = 2,
+		/// <summary>
+		/// Entrada_Salida
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Entrada_Salida
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro/Entrada_Salida.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		Entrada_Salida = 1,
 	}
 }
 
