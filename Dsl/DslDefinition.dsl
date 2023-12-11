@@ -156,24 +156,24 @@
     </DomainClass>
     <DomainClass Id="1b61e213-6a69-42ab-bf1f-c7833e9e1a25" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase" Name="EstiloClase" DisplayName="Estilo Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
       <Properties>
-        <DomainProperty Id="2e2b9d51-d8c4-4df3-9f91-631fac8d8c84" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Fondo" Name="colorFondo" DisplayName="Color Fondo">
+        <DomainProperty Id="2e2b9d51-d8c4-4df3-9f91-631fac8d8c84" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Fondo" Name="colorFondo" DisplayName="Color Fondo" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoColor" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="da57203c-ab51-4e15-a993-7ae042a20f1d" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Letra" Name="colorLetra" DisplayName="Color Letra" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoLetra" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="94ded152-4bf5-4730-827d-2b38ca1b3a3c" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Tipo Letra" Name="tipoLetra" DisplayName="Tipo Letra" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="da57203c-ab51-4e15-a993-7ae042a20f1d" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Letra" Name="colorLetra" DisplayName="Color Letra">
+        <DomainProperty Id="a7c8dca5-02a7-4458-8fd6-10047dbc00b9" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Alineacion" Name="alineacion" DisplayName="Alineacion" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="94ded152-4bf5-4730-827d-2b38ca1b3a3c" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Tipo Letra" Name="tipoLetra" DisplayName="Tipo Letra">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="a7c8dca5-02a7-4458-8fd6-10047dbc00b9" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Alineacion" Name="alineacion" DisplayName="Alineacion">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="Alineacion" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="039ee7ba-2eaa-4677-807c-d58af7f230a6" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Texto Normal" Name="textoNormal" DisplayName="Texto Normal">
@@ -189,6 +189,11 @@
         <DomainProperty Id="3d5c82ca-74bb-45d9-85c9-0f351b2b8cf3" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Radio Button" Name="radioButton" DisplayName="Radio Button">
           <Type>
             <ExternalTypeMoniker Name="/System/Boolean" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d9cb99e9-7d7a-4ab6-833e-d721309dd23b" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Nombre" Name="nombre" DisplayName="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -529,6 +534,28 @@
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato.Double" Name="Double" Value="2" />
       </Literals>
     </DomainEnumeration>
+    <DomainEnumeration Name="TipoColor" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Verde" Name="Verde" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Rojo" Name="Rojo" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Azul" Name="Azul" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Amarillo" Name="Amarillo" Value="3" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="TipoLetra" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoLetra">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoLetra.TimesNewRoman" Name="TimesNewRoman" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoLetra.Calibri" Name="Calibri" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoLetra.Arial" Name="Arial" Value="2" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="Alineacion" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Derecha" Name="Derecha" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Centro" Name="Centro" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Izquierda" Name="Izquierda" Value="2" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <CompartmentShape Id="fa56f67d-987a-4f21-b72e-0cf9d5b1ad2b" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseMetafora" Name="ClaseMetafora" DisplayName="Clase Metafora" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Clase Metafora" FillColor="LightSeaGreen" InitialHeight="1" FillGradientMode="None" Geometry="RoundedRectangle">
@@ -536,14 +563,14 @@
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <IconDecorator Name="IconC" DisplayName="Icon C" DefaultIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\C.bmp" />
+        <IconDecorator Name="IconC" DisplayName="Icon C" DefaultIcon="Resources\C.bmp" />
       </ShapeHasDecorators>
       <Compartment Name="Atributo" />
       <Compartment Name="Opereacion" />
     </CompartmentShape>
     <GeometryShape Id="d38d0576-299a-4100-8120-f3ab7ce692fd" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape" Name="EstiloClaseShape" DisplayName="Estilo Clase Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Clase Shape" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <IconDecorator Name="IconEC" DisplayName="Icon EC" DefaultIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\EC.bmp" />
+        <IconDecorator Name="IconEC" DisplayName="Icon EC" DefaultIcon="Resources\EC.bmp" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
@@ -747,16 +774,16 @@
       <XmlClassData TypeName="EstiloClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloClaseMoniker" ElementName="estiloClase" MonikerTypeName="EstiloClaseMoniker">
         <DomainClassMoniker Name="EstiloClase" />
         <ElementData>
-          <XmlPropertyData XmlName="colorFondo">
+          <XmlPropertyData XmlName="colorFondo" Representation="Ignore">
             <DomainPropertyMoniker Name="EstiloClase/colorFondo" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="colorLetra">
+          <XmlPropertyData XmlName="colorLetra" Representation="Ignore">
             <DomainPropertyMoniker Name="EstiloClase/colorLetra" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="tipoLetra">
+          <XmlPropertyData XmlName="tipoLetra" Representation="Ignore">
             <DomainPropertyMoniker Name="EstiloClase/tipoLetra" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="alineacion">
+          <XmlPropertyData XmlName="alineacion" Representation="Ignore">
             <DomainPropertyMoniker Name="EstiloClase/alineacion" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="textoNormal">
@@ -767,6 +794,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="radioButton">
             <DomainPropertyMoniker Name="EstiloClase/radioButton" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="EstiloClase/nombre" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -1073,6 +1103,50 @@
           </PropertyDisplayed>
         </CompartmentMap>
       </CompartmentShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="EstiloClase" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloClaseShape/alineacionCalculadaDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloClase/alineacion" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloClaseShape/colorFondoCalculadoDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloClase/colorFondo" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloClaseShape/colorLetraCalculadoDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloClase/colorLetra" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloClaseShape/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloClase/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloClaseShape/tipoLetraCalculadoDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloClase/tipoLetra" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="EstiloClaseShape" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
@@ -1203,10 +1277,10 @@
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="UML_CONECTORS">
-      <ConnectionTool Name="Asociacion" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\Aso.bmp" Caption="Asociacion " Tooltip="Crear una Asociacion Clase Clase" HelpKeyword="Asociacion">
+      <ConnectionTool Name="Asociacion" ToolboxIcon="Resources\Aso.bmp" Caption="Asociacion " Tooltip="Crear una Asociacion Clase Clase" HelpKeyword="Asociacion">
         <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClaseReferencesClaseBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="Herencia" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\H.bmp" Caption="Herencia" Tooltip="Herencia" HelpKeyword="Herencia">
+      <ConnectionTool Name="Herencia" ToolboxIcon="Resources\H.bmp" Caption="Herencia" Tooltip="Herencia" HelpKeyword="Herencia">
         <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClaseHasClaseHijaBuilder" />
       </ConnectionTool>
       <ConnectionTool Name="Composicion" ToolboxIcon="Resources\CO.bmp" Caption="Composicion" Tooltip="Composicion" HelpKeyword="Composicion">

@@ -413,19 +413,21 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: colorFondo -->
-        <xsd:attribute name="colorFondo" type="xsd:string" />
+        <xsd:attribute name="colorFondo" type="TipoColor" />
         <!-- Property: colorLetra -->
-        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <xsd:attribute name="colorLetra" type="TipoLetra" />
         <!-- Property: tipoLetra -->
         <xsd:attribute name="tipoLetra" type="xsd:string" />
         <!-- Property: alineacion -->
-        <xsd:attribute name="alineacion" type="xsd:string" />
+        <xsd:attribute name="alineacion" type="Alineacion" />
         <!-- Property: textoNormal -->
         <xsd:attribute name="textoNormal" type="xsd:boolean" />
         <!-- Property: checkBox -->
         <xsd:attribute name="checkBox" type="xsd:boolean" />
         <!-- Property: radioButton -->
         <xsd:attribute name="radioButton" type="xsd:boolean" />
+        <!-- Property: nombre -->
+        <xsd:attribute name="nombre" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -462,6 +464,8 @@
         <xsd:attribute name="tipoLetra" type="xsd:string" />
         <!-- Property: colorLetra -->
         <xsd:attribute name="colorLetra" type="xsd:string" />
+        <!-- Property: nombre -->
+        <xsd:attribute name="nombre" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -498,6 +502,8 @@
         <xsd:attribute name="tipoLetra" type="xsd:string" />
         <!-- Property: colorLetra -->
         <xsd:attribute name="colorLetra" type="xsd:string" />
+        <!-- Property: nombre -->
+        <xsd:attribute name="nombre" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -1066,6 +1072,34 @@
       <xsd:enumeration value="String"/>
       <xsd:enumeration value="Float"/>
       <xsd:enumeration value="Double"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum TipoColor -->
+  <xsd:simpleType name="TipoColor">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Verde"/>
+      <xsd:enumeration value="Rojo"/>
+      <xsd:enumeration value="Azul"/>
+      <xsd:enumeration value="Amarillo"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum TipoLetra -->
+  <xsd:simpleType name="TipoLetra">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TimesNewRoman"/>
+      <xsd:enumeration value="Calibri"/>
+      <xsd:enumeration value="Arial"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum Alineacion -->
+  <xsd:simpleType name="Alineacion">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Derecha"/>
+      <xsd:enumeration value="Centro"/>
+      <xsd:enumeration value="Izquierda"/>
     </xsd:restriction>
   </xsd:simpleType>
   

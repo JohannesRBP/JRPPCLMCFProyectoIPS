@@ -1984,7 +1984,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for colorFondo
 		/// </summary>
-		private global::System.String colorFondoPropertyStorage = string.Empty;
+		private TipoColor colorFondoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of colorFondo domain property.
@@ -1993,7 +1993,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorFondo.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorFondo.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("2e2b9d51-d8c4-4df3-9f91-631fac8d8c84")]
-		public global::System.String colorFondo
+		public TipoColor colorFondo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2009,7 +2009,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloClase.colorFondo domain property.
 		/// </summary>
-		internal sealed partial class colorFondoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, global::System.String>
+		internal sealed partial class colorFondoPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, TipoColor>
 		{
 			private colorFondoPropertyHandler() { }
 		
@@ -2035,7 +2035,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloClase element)
+			public override sealed TipoColor GetValue(EstiloClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorFondoPropertyStorage;
@@ -2046,11 +2046,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloClase element, global::System.String newValue)
+			public override sealed void SetValue(EstiloClase element, TipoColor newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				TipoColor oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2071,7 +2071,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for colorLetra
 		/// </summary>
-		private global::System.String colorLetraPropertyStorage = string.Empty;
+		private TipoLetra colorLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of colorLetra domain property.
@@ -2080,7 +2080,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorLetra.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorLetra.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("da57203c-ab51-4e15-a993-7ae042a20f1d")]
-		public global::System.String colorLetra
+		public TipoLetra colorLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2096,7 +2096,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloClase.colorLetra domain property.
 		/// </summary>
-		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, global::System.String>
+		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, TipoLetra>
 		{
 			private colorLetraPropertyHandler() { }
 		
@@ -2122,7 +2122,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloClase element)
+			public override sealed TipoLetra GetValue(EstiloClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorLetraPropertyStorage;
@@ -2133,11 +2133,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloClase element, global::System.String newValue)
+			public override sealed void SetValue(EstiloClase element, TipoLetra newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				TipoLetra oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2245,7 +2245,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for alineacion
 		/// </summary>
-		private global::System.String alineacionPropertyStorage = string.Empty;
+		private Alineacion alineacionPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of alineacion domain property.
@@ -2254,7 +2254,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/alineacion.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/alineacion.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("a7c8dca5-02a7-4458-8fd6-10047dbc00b9")]
-		public global::System.String alineacion
+		public Alineacion alineacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2270,7 +2270,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloClase.alineacion domain property.
 		/// </summary>
-		internal sealed partial class alineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, global::System.String>
+		internal sealed partial class alineacionPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, Alineacion>
 		{
 			private alineacionPropertyHandler() { }
 		
@@ -2296,7 +2296,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloClase element)
+			public override sealed Alineacion GetValue(EstiloClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.alineacionPropertyStorage;
@@ -2307,11 +2307,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloClase element, global::System.String newValue)
+			public override sealed void SetValue(EstiloClase element, Alineacion newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				Alineacion oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2583,6 +2583,93 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		
 		#endregion
+		#region nombre domain property code
+		
+		/// <summary>
+		/// nombre domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0xd9cb99e9, 0x7d7a, 0x4ab6, 0x83, 0x3e, 0xd7, 0x21, 0x30, 0x9d, 0xd2, 0x3b);
+		
+		/// <summary>
+		/// Storage for nombre
+		/// </summary>
+		private global::System.String nombrePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombre domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Nombre
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/nombre.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/nombre.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("d9cb99e9-7d7a-4ab6-833e-d721309dd23b")]
+		public global::System.String nombre
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombrePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombrePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloClase.nombre domain property.
+		/// </summary>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, global::System.String>
+		{
+			private nombrePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloClase.nombre domain property value handler.
+			/// </summary>
+			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloClase.nombre domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombrePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloClase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombrePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region ClaseEnriquecida opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ClaseEnriquecida.
@@ -2818,6 +2905,93 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		
 		#endregion
+		#region nombre domain property code
+		
+		/// <summary>
+		/// nombre domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0x61a62c51, 0x7917, 0x4912, 0xa8, 0xc1, 0xce, 0x3b, 0xc5, 0x8b, 0x6d, 0x0f);
+		
+		/// <summary>
+		/// Storage for nombre
+		/// </summary>
+		private global::System.String nombrePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombre domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Nombre
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/nombre.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/nombre.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("61a62c51-7917-4912-a8c1-ce3bc58b6d0f")]
+		public global::System.String nombre
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombrePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombrePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloAtributo.nombre domain property.
+		/// </summary>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributo, global::System.String>
+		{
+			private nombrePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloAtributo.nombre domain property value handler.
+			/// </summary>
+			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloAtributo.nombre domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloAtributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombrePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloAtributo element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombrePropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region ClaseEnriquecida opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ClaseEnriquecida.
@@ -3047,6 +3221,93 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.colorLetraPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region nombre domain property code
+		
+		/// <summary>
+		/// nombre domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreDomainPropertyId = new global::System.Guid(0xa98569d1, 0x255d, 0x4875, 0x92, 0xa8, 0x57, 0x42, 0xd3, 0xd6, 0x40, 0x51);
+		
+		/// <summary>
+		/// Storage for nombre
+		/// </summary>
+		private global::System.String nombrePropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombre domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Nombre
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/nombre.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/nombre.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("a98569d1-255d-4875-92a8-5742d3d64051")]
+		public global::System.String nombre
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombrePropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombrePropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloOperacion.nombre domain property.
+		/// </summary>
+		internal sealed partial class nombrePropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloOperacion, global::System.String>
+		{
+			private nombrePropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloOperacion.nombre domain property value handler.
+			/// </summary>
+			public static readonly nombrePropertyHandler Instance = new nombrePropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloOperacion.nombre domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloOperacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombrePropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(EstiloOperacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombrePropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
