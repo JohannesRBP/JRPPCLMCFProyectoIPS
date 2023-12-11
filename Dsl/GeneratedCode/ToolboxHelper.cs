@@ -48,13 +48,13 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </remarks>
 		public const string ToolboxFilterString = "JRPPCLMCFProyectoIPS.1.0";
 		/// <summary>
-		/// Toolbox item filter string used to identify AsociacionClaseClase connector tool.
+		/// Toolbox item filter string used to identify Asociacion connector tool.
 		/// </summary>
-		public const string AsociacionClaseClaseFilterString = "AsociacionClaseClase.1.0";
+		public const string AsociacionFilterString = "Asociacion.1.0";
 		/// <summary>
-		/// Toolbox item filter string used to identify HerenciaPadreHijo connector tool.
+		/// Toolbox item filter string used to identify Herencia connector tool.
 		/// </summary>
-		public const string HerenciaPadreHijoFilterString = "HerenciaPadreHijo.1.0";
+		public const string HerenciaFilterString = "Herencia.1.0";
 		/// <summary>
 		/// Toolbox item filter string used to identify Composicion connector tool.
 		/// </summary>
@@ -98,7 +98,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		{
 			get
 			{
-				return global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel.SingletonResourceManager.GetString("JRPPCLMCFProyectoIPSToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
+				return global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel.SingletonResourceManager.GetString("UML_TOOLSToolboxTab", global::System.Globalization.CultureInfo.CurrentUICulture);
 			}
 		}
 		
@@ -166,8 +166,8 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						1, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("AtributoToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AtributoToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("JRPPCLMCFProyectoIPSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.UML_TOOLSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UML_TOOLSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"Atributo", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("AtributoToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::UPM_IPS.JRPPCLMCFProyectoIPS.Atributo.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
@@ -182,8 +182,8 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						2, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ClaseToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ClaseToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("JRPPCLMCFProyectoIPSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.UML_TOOLSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UML_TOOLSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"Clase", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ClaseToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
@@ -198,8 +198,8 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						3, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("OperacionToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("OperacionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("JRPPCLMCFProyectoIPSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.UML_TOOLSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UML_TOOLSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"Operacion", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("OperacionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::UPM_IPS.JRPPCLMCFProyectoIPS.Operacion.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
@@ -214,8 +214,8 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						4, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ParametroToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ParametroToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.
-						"UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("JRPPCLMCFProyectoIPSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.UML_TOOLSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UML_TOOLSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"Parametro", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ParametroToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						CreateElementToolPrototype(store, global::UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
@@ -223,40 +223,40 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
 						});
 					break;
-				case "UPM_IPS.JRPPCLMCFProyectoIPS.AsociacionClaseClaseToolboxItem":
+				case "UPM_IPS.JRPPCLMCFProyectoIPS.AsociacionToolboxItem":
 
-					// Add AsociacionClaseClase connector tool.
+					// Add Asociacion connector tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"UPM_IPS.JRPPCLMCFProyectoIPS.AsociacionClaseClaseToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.AsociacionToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						1, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("AsociacionClaseClaseToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AsociacionClaseClaseToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"UPM_IPS.JRPPCLMCFProyectoIPS.EnlacesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("EnlacesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"AsociacionClaseClase", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("AsociacionClaseClaseToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						resourceManager.GetString("AsociacionToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("AsociacionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"UPM_IPS.JRPPCLMCFProyectoIPS.UML_CONECTORSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UML_CONECTORSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Asociacion", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("AsociacionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						null, // Connector toolbox items do not have an underlying data object.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(AsociacionClaseClaseFilterString)
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(AsociacionFilterString)
 						});
 					break;
-				case "UPM_IPS.JRPPCLMCFProyectoIPS.HerenciaPadreHijoToolboxItem":
+				case "UPM_IPS.JRPPCLMCFProyectoIPS.HerenciaToolboxItem":
 
-					// Add HerenciaPadreHijo connector tool.
+					// Add Herencia connector tool.
 					result = new DslDesign::ModelingToolboxItem(
-						"UPM_IPS.JRPPCLMCFProyectoIPS.HerenciaPadreHijoToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.HerenciaToolboxItem", // Unique identifier (non-localized) for the toolbox item.
 						2, // Position relative to other items in the same toolbox tab.
-						resourceManager.GetString("HerenciaPadreHijoToolboxItem", resourceCulture), // Localized display name for the item.
-						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("HerenciaPadreHijoToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"UPM_IPS.JRPPCLMCFProyectoIPS.EnlacesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("EnlacesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
-						"HerenciaPadreHijo", // F1 help keyword for the toolbox item.
-						resourceManager.GetString("HerenciaPadreHijoToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						resourceManager.GetString("HerenciaToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("HerenciaToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"UPM_IPS.JRPPCLMCFProyectoIPS.UML_CONECTORSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UML_CONECTORSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"Herencia", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("HerenciaToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						null, // Connector toolbox items do not have an underlying data object.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
-							new global::System.ComponentModel.ToolboxItemFilterAttribute(HerenciaPadreHijoFilterString)
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(HerenciaFilterString)
 						});
 					break;
 				case "UPM_IPS.JRPPCLMCFProyectoIPS.ComposicionToolboxItem":
@@ -267,8 +267,8 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						3, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ComposicionToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ComposicionToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"UPM_IPS.JRPPCLMCFProyectoIPS.EnlacesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("EnlacesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.UML_CONECTORSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UML_CONECTORSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"Composicion", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ComposicionToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						null, // Connector toolbox items do not have an underlying data object.
@@ -285,8 +285,8 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						4, // Position relative to other items in the same toolbox tab.
 						resourceManager.GetString("ReferencialToolboxItem", resourceCulture), // Localized display name for the item.
 						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("ReferencialToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
-						"UPM_IPS.JRPPCLMCFProyectoIPS.EnlacesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
-						resourceManager.GetString("EnlacesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"UPM_IPS.JRPPCLMCFProyectoIPS.UML_CONECTORSToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("UML_CONECTORSToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
 						"Referencial", // F1 help keyword for the toolbox item.
 						resourceManager.GetString("ReferencialToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
 						null, // Connector toolbox items do not have an underlying data object.

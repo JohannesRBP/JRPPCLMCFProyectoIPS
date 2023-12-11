@@ -531,6 +531,30 @@
       <Compartment Name="Atributo" />
       <Compartment Name="Opereacion" />
     </CompartmentShape>
+    <GeometryShape Id="d38d0576-299a-4100-8120-f3ab7ce692fd" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape" Name="EstiloClaseShape" DisplayName="Estilo Clase Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Clase Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="colorFondoDec" DisplayName="Color Fondo Dec" DefaultText="colorFondoDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="colorLetraDec" DisplayName="Color Letra Dec" DefaultText="colorLetraDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="tipoLetraDec" DisplayName="Tipo Letra Dec" DefaultText="tipoLetraDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="alineacionDec" DisplayName="Alineacion Dec" DefaultText="alineacionDec" />
+      </ShapeHasDecorators>
+    </GeometryShape>
+    <CompartmentShape Id="03a15473-6c93-4e44-b77e-076cde6514b0" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape" Name="ClaseEnriquecidaShape" DisplayName="Clase Enriquecida Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Clase Enriquecida Shape" InitialHeight="1" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="IconEn" DisplayName="Icon En" DefaultIcon="Resources\EN.bmp" />
+      </ShapeHasDecorators>
+      <Compartment Name="atributoDec" />
+      <Compartment Name="operacionDec" />
+    </CompartmentShape>
   </Shapes>
   <Connectors>
     <Connector Id="25c6962a-8dc5-43c1-bda8-80c6252e0847" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase" Name="MetaforaClase_Clase" DisplayName="Metafora Clase_ Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Clase_ Clase">
@@ -545,7 +569,7 @@
       </ConnectorHasDecorators>
     </Connector>
     <Connector Id="93b9ea3a-a94f-4d92-821c-cdf2a5db6258" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia" Name="MetaforaHerencia" DisplayName="Metafora Herencia" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Herencia" TargetEndStyle="HollowArrow">
-      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ConnectorHasDecorators>
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
@@ -553,7 +577,7 @@
       </ConnectorHasDecorators>
     </Connector>
     <Connector Id="575f2b5f-cfca-44dd-aaec-210903e74ad0" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaRComposicion" Name="MetaforaRComposicion" DisplayName="Metafora RComposicion" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora RComposicion" TargetEndStyle="FilledDiamond">
-      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
         <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
       </ConnectorHasDecorators>
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
@@ -827,6 +851,12 @@
       <XmlClassData TypeName="MetaforaReferenciada" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaReferenciadaMoniker" ElementName="metaforaReferenciada" MonikerTypeName="MetaforaReferenciadaMoniker">
         <ConnectorMoniker Name="MetaforaReferenciada" />
       </XmlClassData>
+      <XmlClassData TypeName="EstiloClaseShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloClaseShapeMoniker" ElementName="estiloClaseShape" MonikerTypeName="EstiloClaseShapeMoniker">
+        <GeometryShapeMoniker Name="EstiloClaseShape" />
+      </XmlClassData>
+      <XmlClassData TypeName="ClaseEnriquecidaShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseEnriquecidaShapeMoniker" ElementName="claseEnriquecidaShape" MonikerTypeName="ClaseEnriquecidaShapeMoniker">
+        <CompartmentShapeMoniker Name="ClaseEnriquecidaShape" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="JRPPCLMCFProyectoIPSExplorer" />
@@ -940,6 +970,43 @@
         </CompartmentMap>
         <CompartmentMap>
           <CompartmentMoniker Name="ClaseMetafora/Opereacion" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseHasOperacion.Operacion/!Operacion</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Operacion/parametrosCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+      </CompartmentShapeMap>
+      <CompartmentShapeMap>
+        <DomainClassMoniker Name="ClaseEnriquecida" />
+        <ParentElementPath>
+          <DomainPath>TapizClassWebHasClase.TapizClassWeb/!TapizClassWeb</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="ClaseEnriquecidaShape/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Clase/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <CompartmentShapeMoniker Name="ClaseEnriquecidaShape" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="ClaseEnriquecidaShape/atributoDec" />
+          <ElementsDisplayed>
+            <DomainPath>ClaseHasAtributo.Atributo/!Atributo</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributo/tipoDatoCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="ClaseEnriquecidaShape/operacionDec" />
           <ElementsDisplayed>
             <DomainPath>ClaseHasOperacion.Operacion/!Operacion</DomainPath>
           </ElementsDisplayed>
@@ -1065,7 +1132,7 @@
     <XmlSerializationDefinition CustomPostLoad="false">
       <XmlSerializationBehaviorMoniker Name="JRPPCLMCFProyectoIPSSerializationBehavior" />
     </XmlSerializationDefinition>
-    <ToolboxTab TabText="JRPPCLMCFProyectoIPS">
+    <ToolboxTab TabText="UML_TOOLS">
       <ElementTool Name="Atributo" ToolboxIcon="Resources\A.bmp" Caption="Atributo" Tooltip="Atributo" HelpKeyword="Atributo">
         <DomainClassMoniker Name="Atributo" />
       </ElementTool>
@@ -1079,11 +1146,11 @@
         <DomainClassMoniker Name="Parametro" />
       </ElementTool>
     </ToolboxTab>
-    <ToolboxTab TabText="Enlaces">
-      <ConnectionTool Name="AsociacionClaseClase" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\Aso.bmp" Caption="Asociacion Clase-Clase" Tooltip="Crear una Asociacion Clase Clase" HelpKeyword="AsociacionClaseClase">
+    <ToolboxTab TabText="UML_CONECTORS">
+      <ConnectionTool Name="Asociacion" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\Aso.bmp" Caption="Asociacion " Tooltip="Crear una Asociacion Clase Clase" HelpKeyword="Asociacion">
         <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClaseReferencesClaseBuilder" />
       </ConnectionTool>
-      <ConnectionTool Name="HerenciaPadreHijo" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\H.bmp" Caption="HerenciaPadreHijo" Tooltip="Herencia Padre Hijo" HelpKeyword="HerenciaPadreHijo">
+      <ConnectionTool Name="Herencia" ToolboxIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\H.bmp" Caption="Herencia" Tooltip="Herencia" HelpKeyword="Herencia">
         <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClaseHasClaseHijaBuilder" />
       </ConnectionTool>
       <ConnectionTool Name="Composicion" ToolboxIcon="Resources\CO.bmp" Caption="Composicion" Tooltip="Composicion" HelpKeyword="Composicion">
@@ -1093,6 +1160,7 @@
         <ConnectionBuilderMoniker Name="JRPPCLMCFProyectoIPS/ClaseReferenciaClaseBuilder" />
       </ConnectionTool>
     </ToolboxTab>
+    <ToolboxTab TabText="UML_WebTools" />
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="JRPPCLMCFProyectoIPSDiagram" />
   </Designer>

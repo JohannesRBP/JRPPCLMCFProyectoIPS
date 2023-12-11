@@ -94,7 +94,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				typeof(MetaforaHerencia),
 				typeof(MetaforaRComposicion),
 				typeof(MetaforaReferenciada),
+				typeof(EstiloClaseShape),
 				typeof(ClaseMetafora),
+				typeof(ClaseEnriquecidaShape),
 				typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.FixUpDiagram),
 				typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ConnectorRolePlayerChanged),
@@ -203,7 +205,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(16);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(18);
 				createElementMap.Add(typeof(TapizClassWeb), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(ClaseEnriquecida), 2);
@@ -219,7 +221,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				createElementMap.Add(typeof(MetaforaHerencia), 12);
 				createElementMap.Add(typeof(MetaforaRComposicion), 13);
 				createElementMap.Add(typeof(MetaforaReferenciada), 14);
-				createElementMap.Add(typeof(ClaseMetafora), 15);
+				createElementMap.Add(typeof(EstiloClaseShape), 15);
+				createElementMap.Add(typeof(ClaseMetafora), 16);
+				createElementMap.Add(typeof(ClaseEnriquecidaShape), 17);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -248,7 +252,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				case 12: return new MetaforaHerencia(partition, propertyAssignments);
 				case 13: return new MetaforaRComposicion(partition, propertyAssignments);
 				case 14: return new MetaforaReferenciada(partition, propertyAssignments);
-				case 15: return new ClaseMetafora(partition, propertyAssignments);
+				case 15: return new EstiloClaseShape(partition, propertyAssignments);
+				case 16: return new ClaseMetafora(partition, propertyAssignments);
+				case 17: return new ClaseEnriquecidaShape(partition, propertyAssignments);
 				default: return null;
 			}
 		}

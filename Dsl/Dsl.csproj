@@ -82,6 +82,7 @@
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
     <Compile Include="DesignerCustomization\Atributo.cs" />
+    <Compile Include="DesignerCustomization\FixUpDiagram.cs" />
     <Compile Include="DesignerCustomization\Operacion.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
       <AutoGen>True</AutoGen>
@@ -162,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\CO.bmp" />
+    <Content Include="Resources\EN.bmp" />
     <Content Include="Resources\H.bmp" />
     <Content Include="Resources\O.bmp" />
     <Content Include="Resources\P.bmp" />

@@ -929,6 +929,50 @@
     <value>nombreDec</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape</value>
+    <comment>Description for DomainClass &apos;EstiloClaseShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape.DisplayName" xml:space="preserve">
+    <value>Estilo Clase Shape</value>
+    <comment>DisplayName for DomainClass &apos;EstiloClaseShape&apos;</comment>
+  </data>
+  <data name="EstiloClaseShapecolorFondoDecDefaultText" xml:space="preserve">
+    <value>colorFondoDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="EstiloClaseShapecolorLetraDecDefaultText" xml:space="preserve">
+    <value>colorLetraDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="EstiloClaseShapetipoLetraDecDefaultText" xml:space="preserve">
+    <value>tipoLetraDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="EstiloClaseShapealineacionDecDefaultText" xml:space="preserve">
+    <value>alineacionDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape</value>
+    <comment>Description for DomainClass &apos;ClaseEnriquecidaShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape.DisplayName" xml:space="preserve">
+    <value>Clase Enriquecida Shape</value>
+    <comment>DisplayName for DomainClass &apos;ClaseEnriquecidaShape&apos;</comment>
+  </data>
+  <data name="ClaseEnriquecidaShapeatributoDecTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ClaseEnriquecidaShapeoperacionDecTitle" xml:space="preserve">
+    <value></value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ClaseEnriquecidaShapenombreDecDefaultText" xml:space="preserve">
+    <value>nombreDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase</value>
     <comment>Description for DomainClass &apos;MetaforaClase_Clase&apos;</comment>
@@ -1021,8 +1065,8 @@
     <value>Minimal Language Diagram</value>
     <comment>DisplayName for DomainClass &apos;JRPPCLMCFProyectoIPSDiagram&apos;</comment>
   </data>
-  <data name="JRPPCLMCFProyectoIPSToolboxTab" xml:space="preserve">
-    <value>JRPPCLMCFProyectoIPS</value>
+  <data name="UML_TOOLSToolboxTab" xml:space="preserve">
+    <value>UML_TOOLS</value>
     <comment>Toolbox item tab name</comment>
   </data>
   <data name="AtributoToolboxItem" xml:space="preserve">
@@ -1057,24 +1101,24 @@
     <value>Parametro</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="EnlacesToolboxTab" xml:space="preserve">
-    <value>Enlaces</value>
+  <data name="UML_CONECTORSToolboxTab" xml:space="preserve">
+    <value>UML_CONECTORS</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="AsociacionClaseClaseToolboxItem" xml:space="preserve">
-    <value>Asociacion Clase-Clase</value>
+  <data name="AsociacionToolboxItem" xml:space="preserve">
+    <value>Asociacion </value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="AsociacionClaseClaseToolboxTooltip" xml:space="preserve">
+  <data name="AsociacionToolboxTooltip" xml:space="preserve">
     <value>Crear una Asociacion Clase Clase</value>
     <comment>Toolbox tooltip text</comment>
   </data>
-  <data name="HerenciaPadreHijoToolboxItem" xml:space="preserve">
-    <value>HerenciaPadreHijo</value>
+  <data name="HerenciaToolboxItem" xml:space="preserve">
+    <value>Herencia</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="HerenciaPadreHijoToolboxTooltip" xml:space="preserve">
-    <value>Herencia Padre Hijo</value>
+  <data name="HerenciaToolboxTooltip" xml:space="preserve">
+    <value>Herencia</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="ComposicionToolboxItem" xml:space="preserve">
@@ -1092,6 +1136,10 @@
   <data name="ReferencialToolboxTooltip" xml:space="preserve">
     <value>Referencial</value>
     <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UML_WebToolsToolboxTab" xml:space="preserve">
+    <value>UML_WebTools</value>
+    <comment>Toolbox item tab name</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
     <value>ToolboxItem {0} was not found</value>
@@ -1222,6 +1270,10 @@ A DomainClass can be serialized as a moniker only if
     <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\C.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
+  <data name="ClaseEnriquecidaShapeIconEnDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EN.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
   <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\A.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -1238,11 +1290,11 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\P.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="AsociacionClaseClaseToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="AsociacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\Aso.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="HerenciaPadreHijoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="HerenciaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\..\..\..\..\..\JRPPCLMCF_ProyectoIPS\Dsl\Resources\H.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>

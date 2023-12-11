@@ -537,14 +537,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class AsociacionClaseClaseConnectAction : DslDiagrams::ConnectAction
+	internal partial class AsociacionConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new AsociacionClaseClaseConnectAction for the given Diagram.
+		/// Constructs a new AsociacionConnectAction for the given Diagram.
 		/// </summary>
-		public AsociacionClaseClaseConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public AsociacionConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -574,24 +574,24 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the AsociacionClaseClaseConnectionType associated with this action.
+		/// Returns the AsociacionConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AsociacionClaseClaseConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new AsociacionConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class AsociacionClaseClaseConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class AsociacionConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the AsociacionClaseClaseConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the AsociacionConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected AsociacionClaseClaseConnectionTypeBase() : base() {}
+			protected AsociacionConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -684,26 +684,26 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			}
 		}
 		
-		private partial class AsociacionClaseClaseConnectionType : AsociacionClaseClaseConnectionTypeBase
+		private partial class AsociacionConnectionType : AsociacionConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the AsociacionClaseClaseConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the AsociacionConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public AsociacionClaseClaseConnectionType() : base() {}
+			public AsociacionConnectionType() : base() {}
 		}
 	}
  	
  	/// <summary>
 	/// Handles interaction between the ConnectionBuilder and the corresponding ConnectionTool.
 	/// </summary>
-	internal partial class HerenciaPadreHijoConnectAction : DslDiagrams::ConnectAction
+	internal partial class HerenciaConnectAction : DslDiagrams::ConnectAction
 	{
 		private DslDiagrams::ConnectionType[] connectionTypes;
 		
 		/// <summary>
-		/// Constructs a new HerenciaPadreHijoConnectAction for the given Diagram.
+		/// Constructs a new HerenciaConnectAction for the given Diagram.
 		/// </summary>
-		public HerenciaPadreHijoConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
+		public HerenciaConnectAction(DslDiagrams::Diagram diagram): base(diagram, true) 
 		{
 		}
 		
@@ -733,24 +733,24 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		
 		
 		/// <summary>
-		/// Returns the HerenciaPadreHijoConnectionType associated with this action.
+		/// Returns the HerenciaConnectionType associated with this action.
 		/// </summary>
 		protected override DslDiagrams::ConnectionType[] GetConnectionTypes(DslDiagrams::ShapeElement sourceShapeElement, DslDiagrams::ShapeElement targetShapeElement)
 		{
 			if(this.connectionTypes == null)
 			{
-				this.connectionTypes = new DslDiagrams::ConnectionType[] { new HerenciaPadreHijoConnectionType() };
+				this.connectionTypes = new DslDiagrams::ConnectionType[] { new HerenciaConnectionType() };
 			}
 			
 			return this.connectionTypes;
 		}
 		
-		private partial class HerenciaPadreHijoConnectionTypeBase : DslDiagrams::ConnectionType
+		private partial class HerenciaConnectionTypeBase : DslDiagrams::ConnectionType
 		{
 			/// <summary>
-			/// Constructs a new the HerenciaPadreHijoConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the HerenciaConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			protected HerenciaPadreHijoConnectionTypeBase() : base() {}
+			protected HerenciaConnectionTypeBase() : base() {}
 			
 			private static DslDiagrams::ShapeElement RemovePassThroughShapes(DslDiagrams::ShapeElement shape)
 			{
@@ -843,12 +843,12 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			}
 		}
 		
-		private partial class HerenciaPadreHijoConnectionType : HerenciaPadreHijoConnectionTypeBase
+		private partial class HerenciaConnectionType : HerenciaConnectionTypeBase
 		{
 			/// <summary>
-			/// Constructs a new the HerenciaPadreHijoConnectionType with the given ConnectionBuilder.
+			/// Constructs a new the HerenciaConnectionType with the given ConnectionBuilder.
 			/// </summary>
-			public HerenciaPadreHijoConnectionType() : base() {}
+			public HerenciaConnectionType() : base() {}
 		}
 	}
  	
