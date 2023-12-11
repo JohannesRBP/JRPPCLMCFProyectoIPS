@@ -415,9 +415,9 @@
         <!-- Property: colorFondo -->
         <xsd:attribute name="colorFondo" type="TipoColor" />
         <!-- Property: colorLetra -->
-        <xsd:attribute name="colorLetra" type="TipoLetra" />
+        <xsd:attribute name="colorLetra" type="TipoColor" />
         <!-- Property: tipoLetra -->
-        <xsd:attribute name="tipoLetra" type="xsd:string" />
+        <xsd:attribute name="tipoLetra" type="TipoLetra" />
         <!-- Property: alineacion -->
         <xsd:attribute name="alineacion" type="Alineacion" />
         <!-- Property: textoNormal -->
@@ -461,9 +461,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: tipoLetra -->
-        <xsd:attribute name="tipoLetra" type="xsd:string" />
+        <xsd:attribute name="tipoLetra" type="TipoLetra" />
         <!-- Property: colorLetra -->
-        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <xsd:attribute name="colorLetra" type="TipoColor" />
         <!-- Property: nombre -->
         <xsd:attribute name="nombre" type="xsd:string" />
       </xsd:extension>
@@ -499,9 +499,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: tipoLetra -->
-        <xsd:attribute name="tipoLetra" type="xsd:string" />
+        <xsd:attribute name="tipoLetra" type="TipoLetra" />
         <!-- Property: colorLetra -->
-        <xsd:attribute name="colorLetra" type="xsd:string" />
+        <xsd:attribute name="colorLetra" type="TipoColor" />
         <!-- Property: nombre -->
         <xsd:attribute name="nombre" type="xsd:string" />
       </xsd:extension>

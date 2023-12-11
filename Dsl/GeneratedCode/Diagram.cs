@@ -285,6 +285,24 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase)
+			{
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape newShape = new global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo)
+			{
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape newShape = new global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion)
+			{
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape newShape = new global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase)
 			{
 				global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase newShape = new global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase(this.Partition);
@@ -318,6 +336,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			base.InitializeShapeFields(shapeFields);
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseMetafora.DecoratorsInitialized += ClaseMetaforaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape.DecoratorsInitialized += ClaseEnriquecidaShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClaseShape.DecoratorsInitialized += EstiloClaseShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape.DecoratorsInitialized += EstiloAtributoShapeDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape.DecoratorsInitialized += EstiloOperacionShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.DecoratorsInitialized += MetaforaClase_ClaseDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia.DecoratorsInitialized += MetaforaHerenciaDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaRComposicion.DecoratorsInitialized += MetaforaRComposicionDecoratorMap.OnDecoratorsInitialized;
@@ -357,6 +378,84 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase.nombreDomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for EstiloClaseShape.
+		/// </summary>
+		internal static partial class EstiloClaseShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for EstiloClaseShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.alineacionDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "alineacionCalculadaDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.colorFondoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "colorFondoCalculadoDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.colorLetraDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "colorLetraCalculadoDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.tipoLetraDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tipoLetraCalculadoDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for EstiloAtributoShape.
+		/// </summary>
+		internal static partial class EstiloAtributoShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for EstiloAtributoShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.colorLetraCalculadoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "colorDeLetraCalculadoDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.tipoLetraCalculadoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tipoLetraCalculadoDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for EstiloOperacionShape.
+		/// </summary>
+		internal static partial class EstiloOperacionShapeDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for EstiloOperacionShape.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.colorLetraDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "colorLetraCalculadoDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.nombreDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.tipoLetraDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tipoLetraCalculadoDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -652,6 +751,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecida), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasClaseHija), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
@@ -678,6 +780,39 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				if(childElement is global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)
 				{
 					parentElement = GetParentForClase((global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForEstiloClase(EstiloClase childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.JRPPCLMCFProyectoIPS.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForEstiloClase((global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForEstiloAtributo(EstiloAtributo childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.JRPPCLMCFProyectoIPS.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForEstiloAtributo((global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo)childElement);
+				} else
+				if(childElement is global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion)
+				{
+					// Method:
+					// private Microsoft.VisualStudio.Modeling.ModelElement GetParentForEstiloOperacion(EstiloOperacion childElement)
+					// {
+					// }
+					// must be implemented in a partial class of UPM_IPS.JRPPCLMCFProyectoIPS.FixUpDiagram.  Given a child element,
+					// this method should return the parent model element that is associated with the shape or diagram that will be the parent 
+					// of the shape created for this child.  If no shape should be created, the method should return null.
+					parentElement = GetParentForEstiloOperacion((global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion)childElement);
 				} else
 				{
 					parentElement = null;

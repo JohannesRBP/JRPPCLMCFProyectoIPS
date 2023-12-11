@@ -5279,14 +5279,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				string attribcolorLetra = JRPPCLMCFProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetra");
 				if (attribcolorLetra != null)
 				{
-					TipoLetra valueOfcolorLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<TipoLetra>(serializationContext, attribcolorLetra, out valueOfcolorLetra))
+					TipoColor valueOfcolorLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoColor>(serializationContext, attribcolorLetra, out valueOfcolorLetra))
 					{
 						instanceOfEstiloClase.colorLetra = valueOfcolorLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(TipoLetra), attribcolorLetra);
+						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(TipoColor), attribcolorLetra);
 					}
 				}
 			}
@@ -5296,14 +5296,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				string attribtipoLetra = JRPPCLMCFProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoLetra");
 				if (attribtipoLetra != null)
 				{
-					global::System.String valueOftipoLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtipoLetra, out valueOftipoLetra))
+					TipoLetra valueOftipoLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoLetra>(serializationContext, attribtipoLetra, out valueOftipoLetra))
 					{
 						instanceOfEstiloClase.tipoLetra = valueOftipoLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(global::System.String), attribtipoLetra);
+						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(TipoLetra), attribtipoLetra);
 					}
 				}
 			}
@@ -5830,8 +5830,8 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			// colorLetra
 			if (!serializationContext.Result.Failed)
 			{
-				TipoLetra propValue = instanceOfEstiloClase.colorLetra;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoLetra>(serializationContext, propValue);
+				TipoColor propValue = instanceOfEstiloClase.colorLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoColor>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
 					JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", serializedPropValue);
@@ -5840,12 +5840,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			// tipoLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloClase.tipoLetra;
+				TipoLetra propValue = instanceOfEstiloClase.tipoLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoLetra>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", propValue);
-	
+					JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", serializedPropValue);
 				}
 			}
 			// alineacion
@@ -6118,14 +6117,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				string attribtipoLetra = JRPPCLMCFProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoLetra");
 				if (attribtipoLetra != null)
 				{
-					global::System.String valueOftipoLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtipoLetra, out valueOftipoLetra))
+					TipoLetra valueOftipoLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoLetra>(serializationContext, attribtipoLetra, out valueOftipoLetra))
 					{
 						instanceOfEstiloAtributo.tipoLetra = valueOftipoLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(global::System.String), attribtipoLetra);
+						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(TipoLetra), attribtipoLetra);
 					}
 				}
 			}
@@ -6135,14 +6134,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				string attribcolorLetra = JRPPCLMCFProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetra");
 				if (attribcolorLetra != null)
 				{
-					global::System.String valueOfcolorLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcolorLetra, out valueOfcolorLetra))
+					TipoColor valueOfcolorLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoColor>(serializationContext, attribcolorLetra, out valueOfcolorLetra))
 					{
 						instanceOfEstiloAtributo.colorLetra = valueOfcolorLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(global::System.String), attribcolorLetra);
+						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(TipoColor), attribcolorLetra);
 					}
 				}
 			}
@@ -6591,23 +6590,21 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			// tipoLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloAtributo.tipoLetra;
+				TipoLetra propValue = instanceOfEstiloAtributo.tipoLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoLetra>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", propValue);
-	
+					JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", serializedPropValue);
 				}
 			}
 			// colorLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloAtributo.colorLetra;
+				TipoColor propValue = instanceOfEstiloAtributo.colorLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoColor>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", propValue);
-	
+					JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", serializedPropValue);
 				}
 			}
 			// nombre
@@ -6840,14 +6837,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				string attribtipoLetra = JRPPCLMCFProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoLetra");
 				if (attribtipoLetra != null)
 				{
-					global::System.String valueOftipoLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtipoLetra, out valueOftipoLetra))
+					TipoLetra valueOftipoLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoLetra>(serializationContext, attribtipoLetra, out valueOftipoLetra))
 					{
 						instanceOfEstiloOperacion.tipoLetra = valueOftipoLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(global::System.String), attribtipoLetra);
+						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoLetra", typeof(TipoLetra), attribtipoLetra);
 					}
 				}
 			}
@@ -6857,14 +6854,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				string attribcolorLetra = JRPPCLMCFProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "colorLetra");
 				if (attribcolorLetra != null)
 				{
-					global::System.String valueOfcolorLetra;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribcolorLetra, out valueOfcolorLetra))
+					TipoColor valueOfcolorLetra;
+					if (DslModeling::SerializationUtilities.TryGetValue<TipoColor>(serializationContext, attribcolorLetra, out valueOfcolorLetra))
 					{
 						instanceOfEstiloOperacion.colorLetra = valueOfcolorLetra;
 					}
 					else
 					{	// Invalid property value, ignored.
-						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(global::System.String), attribcolorLetra);
+						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "colorLetra", typeof(TipoColor), attribcolorLetra);
 					}
 				}
 			}
@@ -7313,23 +7310,21 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			// tipoLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloOperacion.tipoLetra;
+				TipoLetra propValue = instanceOfEstiloOperacion.tipoLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoLetra>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", propValue);
-	
+					JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoLetra", serializedPropValue);
 				}
 			}
 			// colorLetra
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfEstiloOperacion.colorLetra;
+				TipoColor propValue = instanceOfEstiloOperacion.colorLetra;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<TipoColor>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", propValue);
-	
+					JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "colorLetra", serializedPropValue);
 				}
 			}
 			// nombre

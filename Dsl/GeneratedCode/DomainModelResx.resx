@@ -325,6 +325,38 @@
     <value>Nombre</value>
     <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;EstiloClase&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorFondoCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Fondo Calculado</value>
+    <comment>Description for DomainProperty &apos;colorFondoCalculado&apos; on DomainClass &apos;EstiloClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorFondoCalculado.DisplayName" xml:space="preserve">
+    <value>Color Fondo Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;colorFondoCalculado&apos; on DomainClass &apos;EstiloClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorLetraCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Letra Calculado</value>
+    <comment>Description for DomainProperty &apos;colorLetraCalculado&apos; on DomainClass &apos;EstiloClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorLetraCalculado.DisplayName" xml:space="preserve">
+    <value>Color Letra Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;colorLetraCalculado&apos; on DomainClass &apos;EstiloClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/tipoLetraCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Tipo Letra Calculado</value>
+    <comment>Description for DomainProperty &apos;tipoLetraCalculado&apos; on DomainClass &apos;EstiloClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/tipoLetraCalculado.DisplayName" xml:space="preserve">
+    <value>Tipo Letra Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;tipoLetraCalculado&apos; on DomainClass &apos;EstiloClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/alineacionCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Alineacion Calculado</value>
+    <comment>Description for DomainProperty &apos;alineacionCalculado&apos; on DomainClass &apos;EstiloClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/alineacionCalculado.DisplayName" xml:space="preserve">
+    <value>Alineacion Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;alineacionCalculado&apos; on DomainClass &apos;EstiloClase&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo</value>
     <comment>Description for DomainClass &apos;EstiloAtributo&apos;</comment>
@@ -357,6 +389,22 @@
     <value>Nombre</value>
     <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;EstiloAtributo&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/tipoLetraCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Tipo Letra Calculado</value>
+    <comment>Description for DomainProperty &apos;tipoLetraCalculado&apos; on DomainClass &apos;EstiloAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/tipoLetraCalculado.DisplayName" xml:space="preserve">
+    <value>Tipo Letra Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;tipoLetraCalculado&apos; on DomainClass &apos;EstiloAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/colorLetraCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Color Letra Calculado</value>
+    <comment>Description for DomainProperty &apos;colorLetraCalculado&apos; on DomainClass &apos;EstiloAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/colorLetraCalculado.DisplayName" xml:space="preserve">
+    <value>Color Letra Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;colorLetraCalculado&apos; on DomainClass &apos;EstiloAtributo&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion</value>
     <comment>Description for DomainClass &apos;EstiloOperacion&apos;</comment>
@@ -388,6 +436,22 @@
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/nombre.DisplayName" xml:space="preserve">
     <value>Nombre</value>
     <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/tipoLetraCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Tipo Letra Calculado</value>
+    <comment>Description for DomainProperty &apos;tipoLetraCalculado&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/tipoLetraCalculado.DisplayName" xml:space="preserve">
+    <value>Tipo Letra Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;tipoLetraCalculado&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/colorLetraCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Color Letra Calculado</value>
+    <comment>Description for DomainProperty &apos;colorLetraCalculado&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/colorLetraCalculado.DisplayName" xml:space="preserve">
+    <value>Color Letra Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;colorLetraCalculado&apos; on DomainClass &apos;EstiloOperacion&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Parametro.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Parametro</value>

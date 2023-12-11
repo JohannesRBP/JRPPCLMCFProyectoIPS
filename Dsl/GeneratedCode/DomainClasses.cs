@@ -2071,7 +2071,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for colorLetra
 		/// </summary>
-		private TipoLetra colorLetraPropertyStorage;
+		private TipoColor colorLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of colorLetra domain property.
@@ -2080,7 +2080,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorLetra.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorLetra.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("da57203c-ab51-4e15-a993-7ae042a20f1d")]
-		public TipoLetra colorLetra
+		public TipoColor colorLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2096,7 +2096,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloClase.colorLetra domain property.
 		/// </summary>
-		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, TipoLetra>
+		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, TipoColor>
 		{
 			private colorLetraPropertyHandler() { }
 		
@@ -2122,7 +2122,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed TipoLetra GetValue(EstiloClase element)
+			public override sealed TipoColor GetValue(EstiloClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorLetraPropertyStorage;
@@ -2133,11 +2133,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloClase element, TipoLetra newValue)
+			public override sealed void SetValue(EstiloClase element, TipoColor newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				TipoLetra oldValue = GetValue(element);
+				TipoColor oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2158,7 +2158,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for tipoLetra
 		/// </summary>
-		private global::System.String tipoLetraPropertyStorage = string.Empty;
+		private TipoLetra tipoLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of tipoLetra domain property.
@@ -2167,7 +2167,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/tipoLetra.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/tipoLetra.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("94ded152-4bf5-4730-827d-2b38ca1b3a3c")]
-		public global::System.String tipoLetra
+		public TipoLetra tipoLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2183,7 +2183,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloClase.tipoLetra domain property.
 		/// </summary>
-		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, global::System.String>
+		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloClase, TipoLetra>
 		{
 			private tipoLetraPropertyHandler() { }
 		
@@ -2209,7 +2209,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloClase element)
+			public override sealed TipoLetra GetValue(EstiloClase element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoLetraPropertyStorage;
@@ -2220,11 +2220,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloClase element, global::System.String newValue)
+			public override sealed void SetValue(EstiloClase element, TipoLetra newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				TipoLetra oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2670,6 +2670,270 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		
 		#endregion
+		#region colorFondoCalculado domain property code
+		
+		/// <summary>
+		/// colorFondoCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid colorFondoCalculadoDomainPropertyId = new global::System.Guid(0x150f1666, 0x2766, 0x4fa5, 0x9b, 0xca, 0x93, 0x96, 0x48, 0x32, 0xb9, 0x9b);
+		
+		/// <summary>
+		/// Gets or sets the value of colorFondoCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Fondo Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorFondoCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorFondoCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("150f1666-2766-4fa5-9bca-93964832b99b")]
+		public global::System.String colorFondoCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorFondoCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloClase.colorFondoCalculado domain property.
+		/// </summary>
+		internal sealed partial class colorFondoCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloClase, global::System.String>
+		{
+			private colorFondoCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloClase.colorFondoCalculado domain property value handler.
+			/// </summary>
+			public static readonly colorFondoCalculadoPropertyHandler Instance = new colorFondoCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloClase.colorFondoCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return colorFondoCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for colorFondoCalculado because its Kind is
+				// set to Calculated. Please provide the GetcolorFondoCalculadoValue()
+				// method on the domain class.
+				return element.GetcolorFondoCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
+		#region colorLetraCalculado domain property code
+		
+		/// <summary>
+		/// colorLetraCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid colorLetraCalculadoDomainPropertyId = new global::System.Guid(0x5e27af9a, 0xd438, 0x4641, 0x85, 0x50, 0xd4, 0x29, 0x0c, 0x55, 0x10, 0x81);
+		
+		/// <summary>
+		/// Gets or sets the value of colorLetraCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Letra Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorLetraCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/colorLetraCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("5e27af9a-d438-4641-8550-d4290c551081")]
+		public global::System.String colorLetraCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloClase.colorLetraCalculado domain property.
+		/// </summary>
+		internal sealed partial class colorLetraCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloClase, global::System.String>
+		{
+			private colorLetraCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloClase.colorLetraCalculado domain property value handler.
+			/// </summary>
+			public static readonly colorLetraCalculadoPropertyHandler Instance = new colorLetraCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloClase.colorLetraCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return colorLetraCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for colorLetraCalculado because its Kind is
+				// set to Calculated. Please provide the GetcolorLetraCalculadoValue()
+				// method on the domain class.
+				return element.GetcolorLetraCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
+		#region tipoLetraCalculado domain property code
+		
+		/// <summary>
+		/// tipoLetraCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tipoLetraCalculadoDomainPropertyId = new global::System.Guid(0xfc18f882, 0x6b90, 0x4e51, 0xb0, 0xa6, 0x32, 0x98, 0xb3, 0x1b, 0x75, 0x04);
+		
+		/// <summary>
+		/// Gets or sets the value of tipoLetraCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Tipo Letra Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/tipoLetraCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/tipoLetraCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("fc18f882-6b90-4e51-b0a6-3298b31b7504")]
+		public global::System.String tipoLetraCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoLetraCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloClase.tipoLetraCalculado domain property.
+		/// </summary>
+		internal sealed partial class tipoLetraCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloClase, global::System.String>
+		{
+			private tipoLetraCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloClase.tipoLetraCalculado domain property value handler.
+			/// </summary>
+			public static readonly tipoLetraCalculadoPropertyHandler Instance = new tipoLetraCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloClase.tipoLetraCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tipoLetraCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for tipoLetraCalculado because its Kind is
+				// set to Calculated. Please provide the GettipoLetraCalculadoValue()
+				// method on the domain class.
+				return element.GettipoLetraCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
+		#region alineacionCalculado domain property code
+		
+		/// <summary>
+		/// alineacionCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid alineacionCalculadoDomainPropertyId = new global::System.Guid(0x8d40a66f, 0x8ce8, 0x4f57, 0x89, 0x67, 0xad, 0x03, 0x72, 0x91, 0x36, 0x78);
+		
+		/// <summary>
+		/// Gets or sets the value of alineacionCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Alineacion Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/alineacionCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase/alineacionCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("8d40a66f-8ce8-4f57-8967-ad0372913678")]
+		public global::System.String alineacionCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return alineacionCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloClase.alineacionCalculado domain property.
+		/// </summary>
+		internal sealed partial class alineacionCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloClase, global::System.String>
+		{
+			private alineacionCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloClase.alineacionCalculado domain property value handler.
+			/// </summary>
+			public static readonly alineacionCalculadoPropertyHandler Instance = new alineacionCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloClase.alineacionCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return alineacionCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for alineacionCalculado because its Kind is
+				// set to Calculated. Please provide the GetalineacionCalculadoValue()
+				// method on the domain class.
+				return element.GetalineacionCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
 		#region ClaseEnriquecida opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ClaseEnriquecida.
@@ -2741,7 +3005,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for tipoLetra
 		/// </summary>
-		private global::System.String tipoLetraPropertyStorage = string.Empty;
+		private TipoLetra tipoLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of tipoLetra domain property.
@@ -2750,7 +3014,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/tipoLetra.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/tipoLetra.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("8da55b31-3915-45ba-a296-026848af02f7")]
-		public global::System.String tipoLetra
+		public TipoLetra tipoLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2766,7 +3030,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloAtributo.tipoLetra domain property.
 		/// </summary>
-		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributo, global::System.String>
+		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributo, TipoLetra>
 		{
 			private tipoLetraPropertyHandler() { }
 		
@@ -2792,7 +3056,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloAtributo element)
+			public override sealed TipoLetra GetValue(EstiloAtributo element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoLetraPropertyStorage;
@@ -2803,11 +3067,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloAtributo element, global::System.String newValue)
+			public override sealed void SetValue(EstiloAtributo element, TipoLetra newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				TipoLetra oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2828,7 +3092,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for colorLetra
 		/// </summary>
-		private global::System.String colorLetraPropertyStorage = string.Empty;
+		private TipoColor colorLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of colorLetra domain property.
@@ -2837,7 +3101,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/colorLetra.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/colorLetra.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("333f46f2-ae74-43c1-b562-e1eaa5d5ed0a")]
-		public global::System.String colorLetra
+		public TipoColor colorLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2853,7 +3117,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloAtributo.colorLetra domain property.
 		/// </summary>
-		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributo, global::System.String>
+		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloAtributo, TipoColor>
 		{
 			private colorLetraPropertyHandler() { }
 		
@@ -2879,7 +3143,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloAtributo element)
+			public override sealed TipoColor GetValue(EstiloAtributo element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorLetraPropertyStorage;
@@ -2890,11 +3154,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloAtributo element, global::System.String newValue)
+			public override sealed void SetValue(EstiloAtributo element, TipoColor newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				TipoColor oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2992,6 +3256,139 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		
 		#endregion
+		#region tipoLetraCalculado domain property code
+		
+		/// <summary>
+		/// tipoLetraCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tipoLetraCalculadoDomainPropertyId = new global::System.Guid(0x9800cbd5, 0x3dca, 0x4fec, 0x80, 0x4f, 0x6f, 0xef, 0x15, 0x68, 0x10, 0x44);
+		
+		/// <summary>
+		/// Gets or sets the value of tipoLetraCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Tipo Letra Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/tipoLetraCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/tipoLetraCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("9800cbd5-3dca-4fec-804f-6fef15681044")]
+		public global::System.String tipoLetraCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoLetraCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloAtributo.tipoLetraCalculado domain property.
+		/// </summary>
+		internal sealed partial class tipoLetraCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloAtributo, global::System.String>
+		{
+			private tipoLetraCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloAtributo.tipoLetraCalculado domain property value handler.
+			/// </summary>
+			public static readonly tipoLetraCalculadoPropertyHandler Instance = new tipoLetraCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloAtributo.tipoLetraCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tipoLetraCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloAtributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for tipoLetraCalculado because its Kind is
+				// set to Calculated. Please provide the GettipoLetraCalculadoValue()
+				// method on the domain class.
+				return element.GettipoLetraCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
+		#region colorLetraCalculado domain property code
+		
+		/// <summary>
+		/// colorLetraCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid colorLetraCalculadoDomainPropertyId = new global::System.Guid(0x45253583, 0xcebf, 0x4419, 0x95, 0x34, 0x17, 0x80, 0xf4, 0xb2, 0x7f, 0xc5);
+		
+		/// <summary>
+		/// Gets or sets the value of colorLetraCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Color Letra
+		/// Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/colorLetraCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo/colorLetraCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("45253583-cebf-4419-9534-1780f4b27fc5")]
+		public global::System.String colorLetraCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloAtributo.colorLetraCalculado domain property.
+		/// </summary>
+		internal sealed partial class colorLetraCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloAtributo, global::System.String>
+		{
+			private colorLetraCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloAtributo.colorLetraCalculado domain property value handler.
+			/// </summary>
+			public static readonly colorLetraCalculadoPropertyHandler Instance = new colorLetraCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloAtributo.colorLetraCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return colorLetraCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloAtributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for colorLetraCalculado because its Kind is
+				// set to Calculated. Please provide the GetcolorLetraCalculadoValue()
+				// method on the domain class.
+				return element.GetcolorLetraCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
 		#region ClaseEnriquecida opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ClaseEnriquecida.
@@ -3063,7 +3460,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for tipoLetra
 		/// </summary>
-		private global::System.String tipoLetraPropertyStorage = string.Empty;
+		private TipoLetra tipoLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of tipoLetra domain property.
@@ -3072,7 +3469,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/tipoLetra.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/tipoLetra.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("bb5c5c66-6397-475a-b370-1f191f09c0cc")]
-		public global::System.String tipoLetra
+		public TipoLetra tipoLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3088,7 +3485,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloOperacion.tipoLetra domain property.
 		/// </summary>
-		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloOperacion, global::System.String>
+		internal sealed partial class tipoLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloOperacion, TipoLetra>
 		{
 			private tipoLetraPropertyHandler() { }
 		
@@ -3114,7 +3511,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloOperacion element)
+			public override sealed TipoLetra GetValue(EstiloOperacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoLetraPropertyStorage;
@@ -3125,11 +3522,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloOperacion element, global::System.String newValue)
+			public override sealed void SetValue(EstiloOperacion element, TipoLetra newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				TipoLetra oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -3150,7 +3547,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for colorLetra
 		/// </summary>
-		private global::System.String colorLetraPropertyStorage = string.Empty;
+		private TipoColor colorLetraPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of colorLetra domain property.
@@ -3159,7 +3556,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/colorLetra.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/colorLetra.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("f66daa2a-68d2-4609-a62d-40c364b8f385")]
-		public global::System.String colorLetra
+		public TipoColor colorLetra
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -3175,7 +3572,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the EstiloOperacion.colorLetra domain property.
 		/// </summary>
-		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloOperacion, global::System.String>
+		internal sealed partial class colorLetraPropertyHandler : DslModeling::DomainPropertyValueHandler<EstiloOperacion, TipoColor>
 		{
 			private colorLetraPropertyHandler() { }
 		
@@ -3201,7 +3598,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(EstiloOperacion element)
+			public override sealed TipoColor GetValue(EstiloOperacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.colorLetraPropertyStorage;
@@ -3212,11 +3609,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(EstiloOperacion element, global::System.String newValue)
+			public override sealed void SetValue(EstiloOperacion element, TipoColor newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				TipoColor oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -3311,6 +3708,140 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
+		}
+		
+		#endregion
+		#region tipoLetraCalculado domain property code
+		
+		/// <summary>
+		/// tipoLetraCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tipoLetraCalculadoDomainPropertyId = new global::System.Guid(0xce16566d, 0x1c77, 0x4ae0, 0xbe, 0x66, 0xaf, 0xad, 0x93, 0x4a, 0xc9, 0x79);
+		
+		/// <summary>
+		/// Gets or sets the value of tipoLetraCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Tipo Letra
+		/// Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/tipoLetraCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/tipoLetraCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("ce16566d-1c77-4ae0-be66-afad934ac979")]
+		public global::System.String tipoLetraCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoLetraCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloOperacion.tipoLetraCalculado domain property.
+		/// </summary>
+		internal sealed partial class tipoLetraCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloOperacion, global::System.String>
+		{
+			private tipoLetraCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloOperacion.tipoLetraCalculado domain property value handler.
+			/// </summary>
+			public static readonly tipoLetraCalculadoPropertyHandler Instance = new tipoLetraCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloOperacion.tipoLetraCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tipoLetraCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloOperacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for tipoLetraCalculado because its Kind is
+				// set to Calculated. Please provide the GettipoLetraCalculadoValue()
+				// method on the domain class.
+				return element.GettipoLetraCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
+		#region colorLetraCalculado domain property code
+		
+		/// <summary>
+		/// colorLetraCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid colorLetraCalculadoDomainPropertyId = new global::System.Guid(0xd175ede9, 0x4ac9, 0x444f, 0xaa, 0xaf, 0x9b, 0x18, 0xe3, 0x48, 0x8a, 0xd5);
+		
+		/// <summary>
+		/// Gets or sets the value of colorLetraCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Color Letra
+		/// Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/colorLetraCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion/colorLetraCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("d175ede9-4ac9-444f-aaaf-9b18e3488ad5")]
+		public global::System.String colorLetraCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return colorLetraCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the EstiloOperacion.colorLetraCalculado domain property.
+		/// </summary>
+		internal sealed partial class colorLetraCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<EstiloOperacion, global::System.String>
+		{
+			private colorLetraCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the EstiloOperacion.colorLetraCalculado domain property value handler.
+			/// </summary>
+			public static readonly colorLetraCalculadoPropertyHandler Instance = new colorLetraCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the EstiloOperacion.colorLetraCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return colorLetraCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(EstiloOperacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for colorLetraCalculado because its Kind is
+				// set to Calculated. Please provide the GetcolorLetraCalculadoValue()
+				// method on the domain class.
+				return element.GetcolorLetraCalculadoValue();
+			}
+		
 		}
 		
 		#endregion

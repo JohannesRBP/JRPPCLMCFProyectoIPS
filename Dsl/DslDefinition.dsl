@@ -156,22 +156,22 @@
     </DomainClass>
     <DomainClass Id="1b61e213-6a69-42ab-bf1f-c7833e9e1a25" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase" Name="EstiloClase" DisplayName="Estilo Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
       <Properties>
-        <DomainProperty Id="2e2b9d51-d8c4-4df3-9f91-631fac8d8c84" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Fondo" Name="colorFondo" DisplayName="Color Fondo" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+        <DomainProperty Id="2e2b9d51-d8c4-4df3-9f91-631fac8d8c84" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Fondo" Name="colorFondo" DisplayName="Color Fondo">
           <Type>
             <DomainEnumerationMoniker Name="TipoColor" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="da57203c-ab51-4e15-a993-7ae042a20f1d" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Letra" Name="colorLetra" DisplayName="Color Letra" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+        <DomainProperty Id="da57203c-ab51-4e15-a993-7ae042a20f1d" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Letra" Name="colorLetra" DisplayName="Color Letra">
+          <Type>
+            <DomainEnumerationMoniker Name="TipoColor" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="94ded152-4bf5-4730-827d-2b38ca1b3a3c" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Tipo Letra" Name="tipoLetra" DisplayName="Tipo Letra">
           <Type>
             <DomainEnumerationMoniker Name="TipoLetra" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="94ded152-4bf5-4730-827d-2b38ca1b3a3c" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Tipo Letra" Name="tipoLetra" DisplayName="Tipo Letra" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
-          <Type>
-            <ExternalTypeMoniker Name="/System/String" />
-          </Type>
-        </DomainProperty>
-        <DomainProperty Id="a7c8dca5-02a7-4458-8fd6-10047dbc00b9" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Alineacion" Name="alineacion" DisplayName="Alineacion" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+        <DomainProperty Id="a7c8dca5-02a7-4458-8fd6-10047dbc00b9" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Alineacion" Name="alineacion" DisplayName="Alineacion">
           <Type>
             <DomainEnumerationMoniker Name="Alineacion" />
           </Type>
@@ -196,21 +196,51 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="150f1666-2766-4fa5-9bca-93964832b99b" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Fondo Calculado" Name="colorFondoCalculado" DisplayName="Color Fondo Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5e27af9a-d438-4641-8550-d4290c551081" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Color Letra Calculado" Name="colorLetraCalculado" DisplayName="Color Letra Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="fc18f882-6b90-4e51-b0a6-3298b31b7504" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Tipo Letra Calculado" Name="tipoLetraCalculado" DisplayName="Tipo Letra Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="8d40a66f-8ce8-4f57-8967-ad0372913678" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Alineacion Calculado" Name="alineacionCalculado" DisplayName="Alineacion Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="defb6ab3-1392-43ba-8819-c8eddeb8cfc1" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo" Name="EstiloAtributo" DisplayName="Estilo Atributo" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
       <Properties>
         <DomainProperty Id="8da55b31-3915-45ba-a296-026848af02f7" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Tipo Letra" Name="tipoLetra" DisplayName="Tipo Letra">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="TipoLetra" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="333f46f2-ae74-43c1-b562-e1eaa5d5ed0a" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Color Letra" Name="colorLetra" DisplayName="Color Letra">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="TipoColor" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="61a62c51-7917-4912-a8c1-ce3bc58b6d0f" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Nombre" Name="nombre" DisplayName="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="9800cbd5-3dca-4fec-804f-6fef15681044" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Tipo Letra Calculado" Name="tipoLetraCalculado" DisplayName="Tipo Letra Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="45253583-cebf-4419-9534-1780f4b27fc5" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Color Letra Calculado" Name="colorLetraCalculado" DisplayName="Color Letra Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -221,15 +251,25 @@
       <Properties>
         <DomainProperty Id="bb5c5c66-6397-475a-b370-1f191f09c0cc" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Tipo Letra" Name="tipoLetra" DisplayName="Tipo Letra">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="TipoLetra" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="f66daa2a-68d2-4609-a62d-40c364b8f385" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Color Letra" Name="colorLetra" DisplayName="Color Letra">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="TipoColor" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="a98569d1-255d-4875-92a8-5742d3d64051" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Nombre" Name="nombre" DisplayName="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="ce16566d-1c77-4ae0-be66-afad934ac979" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Tipo Letra Calculado" Name="tipoLetraCalculado" DisplayName="Tipo Letra Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="d175ede9-4ac9-444f-aaaf-9b18e3488ad5" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Color Letra Calculado" Name="colorLetraCalculado" DisplayName="Color Letra Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -774,16 +814,16 @@
       <XmlClassData TypeName="EstiloClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloClaseMoniker" ElementName="estiloClase" MonikerTypeName="EstiloClaseMoniker">
         <DomainClassMoniker Name="EstiloClase" />
         <ElementData>
-          <XmlPropertyData XmlName="colorFondo" Representation="Ignore">
+          <XmlPropertyData XmlName="colorFondo">
             <DomainPropertyMoniker Name="EstiloClase/colorFondo" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="colorLetra" Representation="Ignore">
+          <XmlPropertyData XmlName="colorLetra">
             <DomainPropertyMoniker Name="EstiloClase/colorLetra" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="tipoLetra" Representation="Ignore">
+          <XmlPropertyData XmlName="tipoLetra">
             <DomainPropertyMoniker Name="EstiloClase/tipoLetra" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="alineacion" Representation="Ignore">
+          <XmlPropertyData XmlName="alineacion">
             <DomainPropertyMoniker Name="EstiloClase/alineacion" />
           </XmlPropertyData>
           <XmlPropertyData XmlName="textoNormal">
@@ -797,6 +837,18 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="nombre">
             <DomainPropertyMoniker Name="EstiloClase/nombre" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorFondoCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="EstiloClase/colorFondoCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="EstiloClase/colorLetraCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoLetraCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="EstiloClase/tipoLetraCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="alineacionCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="EstiloClase/alineacionCalculado" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -812,6 +864,12 @@
           <XmlPropertyData XmlName="nombre">
             <DomainPropertyMoniker Name="EstiloAtributo/nombre" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoLetraCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="EstiloAtributo/tipoLetraCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="EstiloAtributo/colorLetraCalculado" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="EstiloOperacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloOperacionMoniker" ElementName="estiloOperacion" MonikerTypeName="EstiloOperacionMoniker">
@@ -825,6 +883,12 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="nombre">
             <DomainPropertyMoniker Name="EstiloOperacion/nombre" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoLetraCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="EstiloOperacion/tipoLetraCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="colorLetraCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="EstiloOperacion/colorLetraCalculado" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -1103,7 +1167,7 @@
           </PropertyDisplayed>
         </CompartmentMap>
       </CompartmentShapeMap>
-      <ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
         <DomainClassMoniker Name="EstiloClase" />
         <DecoratorMap>
           <TextDecoratorMoniker Name="EstiloClaseShape/alineacionCalculadaDec" />
@@ -1146,6 +1210,62 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <GeometryShapeMoniker Name="EstiloClaseShape" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="EstiloAtributo" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloAtributoShape/colorDeLetraCalculadoDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloAtributo/colorLetraCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloAtributoShape/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloAtributo/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloAtributoShape/tipoLetraCalculadoDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloAtributo/tipoLetraCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="EstiloAtributoShape" />
+      </ShapeMap>
+      <ShapeMap HasCustomParentElement="true">
+        <DomainClassMoniker Name="EstiloOperacion" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloOperacionShape/colorLetraCalculadoDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloOperacion/colorLetra" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloOperacionShape/nombreDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloOperacion/nombre" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="EstiloOperacionShape/tipoLetraCalculadoDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="EstiloOperacion/tipoLetra" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="EstiloOperacionShape" />
       </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>

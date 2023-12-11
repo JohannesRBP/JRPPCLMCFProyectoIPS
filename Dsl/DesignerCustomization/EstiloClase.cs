@@ -8,20 +8,19 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 { 
     public partial class EstiloClase
     {
-        public string GetcolorCalculadoValue()
+       public  string GetcolorFondoCalculadoValue()
         {
-            return string.Format("{0}:", this.colorFondo );
+            return string.Format("{0}:" ,this.colorFondo);
         }
-
-        public string GettipoLetraCalculadaValue()
-        {
-            return string.Format("{0}:", this.tipoLetra);
-        }
-        public string GetcolorLetraCalculadaValue()
+       public string GetcolorLetraCalculadoValue()
         {
             return string.Format("{0}:", this.colorLetra);
         }
-        public string GetalineacionCalculadaValue()
+        public string GettipoLetraCalculadoValue()
+        {
+            return string.Format("{0}:", this.tipoLetra);
+        }
+        public string GetalineacionCalculadoValue()
         {
             return string.Format("{0}:", this.alineacion);
         }
