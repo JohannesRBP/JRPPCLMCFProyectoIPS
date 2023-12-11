@@ -205,6 +205,11 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="61a62c51-7917-4912-a8c1-ce3bc58b6d0f" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.Nombre" Name="nombre" DisplayName="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="3fcf45e7-d2a4-465d-ad92-1f24d78c81cd" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion" Name="EstiloOperacion" DisplayName="Estilo Operacion" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
@@ -215,6 +220,11 @@
           </Type>
         </DomainProperty>
         <DomainProperty Id="f66daa2a-68d2-4609-a62d-40c364b8f385" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Color Letra" Name="colorLetra" DisplayName="Color Letra">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="a98569d1-255d-4875-92a8-5742d3d64051" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.Nombre" Name="nombre" DisplayName="Nombre">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -536,7 +546,19 @@
         <IconDecorator Name="IconEC" DisplayName="Icon EC" DefaultIcon="C:\Users\johan\JRPPCLMCF_ProyectoIPS\Dsl\Resources\EC.bmp" />
       </ShapeHasDecorators>
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="calculada" DisplayName="Calculada" DefaultText="calculada" />
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="colorLetraCalculadoDec" DisplayName="Color Letra Calculado Dec" DefaultText="colorLetraCalculadoDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="tipoLetraCalculadoDec" DisplayName="Tipo Letra Calculado Dec" DefaultText="tipoLetraCalculadoDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="colorFondoCalculadoDec" DisplayName="Color Fondo Calculado Dec" DefaultText="colorFondoCalculadoDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="alineacionCalculadaDec" DisplayName="Alineacion Calculada Dec" DefaultText="alineacionCalculadaDec" />
       </ShapeHasDecorators>
     </GeometryShape>
     <CompartmentShape Id="03a15473-6c93-4e44-b77e-076cde6514b0" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaShape" Name="ClaseEnriquecidaShape" DisplayName="Clase Enriquecida Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Clase Enriquecida Shape" FillColor="SteelBlue" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
@@ -553,10 +575,28 @@
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="IconEO" DisplayName="Icon EO" DefaultIcon="Resources\EO.bmp" />
       </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="colorLetraCalculadoDec" DisplayName="Color Letra Calculado Dec" DefaultText="colorLetraCalculadoDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="tipoLetraCalculadoDec" DisplayName="Tipo Letra Calculado Dec" DefaultText="tipoLetraCalculadoDec" />
+      </ShapeHasDecorators>
     </GeometryShape>
     <GeometryShape Id="e42f110e-650e-4fbb-8e7b-2c2670d7906f" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributoShape" Name="EstiloAtributoShape" DisplayName="Estilo Atributo Shape" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Estilo Atributo Shape" InitialHeight="1" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
         <IconDecorator Name="IconEA" DisplayName="Icon EA" DefaultIcon="Resources\EA.bmp" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="colorDeLetraCalculadoDec" DisplayName="Color De Letra Calculado Dec" DefaultText="colorDeLetraCalculadoDec" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="tipoLetraCalculadoDec" DisplayName="Tipo Letra Calculado Dec" DefaultText="tipoLetraCalculadoDec" />
       </ShapeHasDecorators>
     </GeometryShape>
   </Shapes>
@@ -739,6 +779,9 @@
           <XmlPropertyData XmlName="colorLetra">
             <DomainPropertyMoniker Name="EstiloAtributo/colorLetra" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="EstiloAtributo/nombre" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="EstiloOperacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloOperacionMoniker" ElementName="estiloOperacion" MonikerTypeName="EstiloOperacionMoniker">
@@ -749,6 +792,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="colorLetra">
             <DomainPropertyMoniker Name="EstiloOperacion/colorLetra" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombre">
+            <DomainPropertyMoniker Name="EstiloOperacion/nombre" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>

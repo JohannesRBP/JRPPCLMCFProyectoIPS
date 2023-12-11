@@ -82,6 +82,7 @@
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
     <Compile Include="DesignerCustomization\Atributo.cs" />
+    <Compile Include="DesignerCustomization\EstiloClase.cs" />
     <Compile Include="DesignerCustomization\FixUpDiagram.cs" />
     <Compile Include="DesignerCustomization\Operacion.cs" />
     <Compile Include="GeneratedCode\ConnectionBuilders.cs">
