@@ -6,7 +6,7 @@
 <# 
 	
 		// a partir de la apertura del siguiente fichero, la inyección de texto se escribe en él
-
+//MAIN
 	if (this.TapizClassWeb.Clase.Count==0)
 		WriteLine("  solucion vacía. No se ha configurado ninguna clase");
 	else{ 
@@ -23,16 +23,13 @@
 		fileManager.Process();
 	}
 
-	WriteLine("---------------");
-	//METODO PARA GENERAR CLASES HOME
+	//WriteLine("---------------");
+
+//METODO PARA GENERAR CLASES HOME
 	void generarHome(Clase clase, EntityFrameworkTemplateFileManager fileManager){
 	
-	
-	
-
 	//Aqui pondremos la home de cada clase
 	fileManager.StartNewFile(clase.nombre+"Home.txt");
-
 
 	WriteLine("<html>"); 
 	WriteLine("<head>"); 
@@ -41,7 +38,20 @@
 	WriteLine("<body>"); 
 	WriteLine("</div style='border: 1px solid black; margin:20px'>"); 
 
+	//Aqui diferenciamos entre clase enriquecida o normal
 
+	WriteLine("<form name='"+clase.nombre+"' style='background-color:##00aabb; color:#000000;font-family:Arial;text-align:center;'");
+	WriteLine("<h1>"+clase.nombre+"</h1>"); 
+
+	//Boton para alta
+	WriteLine("<button style='color:#000000;font-family:Arial'> <href='./'"+clase.nombre+"Alta.html>Alta</a> </button>"); 
 	
+	//Boton para listado
+	WriteLine("<button style='color:#000000;font-family:Arial'> <href='./'"+clase.nombre+"Listado.html>Listado</a> </button>"); 
+
+	WriteLine("</form>"); 
+	WriteLine("</div>"); 
+	WriteLine("</body>"); 
+	WriteLine("</html>"); 
 	}
 #>
