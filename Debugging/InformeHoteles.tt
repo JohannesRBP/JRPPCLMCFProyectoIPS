@@ -1,0 +1,47 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
+<#@ output extension=".txt" #>
+<#@ JRPPCLMCFProyectoIPS processor="JRPPCLMCFProyectoIPSDirectiveProcessor" requires="fileName='Test.JRPPCLMCFProyectoIPS'" #>
+<#@ include file="EF.utility.CS.ttinclude" #>
+
+<# 
+	
+		// a partir de la apertura del siguiente fichero, la inyección de texto se escribe en él
+
+	if (this.TapizClassWeb.Clase.Count==0)
+		WriteLine("  solucion vacía. No se ha configurado ninguna clase");
+	else{ 
+
+		//Inicializa la creacion de ficheros
+		var fileManager=EntityFrameworkTemplateFileManager.Create(this); 
+
+		foreach(Clase clase in this.TapizClassWeb.Clase){
+			//WriteLine("ClasePrincipal   : " + clase.nombre);
+			generarHome(clase, fileManager);
+		}
+
+		//Cierra la creacion de ficheros
+		fileManager.Process();
+	}
+
+	WriteLine("---------------");
+	//METODO PARA GENERAR CLASES HOME
+	void generarHome(Clase clase, EntityFrameworkTemplateFileManager fileManager){
+	
+	
+	
+
+	//Aqui pondremos la home de cada clase
+	fileManager.StartNewFile(clase.nombre+"Home.txt");
+
+
+	WriteLine("<html>"); 
+	WriteLine("<head>"); 
+	WriteLine("<title>"+clase.nombre+"Home<title>");
+	WriteLine("</head>"); 
+	WriteLine("<body>"); 
+	WriteLine("</div style='border: 1px solid black; margin:20px'>"); 
+
+
+	
+	}
+#>

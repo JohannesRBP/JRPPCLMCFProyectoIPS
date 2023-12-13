@@ -1,1 +1,20 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapizClassWeb xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="28cfba65-ca02-45dd-a5ba-56241133157b" xmlns="http://schemas.microsoft.com/dsltools/JRPPCLMCFProyectoIPS">
+  <clase>
+    <tapizClassWebHasClase Id="40703616-a6b9-47f6-8e84-09c261a299ab">
+      <clase Id="dd49ad42-0c16-4090-9e9d-45a6cb20cb92" nombre="Empleado">
+        <claseReferenciada1>
+          <claseReferenciaClase Id="2152f941-d323-4480-8b74-22d4230ccf80" nombre="gestiona">
+            <claseMoniker Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" />
+          </claseReferenciaClase>
+        </claseReferenciada1>
+      </clase>
+    </tapizClassWebHasClase>
+    <tapizClassWebHasClase Id="ee7e3f75-864d-4bc5-8b0d-9a8687cce7ff">
+      <clase Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" nombre="Hotel" />
+    </tapizClassWebHasClase>
+    <tapizClassWebHasClase Id="282c6981-42a4-4a81-b38e-6f74e8c2799f">
+      <claseEnriquecida Id="6ea2e215-a0f9-4918-a28c-692c9da5ddd7" nombre="Habitacion" />
+    </tapizClassWebHasClase>
+  </clase>
+</tapizClassWeb>

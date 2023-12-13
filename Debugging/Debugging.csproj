@@ -65,6 +65,24 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EmpleadoHome.txt">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="HabitacionHome.txt">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="HotelHome.txt">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="InformeHoteles.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>InformeHoteles.txt</LastGenOutput>
+    </Content>
+    <Content Include="InformeHoteles.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
     <Content Include="JRPPCLMCFProyectoIPSReport.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
