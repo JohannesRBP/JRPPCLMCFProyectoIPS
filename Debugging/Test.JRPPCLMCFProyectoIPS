@@ -11,7 +11,16 @@
       </clase>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="ee7e3f75-864d-4bc5-8b0d-9a8687cce7ff">
-      <clase Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" nombre="Hotel" />
+      <clase Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" nombre="Hotel">
+        <atributo>
+          <claseHasAtributo Id="3f331cd3-2375-438d-9030-99c5cacce4e7">
+            <atributo Id="bff1a34d-38e1-49e7-9f7c-4c2c5003a67d" nombre="nombre" tipoDato="String" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="0aa3a93c-2de6-48fe-997f-d09e96274cef">
+            <atributo Id="2d92a30e-41d6-4e44-86ee-298149f13a58" nombre="direccion" tipoDato="String" modAcceso="private" />
+          </claseHasAtributo>
+        </atributo>
+      </clase>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="282c6981-42a4-4a81-b38e-6f74e8c2799f">
       <claseEnriquecida Id="6ea2e215-a0f9-4918-a28c-692c9da5ddd7" nombre="Habitacion">

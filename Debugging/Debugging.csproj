@@ -65,6 +65,9 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Empleado.java">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
     <Content Include="EmpleadoAlta.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
@@ -74,6 +77,9 @@
     <Content Include="EmpleadoLista.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
+    <Content Include="Habitacion.java">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
     <Content Include="HabitacionAlta.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
@@ -81,6 +87,9 @@
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
     <Content Include="HabitacionLista.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="Hotel.java">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
     <Content Include="HotelAlta.html">

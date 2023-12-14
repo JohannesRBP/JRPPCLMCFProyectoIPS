@@ -9,11 +9,11 @@
         <elementListCompartment Id="1b20ce15-d902-4545-bda7-1b4762756eca" absoluteBounds="3.39, 4.7693896484375, 1.4700000000000002, 0.2493896484375" name="Opereacion" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </claseMetafora>
-    <claseMetafora Id="1b86979f-b79d-4ef5-a7a9-34b13328f97a" absoluteBounds="6.875, 0.5, 1.5, 1.618779296875">
+    <claseMetafora Id="1b86979f-b79d-4ef5-a7a9-34b13328f97a" absoluteBounds="6.875, 0.5, 1.5, 2.0033821614583336">
       <claseMoniker Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" />
       <nestedChildShapes>
-        <elementListCompartment Id="3d00a0fd-7ed7-425a-983b-b08aa443e837" absoluteBounds="6.89, 1.5099999999999998, 1.4700000000000002, 0.2493896484375" name="Atributo" titleTextColor="Black" itemTextColor="Black" />
-        <elementListCompartment Id="d2753af1-fe63-45c9-85e2-1ccce0e1916c" absoluteBounds="6.89, 1.7693896484375, 1.4700000000000002, 0.2493896484375" name="Opereacion" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="3d00a0fd-7ed7-425a-983b-b08aa443e837" absoluteBounds="6.89, 1.5099999999999998, 1.4700000000000002, 0.63399251302083326" name="Atributo" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d2753af1-fe63-45c9-85e2-1ccce0e1916c" absoluteBounds="6.89, 2.1539925130208335, 1.4700000000000002, 0.2493896484375" name="Opereacion" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </claseMetafora>
     <claseEnriquecidaShape Id="45065b78-05e5-480c-9fd2-f4d20d1092a7" absoluteBounds="10.875, 2.375, 3.5, 1.618779296875">
@@ -26,7 +26,7 @@
         </estiloClaseShape>
       </nestedChildShapes>
     </claseEnriquecidaShape>
-    <metaforaReferenciada Id="3a9cc5bc-fafe-4b63-991c-8a464013aee9" edgePoints="[(4.125 : 3.5); (4.125 : 1.3093896484375); (6.875 : 1.3093896484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <metaforaReferenciada Id="3a9cc5bc-fafe-4b63-991c-8a464013aee9" edgePoints="[(4.125 : 3.5); (4.125 : 1.50169108072917); (6.875 : 1.50169108072917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <claseReferenciaClaseMoniker Id="2152f941-d323-4480-8b74-22d4230ccf80" />
       <relativeChildShapes />
       <nodes>

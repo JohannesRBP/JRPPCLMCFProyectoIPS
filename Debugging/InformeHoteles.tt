@@ -27,6 +27,7 @@
 			generarAlta(clase, fileManager, enriquecida);
 			generarListado(clase, fileManager, enriquecida);
 			//Parametros (clase: cada clase contenida en el tapiz, filemanager: gestor de creacion de ficheros, enriquecida(bool): indica si la clase es enriquecida o no)
+			generarJava(clase, fileManager); 
 			
 		}
 
@@ -232,10 +233,80 @@
 
 	WriteLine("</table>");
 	   
-           
+            
 
 		
 	}
 
 
+#>
+<#+
+//METODO PARA GENERAR JAVA DE CADA CLASE (!!!!FALTA EL ATRIBUTO CLAVE!!!!) (\t para tabular)
+	void generarJava(Clase clase, EntityFrameworkTemplateFileManager fileManager){
+
+		//Crea un fichero java de cada clase
+		fileManager.StartNewFile(clase.nombre+".java");
+
+		WriteLine("public class " + clase.nombre + "{");
+
+		//Atributos (Anadir atributo clave)
+		if(clase.Atributo.Count!=0)			
+			foreach(Atributo atributo in clase.Atributo){
+				WriteLine("\t"+atributo.modAcceso+" "+atributo.tipoDato.ToString()+" "+atributo.nombre+";");	//Si hacemos enum del modo de acceso hay que modificar atributo.modAcceso
+			}
+		//Constructor
+		WriteLine("\tpublic "+ clase.nombre + "(){");
+		WriteLine("\t}");	
+		
+		//Getters y Setters (anadir atributo clave)
+		if(clase.Atributo.Count!=0)			
+			foreach(Atributo atributo in clase.Atributo){
+				//GET
+				WriteLine("\tpublic " + atributo.tipoDato.ToString() + " " + atributo.nombre + "(){");
+				WriteLine("\t\treturn this."+atributo.nombre);	
+				WriteLine("\t}");	
+
+				//SET
+				WriteLine("\tpublic void "+ atributo.nombre + "("+ atributo.tipoDato.ToString() + " " + atributo.nombre + "){");	
+				WriteLine("\t\tthis." + atributo.nombre + " = " + atributo.nombre);	
+				WriteLine("\t}");	 
+			}
+
+		//Operaciones
+		if(clase.Operacion.Count!=0)
+			foreach(Operacion operacion in clase.Operacion){ //Recorremos las operaciones de la clase
+				//Recuperar parametro de salida y de entrada
+				string parametroEntrada = "";
+				string parametroSalida = "";
+				if(operacion.Parametro.Count!=0){ //Si hay algun parametro
+					foreach(Parametro parametro in operacion.Parametro){ //Recorremos los parametros de la operacion
+						string auxParametro = parametro.tipoParametro.ToString();
+						if(auxParametro.Equals("Entrada")){	//Si es parametro de ENTRADA
+							//Si el parametro no es el primero, le ponemos una , al principio
+							if(parametroEntrada!="")
+								parametroEntrada +=", ";
+							parametroEntrada += parametro.tipoDato.ToString() + " " + parametro.nombre;
+						}else if(auxParametro.Equals("Salida")) //Si es parametro de SALIDA
+							parametroSalida = parametro.tipoDato.ToString();
+						else{		//Si el parametro es de ENTRADA-SALIDA
+							//Si el parametro no es el primero, le ponemos una , al principio
+							if(parametroEntrada!="")
+								parametroEntrada +=", ";
+							parametroEntrada += parametro.tipoDato.ToString() + " " + parametro.nombre;
+							parametroSalida = parametro.tipoDato.ToString();
+						}
+					}
+				}
+
+				//Si no hay parametro de salida, se pone como void
+				if(parametroSalida=="")
+					parametroSalida="void";
+
+				WriteLine("\t"+operacion.modAcceso + " " + parametroSalida + " " + operacion.nombre + " (" + parametroEntrada + ")"); //Insertar parametros 
+				WriteLine("\t\t//To Do"); 
+				WriteLine("\t}"); 
+			}
+
+		WriteLine("}"); //Cierre de la clase
+	}
 #>
