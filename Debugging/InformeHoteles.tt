@@ -194,7 +194,6 @@
        WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
        WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
        WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
-	   WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">GeneraCertificadoNota</a> </button>");
 	   WriteLine(" </td>");
 	   WriteLine(" </tr>");
 
@@ -205,7 +204,6 @@
      WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
      WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
 	 WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
-     WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">GeneraCertificadoNota</a> </button>");
      WriteLine(" </td>");
      WriteLine(" </tr>");
 
@@ -216,7 +214,13 @@
 	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
 	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
 	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
-	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">GeneraCertificadoNota</a> </button>");
+	WriteLine(" </td>");
+	WriteLine(" </tr>");
+
+	//PUNTOS SUSPENSIVOS
+	WriteLine("<tr>");
+	WriteLine("<td>... </td>");
+	WriteLine("<td>");
 	WriteLine(" </td>");
 	WriteLine(" </tr>");
 
@@ -227,7 +231,6 @@
 	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
 	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
 	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
-	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">GeneraCertificadoNota</a> </button>");
 	WriteLine(" </td>");
 	WriteLine(" </tr>");
 
