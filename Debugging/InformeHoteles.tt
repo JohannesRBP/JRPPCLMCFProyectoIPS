@@ -48,19 +48,19 @@
 		string alineacion="center";
 		string colorFondo="#00aabb";
 
-		//coger estilos de EstiloClase (AUN NO FUNCIONA)
-		/*if(enriquecida){
-			if(clase.EstiloClase.Count==0) 
+		//coger estilos de EstiloClase (FUNCIONA)
+		if(enriquecida){ 
+			ClaseEnriquecida claseEnriquecida= (ClaseEnriquecida)clase; //La casteamos en ClaseEnriquecida
+			if(claseEnriquecida.EstiloClase==null) 
 				WriteLine("No hay estilos de clase");
-			else{
-				EstiloClase estiloClase = clase.EstiloClase;
+			else{					 
+				EstiloClase estiloClase = (EstiloClase) claseEnriquecida.EstiloClase;
 				tipoLetra= estiloClase.tipoLetraCalculado;  
 				colorLetra= estiloClase.colorLetraCalculado;
 				alineacion= estiloClase.alineacionCalculado;
-				colorFondo= estiloClase.colorFondoCalculado;
-				
+				colorFondo= estiloClase.colorFondoCalculado;				
 			}
-		}*/
+		}
 
 
 		WriteLine("<html>"); 
@@ -101,19 +101,19 @@
 		string alineacion="center";
 		string colorFondo="#00aabb";
 
-		//coger estilos de EstiloClase (AUN NO FUNCIONA)
-		/*if(enriquecida){
-			if(clase.EstiloClase.Count==0) 
+		//coger estilos de EstiloClase (FUNCIONA)
+		if(enriquecida){ 
+			ClaseEnriquecida claseEnriquecida= (ClaseEnriquecida)clase; //La casteamos en ClaseEnriquecida
+			if(claseEnriquecida.EstiloClase==null) 
 				WriteLine("No hay estilos de clase");
-			else{
-				EstiloClase estiloClase = clase.EstiloClase;
+			else{					 
+				EstiloClase estiloClase = (EstiloClase) claseEnriquecida.EstiloClase;
 				tipoLetra= estiloClase.tipoLetraCalculado;  
 				colorLetra= estiloClase.colorLetraCalculado;
-				alineacion= estiloClase.alineacionCalculado;
-				colorFondo= estiloClase.colorFondoCalculado;
-				
+				alineacion= estiloClase.alineacionCalculado; 
+				colorFondo= estiloClase.colorFondoCalculado;				
 			}
-		}*/
+		}
 
 
 		WriteLine("<html>"); 
@@ -138,8 +138,8 @@
 		WriteLine("</table>");
 
 		//Botones
-		WriteLine("<button style='color:#000000'; font-family:Arial;'><a href="+clase.nombre+".html>Guardar</a></button>");
-		WriteLine("<button style='color:#000000'; font-family:Arial;'><a href="+clase.nombre+"Home.html>Volver</a></button>");
+		WriteLine("<button style='color:#000000; font-family:Arial;'><a href="+clase.nombre+".html>Guardar</a></button>");
+		WriteLine("<button style='color:#000000; font-family:Arial;'><a href="+clase.nombre+"Home.html>Volver</a></button>");
 
 		WriteLine("</form>");
 		WriteLine("</div>");

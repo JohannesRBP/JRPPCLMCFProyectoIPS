@@ -16,8 +16,8 @@
     <tapizClassWebHasClase Id="282c6981-42a4-4a81-b38e-6f74e8c2799f">
       <claseEnriquecida Id="6ea2e215-a0f9-4918-a28c-692c9da5ddd7" nombre="Habitacion">
         <estiloClase>
-          <claseEnriquecidaHasEstiloClase Id="d7b7ec7d-ca6f-4f5b-9046-b585a5ac78c8">
-            <estiloClase Id="72a8789d-ad22-406e-b1df-ec5eea648cbe" colorFondo="Verde" colorLetra="Verde" tipoLetra="TimesNewRoman" alineacion="Derecha" textoNormal="false" checkBox="false" radioButton="false" nombre="hgg" />
+          <claseEnriquecidaHasEstiloClase Id="acb8fcf6-b6f0-41c3-ae14-4b1c3eddacfd">
+            <estiloClase Id="869ec209-8ba2-4263-a150-d61bad95e4ba" colorFondo="Verde" colorLetra="Verde" tipoLetra="TimesNewRoman" alineacion="Derecha" textoNormal="false" checkBox="false" radioButton="false" />
           </claseEnriquecidaHasEstiloClase>
         </estiloClase>
       </claseEnriquecida>
