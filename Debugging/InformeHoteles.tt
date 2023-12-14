@@ -221,7 +221,7 @@
 
 	//CUARTO ELEMENTO
 	WriteLine("<tr>");
-	WriteLine("<td>Elemento 4: " + clase.nombre + " </td>");
+	WriteLine("<td>Elemento N: " + clase.nombre + " </td>");
 	WriteLine("<td>");
 	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
 	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
