@@ -2266,7 +2266,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						else
 						{
 							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <estiloClase>
-							ReadClaseEnriquecidaHasEstiloClaseInstances(serializationContext, element, reader);
+							ReadClaseEnriquecidaHasEstiloClaseInstance(serializationContext, element, reader);
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </estiloClase>
 						}
 						break;
@@ -2301,18 +2301,25 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship ClaseEnriquecidaHasEstiloClase.
+		/// Reads instance of relationship ClaseEnriquecidaHasEstiloClase.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
-		/// either the first instance, or a bogus tag. This method will deserialize all instances and ignore all bogus tags. When the
-		/// method returns, the reader will be positioned at the end tag of the relationship (or EOF if somehow that happens).
+		/// either the first instance, or a bogus tag. This method will deserialize only the first valid instance and ignore all the
+		/// rest tags (because the multiplicity allows only one instance). When the method returns, the reader will be positioned at 
+		/// the end tag of the relationship (or EOF if somehow that happens).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory ClaseEnriquecida instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		private static void ReadClaseEnriquecidaHasEstiloClaseInstances(DslModeling::SerializationContext serializationContext, ClaseEnriquecida element, global::System.Xml.XmlReader reader)
+		private static void ReadClaseEnriquecidaHasEstiloClaseInstance(DslModeling::SerializationContext serializationContext, ClaseEnriquecida element, global::System.Xml.XmlReader reader)
 		{
+			if (DslModeling::DomainRoleInfo.GetElementLinks<ClaseEnriquecidaHasEstiloClase> (element, ClaseEnriquecidaHasEstiloClase.ClaseEnriquecidaDomainRoleId).Count > 0)
+			{	// Only allow one instance, which already exists, so skip everything
+				DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+				return;
+			}
+	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
 				DslModeling::DomainClassXmlSerializer newClaseEnriquecidaHasEstiloClaseSerializer = serializationContext.Directory.GetSerializer(ClaseEnriquecidaHasEstiloClase.DomainClassId);
@@ -2324,6 +2331,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newClaseEnriquecidaHasEstiloClase.GetDomainClass().Id);	
 					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newClaseEnriquecidaHasEstiloClase.GetDomainClass().Name + "!");
 					targetSerializer.Read(serializationContext, newClaseEnriquecidaHasEstiloClase, reader);
+					break;	// Only allow one instance.
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
@@ -2333,10 +2341,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					if (newEstiloClaseOfClaseEnriquecidaHasEstiloClase != null)
 					{
 						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(ClaseEnriquecidaHasEstiloClase));
-						element.EstiloClase.Add(newEstiloClaseOfClaseEnriquecidaHasEstiloClase);
+						element.EstiloClase = newEstiloClaseOfClaseEnriquecidaHasEstiloClase;
 						DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newEstiloClaseOfClaseEnriquecidaHasEstiloClase.GetDomainClass().Id);	
 						global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newEstiloClaseOfClaseEnriquecidaHasEstiloClase.GetDomainClass().Name + "!");
 						targetSerializer.Read(serializationContext, newEstiloClaseOfClaseEnriquecidaHasEstiloClase, reader);
+						break;	// Only allow one instance.
 					}
 					else
 					{	// Unknown element, skip.
@@ -2854,19 +2863,13 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		private static void WriteChildElements(DslModeling::SerializationContext serializationContext, ClaseEnriquecida element, global::System.Xml.XmlWriter writer)
 		{
 			// ClaseEnriquecidaHasEstiloClase
-			global::System.Collections.ObjectModel.ReadOnlyCollection<ClaseEnriquecidaHasEstiloClase> allClaseEnriquecidaHasEstiloClaseInstances = ClaseEnriquecidaHasEstiloClase.GetLinksToEstiloClase(element);
-			if (!serializationContext.Result.Failed && allClaseEnriquecidaHasEstiloClaseInstances.Count > 0)
+			ClaseEnriquecidaHasEstiloClase theClaseEnriquecidaHasEstiloClaseInstance = ClaseEnriquecidaHasEstiloClase.GetLinkToEstiloClase(element);
+			if (!serializationContext.Result.Failed && theClaseEnriquecidaHasEstiloClaseInstance != null)
 			{
 				writer.WriteStartElement("estiloClase");
-				foreach (ClaseEnriquecidaHasEstiloClase eachClaseEnriquecidaHasEstiloClaseInstance in allClaseEnriquecidaHasEstiloClaseInstances)
-				{
-					if (serializationContext.Result.Failed)
-						break;
-	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachClaseEnriquecidaHasEstiloClaseInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachClaseEnriquecidaHasEstiloClaseInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachClaseEnriquecidaHasEstiloClaseInstance, writer);
-				}
+				DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(theClaseEnriquecidaHasEstiloClaseInstance.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + theClaseEnriquecidaHasEstiloClaseInstance.GetDomainClass().Name + "!");
+				relSerializer.Write(serializationContext, theClaseEnriquecidaHasEstiloClaseInstance, writer);
 				writer.WriteEndElement();
 			}
 	

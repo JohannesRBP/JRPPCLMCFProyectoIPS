@@ -412,7 +412,7 @@
     </DomainRelationship>
     <DomainRelationship Id="f9b65884-7efb-47f8-a0de-7f58775c3a3f" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase" Name="ClaseEnriquecidaHasEstiloClase" DisplayName="Clase Enriquecida Has Estilo Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="7f056284-962c-418d-a6b6-803c90bba8db" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloClase" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Clase">
+        <DomainRole Id="7f056284-962c-418d-a6b6-803c90bba8db" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloClase" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Clase">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseEnriquecida" />
           </RolePlayer>

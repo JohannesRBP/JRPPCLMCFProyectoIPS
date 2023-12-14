@@ -222,13 +222,13 @@
       <xsd:extension base="Clase">
         <xsd:sequence minOccurs="0" maxOccurs="1">
           <!-- Relationship: ClaseEnriquecidaHasEstiloClase -->
-          <xsd:element name="estiloClase" minOccurs="0" maxOccurs="1">
+          <xsd:element name="estiloClase" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ClaseEnriquecidaHasEstiloClase</xsd:documentation>
+              <xsd:documentation>Instance of ClaseEnriquecidaHasEstiloClase</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseEnriquecidaHasEstiloClase" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="claseEnriquecidaHasEstiloClase" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of ClaseEnriquecidaHasEstiloClase needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>

@@ -711,18 +711,22 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		#endregion
 		#region EstiloClase opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of EstiloClase.
+		/// Gets or sets EstiloClase.
 		/// Description for
 		/// UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase.ClaseEnriquecida
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstiloClase> EstiloClase
+		public virtual EstiloClase EstiloClase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloClase>, EstiloClase>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase.ClaseEnriquecidaDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase.ClaseEnriquecidaDomainRoleId) as EstiloClase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase.ClaseEnriquecidaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -780,6 +784,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasEstiloClase.EstiloClase
+					if (this.EstiloClase != null)
+					{
+						return false;
+					}
 					return true;
 				}
 				
@@ -821,7 +830,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			if (sourceEstiloClase1 != null)
 			{
 				// Create link for path ClaseEnriquecidaHasEstiloClase.EstiloClase
-				this.EstiloClase.Add(sourceEstiloClase1);
+				this.EstiloClase = sourceEstiloClase1;
 
 				return;
 			}

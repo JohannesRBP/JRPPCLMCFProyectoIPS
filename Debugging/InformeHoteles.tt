@@ -5,20 +5,28 @@
 
 <# 
 	
-		// a partir de la apertura del siguiente fichero, la inyección de texto se escribe en él
 //MAIN
-	if (this.TapizClassWeb.Clase.Count==0)
-		WriteLine("  solucion vacía. No se ha configurado ninguna clase");
+	if (this.TapizClassWeb.Clase.Count==0) 
+		//Si no hay ninguna clase creada
+		WriteLine("Solucion vacía. No se ha configurado ninguna clase");
 	else{ 
 
 		//Inicializa la creacion de ficheros
 		var fileManager=EntityFrameworkTemplateFileManager.Create(this); 
 
+		//Recorremos todas las clases creadas en el tapiz
 		foreach(Clase clase in this.TapizClassWeb.Clase){
-			//WriteLine("ClasePrincipal   : " + clase.nombre);
-			generarHome(clase, fileManager);
-			generarAlta(clase, fileManager);
-			generarLista(clase, fileManager);
+			
+			//Comprobamos si la clase es enriquecida
+			bool enriquecida=false;
+			if(clase is ClaseEnriquecida)
+				enriquecida=true;
+
+			//Llamamos a cada metodo por cada clase para generar el .html y .java
+			generarHome(clase, fileManager, enriquecida); 
+			generarAlta(clase, fileManager, enriquecida);
+			generarListado(clase, fileManager, enriquecida);
+			//Parametros (clase: cada clase contenida en el tapiz, filemanager: gestor de creacion de ficheros, enriquecida(bool): indica si la clase es enriquecida o no)
 			
 		}
 
@@ -26,18 +34,34 @@
 		fileManager.Process();
 	}
 
-	//WriteLine("---------------");
 #>
 <#+
-//METODO PARA GENERAR CLASES HOME
-	void generarHome(Clase clase, EntityFrameworkTemplateFileManager fileManager){
+//METODO PARA GENERAR HTML DE CADA CLASE_HOME
+	void generarHome(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida){
 
-		//Aqui pondremos la home de cada clase
+		//Crea un fichero donde pondremos la home de cada clase
 		fileManager.StartNewFile(clase.nombre+"Home.html");
 
-		//Comprobar que es enriquecida
-		if(clase is ClaseEnriquecida)
-		WriteLine("Ave Crem");
+		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
+		string tipoLetra="Arial";
+		string colorLetra="#000000";
+		string alineacion="center";
+		string colorFondo="#00aabb";
+
+		//coger estilos de EstiloClase (AUN NO FUNCIONA)
+		/*if(enriquecida){
+			if(clase.EstiloClase.Count==0) 
+				WriteLine("No hay estilos de clase");
+			else{
+				EstiloClase estiloClase = clase.EstiloClase;
+				tipoLetra= estiloClase.tipoLetraCalculado;  
+				colorLetra= estiloClase.colorLetraCalculado;
+				alineacion= estiloClase.alineacionCalculado;
+				colorFondo= estiloClase.colorFondoCalculado;
+				
+			}
+		}*/
+
 
 		WriteLine("<html>"); 
 		WriteLine("<head>"); 
@@ -46,16 +70,15 @@
 		WriteLine("<body>"); 
 		WriteLine("<div style='border: 1px solid black; margin:20px'>"); 
 
-		//Aqui diferenciamos entre clase enriquecida o normal
-
-		WriteLine("<form name='"+clase.nombre+"' style='background-color:##00aabb; color:#000000;font-family:Arial;text-align:center;'>");
+		
+		WriteLine("<form name='"+clase.nombre+"' style='background-color:"+colorFondo+"; color:"+colorLetra+";font-family:"+tipoLetra+";text-align:"+alineacion+";'>");
 		WriteLine("<h1>"+clase.nombre+"</h1>"); 
 
 		//Boton para alta
-		WriteLine("<button style='color:#000000;font-family:Arial'> <a href='./"+clase.nombre+"Alta.html'>Alta</a> </button>"); 
+		WriteLine("<button style='color:"+colorLetra+";font-family:"+tipoLetra+"'> <a href='./"+clase.nombre+"Alta.html'>Alta</a> </button>"); 
 	
 		//Boton para listado
-		WriteLine("<button style='color:#000000;font-family:Arial'> <a href='./"+clase.nombre+"Listado.html'>Listado</a> </button>"); 
+		WriteLine("<button style='color:"+colorLetra+";font-family:"+tipoLetra+"'> <a href='./"+clase.nombre+"Listado.html'>Listado</a> </button>"); 
 
 		WriteLine("</form>"); 
 		WriteLine("</div>"); 
@@ -63,46 +86,77 @@
 		WriteLine("</html>"); 
 	}
 #>
-<#+ //METODO PARA GENERAR CLASES ALTA
+<#+ 
+//METODO PARA GENERAR HTML DE CADA CLASE_ALTA
 
-	void generarAlta(Clase clase, EntityFrameworkTemplateFileManager fileManager){
+	void generarAlta(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida){
 		
-		//Aqui pondremos el alta de cada clase
+		//Crea un fichero donde pondremos el alta de cada clase
 		fileManager.StartNewFile(clase.nombre+"Alta.html");
 	
+
+		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
+		string tipoLetra="Arial";
+		string colorLetra="#000000";
+		string alineacion="center";
+		string colorFondo="#00aabb";
+
+		//coger estilos de EstiloClase (AUN NO FUNCIONA)
+		/*if(enriquecida){
+			if(clase.EstiloClase.Count==0) 
+				WriteLine("No hay estilos de clase");
+			else{
+				EstiloClase estiloClase = clase.EstiloClase;
+				tipoLetra= estiloClase.tipoLetraCalculado;  
+				colorLetra= estiloClase.colorLetraCalculado;
+				alineacion= estiloClase.alineacionCalculado;
+				colorFondo= estiloClase.colorFondoCalculado;
+				
+			}
+		}*/
+
+
 		WriteLine("<html>"); 
 		WriteLine("<head>"); 
 		WriteLine("<title>"+clase.nombre+"Alta</title>");
 		WriteLine("</head>"); 
 		WriteLine("<body>"); 
 		WriteLine("<div style='border: 1px solid black; margin:20px'>"); 
-		WriteLine("<p style='background-color: #00aabb; color:#000000; font-weight:bold; font-family:Arial; text-align:center'> Alta"+clase.nombre+"</p>");
-		WriteLine("form name='"+clase.nombre+"' style='background-color:#00aabb; color:#ffffff;font-family:Arial;text-align:center;'");
+		WriteLine("<p style='background-color: "+colorFondo+"; color:"+colorLetra+"; font-weight:bold; font-family:"+tipoLetra+"; text-align:"+alineacion+"'> Alta"+clase.nombre+"</p>");
+		WriteLine("<form name='"+clase.nombre+"' style='background-color:#00aabb; color:#ffffff;font-family:Arial;text-align:center;'>");
 		WriteLine("<table>");
 
-		//Recorremos los atributos y añadimos una fila por cada uno
-
+		//Recorremos los atributos y añadimos una fila a la tabla por cada uno
 		if(clase.Atributo.Count==0)
 			WriteLine("No hay atributos");
 		else
 			foreach(Atributo atributo in clase.Atributo){
-				WriteLine("<tr><td style='color:#000000; font-family:Arial;'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");		
-
+				WriteLine("<tr><td style='color:#000000; font-family:Arial;'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
 			}
+
+
 		WriteLine("</table>");
+
+		//Botones
 		WriteLine("<button style='color:#000000'; font-family:Arial;'><a href="+clase.nombre+".html>Guardar</a></button>");
-		WriteLine("<button style='color:#000000'; font-family:Arial;'><a href="+clase.nombre+".html>Guardar</a></button>");
+		WriteLine("<button style='color:#000000'; font-family:Arial;'><a href="+clase.nombre+"Home.html>Volver</a></button>");
+
+		WriteLine("</form>");
+		WriteLine("</div>");
+		WriteLine("</body>");
+		WriteLine("</html>");
+
 	}
 	
 #>
-
 <#+
-	void generarLista(Clase clase, EntityFrameworkTemplateFileManager fileManager){
-		fileManager.StartNewFile(clase.nombre+"Lista.html");
-		if(clase is ClaseEnriquecida){
-			WriteLine("JohanEsgay");
-		}
 
+//METODO PARA GENERAR HTML DE CADA CLASE_LISTADO
+	void generarListado(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida){
+
+		//Crea un fichero donde pondremos el listado de cada clase
+		fileManager.StartNewFile(clase.nombre+"Lista.html");
+		
 	}
 
 
