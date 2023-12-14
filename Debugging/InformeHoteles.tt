@@ -156,6 +156,84 @@
 
 		//Crea un fichero donde pondremos el listado de cada clase
 		fileManager.StartNewFile(clase.nombre+"Lista.html");
+
+		
+		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
+		string tipoLetra="Arial";
+		string colorLetra="#000000";
+		string alineacion="center";
+		string colorFondo="#00aabb";
+
+		//coger estilos de EstiloClase (FUNCIONA)
+		if(enriquecida){ 
+			ClaseEnriquecida claseEnriquecida= (ClaseEnriquecida)clase; //La casteamos en ClaseEnriquecida
+			if(claseEnriquecida.EstiloClase==null) 
+				WriteLine("No hay estilos de clase");
+			else{					 
+				EstiloClase estiloClase = (EstiloClase) claseEnriquecida.EstiloClase;
+				tipoLetra= estiloClase.tipoLetraCalculado;  
+				colorLetra= estiloClase.colorLetraCalculado;
+				alineacion= estiloClase.alineacionCalculado; 
+				colorFondo= estiloClase.colorFondoCalculado;				
+			}
+		}
+
+
+	    WriteLine("<body>");
+	    WriteLine("<div style='border:1px solid black; margin:20px'>");
+		WriteLine("<h2>Listado " + clase.nombre + "</h2>");
+		WriteLine("<p style='background-color: "+colorFondo+"; color:"+colorLetra+"; font-weight:bold; font-family:"+tipoLetra+"; text-align:"+alineacion+"'> Listado "+clase.nombre+"</p>");
+		WriteLine("<form name='"+clase.nombre+"' style='background-color:#00aabb; color:#ffffff;font-family:Arial;text-align:center;'>");
+		WriteLine("<table>");
+
+       //PRIMER ELEMENTO
+       WriteLine("<tr>");
+       WriteLine("<td>Elemento 1: " + clase.nombre + " </td>");
+       WriteLine("<td>");
+       WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
+       WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
+       WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
+	   WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">GeneraCertificadoNota</a> </button>");
+	   WriteLine(" </td>");
+	   WriteLine(" </tr>");
+
+	  //SEGUNDO ELEMENTO
+	 WriteLine("<tr>");
+	 WriteLine("<td>Elemento 2: " + clase.nombre + " </td>");
+     WriteLine("<td>");
+     WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
+     WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
+	 WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
+     WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">GeneraCertificadoNota</a> </button>");
+     WriteLine(" </td>");
+     WriteLine(" </tr>");
+
+    //TERCER ELEMENTO
+	WriteLine("<tr>");
+	WriteLine("<td>Elemento 3: " + clase.nombre + " </td>");
+	WriteLine("<td>");
+	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
+	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
+	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
+	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">GeneraCertificadoNota</a> </button>");
+	WriteLine(" </td>");
+	WriteLine(" </tr>");
+
+	//CUARTO ELEMENTO
+	WriteLine("<tr>");
+	WriteLine("<td>Elemento 4: " + clase.nombre + " </td>");
+	WriteLine("<td>");
+	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
+	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
+	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
+	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">GeneraCertificadoNota</a> </button>");
+	WriteLine(" </td>");
+	WriteLine(" </tr>");
+
+	WriteLine("</table>");
+	   
+           
+
 		
 	}
 
