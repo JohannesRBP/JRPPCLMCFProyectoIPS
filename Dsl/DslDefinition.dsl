@@ -355,7 +355,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="35f15e64-bdd2-4012-b7fb-4d838925aa95" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Clase" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Clase">
+        <DomainRole Id="35f15e64-bdd2-4012-b7fb-4d838925aa95" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributo.Atributo" Name="Atributo" DisplayName="Atributo" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Atributo" />
           </RolePlayer>
@@ -371,7 +371,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="e56f4eed-d3e5-48a2-8209-6b2e2e2ac25d" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasOperacion.Operacion" Name="Operacion" DisplayName="Operacion" PropertyName="Clase" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Clase">
+        <DomainRole Id="e56f4eed-d3e5-48a2-8209-6b2e2e2ac25d" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasOperacion.Operacion" Name="Operacion" DisplayName="Operacion" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Operacion" />
           </RolePlayer>
@@ -387,7 +387,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="b95b4879-123c-43dc-9e9c-cc3d494bf9af" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.AtributoIdentificador" Name="AtributoIdentificador" DisplayName="Atributo Identificador" PropertyName="Clase" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Clase">
+        <DomainRole Id="b95b4879-123c-43dc-9e9c-cc3d494bf9af" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.AtributoIdentificador" Name="AtributoIdentificador" DisplayName="Atributo Identificador" PropertyName="Clase" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase">
           <RolePlayer>
             <DomainClassMoniker Name="AtributoIdentificador" />
           </RolePlayer>
@@ -419,7 +419,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="3be436aa-ccc8-4403-935f-96bd0e1da44d" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase.EstiloClase" Name="EstiloClase" DisplayName="Estilo Clase" PropertyName="ClaseEnriquecida" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
+        <DomainRole Id="3be436aa-ccc8-4403-935f-96bd0e1da44d" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloClase.EstiloClase" Name="EstiloClase" DisplayName="Estilo Clase" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
           <RolePlayer>
             <DomainClassMoniker Name="EstiloClase" />
           </RolePlayer>
@@ -435,7 +435,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="8c5a46cb-8b1b-48f8-8bcb-605a6556a2de" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.EstiloOperacion" Name="EstiloOperacion" DisplayName="Estilo Operacion" PropertyName="ClaseEnriquecida" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
+        <DomainRole Id="8c5a46cb-8b1b-48f8-8bcb-605a6556a2de" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.EstiloOperacion" Name="EstiloOperacion" DisplayName="Estilo Operacion" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
           <RolePlayer>
             <DomainClassMoniker Name="EstiloOperacion" />
           </RolePlayer>
@@ -451,7 +451,7 @@
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="f9ce6e9a-c9ef-4b71-a4cb-771b15248659" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.EstiloAtributo" Name="EstiloAtributo" DisplayName="Estilo Atributo" PropertyName="ClaseEnriquecida" Multiplicity="ZeroOne" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
+        <DomainRole Id="f9ce6e9a-c9ef-4b71-a4cb-771b15248659" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.EstiloAtributo" Name="EstiloAtributo" DisplayName="Estilo Atributo" PropertyName="ClaseEnriquecida" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Enriquecida">
           <RolePlayer>
             <DomainClassMoniker Name="EstiloAtributo" />
           </RolePlayer>

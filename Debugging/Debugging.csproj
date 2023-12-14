@@ -65,13 +65,31 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EmpleadoHome.txt">
+    <Content Include="EmpleadoAlta.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
-    <Content Include="HabitacionHome.txt">
+    <Content Include="EmpleadoHome.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
-    <Content Include="HotelHome.txt">
+    <Content Include="EmpleadoLista.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="HabitacionAlta.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="HabitacionHome.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="HabitacionLista.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="HotelAlta.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="HotelHome.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="HotelLista.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
     <Content Include="InformeHoteles.tt">

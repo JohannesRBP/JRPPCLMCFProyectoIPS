@@ -17,6 +17,9 @@
 		foreach(Clase clase in this.TapizClassWeb.Clase){
 			//WriteLine("ClasePrincipal   : " + clase.nombre);
 			generarHome(clase, fileManager);
+			generarAlta(clase, fileManager);
+			generarLista(clase, fileManager);
+			
 		}
 
 		//Cierra la creacion de ficheros
@@ -24,34 +27,83 @@
 	}
 
 	//WriteLine("---------------");
-
+#>
+<#+
 //METODO PARA GENERAR CLASES HOME
 	void generarHome(Clase clase, EntityFrameworkTemplateFileManager fileManager){
+
+		//Aqui pondremos la home de cada clase
+		fileManager.StartNewFile(clase.nombre+"Home.html");
+
+		//Comprobar que es enriquecida
+		if(clase is ClaseEnriquecida)
+		WriteLine("Ave Crem");
+
+		WriteLine("<html>"); 
+		WriteLine("<head>"); 
+		WriteLine("<title>"+clase.nombre+"Home</title>");
+		WriteLine("</head>"); 
+		WriteLine("<body>"); 
+		WriteLine("<div style='border: 1px solid black; margin:20px'>"); 
+
+		//Aqui diferenciamos entre clase enriquecida o normal
+
+		WriteLine("<form name='"+clase.nombre+"' style='background-color:##00aabb; color:#000000;font-family:Arial;text-align:center;'>");
+		WriteLine("<h1>"+clase.nombre+"</h1>"); 
+
+		//Boton para alta
+		WriteLine("<button style='color:#000000;font-family:Arial'> <a href='./"+clase.nombre+"Alta.html'>Alta</a> </button>"); 
 	
-	//Aqui pondremos la home de cada clase
-	fileManager.StartNewFile(clase.nombre+"Home.txt");
+		//Boton para listado
+		WriteLine("<button style='color:#000000;font-family:Arial'> <a href='./"+clase.nombre+"Listado.html'>Listado</a> </button>"); 
 
-	WriteLine("<html>"); 
-	WriteLine("<head>"); 
-	WriteLine("<title>"+clase.nombre+"Home<title>");
-	WriteLine("</head>"); 
-	WriteLine("<body>"); 
-	WriteLine("</div style='border: 1px solid black; margin:20px'>"); 
-
-	//Aqui diferenciamos entre clase enriquecida o normal
-
-	WriteLine("<form name='"+clase.nombre+"' style='background-color:##00aabb; color:#000000;font-family:Arial;text-align:center;'");
-	WriteLine("<h1>"+clase.nombre+"</h1>"); 
-
-	//Boton para alta
-	WriteLine("<button style='color:#000000;font-family:Arial'> <href='./'"+clase.nombre+"Alta.html>Alta</a> </button>"); 
-	
-	//Boton para listado
-	WriteLine("<button style='color:#000000;font-family:Arial'> <href='./'"+clase.nombre+"Listado.html>Listado</a> </button>"); 
-
-	WriteLine("</form>"); 
-	WriteLine("</div>"); 
-	WriteLine("</body>"); 
-	WriteLine("</html>"); 
+		WriteLine("</form>"); 
+		WriteLine("</div>"); 
+		WriteLine("</body>"); 
+		WriteLine("</html>"); 
 	}
+#>
+<#+ //METODO PARA GENERAR CLASES ALTA
+
+	void generarAlta(Clase clase, EntityFrameworkTemplateFileManager fileManager){
+		
+		//Aqui pondremos el alta de cada clase
+		fileManager.StartNewFile(clase.nombre+"Alta.html");
+	
+		WriteLine("<html>"); 
+		WriteLine("<head>"); 
+		WriteLine("<title>"+clase.nombre+"Alta</title>");
+		WriteLine("</head>"); 
+		WriteLine("<body>"); 
+		WriteLine("<div style='border: 1px solid black; margin:20px'>"); 
+		WriteLine("<p style='background-color: #00aabb; color:#000000; font-weight:bold; font-family:Arial; text-align:center'> Alta"+clase.nombre+"</p>");
+		WriteLine("form name='"+clase.nombre+"' style='background-color:#00aabb; color:#ffffff;font-family:Arial;text-align:center;'");
+		WriteLine("<table>");
+
+		//Recorremos los atributos y añadimos una fila por cada uno
+
+		if(clase.Atributo.Count==0)
+			WriteLine("No hay atributos");
+		else
+			foreach(Atributo atributo in clase.Atributo){
+				WriteLine("<tr><td style='color:#000000; font-family:Arial;'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");		
+
+			}
+		WriteLine("</table>");
+		WriteLine("<button style='color:#000000'; font-family:Arial;'><a href="+clase.nombre+".html>Guardar</a></button>");
+		WriteLine("<button style='color:#000000'; font-family:Arial;'><a href="+clase.nombre+".html>Guardar</a></button>");
+	}
+	
+#>
+
+<#+
+	void generarLista(Clase clase, EntityFrameworkTemplateFileManager fileManager){
+		fileManager.StartNewFile(clase.nombre+"Lista.html");
+		if(clase is ClaseEnriquecida){
+			WriteLine("JohanEsgay");
+		}
+
+	}
+
+
 #>
