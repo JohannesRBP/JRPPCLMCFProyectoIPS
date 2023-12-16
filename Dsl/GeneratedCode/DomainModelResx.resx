@@ -253,6 +253,22 @@
     <value>Tipo Dato</value>
     <comment>DisplayName for DomainProperty &apos;tipoDato&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/tipoDatoCalculado.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.Tipo Dato Calculado</value>
+    <comment>Description for DomainProperty &apos;tipoDatoCalculado&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/tipoDatoCalculado.DisplayName" xml:space="preserve">
+    <value>Tipo Dato Calculado</value>
+    <comment>DisplayName for DomainProperty &apos;tipoDatoCalculado&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/modAcceso.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.Mod Acceso</value>
+    <comment>Description for DomainProperty &apos;modAcceso&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/modAcceso.DisplayName" xml:space="preserve">
+    <value>Mod Acceso</value>
+    <comment>DisplayName for DomainProperty &apos;modAcceso&apos; on DomainClass &apos;AtributoIdentificador&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.EstiloClase</value>
     <comment>Description for DomainClass &apos;EstiloClase&apos;</comment>
@@ -789,29 +805,53 @@
     <value>Clase References Clase</value>
     <comment>DisplayName for DomainClass &apos;ClaseReferencesClase&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidad0.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad0</value>
-    <comment>Description for DomainProperty &apos;cardinalidad0&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidadO.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad O</value>
+    <comment>Description for DomainProperty &apos;cardinalidadO&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidad0.DisplayName" xml:space="preserve">
-    <value>Cardinalidad0</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidad0&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidadO.DisplayName" xml:space="preserve">
+    <value>Cardinalidad O</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadO&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidad1.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad1</value>
-    <comment>Description for DomainProperty &apos;cardinalidad1&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidadD.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad D</value>
+    <comment>Description for DomainProperty &apos;cardinalidadD&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidad1.DisplayName" xml:space="preserve">
-    <value>Cardinalidad1</value>
-    <comment>DisplayName for DomainProperty &apos;cardinalidad1&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidadD.DisplayName" xml:space="preserve">
+    <value>Cardinalidad D</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadD&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombre.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre</value>
-    <comment>Description for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombreO.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre O</value>
+    <comment>Description for DomainProperty &apos;nombreO&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombre.DisplayName" xml:space="preserve">
-    <value>Nombre</value>
-    <comment>DisplayName for DomainProperty &apos;nombre&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombreO.DisplayName" xml:space="preserve">
+    <value>Nombre O</value>
+    <comment>DisplayName for DomainProperty &apos;nombreO&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombreD.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre D</value>
+    <comment>Description for DomainProperty &apos;nombreD&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombreD.DisplayName" xml:space="preserve">
+    <value>Nombre D</value>
+    <comment>DisplayName for DomainProperty &apos;nombreD&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidadOCalculada.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad OCalculada</value>
+    <comment>Description for DomainProperty &apos;cardinalidadOCalculada&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidadOCalculada.DisplayName" xml:space="preserve">
+    <value>Cardinalidad OCalculada</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadOCalculada&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidadDCalculada.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad DCalculada</value>
+    <comment>Description for DomainProperty &apos;cardinalidadDCalculada&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/cardinalidadDCalculada.DisplayName" xml:space="preserve">
+    <value>Cardinalidad DCalculada</value>
+    <comment>DisplayName for DomainProperty &apos;cardinalidadDCalculada&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/SourceClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.SourceClase</value>
@@ -1109,37 +1149,37 @@
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoDato.tipoHabitacion</value>
     <comment>Description for EnumerationLiteral &apos;tipoHabitacion&apos; on DomainEnumeration &apos;TipoDato&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Verde.DisplayName" xml:space="preserve">
-    <value>Verde</value>
-    <comment>Display name for EnumerationLiteral &apos;Verde&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/rojo.DisplayName" xml:space="preserve">
+    <value>rojo</value>
+    <comment>Display name for EnumerationLiteral &apos;rojo&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Verde.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Verde</value>
-    <comment>Description for EnumerationLiteral &apos;Verde&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/rojo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.rojo</value>
+    <comment>Description for EnumerationLiteral &apos;rojo&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Rojo.DisplayName" xml:space="preserve">
-    <value>Rojo</value>
-    <comment>Display name for EnumerationLiteral &apos;Rojo&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/amarillo.DisplayName" xml:space="preserve">
+    <value>amarillo</value>
+    <comment>Display name for EnumerationLiteral &apos;amarillo&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Rojo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Rojo</value>
-    <comment>Description for EnumerationLiteral &apos;Rojo&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/amarillo.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.amarillo</value>
+    <comment>Description for EnumerationLiteral &apos;amarillo&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Azul.DisplayName" xml:space="preserve">
-    <value>Azul</value>
-    <comment>Display name for EnumerationLiteral &apos;Azul&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/verde.DisplayName" xml:space="preserve">
+    <value>verde</value>
+    <comment>Display name for EnumerationLiteral &apos;verde&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Azul.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Azul</value>
-    <comment>Description for EnumerationLiteral &apos;Azul&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/verde.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.verde</value>
+    <comment>Description for EnumerationLiteral &apos;verde&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Amarillo.DisplayName" xml:space="preserve">
-    <value>Amarillo</value>
-    <comment>Display name for EnumerationLiteral &apos;Amarillo&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/azul.DisplayName" xml:space="preserve">
+    <value>azul</value>
+    <comment>Display name for EnumerationLiteral &apos;azul&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Amarillo.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Amarillo</value>
-    <comment>Description for EnumerationLiteral &apos;Amarillo&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/azul.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.azul</value>
+    <comment>Description for EnumerationLiteral &apos;azul&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoLetra/TimesNewRoman.DisplayName" xml:space="preserve">
     <value>TimesNewRoman</value>
@@ -1212,6 +1252,46 @@
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro/Entrada_Salida.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Entrada_Salida</value>
     <comment>Description for EnumerationLiteral &apos;Entrada_Salida&apos; on DomainEnumeration &apos;TipoParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/uno_uno.DisplayName" xml:space="preserve">
+    <value>uno_uno</value>
+    <comment>Display name for EnumerationLiteral &apos;uno_uno&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/uno_uno.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.uno_uno</value>
+    <comment>Description for EnumerationLiteral &apos;uno_uno&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/uno_n.DisplayName" xml:space="preserve">
+    <value>uno_n</value>
+    <comment>Display name for EnumerationLiteral &apos;uno_n&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/uno_n.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.uno_n</value>
+    <comment>Description for EnumerationLiteral &apos;uno_n&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/cero_n.DisplayName" xml:space="preserve">
+    <value>cero_n</value>
+    <comment>Display name for EnumerationLiteral &apos;cero_n&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/cero_n.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.cero_n</value>
+    <comment>Description for EnumerationLiteral &apos;cero_n&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/n_n.DisplayName" xml:space="preserve">
+    <value>n_n</value>
+    <comment>Display name for EnumerationLiteral &apos;n_n&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/n_n.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.n_n</value>
+    <comment>Description for EnumerationLiteral &apos;n_n&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/cero_uno.DisplayName" xml:space="preserve">
+    <value>cero_uno</value>
+    <comment>Display name for EnumerationLiteral &apos;cero_uno&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/cero_uno.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.cero_uno</value>
+    <comment>Description for EnumerationLiteral &apos;cero_uno&apos; on DomainEnumeration &apos;tipoCardinalidad&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseMetafora.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseMetafora</value>
@@ -1357,6 +1437,18 @@
     <value>&lt;&lt;Enumerator&gt;&gt;</value>
     <comment>Text decorator default text</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaAtributoIdentificador.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaAtributoIdentificador</value>
+    <comment>Description for DomainClass &apos;MetaforaAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaAtributoIdentificador.DisplayName" xml:space="preserve">
+    <value>Metafora Atributo Identificador</value>
+    <comment>DisplayName for DomainClass &apos;MetaforaAtributoIdentificador&apos;</comment>
+  </data>
+  <data name="MetaforaAtributoIdentificadortipoDatoCalculadaDecDefaultText" xml:space="preserve">
+    <value>tipoDatoCalculadaDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase</value>
     <comment>Description for DomainClass &apos;MetaforaClase_Clase&apos;</comment>
@@ -1365,16 +1457,20 @@
     <value>Metafora Clase_ Clase</value>
     <comment>DisplayName for DomainClass &apos;MetaforaClase_Clase&apos;</comment>
   </data>
-  <data name="MetaforaClase_Clasecardinalidad0DecDefaultText" xml:space="preserve">
-    <value>cardinalidad0Dec</value>
+  <data name="MetaforaClase_ClasecardinalidadODecDefaultText" xml:space="preserve">
+    <value>cardinalidadODec</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="MetaforaClase_Clasecardinalidad1DecDefaultText" xml:space="preserve">
-    <value>cardinalidad1Dec</value>
+  <data name="MetaforaClase_ClasecardinalidadDDecDefaultText" xml:space="preserve">
+    <value>cardinalidadDDec</value>
     <comment>Text decorator default text</comment>
   </data>
-  <data name="MetaforaClase_ClasenombreDecDefaultText" xml:space="preserve">
-    <value>nombreDec</value>
+  <data name="MetaforaClase_ClasenombreODecDefaultText" xml:space="preserve">
+    <value>nombreODec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaClase_ClasenombreDDecDefaultText" xml:space="preserve">
+    <value>nombreDDec</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia.Description" xml:space="preserve">
@@ -1487,6 +1583,14 @@
   </data>
   <data name="ClaseEnumeradorToolboxTooltip" xml:space="preserve">
     <value>Clase Enumerador</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="AtributoIdentificadorToolboxItem" xml:space="preserve">
+    <value>AtributoIdentificador</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="AtributoIdentificadorToolboxTooltip" xml:space="preserve">
+    <value>Atributo Identificador</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UML_CONECTORSToolboxTab" xml:space="preserve">
@@ -1710,6 +1814,10 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\P.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
+  <data name="MetaforaAtributoIdentificadorIconAIDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\AI.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
   <data name="AtributoToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\A.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
@@ -1728,6 +1836,10 @@ A DomainClass can be serialized as a moniker only if
   </data>
   <data name="ClaseEnumeradorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\enumerado.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="AtributoIdentificadorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\AI.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
   <data name="AsociacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">

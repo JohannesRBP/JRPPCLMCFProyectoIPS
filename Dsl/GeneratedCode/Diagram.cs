@@ -315,6 +315,12 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
 			}
+			if(element is global::UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador)
+			{
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaAtributoIdentificador newShape = new global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaAtributoIdentificador(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
 			if(element is global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase)
 			{
 				global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase newShape = new global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase(this.Partition);
@@ -353,6 +359,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacionShape.DecoratorsInitialized += EstiloOperacionShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaParametro.DecoratorsInitialized += MetaforaParametroDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaEnumerador.DecoratorsInitialized += MetaforaEnumeradorDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaAtributoIdentificador.DecoratorsInitialized += MetaforaAtributoIdentificadorDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.DecoratorsInitialized += MetaforaClase_ClaseDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaRComposicion.DecoratorsInitialized += MetaforaRComposicionDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaReferenciada.DecoratorsInitialized += MetaforaReferenciadaDecoratorMap.OnDecoratorsInitialized;
@@ -513,6 +520,24 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		
 		/// <summary>
+		/// Class containing decorator path traversal methods for MetaforaAtributoIdentificador.
+		/// </summary>
+		internal static partial class MetaforaAtributoIdentificadorDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for MetaforaAtributoIdentificador.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.tipoDatoCalculadoDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "tipoDatoCalculadaDec").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
 		/// Class containing decorator path traversal methods for MetaforaClase_Clase.
 		/// </summary>
 		internal static partial class MetaforaClase_ClaseDecoratorMap
@@ -525,14 +550,17 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
 				DslDiagrams::AssociatedPropertyInfo propertyInfo;
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.cardinalidad0DomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidad0Dec").AssociateValueWith(shape.Store, propertyInfo);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.cardinalidadDCalculadaDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidadDDec").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.cardinalidad1DomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidad1Dec").AssociateValueWith(shape.Store, propertyInfo);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.cardinalidadOCalculadaDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "cardinalidadODec").AssociateValueWith(shape.Store, propertyInfo);
 				
-				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreDomainPropertyId);
-				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDec").AssociateValueWith(shape.Store, propertyInfo);
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreDDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreDDec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreODomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreODec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -806,6 +834,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.Parametro), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseComponeClases), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferenciaClase), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
@@ -881,6 +910,10 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				{
 					parentElement = GetParentForClaseEnumerador((global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnumerador)childElement);
 				} else
+				if(childElement is global::UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador)
+				{
+					parentElement = GetParentForAtributoIdentificador((global::UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador)childElement);
+				} else
 				{
 					parentElement = null;
 				}
@@ -908,6 +941,16 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb result = root.TapizClassWeb;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb GetParentForAtributoIdentificador( global::UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase root2 = root.Clase;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWeb result = root2.TapizClassWeb;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -1490,25 +1533,33 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			{
 				if(e == null) throw new global::System.ArgumentNullException("e");
 				
-				if (e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.cardinalidad0DomainPropertyId)
+				if (e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.cardinalidadDCalculadaDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.FindMetaforaClase_ClaseDecorator("cardinalidad0Dec");
+					DslDiagrams::Decorator decorator = global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.FindMetaforaClase_ClaseDecorator("cardinalidadDDec");
 					if(decorator != null)
 					{
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.DomainClassId);
 					}
 				}
-				else if (e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.cardinalidad1DomainPropertyId)
+				else if (e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.cardinalidadOCalculadaDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.FindMetaforaClase_ClaseDecorator("cardinalidad1Dec");
+					DslDiagrams::Decorator decorator = global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.FindMetaforaClase_ClaseDecorator("cardinalidadODec");
 					if(decorator != null)
 					{
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.DomainClassId);
 					}
 				}
-				else if (e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreDomainPropertyId)
+				else if (e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreDDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.FindMetaforaClase_ClaseDecorator("nombreDec");
+					DslDiagrams::Decorator decorator = global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.FindMetaforaClase_ClaseDecorator("nombreDDec");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreODomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.FindMetaforaClase_ClaseDecorator("nombreODec");
 					if(decorator != null)
 					{
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.DomainClassId);

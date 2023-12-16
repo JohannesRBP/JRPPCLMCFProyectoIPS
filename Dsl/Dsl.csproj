@@ -81,6 +81,8 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SerializationHelper.cs</LastGenOutput>
     </None>
+    <Compile Include="DesignerCustomization\AtributoIndentificador.cs" />
+    <Compile Include="DesignerCustomization\ClaseReferencesClase.cs" />
     <Compile Include="DesignerCustomization\Atributo.cs" />
     <Compile Include="DesignerCustomization\EstiloAtributo.cs" />
     <Compile Include="DesignerCustomization\EstiloClase.cs" />
@@ -166,6 +168,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\AI.bmp" />
     <Content Include="Resources\CO.bmp" />
     <Content Include="Resources\EA.bmp" />
     <Content Include="Resources\EC.bmp" />

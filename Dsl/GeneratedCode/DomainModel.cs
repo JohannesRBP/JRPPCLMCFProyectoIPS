@@ -102,6 +102,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				typeof(EstiloOperacionShape),
 				typeof(EstiloAtributoShape),
 				typeof(MetaforaParametro),
+				typeof(MetaforaAtributoIdentificador),
 				typeof(ClaseMetafora),
 				typeof(ClaseEnriquecidaShape),
 				typeof(MetaforaEnumerador),
@@ -134,6 +135,8 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				new DomainMemberInfo(typeof(Operacion), "modAcceso", Operacion.modAccesoDomainPropertyId, typeof(Operacion.modAccesoPropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoIdentificador), "nombre", AtributoIdentificador.nombreDomainPropertyId, typeof(AtributoIdentificador.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(AtributoIdentificador), "tipoDato", AtributoIdentificador.tipoDatoDomainPropertyId, typeof(AtributoIdentificador.tipoDatoPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoIdentificador), "tipoDatoCalculado", AtributoIdentificador.tipoDatoCalculadoDomainPropertyId, typeof(AtributoIdentificador.tipoDatoCalculadoPropertyHandler)),
+				new DomainMemberInfo(typeof(AtributoIdentificador), "modAcceso", AtributoIdentificador.modAccesoDomainPropertyId, typeof(AtributoIdentificador.modAccesoPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloClase), "colorFondo", EstiloClase.colorFondoDomainPropertyId, typeof(EstiloClase.colorFondoPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloClase), "colorLetra", EstiloClase.colorLetraDomainPropertyId, typeof(EstiloClase.colorLetraPropertyHandler)),
 				new DomainMemberInfo(typeof(EstiloClase), "tipoLetra", EstiloClase.tipoLetraDomainPropertyId, typeof(EstiloClase.tipoLetraPropertyHandler)),
@@ -162,9 +165,12 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				new DomainMemberInfo(typeof(Parametro), "tipoParametroCalculado", Parametro.tipoParametroCalculadoDomainPropertyId, typeof(Parametro.tipoParametroCalculadoPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseEnumerador), "nombre", ClaseEnumerador.nombreDomainPropertyId, typeof(ClaseEnumerador.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(Enumerador), "nombre", Enumerador.nombreDomainPropertyId, typeof(Enumerador.nombrePropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidad0", ClaseReferencesClase.cardinalidad0DomainPropertyId, typeof(ClaseReferencesClase.cardinalidad0PropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidad1", ClaseReferencesClase.cardinalidad1DomainPropertyId, typeof(ClaseReferencesClase.cardinalidad1PropertyHandler)),
-				new DomainMemberInfo(typeof(ClaseReferencesClase), "nombre", ClaseReferencesClase.nombreDomainPropertyId, typeof(ClaseReferencesClase.nombrePropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidadO", ClaseReferencesClase.cardinalidadODomainPropertyId, typeof(ClaseReferencesClase.cardinalidadOPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidadD", ClaseReferencesClase.cardinalidadDDomainPropertyId, typeof(ClaseReferencesClase.cardinalidadDPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesClase), "nombreO", ClaseReferencesClase.nombreODomainPropertyId, typeof(ClaseReferencesClase.nombreOPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesClase), "nombreD", ClaseReferencesClase.nombreDDomainPropertyId, typeof(ClaseReferencesClase.nombreDPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidadOCalculada", ClaseReferencesClase.cardinalidadOCalculadaDomainPropertyId, typeof(ClaseReferencesClase.cardinalidadOCalculadaPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidadDCalculada", ClaseReferencesClase.cardinalidadDCalculadaDomainPropertyId, typeof(ClaseReferencesClase.cardinalidadDCalculadaPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseComponeClases), "nombre", ClaseComponeClases.nombreDomainPropertyId, typeof(ClaseComponeClases.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseComponeClases), "cardinalidadO", ClaseComponeClases.cardinalidadODomainPropertyId, typeof(ClaseComponeClases.cardinalidadOPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseComponeClases), "cardinalidadD", ClaseComponeClases.cardinalidadDDomainPropertyId, typeof(ClaseComponeClases.cardinalidadDPropertyHandler)),
@@ -231,7 +237,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(24);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(25);
 				createElementMap.Add(typeof(TapizClassWeb), 0);
 				createElementMap.Add(typeof(Clase), 1);
 				createElementMap.Add(typeof(ClaseEnriquecida), 2);
@@ -253,9 +259,10 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				createElementMap.Add(typeof(EstiloOperacionShape), 18);
 				createElementMap.Add(typeof(EstiloAtributoShape), 19);
 				createElementMap.Add(typeof(MetaforaParametro), 20);
-				createElementMap.Add(typeof(ClaseMetafora), 21);
-				createElementMap.Add(typeof(ClaseEnriquecidaShape), 22);
-				createElementMap.Add(typeof(MetaforaEnumerador), 23);
+				createElementMap.Add(typeof(MetaforaAtributoIdentificador), 21);
+				createElementMap.Add(typeof(ClaseMetafora), 22);
+				createElementMap.Add(typeof(ClaseEnriquecidaShape), 23);
+				createElementMap.Add(typeof(MetaforaEnumerador), 24);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -290,9 +297,10 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				case 18: return new EstiloOperacionShape(partition, propertyAssignments);
 				case 19: return new EstiloAtributoShape(partition, propertyAssignments);
 				case 20: return new MetaforaParametro(partition, propertyAssignments);
-				case 21: return new ClaseMetafora(partition, propertyAssignments);
-				case 22: return new ClaseEnriquecidaShape(partition, propertyAssignments);
-				case 23: return new MetaforaEnumerador(partition, propertyAssignments);
+				case 21: return new MetaforaAtributoIdentificador(partition, propertyAssignments);
+				case 22: return new ClaseMetafora(partition, propertyAssignments);
+				case 23: return new ClaseEnriquecidaShape(partition, propertyAssignments);
+				case 24: return new MetaforaEnumerador(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -685,29 +693,29 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 	public enum TipoColor
 	{
 		/// <summary>
-		/// Verde
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Verde
+		/// rojo
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.rojo
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Verde.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		Verde = 0,
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/rojo.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		rojo = 0,
 		/// <summary>
-		/// Rojo
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Rojo
+		/// amarillo
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.amarillo
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Rojo.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		Rojo = 1,
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/amarillo.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		amarillo = 1,
 		/// <summary>
-		/// Azul
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Azul
+		/// verde
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.verde
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Azul.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		Azul = 2,
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/verde.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		verde = 2,
 		/// <summary>
-		/// Amarillo
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Amarillo
+		/// azul
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.azul
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/Amarillo.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		Amarillo = 3,
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/azul.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		azul = 3,
 	}
 }
 namespace UPM_IPS.JRPPCLMCFProyectoIPS
@@ -795,6 +803,47 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro/Entrada_Salida.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		Entrada_Salida = 1,
+	}
+}
+namespace UPM_IPS.JRPPCLMCFProyectoIPS
+{
+	/// <summary>
+	/// DomainEnumeration: tipoCardinalidad
+	/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum tipoCardinalidad
+	{
+		/// <summary>
+		/// uno_uno
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.uno_uno
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/uno_uno.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		uno_uno = 4,
+		/// <summary>
+		/// uno_n
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.uno_n
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/uno_n.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		uno_n = 3,
+		/// <summary>
+		/// cero_n
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.cero_n
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/cero_n.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		cero_n = 0,
+		/// <summary>
+		/// n_n
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.n_n
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/n_n.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		n_n = 2,
+		/// <summary>
+		/// cero_uno
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.cero_uno
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad/cero_uno.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		cero_uno = 1,
 	}
 }
 

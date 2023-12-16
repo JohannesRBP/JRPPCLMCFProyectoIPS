@@ -149,6 +149,16 @@
         </DomainProperty>
         <DomainProperty Id="1cd8c8d1-7f92-4a56-8ef9-69b5d596b376" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.Tipo Dato" Name="tipoDato" DisplayName="Tipo Dato">
           <Type>
+            <DomainEnumerationMoniker Name="TipoDato" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="8de7b55f-d8d2-4ff0-866c-ec64cfba0ec3" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.Tipo Dato Calculado" Name="tipoDatoCalculado" DisplayName="Tipo Dato Calculado" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="515fc688-8f8b-46e0-b239-ce37ecbe1fda" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.Mod Acceso" Name="modAcceso" DisplayName="Mod Acceso">
+          <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
@@ -380,7 +390,7 @@
     </DomainRelationship>
     <DomainRelationship Id="fc003cb3-6d3b-481b-92bb-0aaa62b0a889" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador" Name="ClaseHasAtributoIdentificador" DisplayName="Clase Has Atributo Identificador" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="581b4abc-d48c-44a4-9ae7-8e094cef9f69" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.Clase" Name="Clase" DisplayName="Clase" PropertyName="AtributoIdentificador" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Identificador">
+        <DomainRole Id="581b4abc-d48c-44a4-9ae7-8e094cef9f69" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.Clase" Name="Clase" DisplayName="Clase" PropertyName="AtributoIdentificador" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributo Identificador">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -460,17 +470,32 @@
     </DomainRelationship>
     <DomainRelationship Id="5c753bee-9b2b-42aa-bbd3-6a1090532a74" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase" Name="ClaseReferencesClase" DisplayName="Clase References Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS">
       <Properties>
-        <DomainProperty Id="bc0fdcd6-2fdd-4d12-825e-efa16ffeea85" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad0" Name="cardinalidad0" DisplayName="Cardinalidad0">
+        <DomainProperty Id="bc0fdcd6-2fdd-4d12-825e-efa16ffeea85" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad O" Name="cardinalidadO" DisplayName="Cardinalidad O">
+          <Type>
+            <DomainEnumerationMoniker Name="tipoCardinalidad" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="0cccf0e0-9589-439e-88ad-cfbe50d114c4" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad D" Name="cardinalidadD" DisplayName="Cardinalidad D">
+          <Type>
+            <DomainEnumerationMoniker Name="tipoCardinalidad" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="480cf540-5fef-4524-bbc5-d1d7199db27a" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre O" Name="nombreO" DisplayName="Nombre O">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="0cccf0e0-9589-439e-88ad-cfbe50d114c4" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad1" Name="cardinalidad1" DisplayName="Cardinalidad1">
+        <DomainProperty Id="c2ca6a17-33d6-4763-8e47-4117af1649b1" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre D" Name="nombreD" DisplayName="Nombre D">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="56bfbeae-58d8-47af-ad70-46093494c7ec" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre" Name="nombre" DisplayName="Nombre">
+        <DomainProperty Id="fc7cdb4f-4c68-4cbf-afde-caa8813399a4" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad OCalculada" Name="cardinalidadOCalculada" DisplayName="Cardinalidad OCalculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="5fc7e219-1c7d-4631-8c01-73588e46a051" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Cardinalidad DCalculada" Name="cardinalidadDCalculada" DisplayName="Cardinalidad DCalculada" Kind="Calculated" IsBrowsable="false" IsUIReadOnly="true">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -642,10 +667,10 @@
     </DomainEnumeration>
     <DomainEnumeration Name="TipoColor" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor">
       <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Verde" Name="Verde" Value="0" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Rojo" Name="Rojo" Value="1" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Azul" Name="Azul" Value="2" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.Amarillo" Name="Amarillo" Value="3" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.rojo" Name="rojo" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.amarillo" Name="amarillo" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.verde" Name="verde" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.azul" Name="azul" Value="3" />
       </Literals>
     </DomainEnumeration>
     <DomainEnumeration Name="TipoLetra" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoLetra">
@@ -667,6 +692,15 @@
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Entrada" Name="Entrada" Value="0" />
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Salida" Name="Salida" Value="2" />
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro.Entrada_Salida" Name="Entrada_Salida" Value="1" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="tipoCardinalidad" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad">
+      <Literals>
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.uno_uno" Name="uno_uno" Value="4" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.uno_n" Name="uno_n" Value="3" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.cero_n" Name="cero_n" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.n_n" Name="n_n" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.tipoCardinalidad.cero_uno" Name="cero_uno" Value="1" />
       </Literals>
     </DomainEnumeration>
   </Types>
@@ -759,17 +793,28 @@
       </ShapeHasDecorators>
       <Compartment Name="enumeradorDec" />
     </CompartmentShape>
+    <GeometryShape Id="173cffc2-e086-432f-ad70-69d84675656d" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaAtributoIdentificador" Name="MetaforaAtributoIdentificador" DisplayName="Metafora Atributo Identificador" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Atributo Identificador" FillColor="DodgerBlue" InitialHeight="1" FillGradientMode="BackwardDiagonal" Geometry="Rectangle">
+      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+        <IconDecorator Name="IconAI" DisplayName="Icon AI" DefaultIcon="Resources\AI.bmp" />
+      </ShapeHasDecorators>
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
+        <TextDecorator Name="tipoDatoCalculadaDec" DisplayName="Tipo Dato Calculada Dec" DefaultText="tipoDatoCalculadaDec" />
+      </ShapeHasDecorators>
+    </GeometryShape>
   </Shapes>
   <Connectors>
     <Connector Id="25c6962a-8dc5-43c1-bda8-80c6252e0847" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase" Name="MetaforaClase_Clase" DisplayName="Metafora Clase_ Clase" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Clase_ Clase">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="cardinalidad0Dec" DisplayName="Cardinalidad0 Dec" DefaultText="cardinalidad0Dec" />
+        <TextDecorator Name="cardinalidadODec" DisplayName="Cardinalidad ODec" DefaultText="cardinalidadODec" />
       </ConnectorHasDecorators>
       <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="cardinalidad1Dec" DisplayName="Cardinalidad1 Dec" DefaultText="cardinalidad1Dec" />
+        <TextDecorator Name="cardinalidadDDec" DisplayName="Cardinalidad DDec" DefaultText="cardinalidadDDec" />
       </ConnectorHasDecorators>
-      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
-        <TextDecorator Name="nombreDec" DisplayName="Nombre Dec" DefaultText="nombreDec" />
+      <ConnectorHasDecorators Position="SourceBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="nombreODec" DisplayName="Nombre ODec" DefaultText="nombreODec" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="nombreDDec" DisplayName="Nombre DDec" DefaultText="nombreDDec" />
       </ConnectorHasDecorators>
     </Connector>
     <Connector Id="93b9ea3a-a94f-4d92-821c-cdf2a5db6258" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia" Name="MetaforaHerencia" DisplayName="Metafora Herencia" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Herencia" TargetEndStyle="HollowArrow">
@@ -902,6 +947,12 @@
           <XmlPropertyData XmlName="tipoDato">
             <DomainPropertyMoniker Name="AtributoIdentificador/tipoDato" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="tipoDatoCalculado" Representation="Ignore">
+            <DomainPropertyMoniker Name="AtributoIdentificador/tipoDatoCalculado" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="modAcceso">
+            <DomainPropertyMoniker Name="AtributoIdentificador/modAcceso" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="EstiloClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="estiloClaseMoniker" ElementName="estiloClase" MonikerTypeName="EstiloClaseMoniker">
@@ -1032,14 +1083,23 @@
       <XmlClassData TypeName="ClaseReferencesClase" MonikerAttributeName="" SerializeId="true" MonikerElementName="claseReferencesClaseMoniker" ElementName="claseReferencesClase" MonikerTypeName="ClaseReferencesClaseMoniker">
         <DomainRelationshipMoniker Name="ClaseReferencesClase" />
         <ElementData>
-          <XmlPropertyData XmlName="cardinalidad0">
-            <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidad0" />
+          <XmlPropertyData XmlName="cardinalidadO">
+            <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidadO" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="cardinalidad1">
-            <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidad1" />
+          <XmlPropertyData XmlName="cardinalidadD">
+            <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidadD" />
           </XmlPropertyData>
-          <XmlPropertyData XmlName="nombre">
-            <DomainPropertyMoniker Name="ClaseReferencesClase/nombre" />
+          <XmlPropertyData XmlName="nombreO">
+            <DomainPropertyMoniker Name="ClaseReferencesClase/nombreO" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreD">
+            <DomainPropertyMoniker Name="ClaseReferencesClase/nombreD" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadOCalculada" Representation="Ignore">
+            <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidadOCalculada" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadDCalculada" Representation="Ignore">
+            <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidadDCalculada" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -1133,6 +1193,9 @@
       </XmlClassData>
       <XmlClassData TypeName="MetaforaEnumerador" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaEnumeradorMoniker" ElementName="metaforaEnumerador" MonikerTypeName="MetaforaEnumeradorMoniker">
         <CompartmentShapeMoniker Name="MetaforaEnumerador" />
+      </XmlClassData>
+      <XmlClassData TypeName="MetaforaAtributoIdentificador" MonikerAttributeName="" SerializeId="true" MonikerElementName="metaforaAtributoIdentificadorMoniker" ElementName="metaforaAtributoIdentificador" MonikerTypeName="MetaforaAtributoIdentificadorMoniker">
+        <GeometryShapeMoniker Name="MetaforaAtributoIdentificador" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -1444,32 +1507,55 @@
           </PropertyDisplayed>
         </CompartmentMap>
       </CompartmentShapeMap>
+      <ShapeMap>
+        <DomainClassMoniker Name="AtributoIdentificador" />
+        <ParentElementPath>
+          <DomainPath>ClaseHasAtributoIdentificador.Clase/!Clase/TapizClassWebHasClase.TapizClassWeb/!TapizClassWeb</DomainPath>
+        </ParentElementPath>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaAtributoIdentificador/tipoDatoCalculadaDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="AtributoIdentificador/tipoDatoCalculado" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <GeometryShapeMoniker Name="MetaforaAtributoIdentificador" />
+      </ShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
         <ConnectorMoniker Name="MetaforaClase_Clase" />
         <DomainRelationshipMoniker Name="ClaseReferencesClase" />
         <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaClase_Clase/cardinalidad0Dec" />
+          <TextDecoratorMoniker Name="MetaforaClase_Clase/cardinalidadDDec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidad0" />
+              <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidadDCalculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaClase_Clase/cardinalidad1Dec" />
+          <TextDecoratorMoniker Name="MetaforaClase_Clase/cardinalidadODec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidad1" />
+              <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidadOCalculada" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="MetaforaClase_Clase/nombreDec" />
+          <TextDecoratorMoniker Name="MetaforaClase_Clase/nombreDDec" />
           <PropertyDisplayed>
             <PropertyPath>
-              <DomainPropertyMoniker Name="ClaseReferencesClase/nombre" />
+              <DomainPropertyMoniker Name="ClaseReferencesClase/nombreD" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaClase_Clase/nombreODec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseReferencesClase/nombreO" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
@@ -1566,6 +1652,9 @@
       </ElementTool>
       <ElementTool Name="ClaseEnumerador" ToolboxIcon="Resources\enumerado.bmp" Caption="ClaseEnumerador" Tooltip="Clase Enumerador" HelpKeyword="ClaseEnumerador">
         <DomainClassMoniker Name="ClaseEnumerador" />
+      </ElementTool>
+      <ElementTool Name="AtributoIdentificador" ToolboxIcon="Resources\AI.bmp" Caption="AtributoIdentificador" Tooltip="Atributo Identificador" HelpKeyword="AtributoIdentificador">
+        <DomainClassMoniker Name="AtributoIdentificador" />
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="UML_CONECTORS">

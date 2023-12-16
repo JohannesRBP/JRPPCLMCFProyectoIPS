@@ -382,17 +382,21 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		#endregion
 		#region AtributoIdentificador opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of AtributoIdentificador.
+		/// Gets or sets AtributoIdentificador.
 		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.Clase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<AtributoIdentificador> AtributoIdentificador
+		public virtual AtributoIdentificador AtributoIdentificador
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<AtributoIdentificador>, AtributoIdentificador>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.ClaseDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.ClaseDomainRoleId) as AtributoIdentificador;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseHasAtributoIdentificador.ClaseDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -548,6 +552,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseHasAtributoIdentificador.AtributoIdentificador
+					if (this.AtributoIdentificador != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -597,7 +606,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			if (sourceAtributoIdentificador3 != null)
 			{
 				// Create link for path ClaseHasAtributoIdentificador.AtributoIdentificador
-				this.AtributoIdentificador.Add(sourceAtributoIdentificador3);
+				this.AtributoIdentificador = sourceAtributoIdentificador3;
 
 				return;
 			}
@@ -1857,7 +1866,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Storage for tipoDato
 		/// </summary>
-		private global::System.String tipoDatoPropertyStorage = string.Empty;
+		private TipoDato tipoDatoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of tipoDato domain property.
@@ -1866,7 +1875,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/tipoDato.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/tipoDato.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("1cd8c8d1-7f92-4a56-8ef9-69b5d596b376")]
-		public global::System.String tipoDato
+		public TipoDato tipoDato
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1882,7 +1891,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// <summary>
 		/// Value handler for the AtributoIdentificador.tipoDato domain property.
 		/// </summary>
-		internal sealed partial class tipoDatoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoIdentificador, global::System.String>
+		internal sealed partial class tipoDatoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoIdentificador, TipoDato>
 		{
 			private tipoDatoPropertyHandler() { }
 		
@@ -1908,10 +1917,164 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(AtributoIdentificador element)
+			public override sealed TipoDato GetValue(AtributoIdentificador element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoDatoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(AtributoIdentificador element, TipoDato newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				TipoDato oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoDatoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region tipoDatoCalculado domain property code
+		
+		/// <summary>
+		/// tipoDatoCalculado domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tipoDatoCalculadoDomainPropertyId = new global::System.Guid(0x8de7b55f, 0xd8d2, 0x4ff0, 0x86, 0x6c, 0xec, 0x64, 0xcf, 0xba, 0x0e, 0xc3);
+		
+		/// <summary>
+		/// Gets or sets the value of tipoDatoCalculado domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.Tipo Dato
+		/// Calculado
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/tipoDatoCalculado.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/tipoDatoCalculado.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.Browsable(false)]
+		[global::System.ComponentModel.ReadOnly(true)]
+		[DslModeling::DomainProperty(Kind = DslModeling::DomainPropertyKind.Calculated)]
+		[DslModeling::DomainObjectId("8de7b55f-d8d2-4ff0-866c-ec64cfba0ec3")]
+		public global::System.String tipoDatoCalculado
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoDatoCalculadoPropertyHandler.Instance.GetValue(this);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoIdentificador.tipoDatoCalculado domain property.
+		/// </summary>
+		internal sealed partial class tipoDatoCalculadoPropertyHandler : DslModeling::CalculatedPropertyValueHandler<AtributoIdentificador, global::System.String>
+		{
+			private tipoDatoCalculadoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoIdentificador.tipoDatoCalculado domain property value handler.
+			/// </summary>
+			public static readonly tipoDatoCalculadoPropertyHandler Instance = new tipoDatoCalculadoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoIdentificador.tipoDatoCalculado domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tipoDatoCalculadoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(AtributoIdentificador element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				// There is no storage for tipoDatoCalculado because its Kind is
+				// set to Calculated. Please provide the GettipoDatoCalculadoValue()
+				// method on the domain class.
+				return element.GettipoDatoCalculadoValue();
+			}
+		
+		}
+		
+		#endregion
+		#region modAcceso domain property code
+		
+		/// <summary>
+		/// modAcceso domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid modAccesoDomainPropertyId = new global::System.Guid(0x515fc688, 0x8f8b, 0x46e0, 0xb2, 0x39, 0xce, 0x37, 0xec, 0xbe, 0x1f, 0xda);
+		
+		/// <summary>
+		/// Storage for modAcceso
+		/// </summary>
+		private global::System.String modAccesoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of modAcceso domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador.Mod Acceso
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/modAcceso.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.AtributoIdentificador/modAcceso.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("515fc688-8f8b-46e0-b239-ce37ecbe1fda")]
+		public global::System.String modAcceso
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return modAccesoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				modAccesoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the AtributoIdentificador.modAcceso domain property.
+		/// </summary>
+		internal sealed partial class modAccesoPropertyHandler : DslModeling::DomainPropertyValueHandler<AtributoIdentificador, global::System.String>
+		{
+			private modAccesoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the AtributoIdentificador.modAcceso domain property value handler.
+			/// </summary>
+			public static readonly modAccesoPropertyHandler Instance = new modAccesoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the AtributoIdentificador.modAcceso domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return modAccesoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(AtributoIdentificador element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.modAccesoPropertyStorage;
 			}
 		
 			/// <summary>
@@ -1927,7 +2090,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.tipoDatoPropertyStorage = newValue;
+					element.modAccesoPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}

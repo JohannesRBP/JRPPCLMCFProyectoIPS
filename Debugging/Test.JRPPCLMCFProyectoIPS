@@ -3,11 +3,11 @@
   <clase>
     <tapizClassWebHasClase Id="40703616-a6b9-47f6-8e84-09c261a299ab">
       <clase Id="dd49ad42-0c16-4090-9e9d-45a6cb20cb92" nombre="Empleado">
-        <claseReferenciada1>
-          <claseReferenciaClase Id="2152f941-d323-4480-8b74-22d4230ccf80" nombre="gestiona">
+        <claseReferenciada>
+          <claseReferencesClase Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" cardinalidadO="cero_n" cardinalidadD="cero_uno" nombreO="gestionado" nombreD="gestiona">
             <claseMoniker Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" />
-          </claseReferenciaClase>
-        </claseReferenciada1>
+          </claseReferencesClase>
+        </claseReferenciada>
       </clase>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="ee7e3f75-864d-4bc5-8b0d-9a8687cce7ff">
@@ -26,10 +26,19 @@
       <claseEnriquecida Id="6ea2e215-a0f9-4918-a28c-692c9da5ddd7" nombre="Habitacion">
         <estiloClase>
           <claseEnriquecidaHasEstiloClase Id="acb8fcf6-b6f0-41c3-ae14-4b1c3eddacfd">
-            <estiloClase Id="869ec209-8ba2-4263-a150-d61bad95e4ba" colorFondo="Verde" colorLetra="Verde" tipoLetra="TimesNewRoman" alineacion="Derecha" textoNormal="false" checkBox="false" radioButton="false" />
+            <estiloClase Id="869ec209-8ba2-4263-a150-d61bad95e4ba" colorFondo="verde" colorLetra="verde" tipoLetra="TimesNewRoman" alineacion="Derecha" textoNormal="false" checkBox="false" radioButton="false" />
           </claseEnriquecidaHasEstiloClase>
         </estiloClase>
       </claseEnriquecida>
+    </tapizClassWebHasClase>
+    <tapizClassWebHasClase Id="6ea3824b-e1cd-4475-bc55-437991a38b4b">
+      <clase Id="aafe5ec9-028a-490f-919c-f73bb9eae973">
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="35f2d54b-f3ae-4a57-9a30-265c9449f81d">
+            <atributoIdentificador Id="2932d787-48a4-4216-92ee-b08ae9ea86dd" nombre="precio" tipoDato="Boolean" modAcceso="private" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
+      </clase>
     </tapizClassWebHasClase>
   </clase>
 </tapizClassWeb>
