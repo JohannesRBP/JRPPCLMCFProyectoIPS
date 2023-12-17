@@ -763,23 +763,23 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 	public enum Alineacion
 	{
 		/// <summary>
-		/// Derecha
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Derecha
+		/// right
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.right
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Derecha.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		Derecha = 0,
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/right.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		right = 0,
 		/// <summary>
-		/// Centro
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Centro
+		/// center
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.center
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Centro.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		Centro = 1,
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/center.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		center = 1,
 		/// <summary>
-		/// Izquierda
-		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Izquierda
+		/// left
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.left
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Izquierda.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		Izquierda = 2,
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/left.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		left = 2,
 	}
 }
 namespace UPM_IPS.JRPPCLMCFProyectoIPS

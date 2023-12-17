@@ -1283,9 +1283,9 @@
   <!-- Enum Alineacion -->
   <xsd:simpleType name="Alineacion">
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="Derecha"/>
-      <xsd:enumeration value="Centro"/>
-      <xsd:enumeration value="Izquierda"/>
+      <xsd:enumeration value="right"/>
+      <xsd:enumeration value="center"/>
+      <xsd:enumeration value="left"/>
     </xsd:restriction>
   </xsd:simpleType>
   

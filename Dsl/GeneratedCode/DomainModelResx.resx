@@ -1213,29 +1213,29 @@
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoLetra.Arial</value>
     <comment>Description for EnumerationLiteral &apos;Arial&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Derecha.DisplayName" xml:space="preserve">
-    <value>Derecha</value>
-    <comment>Display name for EnumerationLiteral &apos;Derecha&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/right.DisplayName" xml:space="preserve">
+    <value>right</value>
+    <comment>Display name for EnumerationLiteral &apos;right&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Derecha.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Derecha</value>
-    <comment>Description for EnumerationLiteral &apos;Derecha&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/right.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.right</value>
+    <comment>Description for EnumerationLiteral &apos;right&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Centro.DisplayName" xml:space="preserve">
-    <value>Centro</value>
-    <comment>Display name for EnumerationLiteral &apos;Centro&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/center.DisplayName" xml:space="preserve">
+    <value>center</value>
+    <comment>Display name for EnumerationLiteral &apos;center&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Centro.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Centro</value>
-    <comment>Description for EnumerationLiteral &apos;Centro&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/center.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.center</value>
+    <comment>Description for EnumerationLiteral &apos;center&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Izquierda.DisplayName" xml:space="preserve">
-    <value>Izquierda</value>
-    <comment>Display name for EnumerationLiteral &apos;Izquierda&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/left.DisplayName" xml:space="preserve">
+    <value>left</value>
+    <comment>Display name for EnumerationLiteral &apos;left&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
   </data>
-  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/Izquierda.Description" xml:space="preserve">
-    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Izquierda</value>
-    <comment>Description for EnumerationLiteral &apos;Izquierda&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion/left.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.left</value>
+    <comment>Description for EnumerationLiteral &apos;left&apos; on DomainEnumeration &apos;Alineacion&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro/Entrada.DisplayName" xml:space="preserve">
     <value>Entrada</value>
