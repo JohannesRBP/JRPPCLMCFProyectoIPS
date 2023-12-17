@@ -683,9 +683,9 @@
     </DomainEnumeration>
     <DomainEnumeration Name="Alineacion" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion">
       <Literals>
-        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Derecha" Name="Derecha" Value="0" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Centro" Name="Centro" Value="1" />
-        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.Izquierda" Name="Izquierda" Value="2" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.right" Name="right" Value="0" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.center" Name="center" Value="1" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.Alineacion.left" Name="left" Value="2" />
       </Literals>
     </DomainEnumeration>
     <DomainEnumeration Name="TipoParametro" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoParametro">
