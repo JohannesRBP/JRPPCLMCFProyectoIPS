@@ -671,6 +671,7 @@
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.amarillo" Name="amarillo" Value="1" />
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.verde" Name="verde" Value="2" />
         <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.azul" Name="azul" Value="3" />
+        <EnumerationLiteral Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.negro" Name="negro" Value="4" />
       </Literals>
     </DomainEnumeration>
     <DomainEnumeration Name="TipoLetra" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoLetra">

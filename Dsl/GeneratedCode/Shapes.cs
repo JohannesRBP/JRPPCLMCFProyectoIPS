@@ -2407,17 +2407,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		{
 			get
 			{
-				return global::System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-			}
-		}
-		/// <summary>
-		/// Specifies the geometry used by this shape
-		/// </summary>
-		public override DslDiagrams::ShapeGeometry ShapeGeometry
-		{
-			get
-			{
-				return DslDiagrams::ShapeGeometries.RoundedRectangle;
+				return global::System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
 			}
 		}
 		#endregion

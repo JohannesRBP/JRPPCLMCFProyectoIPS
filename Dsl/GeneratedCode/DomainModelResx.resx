@@ -1181,6 +1181,14 @@
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.azul</value>
     <comment>Description for EnumerationLiteral &apos;azul&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/negro.DisplayName" xml:space="preserve">
+    <value>negro</value>
+    <comment>Display name for EnumerationLiteral &apos;negro&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/negro.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.negro</value>
+    <comment>Description for EnumerationLiteral &apos;negro&apos; on DomainEnumeration &apos;TipoColor&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TipoLetra/TimesNewRoman.DisplayName" xml:space="preserve">
     <value>TimesNewRoman</value>
     <comment>Display name for EnumerationLiteral &apos;TimesNewRoman&apos; on DomainEnumeration &apos;TipoLetra&apos;</comment>

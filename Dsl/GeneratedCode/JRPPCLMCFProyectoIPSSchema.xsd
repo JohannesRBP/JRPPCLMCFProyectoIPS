@@ -1267,6 +1267,7 @@
       <xsd:enumeration value="amarillo"/>
       <xsd:enumeration value="verde"/>
       <xsd:enumeration value="azul"/>
+      <xsd:enumeration value="negro"/>
     </xsd:restriction>
   </xsd:simpleType>
   

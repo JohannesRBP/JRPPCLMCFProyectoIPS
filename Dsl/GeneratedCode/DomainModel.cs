@@ -716,6 +716,12 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/azul.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		azul = 3,
+		/// <summary>
+		/// negro
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor.negro
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.TipoColor/negro.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		negro = 4,
 	}
 }
 namespace UPM_IPS.JRPPCLMCFProyectoIPS

@@ -61,10 +61,10 @@
 				WriteLine("No hay estilos de clase");
 			else{					 
 				EstiloClase estiloClase = (EstiloClase) claseEnriquecida.EstiloClase;
-				tipoLetra= estiloClase.tipoLetraCalculado;  
-				colorLetra= estiloClase.colorLetraCalculado;
+				tipoLetra = convertidorTiposLetra(estiloClase.tipoLetraCalculado);  
+				colorLetra = convertidorColoresHex(estiloClase.colorLetraCalculado);
 				alineacion= estiloClase.alineacionCalculado;
-				colorFondo= estiloClase.colorFondoCalculado;				
+				colorFondo = convertidorColoresHex(estiloClase.colorFondoCalculado);			
 			}
 		}
 
@@ -115,10 +115,10 @@
 				WriteLine("No hay estilos de clase");
 			else{					 
 				EstiloClase estiloClase = (EstiloClase) claseEnriquecida.EstiloClase;
-				tipoLetra= estiloClase.tipoLetraCalculado;  
-				colorLetra= estiloClase.colorLetraCalculado;
+				tipoLetra = convertidorTiposLetra(estiloClase.tipoLetraCalculado);
+				colorLetra = convertidorColoresHex(estiloClase.colorLetraCalculado);
 				alineacion= estiloClase.alineacionCalculado; 
-				colorFondo= estiloClase.colorFondoCalculado;				
+				colorFondo = convertidorColoresHex(estiloClase.colorFondoCalculado);			
 			}
 		}
 
@@ -187,10 +187,10 @@
 				WriteLine("No hay estilos de clase");
 			else{					 
 				EstiloClase estiloClase = (EstiloClase) claseEnriquecida.EstiloClase;
-				tipoLetra= estiloClase.tipoLetraCalculado;  
-				colorLetra= estiloClase.colorLetraCalculado;
+				tipoLetra = convertidorTiposLetra(estiloClase.tipoLetraCalculado);
+				colorLetra = convertidorColoresHex(estiloClase.colorLetraCalculado);
 				alineacion= estiloClase.alineacionCalculado; 
-				colorFondo= estiloClase.colorFondoCalculado;				
+				colorFondo = convertidorColoresHex(estiloClase.colorFondoCalculado);			
 			}
 		} 
 
@@ -248,6 +248,50 @@
 	}
 
 
+#>
+
+<#+
+   //METODO PARA PONER EL COLOR QUE HAN ELEGIDO LOS USUARIOS (CLASE ENRIQUECIDA)
+	  string convertidorColoresHex(string color){
+	
+			switch (color){
+            case "amarillo":
+                return "#FFFF00";
+
+            case "verde":
+                return "#008000";
+
+            case "rojo":
+                return "#FF0000";
+
+            case "azul":
+                return "#0000FF";
+
+            case "negro":
+			    return "#000000";
+
+            default:
+                return "#FFFFFF";
+            }
+	  }
+#>
+
+<#+ 
+//METODO PARA GENERAR LA FUENTE QUE HA ELEGIDO EL USUARIO (CLASE ENRIQUECIDA)
+
+   string convertidorTiposLetra(string tipoLetra){
+        switch (tipoLetra.ToLower())
+        {
+            case "arial":
+                return "Arial, sans-serif";
+            case "timesnewroman":
+                return "'Times New Roman', serif";
+            case "calibri":
+                return "Calibri, sans-serif";
+            default:
+                return "Arial, sans-serif";
+        }
+    }
 #>
 <#+
 //METODO PARA GENERAR JAVA DE CADA CLASE  (\t para tabular)
