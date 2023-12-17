@@ -26,7 +26,7 @@
         </estiloClaseShape>
       </nestedChildShapes>
     </claseEnriquecidaShape>
-    <metaforaClase_Clase Id="c460b12a-6e33-4547-9cc2-5e7f2c76bdba" edgePoints="[(4.125 : 3.5); (4.125 : 1.50169108072917); (6.875 : 1.50169108072917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <metaforaClase_Clase Id="c460b12a-6e33-4547-9cc2-5e7f2c76bdba" edgePoints="[(4.125 : 3.5); (4.125 : 1.50169108072917); (6.875 : 1.50169108072917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
       <claseReferencesClaseMoniker Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" />
       <relativeChildShapes />
       <nodes>
@@ -34,15 +34,8 @@
         <claseMetaforaMoniker Id="1b86979f-b79d-4ef5-a7a9-34b13328f97a" />
       </nodes>
     </metaforaClase_Clase>
-    <claseMetafora Id="78d6d1df-8d0c-48ee-a4a2-07203adc98cf" absoluteBounds="7.625, 4.625, 1.5, 1.6187792968749992">
-      <claseMoniker Id="aafe5ec9-028a-490f-919c-f73bb9eae973" />
-      <nestedChildShapes>
-        <elementListCompartment Id="a7d6bbc3-ddba-42b8-920d-0a11bed345fc" absoluteBounds="7.64, 5.635, 1.4700000000000002, 0.2493896484375" name="Atributo" titleTextColor="Black" itemTextColor="Black" />
-        <elementListCompartment Id="6b53c54b-151e-4645-ba59-f74b5f4b7e80" absoluteBounds="7.64, 5.8943896484375, 1.4700000000000002, 0.2493896484375" name="Opereacion" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </claseMetafora>
-    <metaforaAtributoIdentificador Id="ffe326e9-44cc-4a44-9fbf-537b07e95798" absoluteBounds="7.625, 4.875, 3.25, 1.375">
-      <atributoIdentificadorMoniker Id="2932d787-48a4-4216-92ee-b08ae9ea86dd" />
+    <metaforaAtributoIdentificador Id="f427af75-4b44-4535-8251-1e6470054090" absoluteBounds="6.875, 1.25, 1.5, 0.25">
+      <atributoIdentificadorMoniker Id="bafa8aad-0e8f-40b6-80b7-6ad1baeaaaa3" />
     </metaforaAtributoIdentificador>
   </nestedChildShapes>
 </jRPPCLMCFProyectoIPSDiagram>

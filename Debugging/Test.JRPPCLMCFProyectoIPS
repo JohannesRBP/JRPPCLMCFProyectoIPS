@@ -20,6 +20,11 @@
             <atributo Id="2d92a30e-41d6-4e44-86ee-298149f13a58" nombre="direccion" tipoDato="String" modAcceso="private" />
           </claseHasAtributo>
         </atributo>
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="5a8f4325-ff47-4354-8572-e88103db6492">
+            <atributoIdentificador Id="bafa8aad-0e8f-40b6-80b7-6ad1baeaaaa3" nombre="idHotel" tipoDato="Int" modAcceso="private" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
       </clase>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="282c6981-42a4-4a81-b38e-6f74e8c2799f">
@@ -30,15 +35,6 @@
           </claseEnriquecidaHasEstiloClase>
         </estiloClase>
       </claseEnriquecida>
-    </tapizClassWebHasClase>
-    <tapizClassWebHasClase Id="6ea3824b-e1cd-4475-bc55-437991a38b4b">
-      <clase Id="aafe5ec9-028a-490f-919c-f73bb9eae973">
-        <atributoIdentificador>
-          <claseHasAtributoIdentificador Id="35f2d54b-f3ae-4a57-9a30-265c9449f81d">
-            <atributoIdentificador Id="2932d787-48a4-4216-92ee-b08ae9ea86dd" nombre="precio" tipoDato="Boolean" modAcceso="private" />
-          </claseHasAtributoIdentificador>
-        </atributoIdentificador>
-      </clase>
     </tapizClassWebHasClase>
   </clase>
 </tapizClassWeb>

@@ -17,6 +17,9 @@
 		//Recorremos todas las clases creadas en el tapiz
 		foreach(Clase clase in this.TapizClassWeb.Clase){
 			
+			//FALTA COMPROBAR SI ES UNA CLASE ABSTRACTA, SI LO ES NO LE CREAREMOS NINGUNA CLASE Y NO LLAMAREMOS A NINGUN METODO
+			
+
 			//Comprobamos si la clase es enriquecida
 			bool enriquecida=false;
 			if(clase is ClaseEnriquecida)
@@ -30,6 +33,8 @@
 			generarJava(clase, fileManager); 
 			
 		}
+
+		//PONER AQUI METODO PARA CREACION DEL HOME, habra que añadirle un link para cada clase no abstracta creada, para ello guardar el nombre de cada clase no asbtracta creada en el bucle en una lista
 
 		//Cierra la creacion de ficheros
 		fileManager.Process();
@@ -71,7 +76,8 @@
 		WriteLine("<body>"); 
 		WriteLine("<div style='border: 1px solid black; margin:20px'>"); 
 
-		
+		WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href=Home.html>Home</a></button>");
+
 		WriteLine("<form name='"+clase.nombre+"' style='background-color:"+colorFondo+"; color:"+colorLetra+";font-family:"+tipoLetra+";text-align:"+alineacion+";'>");
 		WriteLine("<h1>"+clase.nombre+"</h1>"); 
 
@@ -79,7 +85,7 @@
 		WriteLine("<button style='color:"+colorLetra+";font-family:"+tipoLetra+"'> <a href='./"+clase.nombre+"Alta.html'>Alta</a> </button>"); 
 	
 		//Boton para listado
-		WriteLine("<button style='color:"+colorLetra+";font-family:"+tipoLetra+"'> <a href='./"+clase.nombre+"Listado.html'>Listado</a> </button>"); 
+		WriteLine("<button style='color:"+colorLetra+";font-family:"+tipoLetra+"'> <a href='./"+clase.nombre+"Lista.html'>Listado</a> </button>"); 
 
 		WriteLine("</form>"); 
 		WriteLine("</div>"); 
@@ -94,7 +100,7 @@
 		
 		//Crea un fichero donde pondremos el alta de cada clase
 		fileManager.StartNewFile(clase.nombre+"Alta.html");
-	
+	 
 
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
 		string tipoLetra="Arial";
@@ -123,16 +129,25 @@
 		WriteLine("</head>"); 
 		WriteLine("<body>"); 
 		WriteLine("<div style='border: 1px solid black; margin:20px'>"); 
+
+		WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href=Home.html>Home</a></button>");
+
 		WriteLine("<p style='background-color: "+colorFondo+"; color:"+colorLetra+"; font-weight:bold; font-family:"+tipoLetra+"; text-align:"+alineacion+"'> Alta"+clase.nombre+"</p>");
-		WriteLine("<form name='"+clase.nombre+"' style='background-color:#00aabb; color:#ffffff;font-family:Arial;text-align:center;'>");
+		WriteLine("<form name='"+clase.nombre+"' style='background-color:"+colorFondo+"; color:"+colorLetra+";font-family:"+tipoLetra+";text-align:"+alineacion+";'>");
 		WriteLine("<table>");
+
+		//Añadir fila del atributo clave
+		if(clase.AtributoIdentificador!=null){
+			AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;			
+			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
+		}
 
 		//Recorremos los atributos y añadimos una fila a la tabla por cada uno
 		if(clase.Atributo.Count==0)
 			WriteLine("No hay atributos");
 		else
 			foreach(Atributo atributo in clase.Atributo){
-				WriteLine("<tr><td style='color:#000000; font-family:Arial;'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
+				WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
 			}
 
 
@@ -177,66 +192,57 @@
 				alineacion= estiloClase.alineacionCalculado; 
 				colorFondo= estiloClase.colorFondoCalculado;				
 			}
-		}
+		} 
 
-
+		WriteLine("<html>");
+		WriteLine("<head>");
+		WriteLine("<title>"+clase.nombre+"Listado</title>");
+		WriteLine("</head>");
 	    WriteLine("<body>");
 	    WriteLine("<div style='border:1px solid black; margin:20px'>");
+		WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href=Home.html>Home</a></button>");
 		WriteLine("<h2>Listado " + clase.nombre + "</h2>");
 		WriteLine("<p style='background-color: "+colorFondo+"; color:"+colorLetra+"; font-weight:bold; font-family:"+tipoLetra+"; text-align:"+alineacion+"'> Listado "+clase.nombre+"</p>");
 		WriteLine("<form name='"+clase.nombre+"' style='background-color:#00aabb; color:#ffffff;font-family:Arial;text-align:center;'>");
 		WriteLine("<table>");
+			
+	   //Para que haga 4 lineas
+	   for(int i=0; i<4;i++){
+			//Si es la ultima linea
+			if(i==3){				
+				//PUNTOS SUSPENSIVOS
+				WriteLine("<tr>");
+				WriteLine("<td>... </td>");
+				WriteLine("<td>");
+				WriteLine(" </td>");
+				WriteLine(" </tr>");
 
-       //PRIMER ELEMENTO
-       WriteLine("<tr>");
-       WriteLine("<td>Elemento 1: " + clase.nombre + " </td>");
-       WriteLine("<td>");
-       WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
-       WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
-       WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
-	   WriteLine(" </td>");
-	   WriteLine(" </tr>");
+				WriteLine("<tr>");
+				WriteLine("<td>Elemento N: " + clase.nombre + " </td>");
+				WriteLine("<td>");
+			}else{
+				WriteLine("<tr>");
+				WriteLine("<td>Elemento "+(i+1)+": " + clase.nombre + " </td>");
+				WriteLine("<td>");
+			}						
+			WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
+			WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
+			WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
 
-	  //SEGUNDO ELEMENTO
-	 WriteLine("<tr>");
-	 WriteLine("<td>Elemento 2: " + clase.nombre + " </td>");
-     WriteLine("<td>");
-     WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
-     WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
-	 WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
-     WriteLine(" </td>");
-     WriteLine(" </tr>");
+			//AÑADIR UN BOTON POR CADA OPERACION QUE TENGA ESA CLASE
 
-    //TERCER ELEMENTO
-	WriteLine("<tr>");
-	WriteLine("<td>Elemento 3: " + clase.nombre + " </td>");
-	WriteLine("<td>");
-	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
-	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
-	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
-	WriteLine(" </td>");
-	WriteLine(" </tr>");
+			WriteLine(" </td>");
+			WriteLine(" </tr>");			
+	   }
 
-	//PUNTOS SUSPENSIVOS
-	WriteLine("<tr>");
-	WriteLine("<td>... </td>");
-	WriteLine("<td>");
-	WriteLine(" </td>");
-	WriteLine(" </tr>");
+       WriteLine("</table>");     
 
-	//CUARTO ELEMENTO
-	WriteLine("<tr>");
-	WriteLine("<td>Elemento N: " + clase.nombre + " </td>");
-	WriteLine("<td>");
-	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
-	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
-	WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
-	WriteLine(" </td>");
-	WriteLine(" </tr>");
+	   WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href="+clase.nombre+"Home.html>Volver</a></button>");
 
-	WriteLine("</table>");
-	   
-            
+	   WriteLine("</form>");
+	   WriteLine("</div>");
+	   WriteLine("</body>");
+	   WriteLine("</html>");
 
 		
 	}
@@ -244,7 +250,7 @@
 
 #>
 <#+
-//METODO PARA GENERAR JAVA DE CADA CLASE (!!!!FALTA EL ATRIBUTO CLAVE!!!!) (\t para tabular)
+//METODO PARA GENERAR JAVA DE CADA CLASE  (\t para tabular)
 	void generarJava(Clase clase, EntityFrameworkTemplateFileManager fileManager){
 
 		//Crea un fichero java de cada clase
@@ -252,7 +258,14 @@
 
 		WriteLine("public class " + clase.nombre + "{");
 
-		//Atributos (Anadir atributo clave)
+		//Atributo Clave
+		if(clase.AtributoIdentificador!=null){
+			AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;
+			WriteLine("\t"+atributoIdentificador.modAcceso+" "+atributoIdentificador.tipoDato.ToString()+" "+atributoIdentificador.nombre+";");	//Si hacemos enum del modo de acceso hay que modificar atributo.modAcceso
+			
+		}
+
+		//Atributos 
 		if(clase.Atributo.Count!=0)			
 			foreach(Atributo atributo in clase.Atributo){
 				WriteLine("\t"+atributo.modAcceso+" "+atributo.tipoDato.ToString()+" "+atributo.nombre+";");	//Si hacemos enum del modo de acceso hay que modificar atributo.modAcceso
@@ -261,7 +274,21 @@
 		WriteLine("\tpublic "+ clase.nombre + "(){");
 		WriteLine("\t}");	
 		
-		//Getters y Setters (anadir atributo clave)
+		//Get y Set Atributo Clave 
+		if(clase.AtributoIdentificador!=null){
+			AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;
+			//GET
+				WriteLine("\tpublic " + atributoIdentificador.tipoDato.ToString() + " " + atributoIdentificador.nombre + "(){");
+				WriteLine("\t\treturn this."+atributoIdentificador.nombre);	
+				WriteLine("\t}");	
+
+				//SET
+				WriteLine("\tpublic void "+ atributoIdentificador.nombre + "("+ atributoIdentificador.tipoDato.ToString() + " " + atributoIdentificador.nombre + "){");	
+				WriteLine("\t\tthis." + atributoIdentificador.nombre + " = " + atributoIdentificador.nombre);	
+				WriteLine("\t}");	
+		}
+
+		//Getters y Setters 
 		if(clase.Atributo.Count!=0)			
 			foreach(Atributo atributo in clase.Atributo){
 				//GET
