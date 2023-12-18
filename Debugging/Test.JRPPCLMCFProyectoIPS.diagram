@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<jRPPCLMCFProyectoIPSDiagram dslVersion="1.0.0.0" Id="836dd129-c8bf-433c-b1d4-19227372cf64" absoluteBounds="0, 0, 15.375, 8.5" name="Test">
+<jRPPCLMCFProyectoIPSDiagram dslVersion="1.0.0.0" Id="836dd129-c8bf-433c-b1d4-19227372cf64" absoluteBounds="0, 0, 15.375, 9.625" name="Test">
   <tapizClassWebMoniker Id="28cfba65-ca02-45dd-a5ba-56241133157b" />
   <nestedChildShapes>
-    <claseMetafora Id="5dd63896-b9c1-4a2f-898e-c28b2591c948" absoluteBounds="3.375, 3.5, 1.5, 1.618779296875">
+    <claseMetafora Id="5dd63896-b9c1-4a2f-898e-c28b2591c948" absoluteBounds="3.5, 5.125, 1.5, 1.618779296875">
       <claseMoniker Id="dd49ad42-0c16-4090-9e9d-45a6cb20cb92" />
       <nestedChildShapes>
-        <elementListCompartment Id="32a795c8-0360-4c48-ad8e-8cd9106ea5ad" absoluteBounds="3.39, 4.51, 1.4700000000000002, 0.2493896484375" name="Atributo" titleTextColor="Black" itemTextColor="Black" />
-        <elementListCompartment Id="1b20ce15-d902-4545-bda7-1b4762756eca" absoluteBounds="3.39, 4.7693896484375, 1.4700000000000002, 0.2493896484375" name="Opereacion" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="32a795c8-0360-4c48-ad8e-8cd9106ea5ad" absoluteBounds="3.515, 6.135, 1.4700000000000002, 0.2493896484375" name="Atributo" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="1b20ce15-d902-4545-bda7-1b4762756eca" absoluteBounds="3.515, 6.3943896484375, 1.4700000000000002, 0.2493896484375" name="Opereacion" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </claseMetafora>
     <claseMetafora Id="1b86979f-b79d-4ef5-a7a9-34b13328f97a" absoluteBounds="6.875, 0.5, 1.5, 2.0033821614583336">
@@ -26,7 +26,7 @@
         </estiloClaseShape>
       </nestedChildShapes>
     </claseEnriquecidaShape>
-    <metaforaClase_Clase Id="c460b12a-6e33-4547-9cc2-5e7f2c76bdba" edgePoints="[(4.125 : 3.5); (4.125 : 1.50169108072917); (6.875 : 1.50169108072917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <metaforaClase_Clase Id="c460b12a-6e33-4547-9cc2-5e7f2c76bdba" edgePoints="[(4.25 : 5.125); (4.25 : 1.50169108072917); (6.875 : 1.50169108072917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <claseReferencesClaseMoniker Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" />
       <relativeChildShapes />
       <nodes>
@@ -37,5 +37,35 @@
     <metaforaAtributoIdentificador Id="f427af75-4b44-4535-8251-1e6470054090" absoluteBounds="6.875, 1.25, 1.5, 0.25">
       <atributoIdentificadorMoniker Id="bafa8aad-0e8f-40b6-80b7-6ad1baeaaaa3" />
     </metaforaAtributoIdentificador>
+    <claseMetafora Id="b47f3804-4a58-48be-8be4-3ecf1536e006" absoluteBounds="6.625, 3.125, 1.5, 1.6187792968749992">
+      <claseMoniker Id="f58587d8-8c90-43ec-9207-4750b662ada7" />
+      <nestedChildShapes>
+        <elementListCompartment Id="213683b6-b663-4d76-b371-f0205feb9680" absoluteBounds="6.64, 4.135, 1.4700000000000002, 0.2493896484375" name="Atributo" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="ff438431-2a69-4a46-b22d-1e19bca565b2" absoluteBounds="6.64, 4.3943896484375, 1.4700000000000002, 0.2493896484375" name="Opereacion" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </claseMetafora>
+    <metaforaHerencia Id="f039daa9-2285-4ba2-9ff6-fa3db8aac9f5" edgePoints="[(5 : 5.9343896484375); (7.34375 : 5.9343896484375); (7.34375 : 4.743779296875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <clasePadreHasClaseHijaMoniker Id="831926c0-51ff-4b70-9ee2-981f55035a1a" />
+      <relativeChildShapes />
+      <nodes>
+        <claseMetaforaMoniker Id="5dd63896-b9c1-4a2f-898e-c28b2591c948" />
+        <claseMetaforaMoniker Id="b47f3804-4a58-48be-8be4-3ecf1536e006" />
+      </nodes>
+    </metaforaHerencia>
+    <claseMetafora Id="c273a87a-a80a-4a3d-b971-e6ffff974de6" absoluteBounds="7.25, 7.75, 1.5, 1.6187792968749992">
+      <claseMoniker Id="0e46f754-b1df-4a16-bef1-ce166b83b136" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a92b41de-8069-4e06-aa7a-fcefa8c4dae1" absoluteBounds="7.2650000000000006, 8.76, 1.4700000000000002, 0.2493896484375" name="Atributo" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="343ae773-0998-4910-a88d-3ad30709ead4" absoluteBounds="7.2650000000000006, 9.0193896484375, 1.4700000000000002, 0.2493896484375" name="Opereacion" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </claseMetafora>
+    <metaforaHerencia Id="9d3ec949-94db-4e58-8791-4f16fb68f20b" edgePoints="[(7.57897318560043 : 7.75); (7.57897318560043 : 4.743779296875)]" manuallyRouted="true" fixedFrom="Algorithm" fixedTo="Caller">
+      <clasePadreHasClaseHijaMoniker Id="e1c76064-6208-4906-9dcf-b8de04d6328b" />
+      <relativeChildShapes />
+      <nodes>
+        <claseMetaforaMoniker Id="c273a87a-a80a-4a3d-b971-e6ffff974de6" />
+        <claseMetaforaMoniker Id="b47f3804-4a58-48be-8be4-3ecf1536e006" />
+      </nodes>
+    </metaforaHerencia>
   </nestedChildShapes>
 </jRPPCLMCFProyectoIPSDiagram>

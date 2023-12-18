@@ -65,6 +65,18 @@
     <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cliente.java">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="ClienteAlta.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="ClienteHome.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="ClienteLista.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
     <Content Include="Empleado.java">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
@@ -119,6 +131,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>JRPPCLMCFProyectoIPSReportVB.tt</DependentUpon>
+    </Content>
+    <Content Include="Persona.java">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="PersonaAlta.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="PersonaHome.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="PersonaLista.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

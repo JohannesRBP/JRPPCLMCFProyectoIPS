@@ -10,16 +10,16 @@ public class Hotel{
 	public void idHotel(Int idHotel){
 		this.idHotel = idHotel
 	}
-	public String nombre(){
+	public String getnombre(){
 		return this.nombre
 	}
-	public void nombre(String nombre){
+	public void setnombre(String nombre){
 		this.nombre = nombre
 	}
-	public String direccion(){
+	public String getdireccion(){
 		return this.direccion
 	}
-	public void direccion(String direccion){
+	public void setdireccion(String direccion){
 		this.direccion = direccion
 	}
 }

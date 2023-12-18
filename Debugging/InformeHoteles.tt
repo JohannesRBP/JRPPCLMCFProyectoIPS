@@ -15,10 +15,27 @@
 		var fileManager=EntityFrameworkTemplateFileManager.Create(this); 
 
 		//Recorremos todas las clases creadas en el tapiz
-		foreach(Clase clase in this.TapizClassWeb.Clase){
+		foreach(Clase clase in this.TapizClassWeb.Clase){ 
 			
-			//FALTA COMPROBAR SI ES UNA CLASE ABSTRACTA, SI LO ES NO LE CREAREMOS NINGUNA CLASE Y NO LLAMAREMOS A NINGUN METODO
-			
+			//COMPROBAR SI ES UNA HERENCIA, SI LO ES y es superclase NO LE CREAREMOS NINGUN HTML Y En el java le pondremos abstract, si es subclase le pondremos extend en el java
+			bool superclase=false;
+			bool subclase=false;
+
+			if(clase.subClase!=null){
+				foreach(ClasePadreHasClaseHija r in ClasePadreHasClaseHija.GetLinksTosubClase(clase)){
+					//WriteLine(clase.nombre+" Es subclase");
+					subclase=true;
+				} 
+			}
+			if(clase.superClase!=null){
+				//ClasePadreHasClaseHija rex = ClasePadreHasClaseHija.GetLinkTosuperClase(clase);
+				foreach(ClasePadreHasClaseHija r in ClasePadreHasClaseHija.GetLinksTosuperClase(clase)){
+					//WriteLine(clase.nombre+" Es superclase");
+					superclase=true;
+				}
+			}	
+			 
+			 
 
 			//Comprobamos si la clase es enriquecida
 			bool enriquecida=false;
@@ -30,7 +47,7 @@
 			generarAlta(clase, fileManager, enriquecida);
 			generarListado(clase, fileManager, enriquecida);
 			//Parametros (clase: cada clase contenida en el tapiz, filemanager: gestor de creacion de ficheros, enriquecida(bool): indica si la clase es enriquecida o no)
-			generarJava(clase, fileManager); 
+			generarJava(clase, fileManager, subclase, superclase); 
 			
 		}
 
@@ -47,6 +64,9 @@
 
 		//Crea un fichero donde pondremos la home de cada clase
 		fileManager.StartNewFile(clase.nombre+"Home.html");
+
+		 
+
 
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
 		string tipoLetra="Arial";
@@ -295,12 +315,22 @@
 #>
 <#+
 //METODO PARA GENERAR JAVA DE CADA CLASE  (\t para tabular)
-	void generarJava(Clase clase, EntityFrameworkTemplateFileManager fileManager){
+	void generarJava(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool subclase, bool superclase){
 
 		//Crea un fichero java de cada clase
 		fileManager.StartNewFile(clase.nombre+".java");
 
-		WriteLine("public class " + clase.nombre + "{");
+		//Pondremos que hace extend o abstract dependiendo de si es herencia y si es subclase o superclase
+		if(!subclase && !superclase){	//Si no tiene herencia
+			WriteLine("public class " + clase.nombre + "{");
+		}else if(superclase){		//Si es Superclase
+			WriteLine("public abstract class " + clase.nombre + "{");
+		}else if(subclase){			//Si es Subclase
+			foreach(ClasePadreHasClaseHija r in ClasePadreHasClaseHija.GetLinksTosubClase(clase)){
+				//WriteLine("public class " + clase.nombre + " extends "+r.subClase.nombre+"{");						
+			} 
+			
+		}
 
 		//Atributo Clave
 		if(clase.AtributoIdentificador!=null){
@@ -336,12 +366,12 @@
 		if(clase.Atributo.Count!=0)			
 			foreach(Atributo atributo in clase.Atributo){
 				//GET
-				WriteLine("\tpublic " + atributo.tipoDato.ToString() + " " + atributo.nombre + "(){");
+				WriteLine("\tpublic " + atributo.tipoDato.ToString() + " get" + atributo.nombre + "(){");
 				WriteLine("\t\treturn this."+atributo.nombre);	
 				WriteLine("\t}");	
 
 				//SET
-				WriteLine("\tpublic void "+ atributo.nombre + "("+ atributo.tipoDato.ToString() + " " + atributo.nombre + "){");	
+				WriteLine("\tpublic void set"+ atributo.nombre + "("+ atributo.tipoDato.ToString() + " " + atributo.nombre + "){");	
 				WriteLine("\t\tthis." + atributo.nombre + " = " + atributo.nombre);	
 				WriteLine("\t}");	 
 			}
