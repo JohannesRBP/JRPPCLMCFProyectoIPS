@@ -3,6 +3,11 @@
   <clase>
     <tapizClassWebHasClase Id="40703616-a6b9-47f6-8e84-09c261a299ab">
       <clase Id="dd49ad42-0c16-4090-9e9d-45a6cb20cb92" nombre="Empleado">
+        <atributo>
+          <claseHasAtributo Id="3dc557fc-6406-4fff-948a-7873d45c83df">
+            <atributo Id="837caa0e-d08d-4bf3-8c28-d308250f40eb" nombre="id_empleado" tipoDato="Boolean" modAcceso="private" />
+          </claseHasAtributo>
+        </atributo>
         <claseReferenciada>
           <claseReferencesClase Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" cardinalidadO="cero_n" cardinalidadD="cero_uno" nombreO="gestionado" nombreD="gestiona">
             <claseMoniker Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" />
@@ -25,6 +30,11 @@
             <atributo Id="2d92a30e-41d6-4e44-86ee-298149f13a58" nombre="direccion" tipoDato="String" modAcceso="private" />
           </claseHasAtributo>
         </atributo>
+        <operacion>
+          <claseHasOperacion Id="20598db2-ccea-49b2-b380-1bcda7d4a3a0">
+            <operacion Id="ffa11cff-5da6-4a1a-bb12-87a58be4b4e0" nombre="Gestionar" modAcceso="private" />
+          </claseHasOperacion>
+        </operacion>
         <atributoIdentificador>
           <claseHasAtributoIdentificador Id="5a8f4325-ff47-4354-8572-e88103db6492">
             <atributoIdentificador Id="bafa8aad-0e8f-40b6-80b7-6ad1baeaaaa3" nombre="idHotel" tipoDato="Int" modAcceso="private" />
@@ -42,7 +52,13 @@
       </claseEnriquecida>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="e3c4ec54-22da-4c35-b07f-1ae315053aa8">
-      <clase Id="f58587d8-8c90-43ec-9207-4750b662ada7" nombre="Persona" />
+      <clase Id="f58587d8-8c90-43ec-9207-4750b662ada7" nombre="Persona">
+        <atributo>
+          <claseHasAtributo Id="bf42e837-ad5a-4897-92ae-3471b82b94d0">
+            <atributo Id="2b75ebb7-9ecb-4e2a-b6e2-161b4dbf8a09" nombre="dni" tipoDato="Boolean" modAcceso="private" />
+          </claseHasAtributo>
+        </atributo>
+      </clase>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="3a8dd881-a12a-4692-938c-ba0a8278bb45">
       <clase Id="0e46f754-b1df-4a16-bef1-ce166b83b136" nombre="Cliente">

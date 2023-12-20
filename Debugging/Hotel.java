@@ -4,10 +4,10 @@ public class Hotel{
 	private String direccion;
 	public Hotel(){
 	}
-	public Int idHotel(){
+	public Int getidHotel(){
 		return this.idHotel
 	}
-	public void idHotel(Int idHotel){
+	public void setidHotel(Int idHotel){
 		this.idHotel = idHotel
 	}
 	public String getnombre(){
@@ -21,5 +21,8 @@ public class Hotel{
 	}
 	public void setdireccion(String direccion){
 		this.direccion = direccion
+	}
+	private void Gestionar ()
+		//To Do
 	}
 }
