@@ -490,28 +490,32 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			}
 		}
 		#endregion
-		#region subClase opposite domain role accessor
-		
+		#region superClase opposite domain role accessor
 		/// <summary>
-		/// Gets a list of subClase.
+		/// Gets or sets superClase.
 		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> subClase
+		public virtual Clase superClase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClaseDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClaseDomainRoleId) as Clase;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClaseDomainRoleId, value);
 			}
 		}
 		#endregion
-		#region superClase opposite domain role accessor
+		#region subClase opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of superClase.
+		/// Gets a list of subClase.
 		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.TargetClase
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Clase> superClase
+		public virtual DslModeling::LinkedElementCollection<Clase> subClase
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get

@@ -1130,16 +1130,16 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </claseReferenciada1>
 						}
 						break;
-					case "subClase":	// Relationship "ClasePadreHasClaseHija"
+					case "superClase":	// Relationship "ClasePadreHasClaseHija"
 						if (reader.IsEmptyElement)
 						{	// No instance of this relationship, just skip
 							DslModeling::SerializationUtilities.Skip(reader);
 						}
 						else
 						{
-							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <subClase>
-							ReadClasePadreHasClaseHijaInstances(serializationContext, element, reader);
-							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </subClase>
+							DslModeling::SerializationUtilities.SkipToFirstChild(reader);  // Skip the open tag of <superClase>
+							ReadClasePadreHasClaseHijaInstance(serializationContext, element, reader);
+							DslModeling::SerializationUtilities.Skip(reader);  // Skip the close tag of </superClase>
 						}
 						break;
 					default:
@@ -1431,19 +1431,26 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 	
 		/// <summary>
-		/// Reads all instances of relationship ClasePadreHasClaseHija.
+		/// Reads instance of relationship ClasePadreHasClaseHija.
 		/// </summary>
 		/// <remarks>
 		/// The caller will position the reader at the open tag of the first XML element inside the relationship tag, so it can be
-		/// either the first instance, or a bogus tag. This method will deserialize all instances and ignore all bogus tags. When the
-		/// method returns, the reader will be positioned at the end tag of the relationship (or EOF if somehow that happens).
+		/// either the first instance, or a bogus tag. This method will deserialize only the first valid instance and ignore all the
+		/// rest tags (because the multiplicity allows only one instance). When the method returns, the reader will be positioned at 
+		/// the end tag of the relationship (or EOF if somehow that happens).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="element">In-memory Clase instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA1806")]
-		private static void ReadClasePadreHasClaseHijaInstances(DslModeling::SerializationContext serializationContext, Clase element, global::System.Xml.XmlReader reader)
+		private static void ReadClasePadreHasClaseHijaInstance(DslModeling::SerializationContext serializationContext, Clase element, global::System.Xml.XmlReader reader)
 		{
+			if (DslModeling::DomainRoleInfo.GetElementLinks<ClasePadreHasClaseHija> (element, ClasePadreHasClaseHija.SourceClaseDomainRoleId).Count > 0)
+			{	// Only allow one instance, which already exists, so skip everything
+				DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+				return;
+			}
+	
 			while (!serializationContext.Result.Failed && !reader.EOF && reader.NodeType == global::System.Xml.XmlNodeType.Element)
 			{
 				DslModeling::DomainClassXmlSerializer newClasePadreHasClaseHijaSerializer = serializationContext.Directory.GetSerializer(ClasePadreHasClaseHija.DomainClassId);
@@ -1455,6 +1462,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					DslModeling::DomainClassXmlSerializer targetSerializer = serializationContext.Directory.GetSerializer (newClasePadreHasClaseHija.GetDomainClass().Id);	
 					global::System.Diagnostics.Debug.Assert (targetSerializer != null, "Cannot find serializer for " + newClasePadreHasClaseHija.GetDomainClass().Name + "!");
 					targetSerializer.Read(serializationContext, newClasePadreHasClaseHija, reader);
+					break;	// Only allow one instance.
 				}
 				else
 				{	// Maybe the relationship is serialized in short-form by mistake.
@@ -1466,6 +1474,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.ExpectingFullFormRelationship(serializationContext, reader, typeof(ClasePadreHasClaseHija));
 						new ClasePadreHasClaseHija(element.Partition, new DslModeling::RoleAssignment(ClasePadreHasClaseHija.SourceClaseDomainRoleId, element), new DslModeling::RoleAssignment(ClasePadreHasClaseHija.TargetClaseDomainRoleId, newClaseMonikerOfClasePadreHasClaseHija));
 						DslModeling::SerializationUtilities.Skip(reader);	// Moniker contains no child XML elements, so just skip.
+						break;	// Only allow one instance.
 					}
 					else
 					{	// Unknown element, skip.
@@ -2015,19 +2024,13 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			}
 	
 			// ClasePadreHasClaseHija
-			global::System.Collections.ObjectModel.ReadOnlyCollection<ClasePadreHasClaseHija> allClasePadreHasClaseHijaInstances = ClasePadreHasClaseHija.GetLinksTosubClase(element);
-			if (!serializationContext.Result.Failed && allClasePadreHasClaseHijaInstances.Count > 0)
+			ClasePadreHasClaseHija theClasePadreHasClaseHijaInstance = ClasePadreHasClaseHija.GetLinkTosuperClase(element);
+			if (!serializationContext.Result.Failed && theClasePadreHasClaseHijaInstance != null)
 			{
-				writer.WriteStartElement("subClase");
-				foreach (ClasePadreHasClaseHija eachClasePadreHasClaseHijaInstance in allClasePadreHasClaseHijaInstances)
-				{
-					if (serializationContext.Result.Failed)
-						break;
-	
-					DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(eachClasePadreHasClaseHijaInstance.GetDomainClass().Id);
-					global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + eachClasePadreHasClaseHijaInstance.GetDomainClass().Name + "!");
-					relSerializer.Write(serializationContext, eachClasePadreHasClaseHijaInstance, writer);
-				}
+				writer.WriteStartElement("superClase");
+				DslModeling::DomainClassXmlSerializer relSerializer = serializationContext.Directory.GetSerializer(theClasePadreHasClaseHijaInstance.GetDomainClass().Id);
+				global::System.Diagnostics.Debug.Assert(relSerializer != null, "Cannot find serializer for " + theClasePadreHasClaseHijaInstance.GetDomainClass().Name + "!");
+				relSerializer.Write(serializationContext, theClasePadreHasClaseHijaInstance, writer);
 				writer.WriteEndElement();
 			}
 	

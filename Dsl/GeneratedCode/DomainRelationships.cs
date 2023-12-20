@@ -3718,7 +3718,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "subClase", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "superClase", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
 		[DslModeling::DomainObjectId("984b087f-fbca-4076-bbc7-69e2f50b09f8")]
 		public virtual Clase SourceClase
 		{
@@ -3735,13 +3735,13 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access superClase of a Clase
+		#region Static methods to access subClase of a Clase
 		/// <summary>
-		/// Gets a list of superClase.
+		/// Gets a list of subClase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetsuperClase(Clase element)
+		public static DslModeling::LinkedElementCollection<Clase> GetsubClase(Clase element)
 		{
 			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, TargetClaseDomainRoleId);
 		}
@@ -3759,7 +3759,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "superClase", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "subClase", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
 		[DslModeling::DomainObjectId("d775ff49-499a-4d09-890f-fbb86ee8aa76")]
 		public virtual Clase TargetClase
 		{
@@ -3776,15 +3776,25 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 				
 		#endregion
-		#region Static methods to access subClase of a Clase
+		#region Static methods to access superClase of a Clase
 		/// <summary>
-		/// Gets a list of subClase.
+		/// Gets superClase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<Clase> GetsubClase(Clase element)
+		public static Clase GetsuperClase(Clase element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<Clase>, Clase>(element, SourceClaseDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, SourceClaseDomainRoleId) as Clase;
+		}
+		
+		/// <summary>
+		/// Sets superClase.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetsuperClase(Clase element, Clase newTargetClase)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, SourceClaseDomainRoleId, newTargetClase);
 		}
 		#endregion
 		#region tipoHerencia domain property code
@@ -3877,13 +3887,22 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		#endregion
 		#region SourceClase link accessor
 		/// <summary>
-		/// Get the list of ClasePadreHasClaseHija links to a Clase.
+		/// Get the ClasePadreHasClaseHija link to a Clase.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> GetLinksTosubClase ( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClaseInstance )
+		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija GetLinkTosuperClase (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClaseInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija>(sourceClaseInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClaseDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija>(sourceClaseInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClaseDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of SourceClase not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region TargetClase link accessor
@@ -3892,7 +3911,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> GetLinksTosuperClase ( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetClaseInstance )
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija> GetLinksTosubClase ( global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetClaseInstance )
 		{
 			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija>(targetClaseInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.TargetClaseDomainRoleId);
 		}

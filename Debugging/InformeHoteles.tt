@@ -21,21 +21,12 @@
 			bool superclase=false;
 			bool subclase=false;
 
-			if(clase.subClase!=null){
-				foreach(ClasePadreHasClaseHija r in ClasePadreHasClaseHija.GetLinksTosubClase(clase)){
-					//WriteLine(clase.nombre+" Es subclase");
-					subclase=true;
-				} 
-			}
 			if(clase.superClase!=null){
-				//ClasePadreHasClaseHija rex = ClasePadreHasClaseHija.GetLinkTosuperClase(clase);
-				foreach(ClasePadreHasClaseHija r in ClasePadreHasClaseHija.GetLinksTosuperClase(clase)){
-					//WriteLine(clase.nombre+" Es superclase");
-					superclase=true;
-				}
-			}	
-			 
-			 
+				superclase=true; 
+			}
+			if(clase.subClase.Count>0){
+				subclase=true;
+			}		 
 
 			//Comprobamos si la clase es enriquecida
 			bool enriquecida=false;
@@ -43,9 +34,11 @@
 				enriquecida=true;
 
 			//Llamamos a cada metodo por cada clase para generar el .html y .java
-			generarHome(clase, fileManager, enriquecida); 
-			generarAlta(clase, fileManager, enriquecida);
-			generarListado(clase, fileManager, enriquecida);
+			if(!subclase){ //Si no es clase padre (Abstracta, no tiene subclases)
+				generarHome(clase, fileManager, enriquecida); 
+				generarAlta(clase, fileManager, enriquecida);
+				generarListado(clase, fileManager, enriquecida);
+			}
 			//Parametros (clase: cada clase contenida en el tapiz, filemanager: gestor de creacion de ficheros, enriquecida(bool): indica si la clase es enriquecida o no)
 			generarJava(clase, fileManager, subclase, superclase); 
 			
@@ -323,32 +316,34 @@
 		//Pondremos que hace extend o abstract dependiendo de si es herencia y si es subclase o superclase
 		if(!subclase && !superclase){	//Si no tiene herencia
 			WriteLine("public class " + clase.nombre + "{");
-		}else if(superclase){		//Si es Superclase
+		}else if(subclase){		//Si es Superclase
 			WriteLine("public abstract class " + clase.nombre + "{");
-		}else if(subclase){			//Si es Subclase
-			foreach(ClasePadreHasClaseHija r in ClasePadreHasClaseHija.GetLinksTosubClase(clase)){
-				//WriteLine("public class " + clase.nombre + " extends "+r.subClase.nombre+"{");						
-			} 
-			
-		}
+		}else if(superclase){			//Si es Subclase
+			ClasePadreHasClaseHija r = ClasePadreHasClaseHija.GetLinkTosuperClase(clase);
+			WriteLine("public class " + clase.nombre + " extends "+clase.superClase.nombre+"{");				
+		} 
 
-		//Atributo Clave
+		//ATRIBUTO CLAVE
 		if(clase.AtributoIdentificador!=null){
 			AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;
 			WriteLine("\t"+atributoIdentificador.modAcceso+" "+atributoIdentificador.tipoDato.ToString()+" "+atributoIdentificador.nombre+";");	//Si hacemos enum del modo de acceso hay que modificar atributo.modAcceso
 			
 		}
 
-		//Atributos 
+		//ATRIBUTOS
 		if(clase.Atributo.Count!=0)			
 			foreach(Atributo atributo in clase.Atributo){
 				WriteLine("\t"+atributo.modAcceso+" "+atributo.tipoDato.ToString()+" "+atributo.nombre+";");	//Si hacemos enum del modo de acceso hay que modificar atributo.modAcceso
 			}
-		//Constructor
+
+		//AÑADIR ATRIBUTOS DE CLASE ASOCIACION (OBLIGATORIA CARDINALIDAD N:M) Y COMPOSICION (OPCIONAL)
+
+
+		//CONSTRUCTOR
 		WriteLine("\tpublic "+ clase.nombre + "(){");
 		WriteLine("\t}");	
 		
-		//Get y Set Atributo Clave 
+		//GET Y SET ATRIBUTO CLAVE
 		if(clase.AtributoIdentificador!=null){
 			AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;
 			//GET
@@ -362,7 +357,7 @@
 				WriteLine("\t}");	
 		}
 
-		//Getters y Setters 
+		//GETTERS Y SETTERS
 		if(clase.Atributo.Count!=0)			
 			foreach(Atributo atributo in clase.Atributo){
 				//GET

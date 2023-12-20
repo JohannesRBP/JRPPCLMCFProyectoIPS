@@ -479,6 +479,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					{
 						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase sourceClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateSource;
 						global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase targetClase = (global::UPM_IPS.JRPPCLMCFProyectoIPS.Clase)candidateTarget;
+						if(sourceClase == null || global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.GetLinkTosuperClase(sourceClase) != null) return false;
 						if(targetClase == null || sourceClase == null || global::UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.GetLinks(sourceClase, targetClase).Count > 0) return false;
 						return true;
 					}

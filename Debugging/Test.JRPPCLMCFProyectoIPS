@@ -8,11 +8,11 @@
             <claseMoniker Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" />
           </claseReferencesClase>
         </claseReferenciada>
-        <subClase>
-          <clasePadreHasClaseHija Id="831926c0-51ff-4b70-9ee2-981f55035a1a" tipoHerencia="total, disjunta">
+        <superClase>
+          <clasePadreHasClaseHija Id="589cb47a-94e9-411b-83a9-513c6544e021">
             <claseMoniker Id="f58587d8-8c90-43ec-9207-4750b662ada7" />
           </clasePadreHasClaseHija>
-        </subClase>
+        </superClase>
       </clase>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="ee7e3f75-864d-4bc5-8b0d-9a8687cce7ff">
@@ -46,11 +46,11 @@
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="3a8dd881-a12a-4692-938c-ba0a8278bb45">
       <clase Id="0e46f754-b1df-4a16-bef1-ce166b83b136" nombre="Cliente">
-        <subClase>
-          <clasePadreHasClaseHija Id="e1c76064-6208-4906-9dcf-b8de04d6328b">
+        <superClase>
+          <clasePadreHasClaseHija Id="1276eb18-3d3f-42bf-b713-a5fb49febd99">
             <claseMoniker Id="f58587d8-8c90-43ec-9207-4750b662ada7" />
           </clasePadreHasClaseHija>
-        </subClase>
+        </superClase>
       </clase>
     </tapizClassWebHasClase>
   </clase>

@@ -1014,7 +1014,7 @@
     <comment>DisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/SourceClase.PropertyDisplayName" xml:space="preserve">
-    <value>Sub Clase</value>
+    <value>Super Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.Description" xml:space="preserve">
@@ -1026,7 +1026,7 @@
     <comment>DisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija/TargetClase.PropertyDisplayName" xml:space="preserve">
-    <value>Super Clase</value>
+    <value>Sub Clase</value>
     <comment>PropertyDisplayName for DomainRole &apos;TargetClase&apos; on DomainRelationship &apos;ClasePadreHasClaseHija&apos;</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.TapizClassWebHasClaseEnumeradors.Description" xml:space="preserve">

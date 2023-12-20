@@ -591,14 +591,14 @@
         </DomainProperty>
       </Properties>
       <Source>
-        <DomainRole Id="984b087f-fbca-4076-bbc7-69e2f50b09f8" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="subClase" PropertyDisplayName="Sub Clase">
+        <DomainRole Id="984b087f-fbca-4076-bbc7-69e2f50b09f8" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="superClase" Multiplicity="ZeroOne" PropertyDisplayName="Super Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
         </DomainRole>
       </Source>
       <Target>
-        <DomainRole Id="d775ff49-499a-4d09-890f-fbb86ee8aa76" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="superClase" PropertyDisplayName="Super Clase">
+        <DomainRole Id="d775ff49-499a-4d09-890f-fbb86ee8aa76" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClasePadreHasClaseHija.TargetClase" Name="TargetClase" DisplayName="Target Clase" PropertyName="subClase" PropertyDisplayName="Sub Clase">
           <RolePlayer>
             <DomainClassMoniker Name="Clase" />
           </RolePlayer>
@@ -886,7 +886,7 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="claseReferenciada1">
             <DomainRelationshipMoniker Name="ClaseReferenciaClase" />
           </XmlRelationshipData>
-          <XmlRelationshipData UseFullForm="true" RoleElementName="subClase">
+          <XmlRelationshipData UseFullForm="true" RoleElementName="superClase">
             <DomainRelationshipMoniker Name="ClasePadreHasClaseHija" />
           </XmlRelationshipData>
         </ElementData>
