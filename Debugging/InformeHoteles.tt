@@ -330,7 +330,6 @@
 		}else if(subclase){		//Si es Superclase
 			WriteLine("public abstract class " + clase.nombre + "{");
 		}else if(superclase){			//Si es Subclase
-			//ClasePadreHasClaseHija r = ClasePadreHasClaseHija.GetLinkTosuperClase(clase);
 			WriteLine("public class " + clase.nombre + " extends "+clase.superClase.nombre+"{");				
 		} 
 
@@ -342,22 +341,17 @@
 		}
 
 		//ATRIBUTO CLAVE DE CLASE PADRE
-		/*if(superclase){
-			if(clase.superClase.AtributoIdentificador!=null){ 
-					AtributoIdentificador atributoIdentificador = clase.superClase.AtributoIdentificador;
-					WriteLine("\t"+atributoIdentificador.modAcceso+" "+atributoIdentificador.tipoDato.ToString()+" "+atributoIdentificador.nombre+";");
-				}
-			}
-		}*/
+		if(superclase && clase.superClase.AtributoIdentificador!=null){ 
+					AtributoIdentificador atributoIdentificadorPadre = clase.superClase.AtributoIdentificador;
+					WriteLine("\t"+atributoIdentificadorPadre.modAcceso+" "+atributoIdentificadorPadre.tipoDato.ToString()+" "+atributoIdentificadorPadre.nombre+";");
+		}
 
 
-		//AÑADIR ATRIBUTOS Y METODOS DE LA CLASE PADRE
-		if(superclase){
-			if(clase.superClase.Atributo.Count!=0){ 
-				foreach(Atributo atributo in clase.superClase.Atributo){
-					WriteLine("\t"+atributo.modAcceso+" "+atributo.tipoDato.ToString()+" "+atributo.nombre+";");
-				}
-			}
+		//ATRIBUTOS DE CLASE PADRE
+		if(superclase && clase.superClase.Atributo.Count!=0){ 
+			foreach(Atributo atributo in clase.superClase.Atributo){
+				WriteLine("\t"+atributo.modAcceso+" "+atributo.tipoDato.ToString()+" "+atributo.nombre+";");
+			}			
 		}
 
 		//ATRIBUTOS
@@ -385,6 +379,20 @@
 				WriteLine("\t}");	
 		}
 
+		//GET Y SET ATRIBUTO CLAVE DE CLASE PADRE
+		if(superclase && clase.superClase.AtributoIdentificador!=null){ 
+			AtributoIdentificador atributoIdentificadorPadre = clase.superClase.AtributoIdentificador;
+			//GET
+				WriteLine("\tpublic " + atributoIdentificadorPadre.tipoDato.ToString() + " get" + atributoIdentificadorPadre.nombre + "(){");
+				WriteLine("\t\treturn this."+atributoIdentificadorPadre.nombre);	
+				WriteLine("\t}");	
+
+				//SET
+				WriteLine("\tpublic void set"+ atributoIdentificadorPadre.nombre + "("+ atributoIdentificadorPadre.tipoDato.ToString() + " " + atributoIdentificadorPadre.nombre + "){");	
+				WriteLine("\t\tthis." + atributoIdentificadorPadre.nombre + " = " + atributoIdentificadorPadre.nombre);	
+				WriteLine("\t}");	
+		}
+
 		//GETTERS Y SETTERS
 		if(clase.Atributo.Count!=0)			
 			foreach(Atributo atributo in clase.Atributo){
@@ -398,10 +406,61 @@
 				WriteLine("\t\tthis." + atributo.nombre + " = " + atributo.nombre);	
 				WriteLine("\t}");	 
 			}
+		
+		//GETTERS Y SETTERS ATRIBUTOS DE CLASE PADRE
+		if(superclase && clase.superClase.Atributo.Count!=0){ 
+			foreach(Atributo atributo in clase.superClase.Atributo){
+				//GET
+				WriteLine("\tpublic " + atributo.tipoDato.ToString() + " get" + atributo.nombre + "(){");
+				WriteLine("\t\treturn this."+atributo.nombre);	
+				WriteLine("\t}");	
 
-		//Operaciones
+				//SET
+				WriteLine("\tpublic void set"+ atributo.nombre + "("+ atributo.tipoDato.ToString() + " " + atributo.nombre + "){");	
+				WriteLine("\t\tthis." + atributo.nombre + " = " + atributo.nombre);	
+				WriteLine("\t}");	  
+			}			
+		}
+
+
+		//OPERACIONES
 		if(clase.Operacion.Count!=0)
 			foreach(Operacion operacion in clase.Operacion){ //Recorremos las operaciones de la clase
+				//Recuperar parametro de salida y de entrada
+				string parametroEntrada = "";
+				string parametroSalida = "";
+				if(operacion.Parametro.Count!=0){ //Si hay algun parametro
+					foreach(Parametro parametro in operacion.Parametro){ //Recorremos los parametros de la operacion
+						string auxParametro = parametro.tipoParametro.ToString();
+						if(auxParametro.Equals("Entrada")){	//Si es parametro de ENTRADA
+							//Si el parametro no es el primero, le ponemos una , al principio
+							if(parametroEntrada!="")
+								parametroEntrada +=", ";
+							parametroEntrada += parametro.tipoDato.ToString() + " " + parametro.nombre;
+						}else if(auxParametro.Equals("Salida")) //Si es parametro de SALIDA
+							parametroSalida = parametro.tipoDato.ToString();
+						else{		//Si el parametro es de ENTRADA-SALIDA
+							//Si el parametro no es el primero, le ponemos una , al principio
+							if(parametroEntrada!="")
+								parametroEntrada +=", ";
+							parametroEntrada += parametro.tipoDato.ToString() + " " + parametro.nombre;
+							parametroSalida = parametro.tipoDato.ToString();
+						}
+					}
+				}
+
+				//Si no hay parametro de salida, se pone como void
+				if(parametroSalida=="")
+					parametroSalida="void";
+
+				WriteLine("\t"+operacion.modAcceso + " " + parametroSalida + " " + operacion.nombre + " (" + parametroEntrada + ")"); //Insertar parametros 
+				WriteLine("\t\t//To Do"); 
+				WriteLine("\t}"); 
+			}
+
+		//OPERACIONES DE CLASE PADRE
+		if(superclase && clase.superClase.Operacion.Count!=0)
+			foreach(Operacion operacion in clase.superClase.Operacion){ //Recorremos las operaciones de la clase
 				//Recuperar parametro de salida y de entrada
 				string parametroEntrada = "";
 				string parametroSalida = "";

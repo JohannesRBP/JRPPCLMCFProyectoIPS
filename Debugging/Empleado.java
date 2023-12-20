@@ -1,12 +1,42 @@
 public class Empleado extends Persona{
-	private Boolean dni;
-	private Boolean id_empleado;
+	private Int idEmpleado;
+	private String DNI;
+	private String nombre;
+	private String apellidos;
+	private Float sueldo;
 	public Empleado(){
 	}
-	public Boolean getid_empleado(){
-		return this.id_empleado
+	public Int getidEmpleado(){
+		return this.idEmpleado
 	}
-	public void setid_empleado(Boolean id_empleado){
-		this.id_empleado = id_empleado
+	public void setidEmpleado(Int idEmpleado){
+		this.idEmpleado = idEmpleado
+	}
+	public String getDNI(){
+		return this.DNI
+	}
+	public void setDNI(String DNI){
+		this.DNI = DNI
+	}
+	public Float getsueldo(){
+		return this.sueldo
+	}
+	public void setsueldo(Float sueldo){
+		this.sueldo = sueldo
+	}
+	public String getnombre(){
+		return this.nombre
+	}
+	public void setnombre(String nombre){
+		this.nombre = nombre
+	}
+	public String getapellidos(){
+		return this.apellidos
+	}
+	public void setapellidos(String apellidos){
+		this.apellidos = apellidos
+	}
+	private void respira ()
+		//To Do
 	}
 }

@@ -1,11 +1,28 @@
 public abstract class Persona{
-	private Boolean dni;
+	private String DNI;
+	private String nombre;
+	private String apellidos;
 	public Persona(){
 	}
-	public Boolean getdni(){
-		return this.dni
+	public String getDNI(){
+		return this.DNI
 	}
-	public void setdni(Boolean dni){
-		this.dni = dni
+	public void setDNI(String DNI){
+		this.DNI = DNI
+	}
+	public String getnombre(){
+		return this.nombre
+	}
+	public void setnombre(String nombre){
+		this.nombre = nombre
+	}
+	public String getapellidos(){
+		return this.apellidos
+	}
+	public void setapellidos(String apellidos){
+		this.apellidos = apellidos
+	}
+	private void respira ()
+		//To Do
 	}
 }

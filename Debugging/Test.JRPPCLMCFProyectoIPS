@@ -5,9 +5,14 @@
       <clase Id="dd49ad42-0c16-4090-9e9d-45a6cb20cb92" nombre="Empleado">
         <atributo>
           <claseHasAtributo Id="3dc557fc-6406-4fff-948a-7873d45c83df">
-            <atributo Id="837caa0e-d08d-4bf3-8c28-d308250f40eb" nombre="id_empleado" tipoDato="Boolean" modAcceso="private" />
+            <atributo Id="837caa0e-d08d-4bf3-8c28-d308250f40eb" nombre="sueldo" tipoDato="Float" modAcceso="private" />
           </claseHasAtributo>
         </atributo>
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="680651c0-b1c3-4d35-a87a-d7cd1beb1ff6">
+            <atributoIdentificador Id="cbe3c652-4aaa-4bb9-b079-2ddfef89b8b7" nombre="idEmpleado" tipoDato="Int" modAcceso="private" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
         <claseReferenciada>
           <claseReferencesClase Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" cardinalidadO="cero_n" cardinalidadD="cero_uno" nombreO="gestionado" nombreD="gestiona">
             <claseMoniker Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" />
@@ -55,13 +60,36 @@
       <clase Id="f58587d8-8c90-43ec-9207-4750b662ada7" nombre="Persona">
         <atributo>
           <claseHasAtributo Id="bf42e837-ad5a-4897-92ae-3471b82b94d0">
-            <atributo Id="2b75ebb7-9ecb-4e2a-b6e2-161b4dbf8a09" nombre="dni" tipoDato="Boolean" modAcceso="private" />
+            <atributo Id="2b75ebb7-9ecb-4e2a-b6e2-161b4dbf8a09" nombre="nombre" tipoDato="String" modAcceso="private" />
+          </claseHasAtributo>
+          <claseHasAtributo Id="510042e0-e590-427d-ae6e-10f44b9ad78e">
+            <atributo Id="2499ac8f-3017-45b7-9dad-f0e2b361a482" nombre="apellidos" tipoDato="String" modAcceso="private" />
           </claseHasAtributo>
         </atributo>
+        <operacion>
+          <claseHasOperacion Id="3af97c69-1a45-4714-bb62-be010541501d">
+            <operacion Id="858efe95-aaa2-44b6-9068-bd133be0f2ac" nombre="respira" modAcceso="private" />
+          </claseHasOperacion>
+        </operacion>
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="80291605-0f73-4d65-9b72-7de0dc86d99b">
+            <atributoIdentificador Id="48eeb9d4-e171-4b05-969f-3953ac60e181" nombre="DNI" tipoDato="String" modAcceso="private" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
       </clase>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="3a8dd881-a12a-4692-938c-ba0a8278bb45">
       <clase Id="0e46f754-b1df-4a16-bef1-ce166b83b136" nombre="Cliente">
+        <atributo>
+          <claseHasAtributo Id="28aae693-285a-4f1d-8f3c-9592b025a1bd">
+            <atributo Id="51c75328-dc8d-4427-b3af-1424f75e0e8d" nombre="puntosAcum" tipoDato="Int" modAcceso="private" />
+          </claseHasAtributo>
+        </atributo>
+        <atributoIdentificador>
+          <claseHasAtributoIdentificador Id="419e4a98-93d7-400f-972d-d10d32e5ee52">
+            <atributoIdentificador Id="ad5a431c-7a92-433b-850b-8b0dfe898977" nombre="idCliente" tipoDato="Int" modAcceso="private" />
+          </claseHasAtributoIdentificador>
+        </atributoIdentificador>
         <superClase>
           <clasePadreHasClaseHija Id="1276eb18-3d3f-42bf-b713-a5fb49febd99">
             <claseMoniker Id="f58587d8-8c90-43ec-9207-4750b662ada7" />
