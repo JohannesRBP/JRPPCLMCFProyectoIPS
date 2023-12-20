@@ -101,6 +101,9 @@
     <Content Include="HabitacionLista.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
+    <Content Include="Home.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
     <Content Include="Hotel.java">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>

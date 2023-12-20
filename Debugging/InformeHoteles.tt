@@ -49,7 +49,10 @@
 		}
 
 		//PONER AQUI METODO PARA CREACION DEL HOME, habra que añadirle un link para cada clase no abstracta creada, para ello guardar el nombre de cada clase no asbtracta creada en el bucle en una lista
-		 GenerarMenu(listaClase);
+		//Crea un fichero java de cada clase
+		fileManager.StartNewFile("Home.html");
+		GenerarMenu(listaClase);
+
 		//Cierra la creacion de ficheros
 		fileManager.Process();
 	}
@@ -325,6 +328,8 @@
 // FUNCIÓN PARA GENERAR MENU
 void GenerarMenu(List<Clase> listaClase)
 {
+	
+
     WriteLine("<html>");
     WriteLine("<head>");
     WriteLine("    <title>Menú de la Aplicación</title>");
@@ -335,7 +340,7 @@ void GenerarMenu(List<Clase> listaClase)
 
     foreach (Clase clase in listaClase)
     {
-        WriteLine($"<li><a href='{clase.nombre}Home.html'>{clase.nombre}</a></li>");
+        WriteLine("<li><a href='"+clase.nombre+"Home.html'>"+clase.nombre+"</a></li>");
     }
 
     WriteLine("    </ul>");

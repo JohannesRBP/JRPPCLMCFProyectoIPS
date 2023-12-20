@@ -40,17 +40,3 @@ public class Cliente extends Persona{
 		//To Do
 	}
 }
-<html>
-<head>
-    <title>Menú de la Aplicación</title>
-</head>
-<body>
-    <h1>Menú de la Aplicación</h1>
-    <ul>
-<li><a href='EmpleadoHome.html'>Empleado</a></li>
-<li><a href='HotelHome.html'>Hotel</a></li>
-<li><a href='HabitacionHome.html'>Habitacion</a></li>
-<li><a href='ClienteHome.html'>Cliente</a></li>
-    </ul>
-</body>
-</html>
