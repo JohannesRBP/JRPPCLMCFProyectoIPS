@@ -283,7 +283,7 @@
 				colorLetraOpe = convertidorColoresHex(estiloOperacion.colorLetraCalculado);			
 			}
 			 
-		} 
+		}  
 
 		WriteLine("<html>");
 		WriteLine("<head>");

@@ -10,11 +10,11 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
     {
         public string GettipoLetraCalculadoValue()
         {
-            return string.Format("{0}:", this.tipoLetra);
+            return string.Format("{0}", this.tipoLetra);
         }
         public string GetcolorLetraCalculadoValue()
         {
-            return string.Format("{0}:", this.colorLetra);
+            return string.Format("{0}", this.colorLetra);
         }
       
     }

@@ -27,6 +27,9 @@
         <estiloOperacionShape Id="35c7174e-9112-4a32-b609-56c91ccaa905" absoluteBounds="11, 2.5, 1.5, 0.5">
           <estiloOperacionMoniker Id="8eb0c55c-4920-42dc-bd9c-4a57c4d27fd9" />
         </estiloOperacionShape>
+        <estiloAtributoShape Id="19c541de-e22b-41ec-98ab-fb0e6a7e6d1e" absoluteBounds="12.375, 2.625, 1.5, 0.625">
+          <estiloAtributoMoniker Id="39593125-8bca-4866-8a56-396e4d07b638" />
+        </estiloAtributoShape>
       </nestedChildShapes>
     </claseEnriquecidaShape>
     <metaforaClase_Clase Id="c460b12a-6e33-4547-9cc2-5e7f2c76bdba" edgePoints="[(4.25 : 5.125); (4.25 : 1.597841796875); (6.875 : 1.597841796875)]" fixedFrom="NotFixed" fixedTo="NotFixed">

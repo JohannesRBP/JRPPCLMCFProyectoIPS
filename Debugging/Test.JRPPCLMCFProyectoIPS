@@ -64,6 +64,11 @@
             <estiloOperacion Id="8eb0c55c-4920-42dc-bd9c-4a57c4d27fd9" tipoLetra="Calibri" colorLetra="amarillo" nombre="hghfh" />
           </claseEnriquecidaHasEstiloOperacion>
         </estiloOperacion>
+        <estiloAtributo>
+          <claseEnriquecidaHasEstiloAtributo Id="dcf5621c-bffa-4fcc-94e2-f81ade0fe574">
+            <estiloAtributo Id="39593125-8bca-4866-8a56-396e4d07b638" tipoLetra="TimesNewRoman" colorLetra="rojo" />
+          </claseEnriquecidaHasEstiloAtributo>
+        </estiloAtributo>
       </claseEnriquecida>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="e3c4ec54-22da-4c35-b07f-1ae315053aa8">
