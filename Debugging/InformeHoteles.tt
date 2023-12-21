@@ -94,7 +94,7 @@
 
 			//Crea un fichero donde pondremos el listado de cada clase
 			fileManager.StartNewFile(clase.nombre+"Lista.html");
-			generarListado(clase, enriquecida, "");
+			generarListado(clase, enriquecida, superclase, "");
 		}else{
 			//Crea un fichero donde pondremos la home de la clase asociacion
 			fileManager.StartNewFile(asociacionNM + "Home.html");
@@ -106,7 +106,7 @@
 
 			//Crea un fichero donde pondremos el listado de la clase asociacion
 			fileManager.StartNewFile(asociacionNM+"Lista.html");
-			generarListado(clase, enriquecida, asociacionNM);
+			generarListado(clase, enriquecida, superclase, asociacionNM);
 		}
 	}
 
@@ -277,7 +277,7 @@
 <#+
 
 //METODO PARA GENERAR HTML DE CADA CLASE_LISTADO
-	private void generarListado(Clase clase, bool enriquecida, string asociacionNM){
+	private void generarListado(Clase clase, bool enriquecida, bool superclase, string asociacionNM){
 			
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
 		string tipoLetra="Arial";
@@ -353,6 +353,12 @@
 				foreach(Operacion operacion in clase.Operacion){
 					WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>"+operacion.nombre+"</a> </button>");
 				}
+
+				//Añadir tambien las operaciones de la clase padre si tiene
+				if(superclase && clase.superClase.Operacion.Count!=0)			
+					foreach(Operacion operacion in clase.superClase.Operacion){
+						WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>"+operacion.nombre+"</a> </button>");
+					}
 			}
 
 			WriteLine(" </td>");
