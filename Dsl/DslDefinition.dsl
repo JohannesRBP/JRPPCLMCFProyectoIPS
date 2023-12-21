@@ -438,7 +438,7 @@
     </DomainRelationship>
     <DomainRelationship Id="d3357dab-7e5f-4a5e-bcf8-cd6cb9f31c6f" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion" Name="ClaseEnriquecidaHasEstiloOperacion" DisplayName="Clase Enriquecida Has Estilo Operacion" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="76b9d6cc-2ec5-41da-a153-d2f3417cd3fc" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloOperacion" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Operacion">
+        <DomainRole Id="76b9d6cc-2ec5-41da-a153-d2f3417cd3fc" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloOperacion" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Operacion">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseEnriquecida" />
           </RolePlayer>
@@ -454,7 +454,7 @@
     </DomainRelationship>
     <DomainRelationship Id="9691201d-9281-40a0-89aa-45f1666e6111" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo" Name="ClaseEnriquecidaHasEstiloAtributo" DisplayName="Clase Enriquecida Has Estilo Atributo" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" IsEmbedding="true">
       <Source>
-        <DomainRole Id="3fb276b3-ec8c-4ae0-ac7b-33b0f6de1564" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloAtributo" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Atributo">
+        <DomainRole Id="3fb276b3-ec8c-4ae0-ac7b-33b0f6de1564" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.ClaseEnriquecida" Name="ClaseEnriquecida" DisplayName="Clase Enriquecida" PropertyName="EstiloAtributo" Multiplicity="One" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Estilo Atributo">
           <RolePlayer>
             <DomainClassMoniker Name="ClaseEnriquecida" />
           </RolePlayer>

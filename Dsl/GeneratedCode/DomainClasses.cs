@@ -744,34 +744,42 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		#endregion
 		#region EstiloOperacion opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of EstiloOperacion.
+		/// Gets or sets EstiloOperacion.
 		/// Description for
 		/// UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.ClaseEnriquecida
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstiloOperacion> EstiloOperacion
+		public virtual EstiloOperacion EstiloOperacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloOperacion>, EstiloOperacion>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.ClaseEnriquecidaDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.ClaseEnriquecidaDomainRoleId) as EstiloOperacion;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.ClaseEnriquecidaDomainRoleId, value);
 			}
 		}
 		#endregion
 		#region EstiloAtributo opposite domain role accessor
-		
 		/// <summary>
-		/// Gets a list of EstiloAtributo.
+		/// Gets or sets EstiloAtributo.
 		/// Description for
 		/// UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.ClaseEnriquecida
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<EstiloAtributo> EstiloAtributo
+		public virtual EstiloAtributo EstiloAtributo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloAtributo>, EstiloAtributo>(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.ClaseEnriquecidaDomainRoleId);
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.ClaseEnriquecidaDomainRoleId) as EstiloAtributo;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.ClaseEnriquecidaDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -807,11 +815,21 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloOperacion.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasEstiloOperacion.EstiloOperacion
+					if (this.EstiloOperacion != null)
+					{
+						return false;
+					}
 					return true;
 				}
 				
 				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.JRPPCLMCFProyectoIPS.EstiloAtributo.DomainClassId)) 
 				{
+					// Check that creating a link with this path doesn't cause multiplicity overflow: ClaseEnriquecidaHasEstiloAtributo.EstiloAtributo
+					if (this.EstiloAtributo != null)
+					{
+						return false;
+					}
 					return true;
 				}
 			}
@@ -852,7 +870,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			if (sourceEstiloOperacion2 != null)
 			{
 				// Create link for path ClaseEnriquecidaHasEstiloOperacion.EstiloOperacion
-				this.EstiloOperacion.Add(sourceEstiloOperacion2);
+				this.EstiloOperacion = sourceEstiloOperacion2;
 
 				return;
 			}
@@ -861,7 +879,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			if (sourceEstiloAtributo3 != null)
 			{
 				// Create link for path ClaseEnriquecidaHasEstiloAtributo.EstiloAtributo
-				this.EstiloAtributo.Add(sourceEstiloAtributo3);
+				this.EstiloAtributo = sourceEstiloAtributo3;
 
 				return;
 			}

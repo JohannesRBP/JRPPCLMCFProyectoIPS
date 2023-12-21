@@ -49,11 +49,21 @@
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="282c6981-42a4-4a81-b38e-6f74e8c2799f">
       <claseEnriquecida Id="6ea2e215-a0f9-4918-a28c-692c9da5ddd7" nombre="Habitacion">
+        <atributo>
+          <claseHasAtributo Id="318945ab-0e13-40dc-b686-a6cf0c8cf2d5">
+            <atributo Id="6e1c9943-11cd-4251-96a2-3cde01f2b3d0" nombre="gfgfd" tipoDato="Boolean" modAcceso="private" />
+          </claseHasAtributo>
+        </atributo>
         <estiloClase>
           <claseEnriquecidaHasEstiloClase Id="9fb32e12-3740-4ad0-9d92-968fab574d45">
             <estiloClase Id="c12ddeed-8d4a-4373-a9d2-f5f7e95c25dc" colorFondo="verde" colorLetra="negro" tipoLetra="TimesNewRoman" alineacion="center" textoNormal="false" checkBox="false" radioButton="false" />
           </claseEnriquecidaHasEstiloClase>
         </estiloClase>
+        <estiloOperacion>
+          <claseEnriquecidaHasEstiloOperacion Id="4be74c9a-e75f-4c0f-8439-d019be7fbb41">
+            <estiloOperacion Id="8eb0c55c-4920-42dc-bd9c-4a57c4d27fd9" tipoLetra="Calibri" colorLetra="amarillo" nombre="hghfh" />
+          </claseEnriquecidaHasEstiloOperacion>
+        </estiloOperacion>
       </claseEnriquecida>
     </tapizClassWebHasClase>
     <tapizClassWebHasClase Id="e3c4ec54-22da-4c35-b07f-1ae315053aa8">

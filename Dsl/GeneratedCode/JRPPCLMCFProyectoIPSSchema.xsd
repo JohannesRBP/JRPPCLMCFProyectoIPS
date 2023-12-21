@@ -237,13 +237,13 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: ClaseEnriquecidaHasEstiloOperacion -->
-          <xsd:element name="estiloOperacion" minOccurs="0" maxOccurs="1">
+          <xsd:element name="estiloOperacion" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ClaseEnriquecidaHasEstiloOperacion</xsd:documentation>
+              <xsd:documentation>Instance of ClaseEnriquecidaHasEstiloOperacion</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseEnriquecidaHasEstiloOperacion" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="claseEnriquecidaHasEstiloOperacion" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of ClaseEnriquecidaHasEstiloOperacion needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
@@ -252,13 +252,13 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: ClaseEnriquecidaHasEstiloAtributo -->
-          <xsd:element name="estiloAtributo" minOccurs="0" maxOccurs="1">
+          <xsd:element name="estiloAtributo" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ClaseEnriquecidaHasEstiloAtributo</xsd:documentation>
+              <xsd:documentation>Instance of ClaseEnriquecidaHasEstiloAtributo</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="claseEnriquecidaHasEstiloAtributo" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="claseEnriquecidaHasEstiloAtributo" minOccurs="1" maxOccurs="1">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of ClaseEnriquecidaHasEstiloAtributo needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>

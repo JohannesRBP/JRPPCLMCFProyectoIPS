@@ -1573,7 +1573,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion/ClaseEnriquecida.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion/ClaseEnriquecida.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloOperacion", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloOperacion", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("76b9d6cc-2ec5-41da-a153-d2f3417cd3fc")]
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
@@ -1644,24 +1644,43 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		#endregion
 		#region Static methods to access EstiloOperacion of a ClaseEnriquecida
 		/// <summary>
-		/// Gets a list of EstiloOperacion.
+		/// Gets EstiloOperacion.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<EstiloOperacion> GetEstiloOperacion(ClaseEnriquecida element)
+		public static EstiloOperacion GetEstiloOperacion(ClaseEnriquecida element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloOperacion>, EstiloOperacion>(element, ClaseEnriquecidaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseEnriquecidaDomainRoleId) as EstiloOperacion;
+		}
+		
+		/// <summary>
+		/// Sets EstiloOperacion.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEstiloOperacion(ClaseEnriquecida element, EstiloOperacion newEstiloOperacion)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseEnriquecidaDomainRoleId, newEstiloOperacion);
 		}
 		#endregion
 		#region ClaseEnriquecida link accessor
 		/// <summary>
-		/// Get the list of ClaseEnriquecidaHasEstiloOperacion links to a ClaseEnriquecida.
+		/// Get the ClaseEnriquecidaHasEstiloOperacion link to a ClaseEnriquecida.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion> GetLinksToEstiloOperacion ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecida claseEnriquecidaInstance )
+		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion GetLinkToEstiloOperacion (global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecida claseEnriquecidaInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion>(claseEnriquecidaInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.ClaseEnriquecidaDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion>(claseEnriquecidaInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloOperacion.ClaseEnriquecidaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ClaseEnriquecida not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region EstiloOperacion link accessor
@@ -1814,7 +1833,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo/ClaseEnriquecida.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo/ClaseEnriquecida.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
-		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloAtributo", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "EstiloAtributo", PropertyDisplayNameKey="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo/ClaseEnriquecida.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.One)]
 		[DslModeling::DomainObjectId("3fb276b3-ec8c-4ae0-ac7b-33b0f6de1564")]
 		public virtual ClaseEnriquecida ClaseEnriquecida
 		{
@@ -1885,24 +1904,43 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		#endregion
 		#region Static methods to access EstiloAtributo of a ClaseEnriquecida
 		/// <summary>
-		/// Gets a list of EstiloAtributo.
+		/// Gets EstiloAtributo.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static DslModeling::LinkedElementCollection<EstiloAtributo> GetEstiloAtributo(ClaseEnriquecida element)
+		public static EstiloAtributo GetEstiloAtributo(ClaseEnriquecida element)
 		{
-			return GetRoleCollection<DslModeling::LinkedElementCollection<EstiloAtributo>, EstiloAtributo>(element, ClaseEnriquecidaDomainRoleId);
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, ClaseEnriquecidaDomainRoleId) as EstiloAtributo;
+		}
+		
+		/// <summary>
+		/// Sets EstiloAtributo.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetEstiloAtributo(ClaseEnriquecida element, EstiloAtributo newEstiloAtributo)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, ClaseEnriquecidaDomainRoleId, newEstiloAtributo);
 		}
 		#endregion
 		#region ClaseEnriquecida link accessor
 		/// <summary>
-		/// Get the list of ClaseEnriquecidaHasEstiloAtributo links to a ClaseEnriquecida.
+		/// Get the ClaseEnriquecidaHasEstiloAtributo link to a ClaseEnriquecida.
 		/// </summary>
 		[global::System.Diagnostics.DebuggerStepThrough]
 		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
-		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo> GetLinksToEstiloAtributo ( global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecida claseEnriquecidaInstance )
+		public static global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo GetLinkToEstiloAtributo (global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecida claseEnriquecidaInstance)
 		{
-			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo>(claseEnriquecidaInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.ClaseEnriquecidaDomainRoleId);
+			global::System.Collections.Generic.IList<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo>(claseEnriquecidaInstance, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseEnriquecidaHasEstiloAtributo.ClaseEnriquecidaDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of ClaseEnriquecida not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
 		}
 		#endregion
 		#region EstiloAtributo link accessor

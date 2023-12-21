@@ -54,6 +54,22 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 						"ClaseEnriquecida", "", "EstiloClase"),
 						"DSL0001", this);
 			}
+			if (this.EstiloOperacion == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ClaseEnriquecida", "", "EstiloOperacion"),
+						"DSL0001", this);
+			}
+			if (this.EstiloAtributo == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ClaseEnriquecida", "", "EstiloAtributo"),
+						"DSL0001", this);
+			}
 		} // ValidateClaseEnriquecidaMultiplicity
 	} // class ClaseEnriquecida
 } // UPM_IPS.JRPPCLMCFProyectoIPS

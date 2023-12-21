@@ -104,20 +104,19 @@
 		string tipoLetra="Arial";
 		string colorLetra="#000000";
 		string alineacion="center";
-		string colorFondo="#00aabb";
+		string colorFondo="#00aabb";		
 
-		//coger estilos de EstiloClase (FUNCIONA)
+		//coger estilos de EstiloClase  
 		if(enriquecida){ 
 			ClaseEnriquecida claseEnriquecida= (ClaseEnriquecida)clase; //La casteamos en ClaseEnriquecida
-			if(claseEnriquecida.EstiloClase==null) 
-				WriteLine("No hay estilos de clase");
-			else{					 
+			if(claseEnriquecida.EstiloClase!=null){				 
 				EstiloClase estiloClase = (EstiloClase) claseEnriquecida.EstiloClase;
 				tipoLetra = convertidorTiposLetra(estiloClase.tipoLetraCalculado);  
 				colorLetra = convertidorColoresHex(estiloClase.colorLetraCalculado);
 				alineacion= estiloClase.alineacionCalculado;
 				colorFondo = convertidorColoresHex(estiloClase.colorFondoCalculado);			
 			}
+			
 		}
 
 
@@ -157,17 +156,24 @@
 		string alineacion="center";
 		string colorFondo="#00aabb";
 
-		//coger estilos de EstiloClase (FUNCIONA)
+		//Asignacion de estilos de atributo, dependiendo de si es enriquecida o no
+		string tipoLetraAtr="Arial";
+		string colorLetraAtr="#000000";
+
+		//coger estilos de EstiloClase y EstiloAtributo (FUNCIONA)
 		if(enriquecida){ 
 			ClaseEnriquecida claseEnriquecida= (ClaseEnriquecida)clase; //La casteamos en ClaseEnriquecida
-			if(claseEnriquecida.EstiloClase==null) 
-				WriteLine("No hay estilos de clase");
-			else{					 
+			if(claseEnriquecida.EstiloClase!=null){					 
 				EstiloClase estiloClase = (EstiloClase) claseEnriquecida.EstiloClase;
 				tipoLetra = convertidorTiposLetra(estiloClase.tipoLetraCalculado);
 				colorLetra = convertidorColoresHex(estiloClase.colorLetraCalculado);
 				alineacion= estiloClase.alineacionCalculado; 
 				colorFondo = convertidorColoresHex(estiloClase.colorFondoCalculado);			
+			}
+			if(claseEnriquecida.EstiloAtributo!=null) {							 
+				EstiloAtributo estiloAtributo = (EstiloAtributo) claseEnriquecida.EstiloAtributo;
+				tipoLetraAtr = convertidorTiposLetra(estiloAtributo.tipoLetraCalculado);  
+				colorLetraAtr = convertidorColoresHex(estiloAtributo.colorLetraCalculado);			
 			}
 		}
 
@@ -188,19 +194,19 @@
 		//Añadir fila del atributo clave
 		if(clase.AtributoIdentificador!=null){
 			AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;			
-			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
+			WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
 		}
 
 		//Añadir Fila del atributo clave de clase padre
 		if(superclase && clase.superClase.AtributoIdentificador!=null){
 			AtributoIdentificador atributoIdentificador = clase.superClase.AtributoIdentificador;			
-			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
+			WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
 		}
 		 
 		//Añadimos los atributos de la clase padre
 		if(superclase && clase.superClase.Atributo.Count!=0)			
 			foreach(Atributo atributo in clase.superClase.Atributo){
-				WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
+				WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
 			}
 
 		//Recorremos los atributos y añadimos una fila a la tabla por cada uno
@@ -208,7 +214,7 @@
 			WriteLine("No hay atributos");
 		else
 			foreach(Atributo atributo in clase.Atributo){
-				WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
+				WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
 			}
 
 		
@@ -222,7 +228,7 @@
 			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
 			}
 		}
-
+		 
 		if(clase.ClaseReferenciada.Count>0)
 		foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToClaseReferenciada(clase)){
 			WriteLine("<tr><td>"+r.nombreR+"<select name='"+r.nombreR+"'></select></td></tr>");
@@ -236,8 +242,8 @@
 		WriteLine("</table>");
 
 		//Botones
-		WriteLine("<button style='color:#000000; font-family:Arial;'><a href="+clase.nombre+".html>Guardar</a></button>");
-		WriteLine("<button style='color:#000000; font-family:Arial;'><a href="+clase.nombre+"Home.html>Volver</a></button>");
+		WriteLine("<button style='color:"+colorLetra+"; font-family:"+tipoLetra+";'><a href="+clase.nombre+"Home.html>Guardar</a></button>");
+		WriteLine("<button style='color:"+colorLetra+"; font-family:"+tipoLetra+";'><a href="+clase.nombre+"Home.html>Volver</a></button>");
 
 		WriteLine("</form>");
 		WriteLine("</div>");
@@ -251,28 +257,32 @@
 
 //METODO PARA GENERAR HTML DE CADA CLASE_LISTADO
 	private void generarListado(Clase clase, bool enriquecida){
-
-		
-
-		
+			
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
 		string tipoLetra="Arial";
 		string colorLetra="#000000";
 		string alineacion="center";
 		string colorFondo="#00aabb";
 
+		string tipoLetraOpe = "Arial";
+		string colorLetraOpe="#000000";
+		 
 		//coger estilos de EstiloClase (FUNCIONA)
 		if(enriquecida){ 
 			ClaseEnriquecida claseEnriquecida= (ClaseEnriquecida)clase; //La casteamos en ClaseEnriquecida
-			if(claseEnriquecida.EstiloClase==null) 
-				WriteLine("No hay estilos de clase");
-			else{					 
+			if(claseEnriquecida.EstiloClase!=null){					 
 				EstiloClase estiloClase = (EstiloClase) claseEnriquecida.EstiloClase;
 				tipoLetra = convertidorTiposLetra(estiloClase.tipoLetraCalculado);
 				colorLetra = convertidorColoresHex(estiloClase.colorLetraCalculado);
 				alineacion= estiloClase.alineacionCalculado; 
 				colorFondo = convertidorColoresHex(estiloClase.colorFondoCalculado);			
 			}
+			if(claseEnriquecida.EstiloOperacion!=null) {							 
+				EstiloOperacion estiloOperacion = (EstiloOperacion) claseEnriquecida.EstiloOperacion;
+				tipoLetraOpe = convertidorTiposLetra(estiloOperacion.tipoLetraCalculado);  
+				colorLetraOpe = convertidorColoresHex(estiloOperacion.colorLetraCalculado);			
+			}
+			 
 		} 
 
 		WriteLine("<html>");
@@ -297,7 +307,7 @@
 				WriteLine("<td>");
 				WriteLine(" </td>");
 				WriteLine(" </tr>");
-
+				 
 				WriteLine("<tr>");
 				WriteLine("<td>Elemento N: " + clase.nombre + " </td>");
 				WriteLine("<td>");
@@ -306,11 +316,15 @@
 				WriteLine("<td>Elemento "+(i+1)+": " + clase.nombre + " </td>");
 				WriteLine("<td>");
 			}						
-			WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Consultar</a> </button>");
-			WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Modificar</a> </button>");
-			WriteLine("<button style='color:" + colorFondo + ";font-family:" + tipoLetra + "'> <a href=" + clase.nombre + ">Eliminar</a> </button>");
+			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>Consultar</a> </button>");
+			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>Modificar</a> </button>");
+			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>Eliminar</a> </button>");
 
 			//AÑADIR UN BOTON POR CADA OPERACION QUE TENGA ESA CLASE
+			foreach(Operacion operacion in clase.Operacion){
+				WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>"+operacion.nombre+"</a> </button>");
+			}
+
 
 			WriteLine(" </td>");
 			WriteLine(" </tr>");			
