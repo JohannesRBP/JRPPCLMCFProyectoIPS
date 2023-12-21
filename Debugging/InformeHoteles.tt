@@ -14,37 +14,58 @@
 		//Inicializa la creacion de ficheros
 		var fileManager=EntityFrameworkTemplateFileManager.Create(this); 
 		//Creamos una lista para el menu
-		List<Clase> listaClase = new List<Clase>();
+		List<String> listaClase = new List<String>();
 		//Recorremos todas las clases creadas en el tapiz
 		foreach(Clase clase in this.TapizClassWeb.Clase){ 
 			
 			//COMPROBAR SI ES UNA HERENCIA, SI LO ES y es superclase NO LE CREAREMOS NINGUN HTML Y En el java le pondremos abstract, si es subclase le pondremos extend en el java
 			bool superclase=false;
 			bool subclase=false;
+			bool abstracta=false;
 
 			if(clase.superClase!=null){
-				superclase=true; 
+				superclase=true; 				
+				
 			}
 			if(clase.subClase.Count>0){
 				subclase=true;
-			}		 
+				//Si en la relacion contiene que es de tipo TOTAL
+				foreach(ClasePadreHasClaseHija r in ClasePadreHasClaseHija.GetLinksTosubClase(clase)){
+					if(r.tipoHerencia.Contains("Total")){
+						abstracta=true; 
+					}
+				}
+			}	
+			
 			
 		
 			//Comprobamos si la clase es enriquecida
 			bool enriquecida=false;
 			if(clase is ClaseEnriquecida)
 				enriquecida=true;
+			
+			//Ver cuando son clase de asociacion, si es N:M entonces habra que crear un html con el nombre de la relacion
+			//Revisamos las relaciones que tiene de asociacion
+			foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToclaseReferenciadora(clase)){
+				//Si es 1..* o 0..* en ambos extremos de la relacion
+				if((r.cardinalidadO.ToString().Equals("uno_n") || r.cardinalidadO.ToString().Equals("cero_n")) && (r.cardinalidadD.ToString().Equals("uno_n") || r.cardinalidadD.ToString().Equals("cero_n"))){
+				//Creamos una clase con el nombre de la relacion, la añadimos a la lista y generamos sus html
+					//listaClase.Add(r.nombreR);
+					//generarHTML(claseAsoc, fileManager, false);
+				}
+			}
 
 			//Llamamos a cada metodo por cada clase para generar el .html y .java
-			if(!subclase){ //Si no es clase padre (Abstracta, no tiene subclases)
-				generarHome(clase, fileManager, enriquecida); 
-				generarAlta(clase, fileManager, enriquecida);
-				generarListado(clase, fileManager, enriquecida);
-				listaClase.Add(clase);
+			if(!subclase || !abstracta){ //Si no es clase padre y si lo es, y es Total (Abstracta, no tiene subclases)
+				
+				generarHTML(clase, fileManager, enriquecida);
+				listaClase.Add(clase.nombre);
 
 			}
-			//Parametros (clase: cada clase contenida en el tapiz, filemanager: gestor de creacion de ficheros, enriquecida(bool): indica si la clase es enriquecida o no)
-			generarJava(clase, fileManager, subclase, superclase); 
+			//Parametros (clase: cada clase contenida en el tapiz, enriquecida(bool): indica si la clase es enriquecida o no)
+			//Crea un fichero java de cada clase
+			fileManager.StartNewFile(clase.nombre+".java");
+			generarJava(clase, subclase, superclase, abstracta); 
 			
 		}
 
@@ -59,13 +80,25 @@
 
 #>
 <#+
-//METODO PARA GENERAR HTML DE CADA CLASE_HOME
-	void generarHome(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida){
-
+//METODO PARA LLAMAR A LOS METODOS DE GENERACION DE LOS HTML DE LAS CLASES
+	private void generarHTML(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida){
 		//Crea un fichero donde pondremos la home de cada clase
 		fileManager.StartNewFile(clase.nombre + "Home.html");
-		 
+		generarHome(clase, enriquecida); 
 
+		//Crea un fichero donde pondremos el alta de cada clase
+		fileManager.StartNewFile(clase.nombre+"Alta.html");
+		generarAlta(clase, enriquecida);
+
+		//Crea un fichero donde pondremos el listado de cada clase
+		fileManager.StartNewFile(clase.nombre+"Lista.html");
+		generarListado(clase, enriquecida);
+	}
+
+#>
+<#+
+//METODO PARA GENERAR HTML DE CADA CLASE_HOME
+	private void generarHome(Clase clase, bool enriquecida){
 
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
 		string tipoLetra="Arial";
@@ -115,11 +148,8 @@
 <#+ 
 //METODO PARA GENERAR HTML DE CADA CLASE_ALTA
 
-	private void generarAlta(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida){
+	private void generarAlta(Clase clase, bool enriquecida){
 		
-		//Crea un fichero donde pondremos el alta de cada clase
-		fileManager.StartNewFile(clase.nombre+"Alta.html");
-	 
 
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
 		string tipoLetra="Arial";
@@ -206,10 +236,9 @@
 <#+
 
 //METODO PARA GENERAR HTML DE CADA CLASE_LISTADO
-	void generarListado(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida){
+	private void generarListado(Clase clase, bool enriquecida){
 
-		//Crea un fichero donde pondremos el listado de cada clase
-		fileManager.StartNewFile(clase.nombre+"Lista.html");
+		
 
 		
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
@@ -290,7 +319,7 @@
 
 <#+
    //METODO PARA PONER EL COLOR QUE HAN ELEGIDO LOS USUARIOS (CLASE ENRIQUECIDA)
-	  string convertidorColoresHex(string color){
+	  private string convertidorColoresHex(string color){
 	
 			switch (color){
             case "amarillo":
@@ -317,7 +346,7 @@
 <#+ 
 //METODO PARA GENERAR LA FUENTE QUE HA ELEGIDO EL USUARIO (CLASE ENRIQUECIDA)
 
-   string convertidorTiposLetra(string tipoLetra){
+   private string convertidorTiposLetra(string tipoLetra){
         switch (tipoLetra.ToLower())
         {
             case "arial":
@@ -333,7 +362,7 @@
 #>
 <#+
 // FUNCIÓN PARA GENERAR MENU
-void GenerarMenu(List<Clase> listaClase)
+private void GenerarMenu(List<String> listaClase)
 {
     WriteLine("<html>");
     WriteLine("<head>");
@@ -351,9 +380,9 @@ void GenerarMenu(List<Clase> listaClase)
     WriteLine("    <h1>Menú de la Aplicación</h1>");
     WriteLine("    <ul>");
 
-    foreach (Clase clase in listaClase)
+    foreach (String clase in listaClase)
     {
-        WriteLine($"        <li><a href='{clase.nombre}Home.html'>{clase.nombre}</a></li>");
+        WriteLine($"        <li><a href='{clase}Home.html'>{clase}</a></li>");
     }
 
     WriteLine("    </ul>");
@@ -363,15 +392,14 @@ void GenerarMenu(List<Clase> listaClase)
 #>
 <#+
 //METODO PARA GENERAR JAVA DE CADA CLASE  (\t para tabular)
-	void generarJava(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool subclase, bool superclase){
-
-		//Crea un fichero java de cada clase
-		fileManager.StartNewFile(clase.nombre+".java");
+	private void generarJava(Clase clase, bool subclase, bool superclase, bool abstracta){
 
 		//Pondremos que hace extend o abstract dependiendo de si es herencia y si es subclase o superclase
 		if(!subclase && !superclase){	//Si no tiene herencia
 			WriteLine("public class " + clase.nombre + "{");
-		}else if(subclase){		//Si es Superclase
+		}else if(subclase && !abstracta){		//Si es Superclase
+			WriteLine("public class " + clase.nombre + "{");
+		}else if(abstracta){	//Si es SuperClase y abstracta
 			WriteLine("public abstract class " + clase.nombre + "{");
 		}else if(superclase){			//Si es Subclase
 			WriteLine("public class " + clase.nombre + " extends "+clase.superClase.nombre+"{");				

@@ -14,12 +14,12 @@
           </claseHasAtributoIdentificador>
         </atributoIdentificador>
         <claseReferenciada>
-          <claseReferencesClase Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" cardinalidadO="uno_n" cardinalidadD="uno_n" nombreO="gestionado" nombreD="gestiona" nombreR="es gestionado">
+          <claseReferencesClase Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" cardinalidadO="uno_n" cardinalidadD="uno_n" nombreO="gestionado" nombreD="gestiona" nombreR="esgestionado">
             <claseMoniker Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" />
           </claseReferencesClase>
         </claseReferenciada>
         <superClase>
-          <clasePadreHasClaseHija Id="589cb47a-94e9-411b-83a9-513c6544e021">
+          <clasePadreHasClaseHija Id="589cb47a-94e9-411b-83a9-513c6544e021" tipoHerencia="Total, disjunta">
             <claseMoniker Id="f58587d8-8c90-43ec-9207-4750b662ada7" />
           </clasePadreHasClaseHija>
         </superClase>

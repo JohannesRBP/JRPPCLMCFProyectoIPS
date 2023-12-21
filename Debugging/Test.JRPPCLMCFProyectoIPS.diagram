@@ -30,7 +30,7 @@
       <claseReferencesClaseMoniker Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="3.25, 2.125, 0.83652746677398682, 0.181884765625" shapeFieldName="nombreRDec" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="3.4375, 2.1875, 0.80124914646148682, 0.181884765625" shapeFieldName="nombreRDec" />
       </moveableDecoratorHostShapes>
       <nodes>
         <claseMetaforaMoniker Id="5dd63896-b9c1-4a2f-898e-c28b2591c948" />
