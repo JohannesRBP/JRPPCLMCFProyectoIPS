@@ -49,16 +49,16 @@
 			foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToclaseReferenciadora(clase)){
 				//Si es 1..* o 0..* en ambos extremos de la relacion
 				if((r.cardinalidadO.ToString().Equals("uno_n") || r.cardinalidadO.ToString().Equals("cero_n")) && (r.cardinalidadD.ToString().Equals("uno_n") || r.cardinalidadD.ToString().Equals("cero_n"))){
-				//Creamos una clase con el nombre de la relacion, la añadimos a la lista y generamos sus html
-					//listaClase.Add(r.nombreR);
-					//generarHTML(claseAsoc, fileManager, false);
+					//Creamos una clase con el nombre de la relacion, la añadimos a la lista y generamos sus html
+					listaClase.Add(r.nombreR);
+					generarHTML(clase, fileManager, false, false, r.nombreR);
 				}
 			}
 
 			//Llamamos a cada metodo por cada clase para generar el .html y .java
 			if(!subclase || !abstracta){ //Si no es clase padre y si lo es, y es Total (Abstracta, no tiene subclases)
 				
-				generarHTML(clase, fileManager, enriquecida, superclase);
+				generarHTML(clase, fileManager, enriquecida, superclase, "");
 				listaClase.Add(clase.nombre);
 
 			}
@@ -81,24 +81,39 @@
 #>
 <#+
 //METODO PARA LLAMAR A LOS METODOS DE GENERACION DE LOS HTML DE LAS CLASES
-	private void generarHTML(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida, bool superclase){
-		//Crea un fichero donde pondremos la home de cada clase
-		fileManager.StartNewFile(clase.nombre + "Home.html");
-		generarHome(clase, enriquecida); 
+	private void generarHTML(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida, bool superclase, string asociacionNM){
 
-		//Crea un fichero donde pondremos el alta de cada clase
-		fileManager.StartNewFile(clase.nombre+"Alta.html");
-		generarAlta(clase, enriquecida, superclase);
+		if(asociacionNM==""){ //Si no es de tipo asociacion
+			//Crea un fichero donde pondremos la home de cada clase
+			fileManager.StartNewFile(clase.nombre + "Home.html");
+			generarHome(clase, enriquecida, ""); 
 
-		//Crea un fichero donde pondremos el listado de cada clase
-		fileManager.StartNewFile(clase.nombre+"Lista.html");
-		generarListado(clase, enriquecida);
+			//Crea un fichero donde pondremos el alta de cada clase
+			fileManager.StartNewFile(clase.nombre+"Alta.html");
+			generarAlta(clase, enriquecida, superclase, "");
+
+			//Crea un fichero donde pondremos el listado de cada clase
+			fileManager.StartNewFile(clase.nombre+"Lista.html");
+			generarListado(clase, enriquecida, "");
+		}else{
+			//Crea un fichero donde pondremos la home de la clase asociacion
+			fileManager.StartNewFile(asociacionNM + "Home.html");
+			generarHome(clase, enriquecida, asociacionNM); 
+
+			//Crea un fichero donde pondremos el alta de la clase asociacion
+			fileManager.StartNewFile(asociacionNM+"Alta.html");
+			generarAlta(clase, enriquecida, superclase, asociacionNM);
+
+			//Crea un fichero donde pondremos el listado de la clase asociacion
+			fileManager.StartNewFile(asociacionNM+"Lista.html");
+			generarListado(clase, enriquecida, asociacionNM);
+		}
 	}
 
 #>
 <#+
 //METODO PARA GENERAR HTML DE CADA CLASE_HOME
-	private void generarHome(Clase clase, bool enriquecida){
+	private void generarHome(Clase clase, bool enriquecida, string asociacionNM){
 
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
 		string tipoLetra="Arial";
@@ -119,24 +134,30 @@
 			
 		}
 
+		//Variable para guardar el nombre de la clase
+		string nombreClase=clase.nombre;
+		if(asociacionNM!=""){
+			nombreClase=asociacionNM;
+		}
+
 
 		WriteLine("<html>"); 
 		WriteLine("<head>"); 
-		WriteLine("<title>"+clase.nombre+"Home</title>");
+		WriteLine("<title>"+nombreClase+"Home</title>");
 		WriteLine("</head>"); 
 		WriteLine("<body>"); 
 		WriteLine("<div style='border: 1px solid black; margin:20px'>"); 
 
 		WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href=Home.html>Home</a></button>");
 
-		WriteLine("<form name='"+clase.nombre+"' style='background-color:"+colorFondo+"; color:"+colorLetra+";font-family:"+tipoLetra+";text-align:"+alineacion+";'>");
-		WriteLine("<h1>"+clase.nombre+"</h1>"); 
+		WriteLine("<form name='"+nombreClase+"' style='background-color:"+colorFondo+"; color:"+colorLetra+";font-family:"+tipoLetra+";text-align:"+alineacion+";'>");
+		WriteLine("<h1>"+nombreClase+"</h1>"); 
 
 		//Boton para alta
-		WriteLine("<button style='color:"+colorLetra+";font-family:"+tipoLetra+"'> <a href='./"+clase.nombre+"Alta.html'>Alta</a> </button>"); 
+		WriteLine("<button style='color:"+colorLetra+";font-family:"+tipoLetra+"'> <a href='./"+nombreClase+"Alta.html'>Alta</a> </button>"); 
 	
 		//Boton para listado
-		WriteLine("<button style='color:"+colorLetra+";font-family:"+tipoLetra+"'> <a href='./"+clase.nombre+"Lista.html'>Listado</a> </button>"); 
+		WriteLine("<button style='color:"+colorLetra+";font-family:"+tipoLetra+"'> <a href='./"+nombreClase+"Lista.html'>Listado</a> </button>"); 
 
 		WriteLine("</form>"); 
 		WriteLine("</div>"); 
@@ -147,7 +168,7 @@
 <#+ 
 //METODO PARA GENERAR HTML DE CADA CLASE_ALTA
 
-	private void generarAlta(Clase clase, bool enriquecida, bool superclase){
+	private void generarAlta(Clase clase, bool enriquecida, bool superclase, string asociacionNM){
 		
 
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
@@ -177,73 +198,73 @@
 			}
 		}
 
+		//Variable para guardar el nombre de la clase
+		string nombreClase=clase.nombre;
+		if(asociacionNM!=""){
+			nombreClase=asociacionNM;
+		}
 
 		WriteLine("<html>"); 
 		WriteLine("<head>"); 
-		WriteLine("<title>"+clase.nombre+"Alta</title>");
+		WriteLine("<title>"+nombreClase+"Alta</title>");
 		WriteLine("</head>"); 
 		WriteLine("<body>"); 
 		WriteLine("<div style='border: 1px solid black; margin:20px'>"); 
 
 		WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href=Home.html>Home</a></button>");
 
-		WriteLine("<p style='background-color: "+colorFondo+"; color:"+colorLetra+"; font-weight:bold; font-family:"+tipoLetra+"; text-align:"+alineacion+"'> Alta"+clase.nombre+"</p>");
-		WriteLine("<form name='"+clase.nombre+"' style='background-color:"+colorFondo+"; color:"+colorLetra+";font-family:"+tipoLetra+";text-align:"+alineacion+";'>");
+		WriteLine("<p style='background-color: "+colorFondo+"; color:"+colorLetra+"; font-weight:bold; font-family:"+tipoLetra+"; text-align:"+alineacion+"'> Alta"+nombreClase+"</p>");
+		WriteLine("<form name='"+nombreClase+"' style='background-color:"+colorFondo+"; color:"+colorLetra+";font-family:"+tipoLetra+";text-align:"+alineacion+";'>");
 		WriteLine("<table>");
 
-		//Añadir fila del atributo clave
-		if(clase.AtributoIdentificador!=null){
-			AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;			
-			WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
-		}
+		if(asociacionNM==""){
+			//Añadir fila del atributo clave
+			if(clase.AtributoIdentificador!=null){
+				AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;			
+				WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
+			}
 
-		//Añadir Fila del atributo clave de clase padre
-		if(superclase && clase.superClase.AtributoIdentificador!=null){
-			AtributoIdentificador atributoIdentificador = clase.superClase.AtributoIdentificador;			
-			WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
-		}
+			//Añadir Fila del atributo clave de clase padre
+			if(superclase && clase.superClase.AtributoIdentificador!=null){
+				AtributoIdentificador atributoIdentificador = clase.superClase.AtributoIdentificador;			
+				WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
+			}
 		 
-		//Añadimos los atributos de la clase padre
-		if(superclase && clase.superClase.Atributo.Count!=0)			
-			foreach(Atributo atributo in clase.superClase.Atributo){
-				WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
-			}
+			//Añadimos los atributos de la clase padre
+			if(superclase && clase.superClase.Atributo.Count!=0)			
+				foreach(Atributo atributo in clase.superClase.Atributo){
+					WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
+				}
 
-		//Recorremos los atributos y añadimos una fila a la tabla por cada uno
-		if(clase.Atributo.Count==0)
-			WriteLine("No hay atributos");
-		else
-			foreach(Atributo atributo in clase.Atributo){
-				WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
+			//Recorremos los atributos y añadimos una fila a la tabla por cada uno
+			if(clase.Atributo.Count==0)
+				WriteLine("No hay atributos");
+			else
+				foreach(Atributo atributo in clase.Atributo){
+					WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
+				}
+		}else{
+			//Añadimos los atributos clave de ambas clases
+			
+			if(clase.AtributoIdentificador!=null){
+				AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;			
+				WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
 			}
-
-		
-
-		//AÑADIMOS ATRIBUTOS DE CLASE ASOCIACION N:M
-		/*if(clase.claseReferenciadora.Count>0)
-		foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToclaseReferenciadora(clase)){
-			WriteLine("<tr><td>"+r.nombreR+"<select name='"+r.nombreR+"'></select></td></tr>");
-			//añadimos atributos
-			foreach(Atributo atributo in clase.Atributo){
-			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
-			}
+			
+			/*foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToclaseReferenciadora(clase)){
+				if(r.nombreR.Equals(asociacionNM)){ //Si es la relacion actual
+					WriteLine(r.claseReferenciadora.nombre);
+				}
+			}*/
+			
 		}
-		 
-		if(clase.ClaseReferenciada.Count>0)
-		foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToClaseReferenciada(clase)){
-			WriteLine("<tr><td>"+r.nombreR+"<select name='"+r.nombreR+"'></select></td></tr>");
-			//añadimos atributos
-			foreach(Atributo atributo in clase.Atributo){
-			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
-			}
-		}*/
 
 
 		WriteLine("</table>");
 
 		//Botones
-		WriteLine("<button style='color:"+colorLetra+"; font-family:"+tipoLetra+";'><a href="+clase.nombre+"Home.html>Guardar</a></button>");
-		WriteLine("<button style='color:"+colorLetra+"; font-family:"+tipoLetra+";'><a href="+clase.nombre+"Home.html>Volver</a></button>");
+		WriteLine("<button style='color:"+colorLetra+"; font-family:"+tipoLetra+";'><a href="+nombreClase+"Home.html>Guardar</a></button>");
+		WriteLine("<button style='color:"+colorLetra+"; font-family:"+tipoLetra+";'><a href="+nombreClase+"Home.html>Volver</a></button>");
 
 		WriteLine("</form>");
 		WriteLine("</div>");
@@ -256,7 +277,7 @@
 <#+
 
 //METODO PARA GENERAR HTML DE CADA CLASE_LISTADO
-	private void generarListado(Clase clase, bool enriquecida){
+	private void generarListado(Clase clase, bool enriquecida, string asociacionNM){
 			
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
 		string tipoLetra="Arial";
@@ -285,16 +306,22 @@
 			 
 		}  
 
+		//Variable para guardar el nombre de la clase
+		string nombreClase=clase.nombre;
+		if(asociacionNM!=""){
+			nombreClase=asociacionNM;
+		}
+
 		WriteLine("<html>");
 		WriteLine("<head>");
-		WriteLine("<title>"+clase.nombre+"Listado</title>");
+		WriteLine("<title>"+nombreClase+"Listado</title>");
 		WriteLine("</head>");
 	    WriteLine("<body>");
 	    WriteLine("<div style='border:1px solid black; margin:20px'>");
 		WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href=Home.html>Home</a></button>");
-		WriteLine("<h2>Listado " + clase.nombre + "</h2>");
-		WriteLine("<p style='background-color: "+colorFondo+"; color:"+colorLetra+"; font-weight:bold; font-family:"+tipoLetra+"; text-align:"+alineacion+"'> Listado "+clase.nombre+"</p>");
-		WriteLine("<form name='"+clase.nombre+"' style='background-color:#00aabb; color:#ffffff;font-family:Arial;text-align:center;'>");
+		WriteLine("<h2>Listado " + nombreClase + "</h2>");
+		WriteLine("<p style='background-color: "+colorFondo+"; color:"+colorLetra+"; font-weight:bold; font-family:"+tipoLetra+"; text-align:"+alineacion+"'> Listado "+nombreClase+"</p>");
+		WriteLine("<form name='"+nombreClase+"' style='background-color:#00aabb; color:#ffffff;font-family:Arial;text-align:center;'>");
 		WriteLine("<table>");
 			
 	   //Para que haga 4 lineas
@@ -309,22 +336,24 @@
 				WriteLine(" </tr>");
 				 
 				WriteLine("<tr>");
-				WriteLine("<td>Elemento N: " + clase.nombre + " </td>");
+				WriteLine("<td>Elemento N: " + nombreClase + " </td>");
 				WriteLine("<td>");
 			}else{
 				WriteLine("<tr>");
-				WriteLine("<td>Elemento "+(i+1)+": " + clase.nombre + " </td>");
+				WriteLine("<td>Elemento "+(i+1)+": " + nombreClase + " </td>");
 				WriteLine("<td>");
 			}						
-			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>Consultar</a> </button>");
-			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>Modificar</a> </button>");
-			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>Eliminar</a> </button>");
+			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + nombreClase + "Home.html>Consultar</a> </button>");
+			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + nombreClase + "Home.html>Modificar</a> </button>");
+			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + nombreClase + "Home.html>Eliminar</a> </button>");
 
-			//AÑADIR UN BOTON POR CADA OPERACION QUE TENGA ESA CLASE
-			foreach(Operacion operacion in clase.Operacion){
-				WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>"+operacion.nombre+"</a> </button>");
+			//Si no es de asociacion
+			if(asociacionNM==""){
+				//AÑADIR UN BOTON POR CADA OPERACION QUE TENGA ESA CLASE
+				foreach(Operacion operacion in clase.Operacion){
+					WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + clase.nombre + "Home.html>"+operacion.nombre+"</a> </button>");
+				}
 			}
-
 
 			WriteLine(" </td>");
 			WriteLine(" </tr>");			
@@ -332,7 +361,7 @@
 
        WriteLine("</table>");     
 
-	   WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href="+clase.nombre+"Home.html>Volver</a></button>");
+	   WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href="+nombreClase+"Home.html>Volver</a></button>");
 
 	   WriteLine("</form>");
 	   WriteLine("</div>");

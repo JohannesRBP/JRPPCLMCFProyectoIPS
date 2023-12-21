@@ -89,6 +89,15 @@
     <Content Include="EmpleadoLista.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
+    <Content Include="esgestionadoAlta.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="esgestionadoHome.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="esgestionadoLista.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
     <Content Include="Habitacion.java">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
