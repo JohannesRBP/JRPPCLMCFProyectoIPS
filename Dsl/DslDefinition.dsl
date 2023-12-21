@@ -500,6 +500,11 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="5aedf530-5182-47db-8cbb-1e13c177a2b1" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre R" Name="nombreR" DisplayName="Nombre R">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
       <Source>
         <DomainRole Id="756d7004-9974-4e86-8ca2-e63ad162f543" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.SourceClase" Name="SourceClase" DisplayName="Source Clase" PropertyName="ClaseReferenciada" PropertyDisplayName="Clase Referenciada">
@@ -817,6 +822,9 @@
       <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="nombreDDec" DisplayName="Nombre DDec" DefaultText="nombreDDec" />
       </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0" isMoveable="true">
+        <TextDecorator Name="nombreRDec" DisplayName="Nombre RDec" DefaultText="nombreRDec" />
+      </ConnectorHasDecorators>
     </Connector>
     <Connector Id="93b9ea3a-a94f-4d92-821c-cdf2a5db6258" Description="Description for UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia" Name="MetaforaHerencia" DisplayName="Metafora Herencia" Namespace="UPM_IPS.JRPPCLMCFProyectoIPS" FixedTooltipText="Metafora Herencia" TargetEndStyle="HollowArrow">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
@@ -1101,6 +1109,9 @@
           </XmlPropertyData>
           <XmlPropertyData XmlName="cardinalidadDCalculada" Representation="Ignore">
             <DomainPropertyMoniker Name="ClaseReferencesClase/cardinalidadDCalculada" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreR">
+            <DomainPropertyMoniker Name="ClaseReferencesClase/nombreR" />
           </XmlPropertyData>
         </ElementData>
       </XmlClassData>
@@ -1557,6 +1568,14 @@
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="ClaseReferencesClase/nombreO" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="MetaforaClase_Clase/nombreRDec" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="ClaseReferencesClase/nombreR" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>

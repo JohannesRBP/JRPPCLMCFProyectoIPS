@@ -14,7 +14,7 @@
           </claseHasAtributoIdentificador>
         </atributoIdentificador>
         <claseReferenciada>
-          <claseReferencesClase Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" cardinalidadO="cero_n" cardinalidadD="cero_uno" nombreO="gestionado" nombreD="gestiona">
+          <claseReferencesClase Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" cardinalidadO="uno_n" cardinalidadD="uno_n" nombreO="gestionado" nombreD="gestiona" nombreR="es gestionado">
             <claseMoniker Id="3e7fb5f0-2d19-4d68-ad76-7b3b9be4fa57" />
           </claseReferencesClase>
         </claseReferenciada>
@@ -51,7 +51,7 @@
       <claseEnriquecida Id="6ea2e215-a0f9-4918-a28c-692c9da5ddd7" nombre="Habitacion">
         <estiloClase>
           <claseEnriquecidaHasEstiloClase Id="9fb32e12-3740-4ad0-9d92-968fab574d45">
-            <estiloClase Id="c12ddeed-8d4a-4373-a9d2-f5f7e95c25dc" colorFondo="amarillo" colorLetra="negro" tipoLetra="Arial" alineacion="left" textoNormal="false" checkBox="false" radioButton="false" />
+            <estiloClase Id="c12ddeed-8d4a-4373-a9d2-f5f7e95c25dc" colorFondo="verde" colorLetra="negro" tipoLetra="TimesNewRoman" alineacion="center" textoNormal="false" checkBox="false" radioButton="false" />
           </claseEnriquecidaHasEstiloClase>
         </estiloClase>
       </claseEnriquecida>

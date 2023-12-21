@@ -1012,6 +1012,8 @@
         <xsd:attribute name="nombreO" type="xsd:string" />
         <!-- Property: nombreD -->
         <xsd:attribute name="nombreD" type="xsd:string" />
+        <!-- Property: nombreR -->
+        <xsd:attribute name="nombreR" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

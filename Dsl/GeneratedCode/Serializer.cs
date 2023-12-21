@@ -16251,6 +16251,23 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 					}
 				}
 			}
+			// nombreR
+			if (!serializationContext.Result.Failed)
+			{
+				string attribnombreR = JRPPCLMCFProyectoIPSSerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "nombreR");
+				if (attribnombreR != null)
+				{
+					global::System.String valueOfnombreR;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribnombreR, out valueOfnombreR))
+					{
+						instanceOfClaseReferencesClase.nombreR = valueOfnombreR;
+					}
+					else
+					{	// Invalid property value, ignored.
+						JRPPCLMCFProyectoIPSSerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "nombreR", typeof(global::System.String), attribnombreR);
+					}
+				}
+			}
 		}
 	
 		/// <summary>
@@ -16776,6 +16793,17 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				{
 					if (!string.IsNullOrEmpty(propValue))
 						JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreD", propValue);
+	
+				}
+			}
+			// nombreR
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfClaseReferencesClase.nombreR;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						JRPPCLMCFProyectoIPSSerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreR", propValue);
 	
 				}
 			}

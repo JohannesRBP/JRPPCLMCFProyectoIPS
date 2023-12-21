@@ -172,13 +172,20 @@
 		//AÑADIMOS ATRIBUTOS DE CLASE ASOCIACION N:M
 		if(clase.claseReferenciadora.Count>0)
 		foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToclaseReferenciadora(clase)){
-			WriteLine("<tr><td>"+r.nombreO+"<select name='"+r.nombreO+"'></select></td></tr>");
-			//atrubuto clave
+			WriteLine("<tr><td>"+r.nombreR+"<select name='"+r.nombreR+"'></select></td></tr>");
+			//añadimos atributos
+			foreach(Atributo atributo in clase.Atributo){
+			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
+			}
 		}
 
 		if(clase.ClaseReferenciada.Count>0)
 		foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToClaseReferenciada(clase)){
-			WriteLine("<tr><td>"+r.nombreD+"<select name='"+r.nombreD+"'></select></td></tr>");
+			WriteLine("<tr><td>"+r.nombreR+"<select name='"+r.nombreR+"'></select></td></tr>");
+			//añadimos atributos
+			foreach(Atributo atributo in clase.Atributo){
+			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
+			}
 		}
 
 

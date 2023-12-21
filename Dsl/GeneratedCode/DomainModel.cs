@@ -171,6 +171,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "nombreD", ClaseReferencesClase.nombreDDomainPropertyId, typeof(ClaseReferencesClase.nombreDPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidadOCalculada", ClaseReferencesClase.cardinalidadOCalculadaDomainPropertyId, typeof(ClaseReferencesClase.cardinalidadOCalculadaPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseReferencesClase), "cardinalidadDCalculada", ClaseReferencesClase.cardinalidadDCalculadaDomainPropertyId, typeof(ClaseReferencesClase.cardinalidadDCalculadaPropertyHandler)),
+				new DomainMemberInfo(typeof(ClaseReferencesClase), "nombreR", ClaseReferencesClase.nombreRDomainPropertyId, typeof(ClaseReferencesClase.nombreRPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseComponeClases), "nombre", ClaseComponeClases.nombreDomainPropertyId, typeof(ClaseComponeClases.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseComponeClases), "cardinalidadO", ClaseComponeClases.cardinalidadODomainPropertyId, typeof(ClaseComponeClases.cardinalidadOPropertyHandler)),
 				new DomainMemberInfo(typeof(ClaseComponeClases), "cardinalidadD", ClaseComponeClases.cardinalidadDDomainPropertyId, typeof(ClaseComponeClases.cardinalidadDPropertyHandler)),

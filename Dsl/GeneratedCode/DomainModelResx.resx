@@ -853,6 +853,14 @@
     <value>Cardinalidad DCalculada</value>
     <comment>DisplayName for DomainProperty &apos;cardinalidadDCalculada&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
   </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombreR.Description" xml:space="preserve">
+    <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre R</value>
+    <comment>Description for DomainProperty &apos;nombreR&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
+  <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombreR.DisplayName" xml:space="preserve">
+    <value>Nombre R</value>
+    <comment>DisplayName for DomainProperty &apos;nombreR&apos; on DomainClass &apos;ClaseReferencesClase&apos;</comment>
+  </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/SourceClase.Description" xml:space="preserve">
     <value>Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.SourceClase</value>
     <comment>Description for DomainRole &apos;SourceClase&apos; on DomainRelationship &apos;ClaseReferencesClase&apos;</comment>
@@ -1479,6 +1487,10 @@
   </data>
   <data name="MetaforaClase_ClasenombreDDecDefaultText" xml:space="preserve">
     <value>nombreDDec</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="MetaforaClase_ClasenombreRDecDefaultText" xml:space="preserve">
+    <value>nombreRDec</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaHerencia.Description" xml:space="preserve">

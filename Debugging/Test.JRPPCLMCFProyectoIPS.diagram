@@ -26,9 +26,12 @@
         </estiloClaseShape>
       </nestedChildShapes>
     </claseEnriquecidaShape>
-    <metaforaClase_Clase Id="c460b12a-6e33-4547-9cc2-5e7f2c76bdba" edgePoints="[(4.25 : 5.125); (4.25 : 1.597841796875); (6.875 : 1.597841796875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaClase_Clase Id="c460b12a-6e33-4547-9cc2-5e7f2c76bdba" edgePoints="[(4.25 : 5.125); (4.25 : 1.597841796875); (6.875 : 1.597841796875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <claseReferencesClaseMoniker Id="45189cdd-da71-4e9e-ae54-43e519e5cdc4" />
       <relativeChildShapes />
+      <moveableDecoratorHostShapes>
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="3.25, 2.125, 0.83652746677398682, 0.181884765625" shapeFieldName="nombreRDec" />
+      </moveableDecoratorHostShapes>
       <nodes>
         <claseMetaforaMoniker Id="5dd63896-b9c1-4a2f-898e-c28b2591c948" />
         <claseMetaforaMoniker Id="1b86979f-b79d-4ef5-a7a9-34b13328f97a" />
@@ -51,7 +54,7 @@
         <elementListCompartment Id="343ae773-0998-4910-a88d-3ad30709ead4" absoluteBounds="7.265, 9.2116910807291674, 1.4700000000000002, 0.2493896484375" name="Opereacion" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </claseMetafora>
-    <metaforaHerencia Id="39497b5e-d33b-4514-90ee-ce1cea26d3ea" edgePoints="[(5 : 6.12838266145833); (7.15625 : 6.12838266145833); (7.15625 : 5.32068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaHerencia Id="39497b5e-d33b-4514-90ee-ce1cea26d3ea" edgePoints="[(5 : 6.12838266145833); (7.15625 : 6.12838266145833); (7.15625 : 5.32068359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <clasePadreHasClaseHijaMoniker Id="589cb47a-94e9-411b-83a9-513c6544e021" />
       <relativeChildShapes />
       <nodes>
@@ -59,7 +62,7 @@
         <claseMetaforaMoniker Id="b47f3804-4a58-48be-8be4-3ecf1536e006" />
       </nodes>
     </metaforaHerencia>
-    <metaforaHerencia Id="7da89ce6-48fa-4716-bd6b-322c9f85196b" edgePoints="[(7.6875 : 7.75); (7.6875 : 5.32068359375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <metaforaHerencia Id="7da89ce6-48fa-4716-bd6b-322c9f85196b" edgePoints="[(7.6875 : 7.75); (7.6875 : 5.32068359375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <clasePadreHasClaseHijaMoniker Id="1276eb18-3d3f-42bf-b713-a5fb49febd99" />
       <relativeChildShapes />
       <nodes>

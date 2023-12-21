@@ -561,6 +561,9 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				
 				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreODomainPropertyId);
 				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreODec").AssociateValueWith(shape.Store, propertyInfo);
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreRDomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "nombreRDec").AssociateValueWith(shape.Store, propertyInfo);
 			}
 		}
 		
@@ -1560,6 +1563,14 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 				else if (e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreODomainPropertyId)
 				{
 					DslDiagrams::Decorator decorator = global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.FindMetaforaClase_ClaseDecorator("nombreODec");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.nombreRDomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.JRPPCLMCFProyectoIPS.MetaforaClase_Clase.FindMetaforaClase_ClaseDecorator("nombreRDec");
 					if(decorator != null)
 					{
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.DomainClassId);

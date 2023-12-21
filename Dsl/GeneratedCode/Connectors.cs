@@ -176,6 +176,16 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 			DslDiagrams::Decorator decorator4 = new DslDiagrams::ConnectorDecorator(field4, DslDiagrams::ConnectorDecoratorPosition.TargetBottom, DslDiagrams::PointD.Empty);
 			decorators.Add(decorator4);
 				
+			DslDiagrams::TextField field5 = new DslDiagrams::TextField("nombreRDec");
+			field5.DefaultText = global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel.SingletonResourceManager.GetString("MetaforaClase_ClasenombreRDecDefaultText");
+			field5.DefaultFocusable = true;
+			field5.DefaultAutoSize = true;
+			field5.AnchoringBehavior.MinimumHeightInLines = 1;
+			field5.AnchoringBehavior.MinimumWidthInCharacters = 1;
+			field5.DefaultAccessibleState = global::System.Windows.Forms.AccessibleStates.Invisible;
+			DslDiagrams::Decorator decorator5 = new DslDiagrams::ConnectorDecorator(field5, DslDiagrams::ConnectorDecoratorPosition.SourceTop, DslDiagrams::PointD.Empty, true);
+			decorators.Add(decorator5);
+				
 		}
 		
 		#endregion

@@ -2605,6 +2605,93 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
 		}
 		
 		#endregion
+		#region nombreR domain property code
+		
+		/// <summary>
+		/// nombreR domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreRDomainPropertyId = new global::System.Guid(0x5aedf530, 0x5182, 0x47db, 0x8c, 0xbb, 0x1e, 0x13, 0xc1, 0x77, 0xa2, 0xb1);
+		
+		/// <summary>
+		/// Storage for nombreR
+		/// </summary>
+		private global::System.String nombreRPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombreR domain property.
+		/// Description for UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase.Nombre R
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombreR.DisplayName", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.JRPPCLMCFProyectoIPS.ClaseReferencesClase/nombreR.Description", typeof(global::UPM_IPS.JRPPCLMCFProyectoIPS.JRPPCLMCFProyectoIPSDomainModel), "UPM_IPS.JRPPCLMCFProyectoIPS.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("5aedf530-5182-47db-8cbb-1e13c177a2b1")]
+		public global::System.String nombreR
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreRPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombreRPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the ClaseReferencesClase.nombreR domain property.
+		/// </summary>
+		internal sealed partial class nombreRPropertyHandler : DslModeling::DomainPropertyValueHandler<ClaseReferencesClase, global::System.String>
+		{
+			private nombreRPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the ClaseReferencesClase.nombreR domain property value handler.
+			/// </summary>
+			public static readonly nombreRPropertyHandler Instance = new nombreRPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the ClaseReferencesClase.nombreR domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreRDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(ClaseReferencesClase element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreRPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(ClaseReferencesClase element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreRPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region SourceClase link accessor
 		/// <summary>
 		/// Get the list of ClaseReferencesClase links to a Clase.
