@@ -119,7 +119,7 @@
 		string tipoLetra="Arial";
 		string colorLetra="#000000";
 		string alineacion="center";
-		string colorFondo="#00aabb";		
+		string colorFondo="#ffffff";		
 
 		//coger estilos de EstiloClase  
 		if(enriquecida){ 
@@ -175,7 +175,7 @@
 		string tipoLetra="Arial";
 		string colorLetra="#000000";
 		string alineacion="center";
-		string colorFondo="#00aabb";
+		string colorFondo="#ffffff";
 
 		//Asignacion de estilos de atributo, dependiendo de si es enriquecida o no
 		string tipoLetraAtr="Arial";
@@ -283,7 +283,7 @@
 		string tipoLetra="Arial";
 		string colorLetra="#000000";
 		string alineacion="center";
-		string colorFondo="#00aabb";
+		string colorFondo="#ffffff";
 
 		string tipoLetraOpe = "Arial";
 		string colorLetraOpe="#000000";
@@ -321,7 +321,7 @@
 		WriteLine("<button style='color:"+colorFondo+"; font-family:"+tipoLetra+";'><a href=Home.html>Home</a></button>");
 		WriteLine("<h2>Listado " + nombreClase + "</h2>");
 		WriteLine("<p style='background-color: "+colorFondo+"; color:"+colorLetra+"; font-weight:bold; font-family:"+tipoLetra+"; text-align:"+alineacion+"'> Listado "+nombreClase+"</p>");
-		WriteLine("<form name='"+nombreClase+"' style='background-color:#00aabb; color:#ffffff;font-family:Arial;text-align:center;'>");
+		WriteLine("<form name='"+nombreClase+"' style='background-color:"+colorFondo+"; color:"+colorLetra+";font-family:"+tipoLetra+";text-align:"+alineacion+";'>");
 		WriteLine("<table>");
 			
 	   //Para que haga 4 lineas
@@ -336,11 +336,11 @@
 				WriteLine(" </tr>");
 				 
 				WriteLine("<tr>");
-				WriteLine("<td>Elemento N: " + nombreClase + " </td>");
+				WriteLine("<td>" + nombreClase + " N:" + " </td>");
 				WriteLine("<td>");
 			}else{
 				WriteLine("<tr>");
-				WriteLine("<td>Elemento "+(i+1)+": " + nombreClase + " </td>");
+				WriteLine("<td>"+ nombreClase+" "+(i+1)+": </td>");
 				WriteLine("<td>");
 			}						
 			WriteLine("<button style='color:" + colorLetraOpe + ";font-family:" + tipoLetraOpe + "'> <a href=" + nombreClase + "Home.html>Consultar</a> </button>");
