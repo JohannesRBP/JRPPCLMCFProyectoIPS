@@ -11,7 +11,7 @@ namespace UPM_IPS.JRPPCLMCFProyectoIPS
         string simboloUML = "";
         public string GettipoDatoCalculadoValue()
         {
-           // Clase clase = new Clase();
+           
 
             if (this.modAcceso.ToString().Equals("public"))
             {

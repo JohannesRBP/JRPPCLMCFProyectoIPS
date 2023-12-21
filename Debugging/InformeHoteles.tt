@@ -42,7 +42,7 @@
 			//Comprobamos si la clase es enriquecida
 			bool enriquecida=false;
 			if(clase is ClaseEnriquecida)
-				enriquecida=true;
+				enriquecida=true; 
 			
 			//Ver cuando son clase de asociacion, si es N:M entonces habra que crear un html con el nombre de la relacion
 			//Revisamos las relaciones que tiene de asociacion
@@ -58,7 +58,7 @@
 			//Llamamos a cada metodo por cada clase para generar el .html y .java
 			if(!subclase || !abstracta){ //Si no es clase padre y si lo es, y es Total (Abstracta, no tiene subclases)
 				
-				generarHTML(clase, fileManager, enriquecida);
+				generarHTML(clase, fileManager, enriquecida, superclase);
 				listaClase.Add(clase.nombre);
 
 			}
@@ -81,14 +81,14 @@
 #>
 <#+
 //METODO PARA LLAMAR A LOS METODOS DE GENERACION DE LOS HTML DE LAS CLASES
-	private void generarHTML(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida){
+	private void generarHTML(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida, bool superclase){
 		//Crea un fichero donde pondremos la home de cada clase
 		fileManager.StartNewFile(clase.nombre + "Home.html");
 		generarHome(clase, enriquecida); 
 
 		//Crea un fichero donde pondremos el alta de cada clase
 		fileManager.StartNewFile(clase.nombre+"Alta.html");
-		generarAlta(clase, enriquecida);
+		generarAlta(clase, enriquecida, superclase);
 
 		//Crea un fichero donde pondremos el listado de cada clase
 		fileManager.StartNewFile(clase.nombre+"Lista.html");
@@ -148,7 +148,7 @@
 <#+ 
 //METODO PARA GENERAR HTML DE CADA CLASE_ALTA
 
-	private void generarAlta(Clase clase, bool enriquecida){
+	private void generarAlta(Clase clase, bool enriquecida, bool superclase){
 		
 
 		//Asignacion de estilos de la clase, dependiendo de si es enriquecida o no
@@ -191,6 +191,18 @@
 			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
 		}
 
+		//Añadir Fila del atributo clave de clase padre
+		if(superclase && clase.superClase.AtributoIdentificador!=null){
+			AtributoIdentificador atributoIdentificador = clase.superClase.AtributoIdentificador;			
+			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
+		}
+		 
+		//Añadimos los atributos de la clase padre
+		if(superclase && clase.superClase.Atributo.Count!=0)			
+			foreach(Atributo atributo in clase.superClase.Atributo){
+				WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
+			}
+
 		//Recorremos los atributos y añadimos una fila a la tabla por cada uno
 		if(clase.Atributo.Count==0)
 			WriteLine("No hay atributos");
@@ -199,8 +211,10 @@
 				WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
 			}
 
+		
+
 		//AÑADIMOS ATRIBUTOS DE CLASE ASOCIACION N:M
-		if(clase.claseReferenciadora.Count>0)
+		/*if(clase.claseReferenciadora.Count>0)
 		foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToclaseReferenciadora(clase)){
 			WriteLine("<tr><td>"+r.nombreR+"<select name='"+r.nombreR+"'></select></td></tr>");
 			//añadimos atributos
@@ -216,7 +230,7 @@
 			foreach(Atributo atributo in clase.Atributo){
 			WriteLine("<tr><td style='color:"+colorLetra+"; font-family:"+tipoLetra+";'>"+atributo.nombre+"<input type='text' id='"+atributo.nombre+"'></td></tr>");	
 			}
-		}
+		}*/
 
 
 		WriteLine("</table>");
