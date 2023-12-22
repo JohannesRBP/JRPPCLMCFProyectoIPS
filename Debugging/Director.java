@@ -1,10 +1,11 @@
-public class Empleado extends Persona{
+public class Director extends Persona{
 	private Int idEmpleado;
 	private String DNI;
 	private String nombre;
 	private String apellidos;
+	private Int telefono;
 	private Float sueldo;
-	public Empleado(){
+	public Director(){
 	}
 	public Int getidEmpleado(){
 		return this.idEmpleado
@@ -36,7 +37,10 @@ public class Empleado extends Persona{
 	public void setapellidos(String apellidos){
 		this.apellidos = apellidos
 	}
-	private void respira ()
-		//To Do
+	public Int gettelefono(){
+		return this.telefono
+	}
+	public void settelefono(Int telefono){
+		this.telefono = telefono
 	}
 }

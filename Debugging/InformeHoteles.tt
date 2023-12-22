@@ -1,6 +1,6 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" language="C#" hostspecific="True"#>
 <#@ output extension=".txt" #>
-<#@ JRPPCLMCFProyectoIPS processor="JRPPCLMCFProyectoIPSDirectiveProcessor" requires="fileName='Test.JRPPCLMCFProyectoIPS'" #>
+<#@ JRPPCLMCFProyectoIPS processor="JRPPCLMCFProyectoIPSDirectiveProcessor" requires="fileName='Hoteles.JRPPCLMCFProyectoIPS'" #>
 <#@ include file="EF.utility.CS.ttinclude" #>
 
 <# 
@@ -10,7 +10,7 @@
 		//Si no hay ninguna clase creada
 		WriteLine("Solucion vacía. No se ha configurado ninguna clase");
 	else{ 
-
+	    
 		//Inicializa la creacion de ficheros
 		var fileManager=EntityFrameworkTemplateFileManager.Create(this); 
 		//Creamos una lista para el menu
@@ -83,31 +83,23 @@
 //METODO PARA LLAMAR A LOS METODOS DE GENERACION DE LOS HTML DE LAS CLASES
 	private void generarHTML(Clase clase, EntityFrameworkTemplateFileManager fileManager, bool enriquecida, bool superclase, string asociacionNM){
 
-		if(asociacionNM==""){ //Si no es de tipo asociacion
-			//Crea un fichero donde pondremos la home de cada clase
-			fileManager.StartNewFile(clase.nombre + "Home.html");
-			generarHome(clase, enriquecida, ""); 
+		//Crearemos una variable para el nombre del fichero, si es asociacion, sera el nombre de la relacion, si no, el nombre de la clase
+		string nombreHTML=clase.nombre;
+		if(asociacionNM!="")
+			nombreHTML=asociacionNM;
 
-			//Crea un fichero donde pondremos el alta de cada clase
-			fileManager.StartNewFile(clase.nombre+"Alta.html");
-			generarAlta(clase, enriquecida, superclase, "");
+		//Crea un fichero donde pondremos la home de cada clase
+		fileManager.StartNewFile(nombreHTML + "Home.html");
+		generarHome(clase, enriquecida, asociacionNM); 
 
-			//Crea un fichero donde pondremos el listado de cada clase
-			fileManager.StartNewFile(clase.nombre+"Lista.html");
-			generarListado(clase, enriquecida, superclase, "");
-		}else{
-			//Crea un fichero donde pondremos la home de la clase asociacion
-			fileManager.StartNewFile(asociacionNM + "Home.html");
-			generarHome(clase, enriquecida, asociacionNM); 
+		//Crea un fichero donde pondremos el alta de cada clase
+		fileManager.StartNewFile(nombreHTML+"Alta.html");
+		generarAlta(clase, enriquecida, superclase, asociacionNM);
 
-			//Crea un fichero donde pondremos el alta de la clase asociacion
-			fileManager.StartNewFile(asociacionNM+"Alta.html");
-			generarAlta(clase, enriquecida, superclase, asociacionNM);
-
-			//Crea un fichero donde pondremos el listado de la clase asociacion
-			fileManager.StartNewFile(asociacionNM+"Lista.html");
-			generarListado(clase, enriquecida, superclase, asociacionNM);
-		}
+		//Crea un fichero donde pondremos el listado de cada clase
+		fileManager.StartNewFile(nombreHTML+"Lista.html");
+		generarListado(clase, enriquecida, superclase, asociacionNM);
+		
 	}
 
 #>
@@ -245,17 +237,23 @@
 				}
 		}else{
 			//Añadimos los atributos clave de ambas clases
-			
+			//El atributo clave de la clase actual
 			if(clase.AtributoIdentificador!=null){
 				AtributoIdentificador atributoIdentificador = clase.AtributoIdentificador;			
 				WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
 			}
-			
-			/*foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToclaseReferenciadora(clase)){
-				if(r.nombreR.Equals(asociacionNM)){ //Si es la relacion actual
-					WriteLine(r.claseReferenciadora.nombre);
+			//El atributo clave de la clase relacionada, como pueden ser varias, hay que recorrerlas y si coincide el nombre de la relacion, se coge su atributo clave
+			foreach(Clase claseRef in clase.claseReferenciadora){
+				foreach(ClaseReferencesClase r in ClaseReferencesClase.GetLinksToClaseReferenciada(claseRef)){
+					if(r.nombreR.Equals(asociacionNM)){
+						if(clase.AtributoIdentificador!=null){
+							AtributoIdentificador atributoIdentificador = claseRef.AtributoIdentificador;			
+							WriteLine("<tr><td style='color:"+colorLetraAtr+"; font-family:"+tipoLetraAtr+";'>"+atributoIdentificador.nombre+"<input type='text' id='"+atributoIdentificador.nombre+"'></td></tr>");	
+						}
+					}
 				}
-			}*/
+			}
+			
 			
 		}
 
@@ -383,7 +381,7 @@
 <#+
    //METODO PARA PONER EL COLOR QUE HAN ELEGIDO LOS USUARIOS (CLASE ENRIQUECIDA)
 	  private string convertidorColoresHex(string color){
-	
+	 
 			switch (color){
             case "amarillo":
                 return "#FFFF00";
@@ -395,7 +393,7 @@
                 return "#FF0000";
 
             case "azul":
-                return "#0000FF";
+                return "#3399FF";
 
             case "negro":
 			    return "#000000";
@@ -403,7 +401,7 @@
             default:
                 return "#FFFFFF";
             }
-	  }
+	  } 
 #>
 
 <#+ 

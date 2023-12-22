@@ -3,7 +3,8 @@ public class Cliente extends Persona{
 	private String DNI;
 	private String nombre;
 	private String apellidos;
-	private Int puntosAcum;
+	private Int telefono;
+	private Double puntosAcum;
 	public Cliente(){
 	}
 	public Int getidCliente(){
@@ -18,10 +19,10 @@ public class Cliente extends Persona{
 	public void setDNI(String DNI){
 		this.DNI = DNI
 	}
-	public Int getpuntosAcum(){
+	public Double getpuntosAcum(){
 		return this.puntosAcum
 	}
-	public void setpuntosAcum(Int puntosAcum){
+	public void setpuntosAcum(Double puntosAcum){
 		this.puntosAcum = puntosAcum
 	}
 	public String getnombre(){
@@ -36,7 +37,10 @@ public class Cliente extends Persona{
 	public void setapellidos(String apellidos){
 		this.apellidos = apellidos
 	}
-	private void respira ()
-		//To Do
+	public Int gettelefono(){
+		return this.telefono
+	}
+	public void settelefono(Int telefono){
+		this.telefono = telefono
 	}
 }

@@ -77,25 +77,16 @@
     <Content Include="ClienteLista.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
-    <Content Include="Empleado.java">
+    <Content Include="Director.java">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
-    <Content Include="EmpleadoAlta.html">
+    <Content Include="DirectorAlta.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
-    <Content Include="EmpleadoHome.html">
+    <Content Include="DirectorHome.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
-    <Content Include="EmpleadoLista.html">
-      <DependentUpon>InformeHoteles.tt</DependentUpon>
-    </Content>
-    <Content Include="esgestionadoAlta.html">
-      <DependentUpon>InformeHoteles.tt</DependentUpon>
-    </Content>
-    <Content Include="esgestionadoHome.html">
-      <DependentUpon>InformeHoteles.tt</DependentUpon>
-    </Content>
-    <Content Include="esgestionadoLista.html">
+    <Content Include="DirectorLista.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
     <Content Include="Habitacion.java">
@@ -145,6 +136,15 @@
       <DependentUpon>JRPPCLMCFProyectoIPSReportVB.tt</DependentUpon>
     </Content>
     <Content Include="Persona.java">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="reservaAlta.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="reservaHome.html">
+      <DependentUpon>InformeHoteles.tt</DependentUpon>
+    </Content>
+    <Content Include="reservaLista.html">
       <DependentUpon>InformeHoteles.tt</DependentUpon>
     </Content>
   </ItemGroup>

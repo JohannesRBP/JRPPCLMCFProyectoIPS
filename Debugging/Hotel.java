@@ -1,7 +1,7 @@
 public class Hotel{
 	private Int idHotel;
-	private String nombre;
-	private String direccion;
+	public String nombre;
+	public String direccion;
 	public Hotel(){
 	}
 	public Int getidHotel(){
@@ -21,8 +21,5 @@ public class Hotel{
 	}
 	public void setdireccion(String direccion){
 		this.direccion = direccion
-	}
-	private void Gestionar ()
-		//To Do
 	}
 }
