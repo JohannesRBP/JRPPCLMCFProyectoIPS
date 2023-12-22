@@ -80,7 +80,7 @@
         </atributo>
         <operacion>
           <claseHasOperacion Id="eff6a413-6ece-46e1-a8c5-f723b8af8e55">
-            <operacion Id="8c8569a7-7f70-4310-bf4a-b92868ea2238" nombre="reservarHabitacion">
+            <operacion Id="8c8569a7-7f70-4310-bf4a-b92868ea2238" nombre="reservarHabitacion" modAcceso="public">
               <parametro>
                 <operacionHasParametro Id="0f8af375-297f-4c82-934f-80f40b870dae">
                   <parametro Id="7e9a528f-7bc5-4d31-8102-4449080e2ebe" tipoDato="Int" nombre="precio" tipoParametro="Entrada" />

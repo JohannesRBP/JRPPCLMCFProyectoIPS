@@ -36,7 +36,7 @@ public class Habitacion{
 	public void setnumHabitacion(Int numHabitacion){
 		this.numHabitacion = numHabitacion
 	}
-	 Int reservarHabitacion (Int precio, Int numNoches)
+	public Int reservarHabitacion (Int precio, Int numNoches)
 		//To Do
 	}
 }
